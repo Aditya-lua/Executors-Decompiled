@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:padding="5.0dp" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <EditText android:id="@id/branch_edit" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Enter Branch Name" app:layout_constraintTop_toTopOf="parent" />
+    <EditText android:id="@id/commit_edit" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Enter Commit Hash (empty = HEAD)" app:layout_constraintTop_toBottomOf="@id/branch_edit" />
+    <Button android:id="@id/save_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="Save" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/commit_search_btn" />
+    <Button android:id="@id/reset_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="Reset" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@id/commit_search_btn" />
+    <Button android:id="@id/commit_search_btn" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="Search Branch Commits" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/commit_edit" />
+</androidx.constraintlayout.widget.ConstraintLayout>

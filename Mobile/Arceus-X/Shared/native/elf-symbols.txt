@@ -1,0 +1,399 @@
+
+Symbol table '.dynsym' contains 396 entries:
+   Num:    Value          Size Type    Bind   Vis      Ndx Name
+     0: 0000000000000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __cxa_finalize@LIBC (2)
+     2: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __cxa_atexit@LIBC (2)
+     3: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND strlen@LIBC (2)
+     4: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND memcpy@LIBC (2)
+     5: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __stack_chk_fail@LIBC (2)
+     6: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND strcmp@LIBC (2)
+     7: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND strchr@LIBC (2)
+     8: 0000000000000000     0 OBJECT  GLOBAL DEFAULT  UND __sF@LIBC (2)
+     9: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND fwrite@LIBC (2)
+    10: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND fputc@LIBC (2)
+    11: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND strtoull@LIBC (2)
+    12: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND memset@LIBC (2)
+    13: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND memmove@LIBC (2)
+    14: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __memcpy_chk@LIBC (2)
+    15: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND acos@LIBC (3)
+    16: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND asin@LIBC (3)
+    17: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND atan2@LIBC (3)
+    18: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND atan@LIBC (3)
+    19: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND cosh@LIBC (3)
+    20: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND cos@LIBC (3)
+    21: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND exp@LIBC (3)
+    22: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND fmod@LIBC (3)
+    23: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND ldexp@LIBC (2)
+    24: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND log10@LIBC (3)
+    25: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND log@LIBC (3)
+    26: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND log2@LIBC (3)
+    27: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND pow@LIBC (3)
+    28: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND sinh@LIBC (3)
+    29: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND sin@LIBC (3)
+    30: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND tanh@LIBC (3)
+    31: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND tan@LIBC (3)
+    32: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND vsnprintf@LIBC (2)
+    33: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __strlen_chk@LIBC (2)
+    34: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND fprintf@LIBC (2)
+    35: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __vsnprintf_chk@LIBC (2)
+    36: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND realloc@LIBC (2)
+    37: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND free@LIBC (2)
+    38: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND time@LIBC (2)
+    39: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND clock@LIBC (2)
+    40: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND strtod@LIBC (2)
+    41: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND strtoul@LIBC (2)
+    42: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND strtoll@LIBC (2)
+    43: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND strcspn@LIBC (2)
+    44: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND strncat@LIBC (2)
+    45: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND strcat@LIBC (2)
+    46: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND gmtime_r@LIBC (2)
+    47: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __strchr_chk@LIBC (2)
+    48: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND strftime@LIBC (2)
+    49: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND clock_gettime@LIBC (2)
+    50: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND memcmp@LIBC (2)
+    51: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __strncpy_chk@LIBC (2)
+    52: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND memchr@LIBC (2)
+    53: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND strpbrk@LIBC (2)
+    54: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND atoi@LIBC (2)
+    55: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND malloc@LIBC (2)
+    56: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __memset_chk@LIBC (2)
+    57: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND strncmp@LIBC (2)
+    58: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __errno@LIBC (2)
+    59: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND strspn@LIBC (2)
+    60: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND pthread_create@LIBC (2)
+    61: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND sched_yield@LIBC (2)
+    62: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND pthread_setspecific@LIBC (2)
+    63: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND exit@LIBC (2)
+    64: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND rand@LIBC (2)
+    65: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND localtime@LIBC (2)
+    66: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND fopen@LIBC (2)
+    67: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND strstr@LIBC (2)
+    68: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND fclose@LIBC (2)
+    69: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND fseeko@LIBC (2)
+    70: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND ftello@LIBC (2)
+    71: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND fflush@LIBC (2)
+    72: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND fread@LIBC (2)
+    73: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND write@LIBC (2)
+    74: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND eventfd@LIBC (2)
+    75: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND close@LIBC (2)
+    76: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND fgetc@LIBC (2)
+    77: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND ferror@LIBC (2)
+    78: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND feof@LIBC (2)
+    79: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __system_property_get@LIBC (2)
+    80: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __open_2@LIBC (2)
+    81: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND getenv@LIBC (2)
+    82: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __vsprintf_chk@LIBC (2)
+    83: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND dlopen@LIBC (4)
+    84: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND dlsym@LIBC (4)
+    85: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND strdup@LIBC (2)
+    86: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND calloc@LIBC (2)
+    87: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND pthread_mutex_init@LIBC (2)
+    88: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND pthread_cond_init@LIBC (2)
+    89: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND pthread_mutex_lock@LIBC (2)
+    90: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND pthread_mutex_unlock@LIBC (2)
+    91: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND pthread_cond_broadcast@LIBC (2)
+    92: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND pthread_join@LIBC (2)
+    93: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND pthread_mutex_destroy@LIBC (2)
+    94: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND pthread_cond_destroy@LIBC (2)
+    95: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND pthread_cond_wait@LIBC (2)
+    96: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND pthread_cond_signal@LIBC (2)
+    97: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND _Z25ZSTD_trace_compress_beginPK11ZSTD_CCtx_s
+    98: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND _Z23ZSTD_trace_compress_endyPK10ZSTD_Trace
+    99: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND _Z27ZSTD_trace_decompress_beginPK11ZSTD_DCtx_s
+   100: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND _Z25ZSTD_trace_decompress_endyPK10ZSTD_Trace
+   101: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND qsort@LIBC (2)
+   102: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND sysconf@LIBC (2)
+   103: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND mprotect@LIBC (2)
+   104: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND fgets@LIBC (2)
+   105: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND sscanf@LIBC (2)
+   106: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND dladdr@LIBC (4)
+   107: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND getpid@LIBC (2)
+   108: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND socket@LIBC (2)
+   109: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND bind@LIBC (2)
+   110: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND listen@LIBC (2)
+   111: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND accept@LIBC (2)
+   112: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND mmap@LIBC (2)
+   113: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND munmap@LIBC (2)
+   114: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND access@LIBC (2)
+   115: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND mkdir@LIBC (2)
+   116: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND strerror@LIBC (2)
+   117: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND opendir@LIBC (2)
+   118: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND remove@LIBC (2)
+   119: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND readdir@LIBC (2)
+   120: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND closedir@LIBC (2)
+   121: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND rmdir@LIBC (2)
+   122: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND stat@LIBC (2)
+   123: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND fseek@LIBC (2)
+   124: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND sigemptyset@LIBC (2)
+   125: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND sigaction@LIBC (2)
+   126: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND _exit@LIBC (2)
+   127: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND getaddrinfo@LIBC (2)
+   128: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND connect@LIBC (2)
+   129: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND freeaddrinfo@LIBC (2)
+   130: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND sendto@LIBC (2)
+   131: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND recvfrom@LIBC (2)
+   132: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND setsockopt@LIBC (2)
+   133: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND fcntl@LIBC (2)
+   134: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __FD_SET_chk@LIBC (2)
+   135: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND select@LIBC (2)
+   136: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __FD_ISSET_chk@LIBC (2)
+   137: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND read@LIBC (2)
+   138: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND fputs@LIBC (2)
+   139: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND perror@LIBC (2)
+   140: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND printf@LIBC (2)
+   141: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND snprintf@LIBC (2)
+   142: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND dl_iterate_phdr@LIBC (4)
+   143: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND dlclose@LIBC (4)
+   144: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND dlerror@LIBC (4)
+   145: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND lseek@LIBC (2)
+   146: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND mbstowcs@LIBC (2)
+   147: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND wcstombs@LIBC (2)
+   148: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND wcslen@LIBC (2)
+   149: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND getpwuid_r@LIBC (2)
+   150: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND iswlower_l@LIBC (2)
+   151: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND posix_memalign@LIBC (2)
+   152: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND syslog@LIBC (2)
+   153: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND geteuid@LIBC (2)
+   154: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND getpeername@LIBC (2)
+   155: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND wmemmove@LIBC (2)
+   156: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __strncpy_chk2@LIBC (2)
+   157: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND isupper_l@LIBC (2)
+   158: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND openlog@LIBC (2)
+   159: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND isdigit_l@LIBC (2)
+   160: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND tolower@LIBC (2)
+   161: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND fnmatch@LIBC (2)
+   162: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND uselocale@LIBC (2)
+   163: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND isalpha@LIBC (2)
+   164: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND lseek64@LIBC (2)
+   165: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND newlocale@LIBC (2)
+   166: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND memalign@LIBC (2)
+   167: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND gethostname@LIBC (2)
+   168: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND if_nametoindex@LIBC (2)
+   169: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND inet_pton@LIBC (2)
+   170: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND pthread_detach@LIBC (2)
+   171: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND toupper@LIBC (2)
+   172: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND getsockname@LIBC (2)
+   173: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND pthread_getspecific@LIBC (2)
+   174: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND pthread_rwlock_unlock@LIBC (2)
+   175: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND realpath@LIBC (2)
+   176: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __read_chk@LIBC (2)
+   177: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND fstat@LIBC (2)
+   178: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND ungetc@LIBC (2)
+   179: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND poll@LIBC (2)
+   180: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND strtoll_l@LIBC (2)
+   181: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND strtoull_l@LIBC (2)
+   182: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND open@LIBC (2)
+   183: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND getsockopt@LIBC (2)
+   184: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND vfprintf@LIBC (2)
+   185: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND readlink@LIBC (2)
+   186: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND freelocale@LIBC (2)
+   187: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND isxdigit_l@LIBC (2)
+   188: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND memrchr@LIBC (2)
+   189: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __strcpy_chk@LIBC (2)
+   190: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND abort@LIBC (2)
+   191: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND nanosleep@LIBC (2)
+   192: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND getc@LIBC (2)
+   193: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND mbrlen@LIBC (2)
+   194: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND strncpy@LIBC (2)
+   195: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND rename@LIBC (2)
+   196: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND closelog@LIBC (2)
+   197: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND ioctl@LIBC (2)
+   198: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND strtok_r@LIBC (2)
+   199: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND strtold_l@LIBC (2)
+   200: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __ctype_get_mb_cur_max@LIBC (2)
+   201: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND fileno@LIBC (2)
+   202: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND getauxval@LIBC (2)
+   203: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND strtof@LIBC (2)
+   204: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND mbsnrtowcs@LIBC (2)
+   205: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND strrchr@LIBC (2)
+   206: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND sigprocmask@LIBC (2)
+   207: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND strtol@LIBC (2)
+   208: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND pthread_rwlock_rdlock@LIBC (2)
+   209: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND pthread_key_delete@LIBC (2)
+   210: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND ftell@LIBC (2)
+   211: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND strcasecmp@LIBC (2)
+   212: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND inet_ntop@LIBC (2)
+   213: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND times@LIBC (2)
+   214: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND wmemcpy@LIBC (2)
+   215: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND islower_l@LIBC (2)
+   216: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND strerror_r@LIBC (2)
+   217: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND mbsrtowcs@LIBC (2)
+   218: 0000000000000000     0 FUNC    WEAK   DEFAULT  UND gettid@LIBC (2)
+   219: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND syscall@LIBC (2)
+   220: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND mbrtowc@LIBC (2)
+   221: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND pthread_once@LIBC (2)
+   222: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND fdopen@LIBC (2)
+   223: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND wmemset@LIBC (2)
+   224: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __memmove_chk@LIBC (2)
+   225: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND getcwd@LIBC (2)
+   226: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND vasprintf@LIBC (2)
+   227: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND pthread_rwlock_wrlock@LIBC (2)
+   228: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND signal@LIBC (2)
+   229: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __strrchr_chk@LIBC (2)
+   230: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND setvbuf@LIBC (2)
+   231: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND android_set_abort_message@LIBC (2)
+   232: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND strftime_l@LIBC (2)
+   233: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND setjmp@LIBC (2)
+   234: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND writev@LIBC (2)
+   235: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND pthread_key_create@LIBC (2)
+   236: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND longjmp@LIBC (2)
+   237: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND wcrtomb@LIBC (2)
+   238: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __fgets_chk@LIBC (2)
+   239: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND gettimeofday@LIBC (2)
+   240: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND vsscanf@LIBC (2)
+   241: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND unlink@LIBC (2)
+   242: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND basename@LIBC (2)
+   243: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND mbtowc@LIBC (2)
+   244: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND wcsnrtombs@LIBC (2)
+   245: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND exp2@LIBC (3)
+   246: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND getrandom
+   247: 00000000004d2e64     4 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_createCStream
+   248: 00000000004d406c     4 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdCompressCtx_init
+   249: 00000000004d66e8    32 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_setCompressionStrategy
+   250: 00000000004d68c0     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_errSrcSizeWrong
+   251: 00000000004d3474     4 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdDirectBufferDecompressingStreamNoFinalizer_createDStreamNative
+   252: 00000000004d674c    40 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_setSequenceProducerFallback
+   253: 00000000004d2f18   312 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_initCStreamWithDict
+   254: 00000000004d3170   352 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_compressDirectByteBuffer
+   255: 00000000004d3520   352 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdDirectBufferDecompressingStreamNoFinalizer_decompressStreamNative
+   256: 00000000004d59b0   152 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_compressUnsafe
+   257: 00000000004d67cc     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_chainLogMax
+   258: 00000000004d2bf4     4 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdBufferDecompressingStreamNoFinalizer_createDStreamNative
+   259: 00000000004d6214   160 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_loadFastDictDecompress
+   260: 00000000004d6534    80 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_setCompressionLong
+   261: 00000000004d6810     4 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_minCompressionLevel
+   262: 00000000004d387c    52 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdDictCompress_free
+   263: 00000000004d5a48    20 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_decompressUnsafe
+   264: 00000000004d5be4   156 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_findFrameCompressedSize0
+   265: 00000000004d5e9c    68 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_getDictIdFromDictDirect
+   266: 00000000004d60f4    32 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_isError
+   267: 00000000004d6890     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_errMaxSymbolValueTooSmall
+   268: 00000000004d4078    16 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdCompressCtx_setLevel0
+   269: 00000000004d4138   216 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdCompressCtx_loadCDict0
+   270: 00000000004d4210    12 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdCompressCtx_reset0
+   271: 00000000004d4ebc     4 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdInputStreamNoFinalizer_recommendedDInSize
+   272: 00000000004d4ec4     4 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdInputStreamNoFinalizer_createDStream
+   273: 00000000004d4ec8    24 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdInputStreamNoFinalizer_freeDStream
+   274: 00000000004d672c    32 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_setValidateSequences
+   275: 00000000004d6888     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_errMaxSymbolValueTooLarge
+   276: 00000000004d3680   264 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdDictCompress_init
+   277: 00000000004d421c   152 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdCompressCtx_getFrameProgression0
+   278: 00000000004d65e8    32 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_setCompressionJobSize
+   279: 00000000004d5ee0   276 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_decompressedDirectByteBufferSize
+   280: 00000000004d65a4    36 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_setDecompressionMagicless
+   281: 00000000004d6688    32 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_setCompressionSearchLog
+   282: 00000000004d6840     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_errFrameParameterWindowTooLarge
+   283: 00000000004d39b0   232 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdDictDecompress_initDirect
+   284: 00000000004d510c    24 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdOutputStreamNoFinalizer_freeCStream
+   285: 00000000004d6648    32 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_setCompressionHashLog
+   286: 00000000004d6820     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_errGeneric
+   287: 00000000004d6880     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_errTableLogTooLarge
+   288: 00000000004d2bf8     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdBufferDecompressingStreamNoFinalizer_freeDStreamNative
+   289: 00000000004d62b4   176 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_loadDictCompress
+   290: 00000000004d6514    32 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_setCompressionLevel
+   291: 00000000004d65c8    32 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_setCompressionWorkers
+   292: 00000000004d6668    32 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_setCompressionChainLog
+   293: 00000000004d6814     4 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_maxCompressionLevel
+   294: 00000000004d6828     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_errPrefixUnknown
+   295: 00000000004d68c8     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_errDstBufferNull
+   296: 00000000004d2bf0     4 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdBufferDecompressingStreamNoFinalizer_recommendedDOutSizeNative
+   297: 00000000004d5ff4   248 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_getDirectByteBufferFrameContentSize
+   298: 00000000005f48f4 13184 FUNC    GLOBAL DEFAULT   15 JNI_OnLoad
+   299: 00000000004d456c   356 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdCompressCtx_compressByteArray0
+   300: 00000000004d46d4    16 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdDecompressCtx_free
+   301: 00000000004d4ad0   356 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdDecompressCtx_decompressByteArray0
+   302: 00000000004d67b4     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_windowLogMin
+   303: 00000000004d5404   208 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdOutputStreamNoFinalizer_flushStream
+   304: 00000000004d6868     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_errDictionaryCreationFailed
+   305: 00000000004d2c00   160 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdBufferDecompressingStreamNoFinalizer_initDStreamNative
+   306: 00000000004d46d0     4 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdDecompressCtx_init
+   307: 00000000004d4ee0   148 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdInputStreamNoFinalizer_initDStream
+   308: 00000000004d5a5c   196 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_decompressedSize0
+   309: 00000000004d4ec0     4 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdInputStreamNoFinalizer_recommendedDOutSize
+   310: 00000000004d6878     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_errParameterOutOfBound
+   311: 00000000004d3470     4 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdDirectBufferDecompressingStreamNoFinalizer_recommendedDOutSizeNative
+   312: 00000000004d60ec     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_compressBound
+   313: 00000000004d6608    32 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_setCompressionOverlapLog
+   314: 00000000004d6808     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_defaultCompressionLevel
+   315: 00000000004d3a98    52 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdDictDecompress_free
+   316: 00000000004d3c64   408 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_compressFastDict0
+   317: 00000000004d6164   176 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_loadDictDecompress
+   318: 00000000004d6628    32 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_setCompressionWindowLog
+   319: 00000000004d66c8    32 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_setCompressionTargetLength
+   320: 00000000004d67bc     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_windowLogMax
+   321: 00000000004d3acc   408 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_decompressFastDict0
+   322: 00000000004d4088    24 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdCompressCtx_setChecksum0
+   323: 00000000004d5d9c   120 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_getDictIdFromFrameBuffer
+   324: 00000000004d6800     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_blockSizeMax
+   325: 00000000004d3788   244 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdDictCompress_initDirect
+   326: 00000000004d38b0   256 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdDictDecompress_init
+   327: 00000000004d3f34   312 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_decompressDirectByteBufferFastDict0
+   328: 00000000004d40d0   104 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdCompressCtx_loadCDictFast0
+   329: 00000000004d5c80   148 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_findDirectByteBufferFrameCompressedSize
+   330: 00000000004d67d4     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_hashLogMin
+   331: 00000000004d6838     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_errFrameParameterUnsupported
+   332: 00000000004d66a8    32 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_setCompressionMinMatch
+   333: 00000000004d2e68     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_freeCStream
+   334: 00000000004d40a0    24 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdCompressCtx_setContentSize0
+   335: 00000000004d6898     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_errStageWrong
+   336: 00000000004d68a8     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_errMemoryAllocation
+   337: 00000000004d5334   208 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdOutputStreamNoFinalizer_endStream
+   338: 00000000004d5e14   136 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_getDictIdFromDict
+   339: 00000000004d64b0    12 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_getStubSequenceProducer
+   340: 00000000004d6818     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_errNoError
+   341: 00000000004d6830     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_errVersionUnsupported
+   342: 00000000004d3478     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdDirectBufferDecompressingStreamNoFinalizer_freeDStreamNative
+   343: 00000000004d3dfc   312 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_compressDirectByteBufferFastDict0
+   344: 00000000004d40b8    24 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdCompressCtx_setDictID0
+   345: 00000000004d5b20   196 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_getFrameContentSize0
+   346: 00000000004d67dc     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_hashLogMax
+   347: 00000000004d67f4    12 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_magicNumber
+   348: 00000000004d33a0   208 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_flushStream
+   349: 00000000004d2e60     4 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_recommendedCOutSize
+   350: 00000000004d54d4   736 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_trainFromBuffer0
+   351: 00000000004d6794    32 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_setEnableLongDistanceMatching
+   352: 00000000004d6848     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_errCorruptionDetected
+   353: 00000000004d42cc   340 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdCompressCtx_compressDirectByteBufferStream0
+   354: 00000000004d4824    12 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdDecompressCtx_reset0
+   355: 00000000004d5104     4 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdOutputStreamNoFinalizer_recommendedCOutSize
+   356: 00000000004d51c8   364 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdOutputStreamNoFinalizer_compressStream
+   357: 00000000004d64a4    12 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_getBuiltinSequenceProducer
+   358: 00000000004d64cc    36 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_setCompressionChecksums
+   359: 00000000004d3050   288 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_initCStreamWithFastDict
+   360: 00000000004d3480   160 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdDirectBufferDecompressingStreamNoFinalizer_initDStreamNative
+   361: 00000000004d6114    52 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_getErrorName
+   362: 00000000004d6364   160 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_loadFastDictCompress
+   363: 00000000004d68a0     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_errInitMissing
+   364: 00000000004d2e70   168 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_initCStream
+   365: 00000000004d6584    32 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_setDecompressionLongMax
+   366: 00000000004d42b4    24 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdCompressCtx_setPledgedSrcSize0
+   367: 00000000004d4420   332 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdCompressCtx_compressDirectByteBuffer0
+   368: 00000000004d4c34   324 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdDecompressCtx_decompressByteArrayToDirectByteBuffer0
+   369: 00000000004d6148    28 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_getErrorCode
+   370: 00000000004d6774    32 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_setSearchForExternalRepcodes
+   371: 00000000004d67e4     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_searchLogMin
+   372: 00000000004d6870     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_errParameterUnsupported
+   373: 00000000004d4984   332 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdDecompressCtx_decompressDirectByteBuffer0
+   374: 00000000004d5108     4 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdOutputStreamNoFinalizer_createCStream
+   375: 00000000004d64bc    16 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_registerSequenceProducer
+   376: 00000000004d64f0    36 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_setCompressionMagicless
+   377: 00000000004d68b8     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_errDstSizeTooSmall
+   378: 00000000004d6850     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_errChecksumWrong
+   379: 00000000004d6858     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_errDictionaryCorrupted
+   380: 00000000004d2ca0   448 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdBufferDecompressingStreamNoFinalizer_decompressStreamNative
+   381: 00000000004d46e4   104 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdDecompressCtx_loadDDictFast0
+   382: 00000000004d474c   216 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdDecompressCtx_loadDDict0
+   383: 00000000004d4d78   324 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdDecompressCtx_decompressDirectByteBufferToByteArray0
+   384: 00000000004d6860     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_errDictionaryWrong
+   385: 00000000004d4830   340 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdDecompressCtx_decompressDirectByteBufferStream0
+   386: 00000000004d4f74   400 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdInputStreamNoFinalizer_decompressStream
+   387: 00000000004d57b4   508 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_trainFromBufferDirect0
+   388: 00000000004d6708    36 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_setRefMultipleDDicts
+   389: 00000000004d67c4     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_chainLogMin
+   390: 00000000004d67ec     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_searchLogMax
+   391: 00000000004d4070     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdCompressCtx_free
+   392: 00000000004d32d0   208 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream
+   393: 00000000004d5124   164 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_ZstdOutputStreamNoFinalizer_resetCStream
+   394: 00000000004d5d14   136 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_getDictIdFromFrame
+   395: 00000000004d68b0     8 FUNC    GLOBAL DEFAULT   15 Java_com_github_luben_zstd_Zstd_errWorkSpaceTooSmall

@@ -1,0 +1,11 @@
+package androidx.p616lifecycle;
+
+import kotlin.Metadata;
+
+/* JADX INFO: renamed from: androidx.lifecycle.e0 */
+/* JADX INFO: loaded from: classes.dex */
+@Metadata(m31664d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0003\bæ\u0080\u0001\u0018\u0000*\u0004\b\u0000\u0010\u00012\u00020\u0002J\u0017\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00028\u0000H&¢\u0006\u0004\b\u0005\u0010\u0006ø\u0001\u0000\u0082\u0002\u0006\n\u0004\b!0\u0001¨\u0006\u0007À\u0006\u0001"}, m31665d2 = {"Landroidx/lifecycle/e0;", "T", "", "value", "", "a", "(Ljava/lang/Object;)V", "lifecycle-livedata-core"}, m31666k = 1, m31667mv = {2, 0, 0}, m31669xi = 48)
+public interface InterfaceC0952e0<T> {
+    /* JADX INFO: renamed from: a */
+    void mo4884a(T value);
+}

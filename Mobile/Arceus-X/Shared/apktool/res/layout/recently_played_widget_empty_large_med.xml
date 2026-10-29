@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/empty_state" android:background="@color/widget_surface_container" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/widget_primary_text" android:id="@id/title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Widgets_RecentlyPlayed_Label_WidgetGalleryTitle" android:layout_alignParentTop="true" android:fontFamily="sans-serif-medium" android:layout_alignParentStart="true" />
+    <ImageView android:id="@id/roblox_logo" android:layout_width="@dimen/recently_played_widget_roblox_icon_size" android:layout_height="@dimen/recently_played_widget_roblox_icon_size" android:src="@drawable/roblox_logo_widget" android:layout_alignParentTop="true" android:importantForAccessibility="no" android:layout_alignParentEnd="true" />
+    <TextView android:textSize="12.0sp" android:textColor="@color/widget_primary_text" android:id="@id/subtitle_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dp" android:text="@string/Widgets_RecentlyPlayed_Description_NoExperiences" android:layout_below="@id/title_text" android:fontFamily="sans-serif-medium" />
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/subtitle_text" android:layout_alignParentBottom="true">
+        <ImageView android:layout_gravity="center" android:id="@id/empty_icon_large" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/widget_empty_icon" android:importantForAccessibility="no" />
+    </FrameLayout>
+</RelativeLayout>

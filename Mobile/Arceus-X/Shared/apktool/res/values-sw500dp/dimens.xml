@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="alertIconHeight">35.0dp</dimen>
+    <dimen name="captchaScreenWidth">400.0dp</dimen>
+    <dimen name="mainToolbarNavigationWidth">72.0dp</dimen>
+    <dimen name="morePageListPaddingLeft">40.0dp</dimen>
+    <dimen name="morePageListPaddingRight">40.0dp</dimen>
+    <dimen name="morePageSquareSide">150.0dp</dimen>
+    <dimen name="rbxEditTextHint">16.0sp</dimen>
+    <dimen name="settingsAlertIconLeftMargin">7.0dp</dimen>
+    <dimen name="textSizeCreateUsernameChoose">22.0sp</dimen>
+    <dimen name="textSizeCreateUsernameHeader">25.0sp</dimen>
+    <dimen name="textSizeLoginFinePrint">19.0sp</dimen>
+    <dimen name="textSizeSignupHeader">23.0sp</dimen>
+    <dimen name="textSizeSignupLogin">17.0sp</dimen>
+</resources>

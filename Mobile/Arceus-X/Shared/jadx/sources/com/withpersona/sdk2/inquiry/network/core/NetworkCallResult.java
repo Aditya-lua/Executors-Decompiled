@@ -1,0 +1,51 @@
+package com.withpersona.sdk2.inquiry.network.core;
+
+import kotlin.jvm.internal.DefaultConstructorMarker;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+/* JADX INFO: loaded from: classes3.dex */
+public abstract class NetworkCallResult<T> {
+
+    public static final class Failure<T> extends NetworkCallResult<T> {
+
+        @NotNull
+        private final InternalErrorInfo.NetworkErrorInfo networkErrorInfo;
+
+        public Failure(@NotNull InternalErrorInfo.NetworkErrorInfo networkErrorInfo) {
+            super(null);
+            this.networkErrorInfo = networkErrorInfo;
+        }
+
+        @NotNull
+        public final InternalErrorInfo.NetworkErrorInfo getNetworkErrorInfo() {
+            return this.networkErrorInfo;
+        }
+    }
+
+    public static final class Success<T> extends NetworkCallResult<T> {
+
+        @Nullable
+        private final T response;
+
+        public Success(@Nullable T t8) {
+            super(null);
+            this.response = t8;
+        }
+
+        @Nullable
+        public final T getResponse() {
+            return this.response;
+        }
+    }
+
+    /* JADX DEBUG: Can't inline method, not implemented redirect type for insn: 0x0000: CONSTRUCTOR  A[MD:():void (m)] (LINE:1) call: com.withpersona.sdk2.inquiry.network.core.NetworkCallResult.<init>():void type: THIS */
+    /* JADX DEBUG: Don't trust debug lines info. Lines numbers was adjusted: min line is 1 */
+    public /* synthetic */ NetworkCallResult(DefaultConstructorMarker defaultConstructorMarker) {
+        this();
+    }
+
+    /* JADX DEBUG: Don't trust debug lines info. Lines numbers was adjusted: min line is 2 */
+    private NetworkCallResult() {
+    }
+}

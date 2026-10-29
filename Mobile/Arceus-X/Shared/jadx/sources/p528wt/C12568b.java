@@ -1,0 +1,9 @@
+package p528wt;
+
+import kotlin.Metadata;
+
+/* JADX INFO: renamed from: wt.b */
+/* JADX INFO: loaded from: classes2.dex */
+@Metadata(m31664d1 = {"\u0000\u0002\n\u0000¨\u0006\u0000"}, m31665d2 = {"kotlin-stdlib-jdk7"}, m31666k = 5, m31667mv = {2, 2, 0}, m31669xi = 49, m31670xs = "kotlin/io/path/PathsKt")
+public class C12568b extends C12567a {
+}

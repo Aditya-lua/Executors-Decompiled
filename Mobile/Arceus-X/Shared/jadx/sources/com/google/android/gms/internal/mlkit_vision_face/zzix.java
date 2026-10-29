@@ -1,0 +1,138 @@
+package com.google.android.gms.internal.mlkit_vision_face;
+
+import p433sf.InterfaceC11291a;
+import p433sf.InterfaceC11292b;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class zzix implements InterfaceC11291a {
+    public static final InterfaceC11291a zza = new zzix();
+
+    private zzix() {
+    }
+
+    @Override // p433sf.InterfaceC11291a
+    public final void configure(InterfaceC11292b interfaceC11292b) {
+        interfaceC11292b.registerEncoder(zzkw.class, zzgq.zza);
+        interfaceC11292b.registerEncoder(zzmv.class, zzip.zza);
+        interfaceC11292b.registerEncoder(zzkx.class, zzgr.zza);
+        interfaceC11292b.registerEncoder(zzla.class, zzgt.zza);
+        interfaceC11292b.registerEncoder(zzky.class, zzgs.zza);
+        interfaceC11292b.registerEncoder(zzkz.class, zzgu.zza);
+        interfaceC11292b.registerEncoder(zzjr.class, zzfz.zza);
+        interfaceC11292b.registerEncoder(zzjq.class, zzfy.zza);
+        interfaceC11292b.registerEncoder(zzkl.class, zzgj.zza);
+        interfaceC11292b.registerEncoder(zzmp.class, zzih.zza);
+        interfaceC11292b.registerEncoder(zzjp.class, zzfx.zza);
+        interfaceC11292b.registerEncoder(zzjo.class, zzfw.zza);
+        interfaceC11292b.registerEncoder(zzll.class, zzhf.zza);
+        interfaceC11292b.registerEncoder(zznn.class, zzgf.zza);
+        interfaceC11292b.registerEncoder(zzkh.class, zzgh.zza);
+        interfaceC11292b.registerEncoder(zzkd.class, zzge.zza);
+        interfaceC11292b.registerEncoder(zzlo.class, zzhg.zza);
+        interfaceC11292b.registerEncoder(zzmm.class, zzie.zza);
+        interfaceC11292b.registerEncoder(zzmn.class, zzif.zza);
+        interfaceC11292b.registerEncoder(zzml.class, zzid.zza);
+        interfaceC11292b.registerEncoder(zzle.class, zzha.zza);
+        interfaceC11292b.registerEncoder(zznm.class, zzfg.zza);
+        interfaceC11292b.registerEncoder(zzlf.class, zzhb.zza);
+        interfaceC11292b.registerEncoder(zzlp.class, zzhh.zza);
+        interfaceC11292b.registerEncoder(zzls.class, zzhk.zza);
+        interfaceC11292b.registerEncoder(zzlr.class, zzhj.zza);
+        interfaceC11292b.registerEncoder(zzlq.class, zzhi.zza);
+        interfaceC11292b.registerEncoder(zzlx.class, zzhp.zza);
+        interfaceC11292b.registerEncoder(zzly.class, zzhq.zza);
+        interfaceC11292b.registerEncoder(zzma.class, zzhs.zza);
+        interfaceC11292b.registerEncoder(zzlz.class, zzhr.zza);
+        interfaceC11292b.registerEncoder(zzld.class, zzgz.zza);
+        interfaceC11292b.registerEncoder(zzmb.class, zzht.zza);
+        interfaceC11292b.registerEncoder(zzmc.class, zzhu.zza);
+        interfaceC11292b.registerEncoder(zzmd.class, zzhv.zza);
+        interfaceC11292b.registerEncoder(zzme.class, zzhw.zza);
+        interfaceC11292b.registerEncoder(zzmk.class, zzib.zza);
+        interfaceC11292b.registerEncoder(zzmj.class, zzic.zza);
+        interfaceC11292b.registerEncoder(zzlw.class, zzhl.zza);
+        interfaceC11292b.registerEncoder(zzkp.class, zzgo.zza);
+        interfaceC11292b.registerEncoder(zzlu.class, zzhn.zza);
+        interfaceC11292b.registerEncoder(zzlt.class, zzhm.zza);
+        interfaceC11292b.registerEncoder(zzlv.class, zzho.zza);
+        interfaceC11292b.registerEncoder(zzmo.class, zzig.zza);
+        interfaceC11292b.registerEncoder(zzmz.class, zzit.zza);
+        interfaceC11292b.registerEncoder(zzjd.class, zzfl.zza);
+        interfaceC11292b.registerEncoder(zzjb.class, zzfj.zza);
+        interfaceC11292b.registerEncoder(zzja.class, zzfi.zza);
+        interfaceC11292b.registerEncoder(zzjc.class, zzfk.zza);
+        interfaceC11292b.registerEncoder(zzjf.class, zzfn.zza);
+        interfaceC11292b.registerEncoder(zzje.class, zzfm.zza);
+        interfaceC11292b.registerEncoder(zzjg.class, zzfo.zza);
+        interfaceC11292b.registerEncoder(zzjh.class, zzfp.zza);
+        interfaceC11292b.registerEncoder(zzji.class, zzfq.zza);
+        interfaceC11292b.registerEncoder(zzjj.class, zzfr.zza);
+        interfaceC11292b.registerEncoder(zzjk.class, zzfs.zza);
+        interfaceC11292b.registerEncoder(zzec.class, zzfc.zza);
+        interfaceC11292b.registerEncoder(zzee.class, zzfe.zza);
+        interfaceC11292b.registerEncoder(zzed.class, zzfd.zza);
+        interfaceC11292b.registerEncoder(zzkn.class, zzgm.zza);
+        interfaceC11292b.registerEncoder(zzjs.class, zzga.zza);
+        interfaceC11292b.registerEncoder(zzdd.class, zzeg.zza);
+        interfaceC11292b.registerEncoder(zzdc.class, zzeh.zza);
+        interfaceC11292b.registerEncoder(zzjv.class, zzgc.zza);
+        interfaceC11292b.registerEncoder(zzdf.class, zzei.zza);
+        interfaceC11292b.registerEncoder(zzde.class, zzej.zza);
+        interfaceC11292b.registerEncoder(zzdp.class, zzeo.zza);
+        interfaceC11292b.registerEncoder(zzdn.class, zzep.zza);
+        interfaceC11292b.registerEncoder(zzdh.class, zzek.zza);
+        interfaceC11292b.registerEncoder(zzdg.class, zzel.zza);
+        interfaceC11292b.registerEncoder(zzdr.class, zzeq.zza);
+        interfaceC11292b.registerEncoder(zzdq.class, zzer.zza);
+        interfaceC11292b.registerEncoder(zzdt.class, zzes.zza);
+        interfaceC11292b.registerEncoder(zzds.class, zzet.zza);
+        interfaceC11292b.registerEncoder(zzeb.class, zzfa.zza);
+        interfaceC11292b.registerEncoder(zzea.class, zzfb.zza);
+        interfaceC11292b.registerEncoder(zzdv.class, zzeu.zza);
+        interfaceC11292b.registerEncoder(zzdu.class, zzev.zza);
+        interfaceC11292b.registerEncoder(zzdx.class, zzew.zza);
+        interfaceC11292b.registerEncoder(zzdw.class, zzex.zza);
+        interfaceC11292b.registerEncoder(zznh.class, zzik.zza);
+        interfaceC11292b.registerEncoder(zzna.class, zzgb.zza);
+        interfaceC11292b.registerEncoder(zzne.class, zzgy.zza);
+        interfaceC11292b.registerEncoder(zznd.class, zzgx.zza);
+        interfaceC11292b.registerEncoder(zznb.class, zzgg.zza);
+        interfaceC11292b.registerEncoder(zzng.class, zzij.zza);
+        interfaceC11292b.registerEncoder(zznf.class, zzii.zza);
+        interfaceC11292b.registerEncoder(zzni.class, zzil.zza);
+        interfaceC11292b.registerEncoder(zznc.class, zzgk.zza);
+        interfaceC11292b.registerEncoder(zznl.class, zziv.zza);
+        interfaceC11292b.registerEncoder(zznk.class, zziw.zza);
+        interfaceC11292b.registerEncoder(zznj.class, zziu.zza);
+        interfaceC11292b.registerEncoder(zzmq.class, zzim.zza);
+        interfaceC11292b.registerEncoder(zzkm.class, zzgl.zza);
+        interfaceC11292b.registerEncoder(zzkq.class, zzgp.zza);
+        interfaceC11292b.registerEncoder(zziz.class, zzfh.zza);
+        interfaceC11292b.registerEncoder(zzki.class, zzgi.zza);
+        interfaceC11292b.registerEncoder(zzko.class, zzgn.zza);
+        interfaceC11292b.registerEncoder(zzjw.class, zzgd.zza);
+        interfaceC11292b.registerEncoder(zzlc.class, zzgw.zza);
+        interfaceC11292b.registerEncoder(zzlb.class, zzgv.zza);
+        interfaceC11292b.registerEncoder(zzdb.class, zzef.zza);
+        interfaceC11292b.registerEncoder(zzmw.class, zziq.zza);
+        interfaceC11292b.registerEncoder(zzmy.class, zzis.zza);
+        interfaceC11292b.registerEncoder(zzmx.class, zzir.zza);
+        interfaceC11292b.registerEncoder(zziy.class, zzff.zza);
+        interfaceC11292b.registerEncoder(zzjn.class, zzfv.zza);
+        interfaceC11292b.registerEncoder(zzjm.class, zzfu.zza);
+        interfaceC11292b.registerEncoder(zzjl.class, zzft.zza);
+        interfaceC11292b.registerEncoder(zzlg.class, zzhc.zza);
+        interfaceC11292b.registerEncoder(zzli.class, zzhe.zza);
+        interfaceC11292b.registerEncoder(zzlh.class, zzhd.zza);
+        interfaceC11292b.registerEncoder(zzdj.class, zzem.zza);
+        interfaceC11292b.registerEncoder(zzdi.class, zzen.zza);
+        interfaceC11292b.registerEncoder(zzmf.class, zzhx.zza);
+        interfaceC11292b.registerEncoder(zzmi.class, zzia.zza);
+        interfaceC11292b.registerEncoder(zzmg.class, zzhy.zza);
+        interfaceC11292b.registerEncoder(zzmh.class, zzhz.zza);
+        interfaceC11292b.registerEncoder(zzdz.class, zzey.zza);
+        interfaceC11292b.registerEncoder(zzdy.class, zzez.zza);
+        interfaceC11292b.registerEncoder(zzms.class, zzio.zza);
+        interfaceC11292b.registerEncoder(zzmr.class, zzin.zza);
+    }
+}

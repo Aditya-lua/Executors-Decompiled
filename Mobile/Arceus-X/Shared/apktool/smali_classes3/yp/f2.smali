@@ -1,0 +1,54 @@
+.class public final synthetic Lyp/f2;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function0;
+
+
+# instance fields
+.field public final synthetic a:Lym/k$a;
+
+.field public final synthetic b:Lcom/withpersona/sdk2/inquiry/selfie/SelfieWorkflow;
+
+.field public final synthetic c:Lcom/withpersona/sdk2/inquiry/selfie/SelfieWorkflow$Input;
+
+.field public final synthetic d:Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$ReviewCaptures;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lym/k$a;Lcom/withpersona/sdk2/inquiry/selfie/SelfieWorkflow;Lcom/withpersona/sdk2/inquiry/selfie/SelfieWorkflow$Input;Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$ReviewCaptures;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lyp/f2;->a:Lym/k$a;
+
+    iput-object p2, p0, Lyp/f2;->b:Lcom/withpersona/sdk2/inquiry/selfie/SelfieWorkflow;
+
+    iput-object p3, p0, Lyp/f2;->c:Lcom/withpersona/sdk2/inquiry/selfie/SelfieWorkflow$Input;
+
+    iput-object p4, p0, Lyp/f2;->d:Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$ReviewCaptures;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
+
+    iget-object v0, p0, Lyp/f2;->a:Lym/k$a;
+
+    iget-object v1, p0, Lyp/f2;->b:Lcom/withpersona/sdk2/inquiry/selfie/SelfieWorkflow;
+
+    iget-object v2, p0, Lyp/f2;->c:Lcom/withpersona/sdk2/inquiry/selfie/SelfieWorkflow$Input;
+
+    iget-object v3, p0, Lyp/f2;->d:Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$ReviewCaptures;
+
+    invoke-static {v0, v1, v2, v3}, Lcom/withpersona/sdk2/inquiry/selfie/SelfieWorkflow;->k1(Lym/k$a;Lcom/withpersona/sdk2/inquiry/selfie/SelfieWorkflow;Lcom/withpersona/sdk2/inquiry/selfie/SelfieWorkflow$Input;Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$ReviewCaptures;)Lkotlin/Unit;
+
+    move-result-object v0
+
+    return-object v0
+.end method

@@ -1,0 +1,119 @@
+package com.withpersona.sdk2.inquiry.steps.p056ui.components;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+import com.withpersona.sdk2.inquiry.network.dto.p054ui.components.Text;
+import kotlin.Metadata;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+import kotlin.jvm.internal.Intrinsics;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+/* JADX INFO: loaded from: classes3.dex */
+@Metadata(m31664d1 = {"\u00006\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\b\u0005\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\t\b\u0087\b\u0018\u00002\u00020\u0001B#\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0004\u001a\u00020\u0002\u0012\n\b\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u0002¢\u0006\u0004\b\u0006\u0010\u0007J\r\u0010\t\u001a\u00020\b¢\u0006\u0004\b\t\u0010\nJ\u001d\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\f\u001a\u00020\u000b2\u0006\u0010\r\u001a\u00020\b¢\u0006\u0004\b\u000f\u0010\u0010J\u0010\u0010\u0011\u001a\u00020\u0002HÖ\u0001¢\u0006\u0004\b\u0011\u0010\u0012J\u0010\u0010\u0013\u001a\u00020\bHÖ\u0001¢\u0006\u0004\b\u0013\u0010\nJ\u001a\u0010\u0017\u001a\u00020\u00162\b\u0010\u0015\u001a\u0004\u0018\u00010\u0014HÖ\u0003¢\u0006\u0004\b\u0017\u0010\u0018R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0019\u0010\u001a\u001a\u0004\b\u001b\u0010\u0012R\u0017\u0010\u0004\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u001c\u0010\u001a\u001a\u0004\b\u001d\u0010\u0012R\u0019\u0010\u0005\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b\u001e\u0010\u001a\u001a\u0004\b\u0019\u0010\u0012¨\u0006\u001f"}, m31665d2 = {"Lcom/withpersona/sdk2/inquiry/steps/ui/components/Option;", "Landroid/os/Parcelable;", "", Text.type, "value", "leadingImageUrl", "<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "toString", "()Ljava/lang/String;", "hashCode", "", "other", "", "equals", "(Ljava/lang/Object;)Z", "a", "Ljava/lang/String;", "getText", "b", "f", "c", "ui-step-renderer_release"}, m31666k = 1, m31667mv = {2, 2, 0}, m31669xi = 48)
+public final /* data */ class Option implements Parcelable {
+
+    @NotNull
+    public static final Parcelable.Creator<Option> CREATOR = new C4074a();
+
+    /* JADX INFO: renamed from: a, reason: from kotlin metadata and from toString */
+    @NotNull
+    public final String text;
+
+    /* JADX INFO: renamed from: b, reason: from kotlin metadata and from toString */
+    @NotNull
+    public final String value;
+
+    /* JADX INFO: renamed from: c, reason: from kotlin metadata and from toString */
+    @Nullable
+    public final String leadingImageUrl;
+
+    /* JADX INFO: renamed from: com.withpersona.sdk2.inquiry.steps.ui.components.Option$a */
+    @Metadata(m31666k = 3, m31667mv = {2, 2, 0}, m31669xi = 48)
+    public static final class C4074a implements Parcelable.Creator<Option> {
+        /* JADX DEBUG: Method merged with bridge method: createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object; */
+        @Override // android.os.Parcelable.Creator
+        /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
+        public final Option createFromParcel(Parcel parcel) {
+            Intrinsics.checkNotNullParameter(parcel, "parcel");
+            return new Option(parcel.readString(), parcel.readString(), parcel.readString());
+        }
+
+        /* JADX DEBUG: Method merged with bridge method: newArray(I)[Ljava/lang/Object; */
+        @Override // android.os.Parcelable.Creator
+        /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+        public final Option[] newArray(int i10) {
+            return new Option[i10];
+        }
+    }
+
+    /* JADX DEBUG: Don't trust debug lines info. Lines numbers was adjusted: min line is 1 */
+    public Option(@NotNull String text, @NotNull String value, @Nullable String str) {
+        Intrinsics.checkNotNullParameter(text, "text");
+        Intrinsics.checkNotNullParameter(value, "value");
+        this.text = text;
+        this.value = value;
+        this.leadingImageUrl = str;
+    }
+
+    @Nullable
+    /* JADX INFO: renamed from: a, reason: from getter */
+    public final String getLeadingImageUrl() {
+        return this.leadingImageUrl;
+    }
+
+    @Override // android.os.Parcelable
+    public final int describeContents() {
+        return 0;
+    }
+
+    public boolean equals(@Nullable Object other) {
+        if (this == other) {
+            return true;
+        }
+        if (!(other instanceof Option)) {
+            return false;
+        }
+        Option option = (Option) other;
+        return Intrinsics.m31980c(this.text, option.text) && Intrinsics.m31980c(this.value, option.value) && Intrinsics.m31980c(this.leadingImageUrl, option.leadingImageUrl);
+    }
+
+    @NotNull
+    /* JADX INFO: renamed from: f, reason: from getter */
+    public final String getValue() {
+        return this.value;
+    }
+
+    @NotNull
+    public final String getText() {
+        return this.text;
+    }
+
+    public int hashCode() {
+        int iHashCode = ((this.text.hashCode() * 31) + this.value.hashCode()) * 31;
+        String str = this.leadingImageUrl;
+        return iHashCode + (str == null ? 0 : str.hashCode());
+    }
+
+    @NotNull
+    public String toString() {
+        return "Option(text=" + this.text + ", value=" + this.value + ", leadingImageUrl=" + this.leadingImageUrl + ")";
+    }
+
+    @Override // android.os.Parcelable
+    public final void writeToParcel(@NotNull Parcel dest, int flags) {
+        Intrinsics.checkNotNullParameter(dest, "dest");
+        dest.writeString(this.text);
+        dest.writeString(this.value);
+        dest.writeString(this.leadingImageUrl);
+    }
+
+    /* JADX DEBUG: Can't inline method, not implemented redirect type for insn: 0x0005: CONSTRUCTOR 
+      (r1v0 java.lang.String)
+      (r2v0 java.lang.String)
+      (wrap java.lang.String:?: TERNARY null = ((wrap int:0x0000: ARITH (r4v0 int) & (4 int) A[WRAPPED]) != (0 int)) ? (null java.lang.String) : (r3v0 java.lang.String))
+     A[MD:(java.lang.String, java.lang.String, java.lang.String):void (m)] (LINE:5) call: com.withpersona.sdk2.inquiry.steps.ui.components.Option.<init>(java.lang.String, java.lang.String, java.lang.String):void type: THIS */
+    public /* synthetic */ Option(String str, String str2, String str3, int i10, DefaultConstructorMarker defaultConstructorMarker) {
+        this(str, str2, (i10 & 4) != 0 ? null : str3);
+    }
+}

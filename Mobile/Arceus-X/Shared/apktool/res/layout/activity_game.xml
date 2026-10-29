@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/loading_layout" android:background="@color/activityBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/roblox_logo" android:contentDescription="@string/CommonUI_Messages_Label_Roblox" />
+        <com.roblox.client.components.LoadingBar android:layout_gravity="center|bottom" android:orientation="horizontal" android:id="@id/loading_progress_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="30.0dp" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/keyboard_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.roblox.client.RbxKeyboard android:layout_gravity="top" android:id="@id/rbx_edit_text" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="36.0dp" android:ems="10" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/web_overlay_layout" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <ViewStub android:id="@id/google_ads_view_stub" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" />
+</FrameLayout>

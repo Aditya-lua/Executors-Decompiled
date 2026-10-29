@@ -1,0 +1,54 @@
+package ro;
+
+import android.content.Context;
+import com.withpersona.sdk2.camera.C3405e;
+import com.withpersona.sdk2.inquiry.tracking.TrackingEventsLogger;
+import hn.C6434c;
+import p136ft.InterfaceC5830d;
+import p136ft.InterfaceC5835i;
+import p475uq.C11930a;
+
+/* JADX INFO: renamed from: ro.w0 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C10992w0 implements InterfaceC5830d<C10990v0> {
+
+    /* JADX INFO: renamed from: a */
+    public final InterfaceC5835i<Context> f38895a;
+
+    /* JADX INFO: renamed from: b */
+    public final InterfaceC5835i<C3405e.a> f38896b;
+
+    /* JADX INFO: renamed from: c */
+    public final InterfaceC5835i<C6434c.a> f38897c;
+
+    /* JADX INFO: renamed from: d */
+    public final InterfaceC5835i<C11930a> f38898d;
+
+    /* JADX INFO: renamed from: e */
+    public final InterfaceC5835i<TrackingEventsLogger> f38899e;
+
+    public C10992w0(InterfaceC5835i<Context> interfaceC5835i, InterfaceC5835i<C3405e.a> interfaceC5835i2, InterfaceC5835i<C6434c.a> interfaceC5835i3, InterfaceC5835i<C11930a> interfaceC5835i4, InterfaceC5835i<TrackingEventsLogger> interfaceC5835i5) {
+        this.f38895a = interfaceC5835i;
+        this.f38896b = interfaceC5835i2;
+        this.f38897c = interfaceC5835i3;
+        this.f38898d = interfaceC5835i4;
+        this.f38899e = interfaceC5835i5;
+    }
+
+    /* JADX INFO: renamed from: a */
+    public static C10992w0 m41673a(InterfaceC5835i<Context> interfaceC5835i, InterfaceC5835i<C3405e.a> interfaceC5835i2, InterfaceC5835i<C6434c.a> interfaceC5835i3, InterfaceC5835i<C11930a> interfaceC5835i4, InterfaceC5835i<TrackingEventsLogger> interfaceC5835i5) {
+        return new C10992w0(interfaceC5835i, interfaceC5835i2, interfaceC5835i3, interfaceC5835i4, interfaceC5835i5);
+    }
+
+    /* JADX INFO: renamed from: c */
+    public static C10990v0 m41674c(Context context, C3405e.a aVar, C6434c.a aVar2, C11930a c11930a, TrackingEventsLogger trackingEventsLogger) {
+        return new C10990v0(context, aVar, aVar2, c11930a, trackingEventsLogger);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method: get()Ljava/lang/Object; */
+    @Override // ht.InterfaceC6564a
+    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+    public C10990v0 get() {
+        return m41674c(this.f38895a.get(), this.f38896b.get(), this.f38897c.get(), this.f38898d.get(), this.f38899e.get());
+    }
+}

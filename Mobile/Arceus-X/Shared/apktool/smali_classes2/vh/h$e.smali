@@ -1,0 +1,84 @@
+.class public Lvh/h$e;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ldk/d;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lvh/h;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "e"
+.end annotation
+
+
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lsg/j0;->m:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v0
+
+    iput v0, p0, Lvh/h$e;->a:I
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    sget v0, Lsg/j0;->f:I
+
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result p1
+
+    iput p1, p0, Lvh/h$e;->b:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Lol/a;)I
+    .locals 1
+
+    sget-object v0, Lvh/h$b;->a:[I
+
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p1
+
+    aget p1, v0, p1
+
+    const/4 v0, 0x1
+
+    if-eq p1, v0, :cond_0
+
+    iget p1, p0, Lvh/h$e;->a:I
+
+    return p1
+
+    :cond_0
+    iget p1, p0, Lvh/h$e;->b:I
+
+    return p1
+.end method

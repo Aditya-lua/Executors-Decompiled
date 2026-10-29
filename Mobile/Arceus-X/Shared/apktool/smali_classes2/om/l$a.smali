@@ -1,0 +1,40 @@
+.class public Lom/l$a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lom/l;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "a"
+.end annotation
+
+
+# static fields
+.field public static final a:Lom/l;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lom/l;
+
+    invoke-direct {v0}, Lom/l;-><init>()V
+
+    sput-object v0, Lom/l$a;->a:Lom/l;
+
+    return-void
+.end method
+
+.method public static bridge synthetic a()Lom/l;
+    .locals 1
+
+    sget-object v0, Lom/l$a;->a:Lom/l;
+
+    return-object v0
+.end method

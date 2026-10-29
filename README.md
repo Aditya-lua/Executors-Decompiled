@@ -11,6 +11,7 @@ repositories.
 
 | Platform | Executor | Contents |
 | --- | --- | --- |
+| Mobile | [`Arceus X`](Mobile/Arceus-X/) | Android V5/NEO Java, smali, resources, and protected native-payload reconstruction |
 | Mobile | [`Delta`](Mobile/Delta/) | Android and iOS decompilation/reconstruction workspaces |
 | PC | [`Codex`](PC/Codex/) | Recovered Windows managed projects, web runtime, and native pseudocode |
 | PC | [`Madius`](PC/Madius/) | Windows updater analysis and recovered native pseudocode |
@@ -20,6 +21,10 @@ repositories.
 ```text
 Executors-Decompiled/
 ├── Mobile/
+│   ├── Arceus-X/
+│   │   ├── NEO/
+│   │   ├── V5/
+│   │   └── Shared/
 │   └── Delta/
 │       ├── android/
 │       └── iOS/

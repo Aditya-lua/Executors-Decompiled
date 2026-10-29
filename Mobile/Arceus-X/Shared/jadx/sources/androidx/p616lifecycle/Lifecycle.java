@@ -1,0 +1,40 @@
+package androidx.p616lifecycle;
+
+import androidx.annotation.MainThread;
+import androidx.annotation.NonNull;
+
+/* JADX INFO: loaded from: classes4.dex */
+public abstract class Lifecycle {
+
+    public enum Event {
+        ON_CREATE,
+        ON_START,
+        ON_RESUME,
+        ON_PAUSE,
+        ON_STOP,
+        ON_DESTROY,
+        ON_ANY
+    }
+
+    @MainThread
+    public abstract void addObserver(@NonNull LifecycleObserver lifecycleObserver);
+
+    @NonNull
+    @MainThread
+    public abstract State getCurrentState();
+
+    @MainThread
+    public abstract void removeObserver(@NonNull LifecycleObserver lifecycleObserver);
+
+    public enum State {
+        DESTROYED,
+        INITIALIZED,
+        CREATED,
+        STARTED,
+        RESUMED;
+
+        public boolean isAtLeast(@NonNull State state) {
+            return compareTo(state) >= 0;
+        }
+    }
+}

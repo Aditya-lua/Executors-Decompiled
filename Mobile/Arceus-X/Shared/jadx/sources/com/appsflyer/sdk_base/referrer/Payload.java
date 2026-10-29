@@ -1,0 +1,55 @@
+package com.appsflyer.sdk_base.referrer;
+
+/* JADX INFO: loaded from: classes.dex */
+public interface Payload {
+    public static final String API = "api_ver";
+    public static final String API_NAME = "api_ver_name";
+    public static final String ATTR_TYPE = "attr_type";
+    public static final String CAMPAIGN_ID = "campaign_id";
+    public static final String CLICK_SERVER_TS = "click_server_ts";
+    public static final String CLICK_TS = "click_ts";
+    public static final String COUNTRY = "country";
+    public static final String CUSTOM = "custom";
+    public static final String DEVICE_MODEL = "device_model";
+    public static final String GOOGLE_CUSTOM = "google_custom";
+    public static final String HUAWEI_CUSTOM = "huawei_custom";
+    public static final String HUAWEI_RFR_EX = "referrer_ex";
+    public static final String HUAWEI_TRACK_ID = "track_id";
+    public static final String INSTALL_BEGIN_SERVER_TS = "install_begin_server_ts";
+    public static final String INSTALL_BEGIN_TS = "install_begin_ts";
+    public static final String INSTALL_END_TS = "install_end_ts";
+    public static final String INSTALL_VERSION = "install_version";
+    public static final String INSTANT = "instant";
+    public static final String LATENCY = "latency";
+    public static final String MAPS_ID = "maps_id";
+    public static final String META_CUSTOM = "meta_custom";
+    public static final String META_IS_CLICK_THROUGH_CUSTOM_KEY = "is_ct";
+    public static final String ORGANIC_KEYWORDS = "organic_keywords";
+    public static final String RESPONSE = "response";
+    public static final String RESPONSE_DEVELOPER_ERROR = "DEVELOPER_ERROR";
+    public static final String RESPONSE_FEATURE_NOT_SUPPORTED = "FEATURE_NOT_SUPPORTED";
+    public static final String RESPONSE_OK = "OK";
+    public static final String RESPONSE_PERMISSION_ERROR = "PERMISSION_ERROR";
+    public static final String RESPONSE_SERVICE_DISCONNECTED = "SERVICE_DISCONNECTED";
+    public static final String RESPONSE_SERVICE_UNAVAILABLE = "SERVICE_UNAVAILABLE";
+    public static final String RESPONSE_TIMEOUT = "TIMEOUT";
+    public static final String RFR = "referrer";
+    public static final String RFRS = "referrers";
+    public static final String SAMSUNG_CUSTOM = "samsung_custom";
+    public static final String SOURCE = "source";
+    public static final String SOURCE_FACEBOOK = "facebook";
+    public static final String SOURCE_FACEBOOK_LITE = "facebook_lite";
+    public static final String SOURCE_GOOGLE = "google";
+    public static final String SOURCE_HUAWEI = "huawei";
+    public static final String SOURCE_INSTAGRAM = "instagram";
+    public static final String SOURCE_SAMSUNG = "samsung";
+    public static final String SOURCE_VIVO = "vivo";
+    public static final String SOURCE_XIAOMI = "xiaomi";
+    public static final String TYPE = "type";
+    public static final String TYPE_AF_REFERRER = "af_referrer";
+    public static final String TYPE_APP = "app";
+    public static final String TYPE_PRELOAD = "preload";
+    public static final String TYPE_STORE = "store";
+    public static final String VIVO_CUSTOM = "vivo_custom";
+    public static final String XIAOMI_CUSTOM = "xiaomi_custom";
+}

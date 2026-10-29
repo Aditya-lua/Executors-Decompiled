@@ -1,0 +1,29 @@
+package p117f3;
+
+import com.appsflyer.sdk_base.referrer.Payload;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+/* JADX INFO: renamed from: f3.a */
+/* JADX INFO: loaded from: classes.dex */
+@Metadata(m31664d1 = {"\u0000\u001a\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\r\n\u0002\b\r\b&\u0018\u0000 \u00112\u00060\u0001j\u0002`\u0002:\u0001\tB\u001d\b\u0001\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\n\b\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u0005¢\u0006\u0004\b\u0007\u0010\bR\u001a\u0010\u0004\u001a\u00020\u00038WX\u0096\u0004¢\u0006\f\n\u0004\b\t\u0010\n\u001a\u0004\b\u000b\u0010\fR\u001c\u0010\u0006\u001a\u0004\u0018\u00010\u00058WX\u0096\u0004¢\u0006\f\n\u0004\b\r\u0010\u000e\u001a\u0004\b\u000f\u0010\u0010¨\u0006\u0012"}, m31665d2 = {"Lf3/a;", "Ljava/lang/Exception;", "Lkotlin/Exception;", "", Payload.TYPE, "", "errorMessage", "<init>", "(Ljava/lang/String;Ljava/lang/CharSequence;)V", "a", "Ljava/lang/String;", "getType", "()Ljava/lang/String;", "b", "Ljava/lang/CharSequence;", "getErrorMessage", "()Ljava/lang/CharSequence;", "c", "credentials_release"}, m31666k = 1, m31667mv = {2, 1, 0}, m31669xi = 48)
+public abstract class AbstractC5327a extends Exception {
+
+    /* JADX INFO: renamed from: a, reason: from kotlin metadata */
+    @NotNull
+    public final String type;
+
+    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
+    @Nullable
+    public final CharSequence errorMessage;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public AbstractC5327a(@NotNull String type, @Nullable CharSequence charSequence) {
+        super(charSequence != null ? charSequence.toString() : null);
+        Intrinsics.checkNotNullParameter(type, "type");
+        this.type = type;
+        this.errorMessage = charSequence;
+    }
+}

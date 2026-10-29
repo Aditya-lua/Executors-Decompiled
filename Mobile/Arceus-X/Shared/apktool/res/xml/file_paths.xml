@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <cache-path name="cache" path="." />
+    <external-path name="ax_updates_v5" path="Arceus X v5/Updates/" />
+    <external-path name="ax_updates_neo" path="Arceus X/Updates/" />
+</paths>
