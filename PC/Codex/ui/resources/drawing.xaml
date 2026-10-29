@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <SolidColorBrush x:Key="DefaultSolidColorBrush" Color="#474954" />
+  <Geometry x:Key="Icon.Restore">F0 M14,30H66V82H14Z M22,38V74H58V38Z M30,14H82V66H66V58H74V22H38V30H30Z</Geometry>
+  <DrawingImage x:Key="LoadingCircle">
+    <DrawingImage.Drawing>
+      <DrawingGroup ClipGeometry="M0,0 L0,16 L16,16 L16,0 L0,0">
+        <GeometryDrawing Geometry="F1 M16,16 M0,0 M14,7.99999 C13.9999,9.26705 13.5988,10.5016 12.854,11.5266 C12.1092,12.5516 11.059,13.3146 9.85392,13.7061 C8.64886,14.0976 7.3508,14.0976 6.14576,13.706 C4.94073,13.3144 3.89059,12.5514 3.14584,11.5263 C2.4011,10.5012 1.99999,9.26671 2,7.99965 C2.00001,6.73259 2.40114,5.49806 3.14589,4.47299 C3.89065,3.44792 4.9408,2.68493 6.14584,2.29337 C7.35088,1.90182 8.64895,1.9018 9.854,2.29332">
+          <GeometryDrawing.Pen>
+            <Pen Brush="#FFFFFFFF" EndLineCap="Round" LineJoin="Round" MiterLimit="1" StartLineCap="Round" Thickness="1" />
+          </GeometryDrawing.Pen>
+        </GeometryDrawing>
+      </DrawingGroup>
+    </DrawingImage.Drawing>
+  </DrawingImage>
+  <DrawingImage x:Key="Exit">
+    <DrawingImage.Drawing>
+      <DrawingGroup>
+        <DrawingGroup Opacity="1">
+          <DrawingGroup Opacity="1">
+            <GeometryDrawing Brush="{DynamicResource DefaultSolidColorBrush}" Geometry="F1 M96,96 M0,0 M82.17,77.76 L77.82,82.13 C77.62,82.33 76.86,82.33 76.65,82.11 L48.42,53.98 C47.89,53.45 46.97,54.64 46.54,55.07 L19.8,81.73 C19.46,82.07 18.93,82.39 18.65,82.34 C18.37,82.29 18,81.84 17.73,81.57 L14.89,78.66 C14.39,78.47 13.65,77.65 13.67,76.99 L42.58,48.12 L14.07,19.68 C13.73,19.34 13.7,18.72 13.89,18.41 L18.08,14.23 C18.46,13.85 19.18,13.88 19.66,14.35 L46.75,41.37 C47.24,41.86 47.67,42.47 48.45,42.28 L76.53,14.27 C76.94,13.86 77.62,13.89 77.95,14.23 L81.87,18.14 C82.05,18.32 82.36,18.82 82.31,19.06 C82.26,19.3 82.01,19.72 81.76,19.98 L54.66,47 C54.35,47.31 53.89,47.76 53.85,48.06 C53.8,48.41 54.31,48.93 54.67,49.28 L81.77,76.29 C82.09,76.61 82.52,77.45 82.2,77.77" />
+          </DrawingGroup>
+        </DrawingGroup>
+      </DrawingGroup>
+    </DrawingImage.Drawing>
+  </DrawingImage>
+</ResourceDictionary>

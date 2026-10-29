@@ -1,0 +1,12 @@
+*.dll binary
+*.exe binary
+*.png binary
+*.ttf binary
+*.ico binary
+*.zip binary
+*.js text eol=lf
+*.cs text eol=lf
+*.xaml text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.java text eol=lf

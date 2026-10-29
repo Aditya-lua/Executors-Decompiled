@@ -1,0 +1,258 @@
+{
+  "target": "0x50c658",
+  "stopped_reason": "returned",
+  "unicorn_error": null,
+  "instruction_count": 2624710,
+  "heap_used": 4320,
+  "function_entries": [
+    {
+      "at_instruction": 1,
+      "address": "0x50c658",
+      "arguments": [
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {}
+    },
+    {
+      "at_instruction": 23,
+      "address": "0x2b21ec",
+      "arguments": [
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {}
+    },
+    {
+      "at_instruction": 2621764,
+      "address": "0x3a8258",
+      "arguments": [
+        "0x21fef60",
+        "0x0",
+        "0x28",
+        "0xffffff90",
+        "0x0",
+        "0x37",
+        "0xffffffde",
+        "0x6a"
+      ],
+      "cstring_arguments": {
+        "x0": "RobloxLib",
+        "x2": "__TEXT",
+        "x7": "text"
+      }
+    }
+  ],
+  "import_calls": [
+    {
+      "at_instruction": 1221,
+      "target": "0xc7ada8",
+      "symbol": "_mmap",
+      "arguments": [
+        "0x0",
+        "0xe0",
+        "0x3",
+        "0x1002",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {}
+    },
+    {
+      "at_instruction": 2621637,
+      "target": "0x23001a0",
+      "symbol": "___chkstk_darwin",
+      "arguments": [
+        "0xfffffffc",
+        "0x0",
+        "0x28",
+        "0xffffff90",
+        "0x0",
+        "0x37",
+        "0xffffffde",
+        "0x6a"
+      ],
+      "cstring_arguments": {
+        "x2": "__TEXT",
+        "x7": "text"
+      }
+    },
+    {
+      "at_instruction": 2621645,
+      "target": "0x23001a0",
+      "symbol": "___chkstk_darwin",
+      "arguments": [
+        "0xfffffffc",
+        "0x0",
+        "0x28",
+        "0xffffff90",
+        "0x0",
+        "0x37",
+        "0xffffffde",
+        "0x6a"
+      ],
+      "cstring_arguments": {
+        "x2": "__TEXT",
+        "x7": "text"
+      }
+    },
+    {
+      "at_instruction": 2621652,
+      "target": "0x23001a0",
+      "symbol": "___chkstk_darwin",
+      "arguments": [
+        "0xfffffffc",
+        "0x0",
+        "0x28",
+        "0xffffff90",
+        "0x0",
+        "0x37",
+        "0xffffffde",
+        "0x6a"
+      ],
+      "cstring_arguments": {
+        "x2": "__TEXT",
+        "x7": "text"
+      }
+    },
+    {
+      "at_instruction": 2621806,
+      "target": "0x2300c80",
+      "symbol": "__dyld_image_count",
+      "arguments": [
+        "0x21fef60",
+        "0x0",
+        "0x28",
+        "0xffffff90",
+        "0x0",
+        "0x37",
+        "0xffffffde",
+        "0x6a"
+      ],
+      "cstring_arguments": {
+        "x0": "RobloxLib",
+        "x2": "__TEXT",
+        "x7": "text"
+      }
+    },
+    {
+      "at_instruction": 2621828,
+      "target": "0x2300c60",
+      "symbol": "__dyld_get_image_name",
+      "arguments": [
+        "0x0",
+        "0x0",
+        "0x28",
+        "0xffffff90",
+        "0x0",
+        "0x37",
+        "0xffffffde",
+        "0x6a"
+      ],
+      "cstring_arguments": {
+        "x2": "__TEXT",
+        "x7": "text"
+      }
+    },
+    {
+      "at_instruction": 2622322,
+      "target": "0x2300c60",
+      "symbol": "__dyld_get_image_name",
+      "arguments": [
+        "0x1",
+        "0x0",
+        "0x28",
+        "0xffffff90",
+        "0x0",
+        "0x37",
+        "0xffffffde",
+        "0x6a"
+      ],
+      "cstring_arguments": {
+        "x2": "__TEXT",
+        "x7": "text"
+      }
+    },
+    {
+      "at_instruction": 2622738,
+      "target": "0x2300c60",
+      "symbol": "__dyld_get_image_name",
+      "arguments": [
+        "0x2",
+        "0x0",
+        "0x28",
+        "0xffffff90",
+        "0x0",
+        "0x37",
+        "0xffffffde",
+        "0x6a"
+      ],
+      "cstring_arguments": {
+        "x2": "__TEXT",
+        "x7": "text"
+      }
+    },
+    {
+      "at_instruction": 2623232,
+      "target": "0x2300c60",
+      "symbol": "__dyld_get_image_name",
+      "arguments": [
+        "0x3",
+        "0x0",
+        "0x28",
+        "0xffffff90",
+        "0x0",
+        "0x37",
+        "0xffffffde",
+        "0x6a"
+      ],
+      "cstring_arguments": {
+        "x2": "__TEXT",
+        "x7": "text"
+      }
+    },
+    {
+      "at_instruction": 2623787,
+      "target": "0x2300c70",
+      "symbol": "__dyld_get_image_vmaddr_slide",
+      "arguments": [
+        "0x3",
+        "0x0",
+        "0x28",
+        "0xffffff90",
+        "0x0",
+        "0x37",
+        "0xffffffde",
+        "0x6a"
+      ],
+      "cstring_arguments": {
+        "x2": "__TEXT",
+        "x7": "text"
+      }
+    }
+  ],
+  "import_counts": {
+    "_mmap": 1,
+    "___chkstk_darwin": 3,
+    "__dyld_image_count": 1,
+    "__dyld_get_image_name": 4,
+    "__dyld_get_image_vmaddr_slide": 1
+  },
+  "invalid_accesses": [],
+  "data_dump": "delta-ios-decompiled/analysis/protected-init-traces/init-50c658-data.bin",
+  "heap_dump": "delta-ios-decompiled/analysis/protected-init-traces/init-50c658-heap.bin"
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="center_vertical" android:paddingLeft="7.0dp" android:paddingRight="10.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/icon_robux" android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@drawable/icon_robux" />
+</FrameLayout>

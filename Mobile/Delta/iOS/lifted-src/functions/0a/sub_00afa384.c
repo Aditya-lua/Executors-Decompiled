@@ -1,0 +1,9 @@
+/*
+ * Machine-reconstructed pseudocode; not original vendor source.
+ * Mach-O extent: 0xafa384..0xafa390 (12 bytes).
+ * Function and variable names are synthetic unless documented elsewhere.
+ */
+
+void sub_afa384(void)
+{
+}

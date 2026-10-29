@@ -1,0 +1,80 @@
+{
+  "target": "0x51d0e4",
+  "stopped_reason": "returned",
+  "unicorn_error": null,
+  "instruction_count": 31,
+  "heap_used": 3448,
+  "function_entries": [
+    {
+      "at_instruction": 1,
+      "address": "0x51d0e4",
+      "arguments": [
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {}
+    },
+    {
+      "at_instruction": 7,
+      "address": "0x51d098",
+      "arguments": [
+        "0x3000140",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {}
+    }
+  ],
+  "import_calls": [
+    {
+      "at_instruction": 5,
+      "target": "0xc7a820",
+      "symbol": "__Znwm",
+      "arguments": [
+        "0xc38",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {}
+    },
+    {
+      "at_instruction": 14,
+      "target": "0xc7a9d0",
+      "symbol": "_bzero",
+      "arguments": [
+        "0x300016c",
+        "0xc00",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {}
+    }
+  ],
+  "import_counts": {
+    "__Znwm": 1,
+    "_bzero": 1
+  },
+  "invalid_accesses": [],
+  "data_dump": "delta-ios-decompiled/analysis/protected-init-traces/init-51d0e4-data.bin",
+  "heap_dump": "delta-ios-decompiled/analysis/protected-init-traces/init-51d0e4-heap.bin"
+}

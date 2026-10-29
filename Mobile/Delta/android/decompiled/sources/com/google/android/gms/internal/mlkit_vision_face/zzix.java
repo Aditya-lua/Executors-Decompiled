@@ -1,0 +1,138 @@
+package com.google.android.gms.internal.mlkit_vision_face;
+
+import rf.a;
+import rf.b;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class zzix implements a {
+    public static final a zza = new zzix();
+
+    private zzix() {
+    }
+
+    @Override // rf.a
+    public final void configure(b bVar) {
+        bVar.registerEncoder(zzkw.class, zzgq.zza);
+        bVar.registerEncoder(zzmv.class, zzip.zza);
+        bVar.registerEncoder(zzkx.class, zzgr.zza);
+        bVar.registerEncoder(zzla.class, zzgt.zza);
+        bVar.registerEncoder(zzky.class, zzgs.zza);
+        bVar.registerEncoder(zzkz.class, zzgu.zza);
+        bVar.registerEncoder(zzjr.class, zzfz.zza);
+        bVar.registerEncoder(zzjq.class, zzfy.zza);
+        bVar.registerEncoder(zzkl.class, zzgj.zza);
+        bVar.registerEncoder(zzmp.class, zzih.zza);
+        bVar.registerEncoder(zzjp.class, zzfx.zza);
+        bVar.registerEncoder(zzjo.class, zzfw.zza);
+        bVar.registerEncoder(zzll.class, zzhf.zza);
+        bVar.registerEncoder(zznn.class, zzgf.zza);
+        bVar.registerEncoder(zzkh.class, zzgh.zza);
+        bVar.registerEncoder(zzkd.class, zzge.zza);
+        bVar.registerEncoder(zzlo.class, zzhg.zza);
+        bVar.registerEncoder(zzmm.class, zzie.zza);
+        bVar.registerEncoder(zzmn.class, zzif.zza);
+        bVar.registerEncoder(zzml.class, zzid.zza);
+        bVar.registerEncoder(zzle.class, zzha.zza);
+        bVar.registerEncoder(zznm.class, zzfg.zza);
+        bVar.registerEncoder(zzlf.class, zzhb.zza);
+        bVar.registerEncoder(zzlp.class, zzhh.zza);
+        bVar.registerEncoder(zzls.class, zzhk.zza);
+        bVar.registerEncoder(zzlr.class, zzhj.zza);
+        bVar.registerEncoder(zzlq.class, zzhi.zza);
+        bVar.registerEncoder(zzlx.class, zzhp.zza);
+        bVar.registerEncoder(zzly.class, zzhq.zza);
+        bVar.registerEncoder(zzma.class, zzhs.zza);
+        bVar.registerEncoder(zzlz.class, zzhr.zza);
+        bVar.registerEncoder(zzld.class, zzgz.zza);
+        bVar.registerEncoder(zzmb.class, zzht.zza);
+        bVar.registerEncoder(zzmc.class, zzhu.zza);
+        bVar.registerEncoder(zzmd.class, zzhv.zza);
+        bVar.registerEncoder(zzme.class, zzhw.zza);
+        bVar.registerEncoder(zzmk.class, zzib.zza);
+        bVar.registerEncoder(zzmj.class, zzic.zza);
+        bVar.registerEncoder(zzlw.class, zzhl.zza);
+        bVar.registerEncoder(zzkp.class, zzgo.zza);
+        bVar.registerEncoder(zzlu.class, zzhn.zza);
+        bVar.registerEncoder(zzlt.class, zzhm.zza);
+        bVar.registerEncoder(zzlv.class, zzho.zza);
+        bVar.registerEncoder(zzmo.class, zzig.zza);
+        bVar.registerEncoder(zzmz.class, zzit.zza);
+        bVar.registerEncoder(zzjd.class, zzfl.zza);
+        bVar.registerEncoder(zzjb.class, zzfj.zza);
+        bVar.registerEncoder(zzja.class, zzfi.zza);
+        bVar.registerEncoder(zzjc.class, zzfk.zza);
+        bVar.registerEncoder(zzjf.class, zzfn.zza);
+        bVar.registerEncoder(zzje.class, zzfm.zza);
+        bVar.registerEncoder(zzjg.class, zzfo.zza);
+        bVar.registerEncoder(zzjh.class, zzfp.zza);
+        bVar.registerEncoder(zzji.class, zzfq.zza);
+        bVar.registerEncoder(zzjj.class, zzfr.zza);
+        bVar.registerEncoder(zzjk.class, zzfs.zza);
+        bVar.registerEncoder(zzec.class, zzfc.zza);
+        bVar.registerEncoder(zzee.class, zzfe.zza);
+        bVar.registerEncoder(zzed.class, zzfd.zza);
+        bVar.registerEncoder(zzkn.class, zzgm.zza);
+        bVar.registerEncoder(zzjs.class, zzga.zza);
+        bVar.registerEncoder(zzdd.class, zzeg.zza);
+        bVar.registerEncoder(zzdc.class, zzeh.zza);
+        bVar.registerEncoder(zzjv.class, zzgc.zza);
+        bVar.registerEncoder(zzdf.class, zzei.zza);
+        bVar.registerEncoder(zzde.class, zzej.zza);
+        bVar.registerEncoder(zzdp.class, zzeo.zza);
+        bVar.registerEncoder(zzdn.class, zzep.zza);
+        bVar.registerEncoder(zzdh.class, zzek.zza);
+        bVar.registerEncoder(zzdg.class, zzel.zza);
+        bVar.registerEncoder(zzdr.class, zzeq.zza);
+        bVar.registerEncoder(zzdq.class, zzer.zza);
+        bVar.registerEncoder(zzdt.class, zzes.zza);
+        bVar.registerEncoder(zzds.class, zzet.zza);
+        bVar.registerEncoder(zzeb.class, zzfa.zza);
+        bVar.registerEncoder(zzea.class, zzfb.zza);
+        bVar.registerEncoder(zzdv.class, zzeu.zza);
+        bVar.registerEncoder(zzdu.class, zzev.zza);
+        bVar.registerEncoder(zzdx.class, zzew.zza);
+        bVar.registerEncoder(zzdw.class, zzex.zza);
+        bVar.registerEncoder(zznh.class, zzik.zza);
+        bVar.registerEncoder(zzna.class, zzgb.zza);
+        bVar.registerEncoder(zzne.class, zzgy.zza);
+        bVar.registerEncoder(zznd.class, zzgx.zza);
+        bVar.registerEncoder(zznb.class, zzgg.zza);
+        bVar.registerEncoder(zzng.class, zzij.zza);
+        bVar.registerEncoder(zznf.class, zzii.zza);
+        bVar.registerEncoder(zzni.class, zzil.zza);
+        bVar.registerEncoder(zznc.class, zzgk.zza);
+        bVar.registerEncoder(zznl.class, zziv.zza);
+        bVar.registerEncoder(zznk.class, zziw.zza);
+        bVar.registerEncoder(zznj.class, zziu.zza);
+        bVar.registerEncoder(zzmq.class, zzim.zza);
+        bVar.registerEncoder(zzkm.class, zzgl.zza);
+        bVar.registerEncoder(zzkq.class, zzgp.zza);
+        bVar.registerEncoder(zziz.class, zzfh.zza);
+        bVar.registerEncoder(zzki.class, zzgi.zza);
+        bVar.registerEncoder(zzko.class, zzgn.zza);
+        bVar.registerEncoder(zzjw.class, zzgd.zza);
+        bVar.registerEncoder(zzlc.class, zzgw.zza);
+        bVar.registerEncoder(zzlb.class, zzgv.zza);
+        bVar.registerEncoder(zzdb.class, zzef.zza);
+        bVar.registerEncoder(zzmw.class, zziq.zza);
+        bVar.registerEncoder(zzmy.class, zzis.zza);
+        bVar.registerEncoder(zzmx.class, zzir.zza);
+        bVar.registerEncoder(zziy.class, zzff.zza);
+        bVar.registerEncoder(zzjn.class, zzfv.zza);
+        bVar.registerEncoder(zzjm.class, zzfu.zza);
+        bVar.registerEncoder(zzjl.class, zzft.zza);
+        bVar.registerEncoder(zzlg.class, zzhc.zza);
+        bVar.registerEncoder(zzli.class, zzhe.zza);
+        bVar.registerEncoder(zzlh.class, zzhd.zza);
+        bVar.registerEncoder(zzdj.class, zzem.zza);
+        bVar.registerEncoder(zzdi.class, zzen.zza);
+        bVar.registerEncoder(zzmf.class, zzhx.zza);
+        bVar.registerEncoder(zzmi.class, zzia.zza);
+        bVar.registerEncoder(zzmg.class, zzhy.zza);
+        bVar.registerEncoder(zzmh.class, zzhz.zza);
+        bVar.registerEncoder(zzdz.class, zzey.zza);
+        bVar.registerEncoder(zzdy.class, zzez.zza);
+        bVar.registerEncoder(zzms.class, zzio.zza);
+        bVar.registerEncoder(zzmr.class, zzin.zza);
+    }
+}

@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*.dmp
+*.exe
+*.dll
+*.sys
+*.zip
+*.gpr
+*.rep/
+*.lock
+*.lock~

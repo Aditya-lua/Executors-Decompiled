@@ -1,0 +1,642 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:Controls="clr-namespace:dotnet_codex_ui.Controls" xmlns:app="clr-namespace:dotnet_codex_ui.Services" xmlns:System="clr-namespace:System;assembly=mscorlib">
+  <Geometry x:Key="Icon.Plus">M8,3 V13 M3,8 H13</Geometry>
+  <Geometry x:Key="Icon.File">M4,1.5 H9.5 L13,5 V13.5 C13,14 12.5,14.5 12,14.5 H4 C3.5,14.5 3,14 3,13.5 V2.5 C3,2 3.5,1.5 4,1.5 Z M9.5,1.5 V5 H13</Geometry>
+  <Style x:Key="{x:Type Controls:Button}" TargetType="{x:Type Controls:Button}">
+    <Setter Property="FrameworkElement.FocusVisualStyle" Value="{x:Null}" />
+    <Setter Property="Background" Value="#00FFFFFF" />
+    <Setter Property="FrameworkElement.UseLayoutRounding" Value="True" />
+    <Setter Property="UIElement.SnapsToDevicePixels" Value="True" />
+    <Setter Property="HorizontalContentAlignment" Value="Center" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+    <Setter Property="Padding" Value="1" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Controls:Button}">
+          <Border Name="Background" Background="{TemplateBinding Control.Background}" BorderBrush="{TemplateBinding Control.BorderBrush}" BorderThickness="{TemplateBinding Control.BorderThickness}" IsHitTestVisible="True" SnapsToDevicePixels="true" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource TemplatedParent}}">
+            <Grid>
+              <ContentPresenter Name="PART_ContentHost" Margin="{TemplateBinding Control.Padding}" HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" Content="{TemplateBinding ContentControl.Content}" ContentStringFormat="{TemplateBinding ContentControl.ContentStringFormat}" ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}" RecognizesAccessKey="True" RenderTransformOrigin="0.5,0.5">
+                <UIElement.RenderTransform>
+                  <ScaleTransform ScaleX="1" ScaleY="1" />
+                </UIElement.RenderTransform>
+              </ContentPresenter>
+              <Image Name="LoadingImage" HorizontalAlignment="Center" VerticalAlignment="Center" IsHitTestVisible="False" Opacity="0" RenderOptions.BitmapScalingMode="HighQuality" Stretch="None" RenderTransformOrigin="0.5,0.5" Source="{StaticResource LoadingCircle}">
+                <UIElement.RenderTransform>
+                  <RotateTransform Angle="0" />
+                </UIElement.RenderTransform>
+              </Image>
+            </Grid>
+          </Border>
+          <ControlTemplate.Triggers>
+            <Trigger Property="IsEnabled" Value="False">
+              <TriggerBase.EnterActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="Background" Storyboard.TargetProperty="Opacity" To="0.5" Duration="0:0:0.25" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.EnterActions>
+              <TriggerBase.ExitActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="Background" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.25" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.ExitActions>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+              <TriggerBase.EnterActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="PART_ContentHost" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)" To="0.95" Duration="0:0:0.05" />
+                    <DoubleAnimation Storyboard.TargetName="PART_ContentHost" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)" To="0.95" Duration="0:0:0.05" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.EnterActions>
+              <TriggerBase.ExitActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="PART_ContentHost" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)" To="1" Duration="0:0:0.1" />
+                    <DoubleAnimation Storyboard.TargetName="PART_ContentHost" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)" To="1" Duration="0:0:0.1" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.ExitActions>
+            </Trigger>
+            <DataTrigger Value="True" Binding="{Binding IsLoading, RelativeSource={RelativeSource Self}}">
+              <TriggerBase.EnterActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="LoadingImage" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.25" />
+                    <DoubleAnimation Storyboard.TargetName="PART_ContentHost" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.25" />
+                    <DoubleAnimation RepeatBehavior="Forever" Storyboard.TargetName="LoadingImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(RotateTransform.Angle)" From="0" To="360" Duration="0:0:1.25">
+                      <DoubleAnimation.EasingFunction>
+                        <ExponentialEase EasingMode="EaseInOut" />
+                      </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.EnterActions>
+              <TriggerBase.ExitActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="LoadingImage" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.25" />
+                    <DoubleAnimation Storyboard.TargetName="PART_ContentHost" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.25" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.ExitActions>
+            </DataTrigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="ChromeButton" BasedOn="{StaticResource {x:Type Controls:Button}}" TargetType="{x:Type Controls:Button}">
+    <Setter Property="FrameworkElement.Cursor" Value="Hand" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Controls:Button}">
+          <Border Name="Root" Background="{TemplateBinding Control.Background}" BorderBrush="{TemplateBinding Control.BorderBrush}" BorderThickness="{TemplateBinding Control.BorderThickness}" SnapsToDevicePixels="True" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource TemplatedParent}}">
+            <Grid>
+              <Border Name="HoverOverlay" Background="#FFFFFFFF" IsHitTestVisible="False" Opacity="0" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource TemplatedParent}}" />
+              <Border Name="PressOverlay" Background="#FFFFFFFF" IsHitTestVisible="False" Opacity="0" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource TemplatedParent}}" />
+              <ContentPresenter Name="PART_ContentHost" Margin="{TemplateBinding Control.Padding}" HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" RecognizesAccessKey="True" RenderTransformOrigin="0.5,0.5">
+                <UIElement.RenderTransform>
+                  <ScaleTransform ScaleX="1" ScaleY="1" />
+                </UIElement.RenderTransform>
+              </ContentPresenter>
+            </Grid>
+          </Border>
+          <ControlTemplate.Triggers>
+            <MultiDataTrigger>
+              <MultiDataTrigger.Conditions>
+                <Condition Value="True" Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Self}}" />
+                <Condition Value="True" Binding="{Binding IsEnabled, RelativeSource={RelativeSource Self}}" />
+                <Condition Value="False" Binding="{Binding IsLoading, RelativeSource={RelativeSource Self}}" />
+              </MultiDataTrigger.Conditions>
+              <TriggerBase.EnterActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="HoverOverlay" Storyboard.TargetProperty="Opacity" To="0.08" Duration="{x:Static app:MotionDurations.Fast}" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.EnterActions>
+              <TriggerBase.ExitActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="HoverOverlay" Storyboard.TargetProperty="Opacity" To="0" Duration="{x:Static app:MotionDurations.Fast}" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.ExitActions>
+            </MultiDataTrigger>
+            <Trigger Property="IsPressed" Value="True">
+              <TriggerBase.EnterActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="PressOverlay" Storyboard.TargetProperty="Opacity" To="0.07" Duration="{x:Static app:MotionDurations.Press}" />
+                    <DoubleAnimation Storyboard.TargetName="PART_ContentHost" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)" To="0.95" Duration="{x:Static app:MotionDurations.Press}" />
+                    <DoubleAnimation Storyboard.TargetName="PART_ContentHost" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)" To="0.95" Duration="{x:Static app:MotionDurations.Press}" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.EnterActions>
+              <TriggerBase.ExitActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="PressOverlay" Storyboard.TargetProperty="Opacity" To="0" Duration="{x:Static app:MotionDurations.Fast}" />
+                    <DoubleAnimation Storyboard.TargetName="PART_ContentHost" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)" To="1" Duration="{x:Static app:MotionDurations.Fast}" />
+                    <DoubleAnimation Storyboard.TargetName="PART_ContentHost" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)" To="1" Duration="{x:Static app:MotionDurations.Fast}" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.ExitActions>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+              <Setter TargetName="Root" Property="UIElement.Opacity" Value="0.5" />
+              <Setter Property="FrameworkElement.Cursor" Value="Arrow" />
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Controls:SubtractConverter x:Key="SubtractConverter" />
+  <Style x:Key="TabCloseButton" TargetType="{x:Type Controls:Button}">
+    <Setter Property="FrameworkElement.FocusVisualStyle" Value="{x:Null}" />
+    <Setter Property="Width" Value="16" />
+    <Setter Property="Height" Value="16" />
+    <Setter Property="Focusable" Value="False" />
+    <Setter Property="FrameworkElement.Cursor" Value="Hand" />
+    <Setter Property="Controls:Button.CornerRadius" Value="4" />
+    <Setter Property="Background" Value="#00FFFFFF" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Controls:Button}">
+          <Border Name="Root" Background="#00FFFFFF" SnapsToDevicePixels="True" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource TemplatedParent}}">
+            <Grid>
+              <Border Name="HoverOverlay" Background="#FFFFFFFF" IsHitTestVisible="False" Opacity="0" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource TemplatedParent}}" />
+              <Border Name="PressOverlay" Background="#FFFFFFFF" IsHitTestVisible="False" Opacity="0" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource TemplatedParent}}" />
+              <ContentPresenter Name="Glyph" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0.55" RenderTransformOrigin="0.5,0.5">
+                <UIElement.RenderTransform>
+                  <ScaleTransform ScaleX="1" ScaleY="1" />
+                </UIElement.RenderTransform>
+              </ContentPresenter>
+            </Grid>
+          </Border>
+          <ControlTemplate.Triggers>
+            <MultiDataTrigger>
+              <MultiDataTrigger.Conditions>
+                <Condition Value="True" Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Self}}" />
+                <Condition Value="True" Binding="{Binding IsEnabled, RelativeSource={RelativeSource Self}}" />
+                <Condition Value="False" Binding="{Binding IsLoading, RelativeSource={RelativeSource Self}}" />
+              </MultiDataTrigger.Conditions>
+              <TriggerBase.EnterActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="HoverOverlay" Storyboard.TargetProperty="Opacity" To="0.12" Duration="0:0:0.12" />
+                    <DoubleAnimation Storyboard.TargetName="Glyph" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.12" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.EnterActions>
+              <TriggerBase.ExitActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="HoverOverlay" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.16" />
+                    <DoubleAnimation Storyboard.TargetName="Glyph" Storyboard.TargetProperty="Opacity" To="0.55" Duration="0:0:0.16" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.ExitActions>
+            </MultiDataTrigger>
+            <Trigger Property="IsPressed" Value="True">
+              <TriggerBase.EnterActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="PressOverlay" Storyboard.TargetProperty="Opacity" To="0.07" Duration="0:0:0.05" />
+                    <DoubleAnimation Storyboard.TargetName="Glyph" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)" To="0.88" Duration="0:0:0.05" />
+                    <DoubleAnimation Storyboard.TargetName="Glyph" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)" To="0.88" Duration="0:0:0.05" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.EnterActions>
+              <TriggerBase.ExitActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="PressOverlay" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.12" />
+                    <DoubleAnimation Storyboard.TargetName="Glyph" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)" To="1" Duration="0:0:0.1" />
+                    <DoubleAnimation Storyboard.TargetName="Glyph" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)" To="1" Duration="0:0:0.1" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.ExitActions>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="{x:Type Controls:TabItem}" TargetType="{x:Type Controls:TabItem}">
+    <Setter Property="FrameworkElement.FocusVisualStyle" Value="{x:Null}" />
+    <Setter Property="Foreground" Value="#C9CCD6" />
+    <Setter Property="Margin" Value="-2,-2,-2,0" />
+    <Setter Property="FrameworkElement.ToolTip" Value="{Binding Header, RelativeSource={RelativeSource Self}}" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Controls:TabItem}">
+          <Grid Name="TemplateRoot" Margin="0,0,10,0" SnapsToDevicePixels="True">
+            <Border Name="MainBorder" Background="#171A21" BorderBrush="#1E2029" BorderThickness="1,1,1,0" CornerRadius="5,5,0,0">
+              <Border Name="InnerBorder" Margin="0,-1,0,0" Background="#171A21" BorderBrush="{DynamicResource Page.AccentStrong}" BorderThickness="0,1,0,0" CornerRadius="5,5,0,0" />
+            </Border>
+            <Border Name="HoverOverlay" Background="#FFFFFFFF" CornerRadius="5,5,0,0" IsHitTestVisible="False" Opacity="0" />
+            <Grid Name="ContentHost" MinHeight="26" Margin="10,0,6,0">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <Path Width="12" Height="12" Margin="0,0,7,0" VerticalAlignment="Center" Data="{DynamicResource Icon.File}" Opacity="0.7" Stretch="Uniform" Stroke="{TemplateBinding Control.Foreground}" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeThickness="1.2" />
+              <Grid Column="1" VerticalAlignment="Center">
+                <TextBlock Name="Title" MinWidth="40" MaxWidth="150" VerticalAlignment="Center" FontFamily="{DynamicResource Inter}" FontSize="11" Foreground="{TemplateBinding Control.Foreground}" TextTrimming="CharacterEllipsis" Text="{Binding Header, RelativeSource={RelativeSource TemplatedParent}}" />
+                <Border Name="EditorFrame" MinWidth="60" MaxWidth="150" Padding="3,1" Background="#0E0F14" BorderBrush="{DynamicResource Page.AccentBorder}" BorderThickness="1" CornerRadius="3" Visibility="Collapsed">
+                  <TextBox Name="PART_Editor" Padding="0" VerticalContentAlignment="Center" Background="#00FFFFFF" BorderThickness="0" CaretBrush="{DynamicResource Page.Foreground}" FontFamily="{DynamicResource Inter}" FontSize="11" Foreground="{DynamicResource Page.Foreground}" SelectionBrush="{DynamicResource Page.AccentBorder}" />
+                </Border>
+              </Grid>
+              <Ellipse Name="DirtyDot" Grid.Column="2" Width="6" Height="6" Margin="6,0,0,0" VerticalAlignment="Center" AutomationProperties.Name="Unsaved changes" Fill="{DynamicResource Page.Accent}" ToolTip="Unsaved changes" Visibility="Collapsed" />
+              <Controls:Button x:Name="PART_Close" Grid.Column="3" Margin="6,0,0,0" VerticalAlignment="Center" AutomationProperties.Name="Close Tab" ToolTip="Close Tab" Style="{StaticResource TabCloseButton}">
+                <Path Width="8" Height="8" Data="{DynamicResource Icon.Close}" Stretch="Uniform" StrokeEndLineCap="Round" StrokeStartLineCap="Round" StrokeThickness="1.4" Stroke="{Binding Foreground, RelativeSource={RelativeSource TemplatedParent}}" />
+              </Controls:Button>
+            </Grid>
+          </Grid>
+          <ControlTemplate.Triggers>
+            <Trigger Property="Controls:TabItem.IsDirty" Value="True">
+              <Setter TargetName="DirtyDot" Property="Visibility" Value="Visible" />
+            </Trigger>
+            <Trigger Property="TabItem.IsSelected" Value="False">
+              <Setter TargetName="InnerBorder" Property="UIElement.Opacity" Value="0" />
+              <Setter TargetName="ContentHost" Property="UIElement.Opacity" Value="0.6" />
+              <Setter TargetName="MainBorder" Property="UIElement.Opacity" Value="0.5" />
+              <Setter TargetName="MainBorder" Property="Border.BorderThickness" Value="1,1,1,1" />
+            </Trigger>
+            <Trigger Property="TabItem.IsSelected" Value="True">
+              <Setter Property="Panel.ZIndex" Value="1" />
+              <Setter Property="Foreground" Value="#FFFFFF" />
+              <Setter TargetName="Title" Property="TextBlock.FontWeight" Value="SemiBold" />
+              <Setter TargetName="InnerBorder" Property="Margin" Value="0,-1.5,0,-1" />
+              <Setter TargetName="InnerBorder" Property="Border.BorderThickness" Value="0,1.5,0,0" />
+            </Trigger>
+            <MultiTrigger>
+              <MultiTrigger.Conditions>
+                <Condition Property="TabItem.IsSelected" Value="False" />
+                <Condition Property="UIElement.IsMouseOver" Value="False" />
+              </MultiTrigger.Conditions>
+              <Setter TargetName="PART_Close" Property="UIElement.Opacity" Value="0" />
+              <Setter TargetName="PART_Close" Property="UIElement.IsHitTestVisible" Value="False" />
+              <TriggerBase.EnterActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="PART_Close" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.12" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.EnterActions>
+              <TriggerBase.ExitActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="PART_Close" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.12" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.ExitActions>
+            </MultiTrigger>
+            <Trigger Property="Controls:TabItem.IsEditing" Value="True">
+              <Setter TargetName="Title" Property="Visibility" Value="Collapsed" />
+              <Setter TargetName="EditorFrame" Property="Visibility" Value="Visible" />
+            </Trigger>
+            <Trigger Property="UIElement.IsMouseOver" Value="True">
+              <TriggerBase.EnterActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="HoverOverlay" Storyboard.TargetProperty="Opacity" To="0.05" Duration="0:0:0.12" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.EnterActions>
+              <TriggerBase.ExitActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="HoverOverlay" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.16" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.ExitActions>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="ActionBarButton" TargetType="{x:Type Controls:Button}">
+    <Setter Property="FrameworkElement.FocusVisualStyle" Value="{x:Null}" />
+    <Setter Property="Height" Value="26" />
+    <Setter Property="Background" Value="#1E2028" />
+    <Setter Property="Foreground" Value="#9FA6AF" />
+    <Setter Property="BorderBrush" Value="#2A2C36" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="Controls:Button.CornerRadius" Value="6" />
+    <Setter Property="FontFamily" Value="{StaticResource Inter}" />
+    <Setter Property="FontSize" Value="9" />
+    <Setter Property="FontWeight" Value="SemiBold" />
+    <Setter Property="FrameworkElement.Cursor" Value="Hand" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Controls:Button}">
+          <Border Name="Root" Background="{TemplateBinding Control.Background}" BorderBrush="{TemplateBinding Control.BorderBrush}" BorderThickness="{TemplateBinding Control.BorderThickness}" SnapsToDevicePixels="True" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource TemplatedParent}}">
+            <Grid>
+              <Border Name="HoverOverlay" Background="#FFFFFFFF" IsHitTestVisible="False" Opacity="0" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource TemplatedParent}}" />
+              <Border Name="PressOverlay" Background="#FFFFFFFF" IsHitTestVisible="False" Opacity="0" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource TemplatedParent}}" />
+              <ContentPresenter Name="PART_ContentHost" Margin="12,0" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                <UIElement.RenderTransform>
+                  <ScaleTransform ScaleX="1" ScaleY="1" />
+                </UIElement.RenderTransform>
+              </ContentPresenter>
+            </Grid>
+          </Border>
+          <ControlTemplate.Triggers>
+            <MultiDataTrigger>
+              <MultiDataTrigger.Conditions>
+                <Condition Value="True" Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Self}}" />
+                <Condition Value="True" Binding="{Binding IsEnabled, RelativeSource={RelativeSource Self}}" />
+                <Condition Value="False" Binding="{Binding IsLoading, RelativeSource={RelativeSource Self}}" />
+              </MultiDataTrigger.Conditions>
+              <TriggerBase.EnterActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="HoverOverlay" Storyboard.TargetProperty="Opacity" To="0.08" Duration="0:0:0.14" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.EnterActions>
+              <TriggerBase.ExitActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="HoverOverlay" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.16" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.ExitActions>
+            </MultiDataTrigger>
+            <Trigger Property="IsPressed" Value="True">
+              <TriggerBase.EnterActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="PressOverlay" Storyboard.TargetProperty="Opacity" To="0.07" Duration="0:0:0.05" />
+                    <DoubleAnimation Storyboard.TargetName="PART_ContentHost" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)" To="0.96" Duration="0:0:0.05" />
+                    <DoubleAnimation Storyboard.TargetName="PART_ContentHost" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)" To="0.96" Duration="0:0:0.05" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.EnterActions>
+              <TriggerBase.ExitActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="PressOverlay" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.12" />
+                    <DoubleAnimation Storyboard.TargetName="PART_ContentHost" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)" To="1" Duration="0:0:0.1" />
+                    <DoubleAnimation Storyboard.TargetName="PART_ContentHost" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)" To="1" Duration="0:0:0.1" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.ExitActions>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+              <Setter TargetName="Root" Property="UIElement.Opacity" Value="0.4" />
+              <Setter Property="FrameworkElement.Cursor" Value="Arrow" />
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="ActionBarAccent" BasedOn="{StaticResource ActionBarButton}" TargetType="{x:Type Controls:Button}">
+    <Setter Property="Background" Value="{DynamicResource Page.AccentSurface}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Page.AccentBorder}" />
+    <Setter Property="Foreground" Value="{DynamicResource Page.Accent}" />
+  </Style>
+  <Style x:Key="ActionBarDanger" BasedOn="{StaticResource ActionBarButton}" TargetType="{x:Type Controls:Button}">
+    <Setter Property="Background" Value="#241B1E" />
+    <Setter Property="BorderBrush" Value="#3A2428" />
+    <Setter Property="Foreground" Value="#D26064" />
+  </Style>
+  <Style x:Key="KickButton" TargetType="{x:Type Controls:Button}">
+    <Setter Property="FrameworkElement.FocusVisualStyle" Value="{x:Null}" />
+    <Setter Property="Width" Value="32" />
+    <Setter Property="Height" Value="32" />
+    <Setter Property="Background" Value="#1E2028" />
+    <Setter Property="Foreground" Value="#9FA6AF" />
+    <Setter Property="BorderBrush" Value="#2A2C36" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="Controls:Button.CornerRadius" Value="8" />
+    <Setter Property="FrameworkElement.Cursor" Value="Hand" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Controls:Button}">
+          <Border Name="Root" Background="{TemplateBinding Control.Background}" BorderBrush="{TemplateBinding Control.BorderBrush}" BorderThickness="{TemplateBinding Control.BorderThickness}" SnapsToDevicePixels="True" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource TemplatedParent}}">
+            <Grid>
+              <Border Name="HoverOverlay" Background="#D26064" IsHitTestVisible="False" Opacity="0" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource TemplatedParent}}" />
+              <Border Name="PressOverlay" Background="#D26064" IsHitTestVisible="False" Opacity="0" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource TemplatedParent}}" />
+              <ContentPresenter Name="PART_ContentHost" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                <UIElement.RenderTransform>
+                  <ScaleTransform ScaleX="1" ScaleY="1" />
+                </UIElement.RenderTransform>
+              </ContentPresenter>
+            </Grid>
+          </Border>
+          <ControlTemplate.Triggers>
+            <MultiDataTrigger>
+              <MultiDataTrigger.Conditions>
+                <Condition Value="True" Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Self}}" />
+                <Condition Value="True" Binding="{Binding IsEnabled, RelativeSource={RelativeSource Self}}" />
+                <Condition Value="False" Binding="{Binding IsLoading, RelativeSource={RelativeSource Self}}" />
+              </MultiDataTrigger.Conditions>
+              <MultiDataTrigger.Setters>
+                <Setter Property="Foreground" Value="#F18081" />
+              </MultiDataTrigger.Setters>
+              <TriggerBase.EnterActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="HoverOverlay" Storyboard.TargetProperty="Opacity" To="0.18" Duration="0:0:0.14" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.EnterActions>
+              <TriggerBase.ExitActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="HoverOverlay" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.16" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.ExitActions>
+            </MultiDataTrigger>
+            <Trigger Property="IsPressed" Value="True">
+              <TriggerBase.EnterActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="PressOverlay" Storyboard.TargetProperty="Opacity" To="0.12" Duration="0:0:0.05" />
+                    <DoubleAnimation Storyboard.TargetName="PART_ContentHost" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)" To="0.9" Duration="0:0:0.05" />
+                    <DoubleAnimation Storyboard.TargetName="PART_ContentHost" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)" To="0.9" Duration="0:0:0.05" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.EnterActions>
+              <TriggerBase.ExitActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="PressOverlay" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.12" />
+                    <DoubleAnimation Storyboard.TargetName="PART_ContentHost" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)" To="1" Duration="0:0:0.1" />
+                    <DoubleAnimation Storyboard.TargetName="PART_ContentHost" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)" To="1" Duration="0:0:0.1" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.ExitActions>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+              <Setter TargetName="Root" Property="UIElement.Opacity" Value="0.4" />
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="AccentIconButton" TargetType="{x:Type Controls:Button}">
+    <Setter Property="FrameworkElement.FocusVisualStyle" Value="{x:Null}" />
+    <Setter Property="Width" Value="32" />
+    <Setter Property="Height" Value="32" />
+    <Setter Property="Background" Value="#1E2028" />
+    <Setter Property="Foreground" Value="#9FA6AF" />
+    <Setter Property="BorderBrush" Value="#2A2C36" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="Controls:Button.CornerRadius" Value="8" />
+    <Setter Property="FrameworkElement.Cursor" Value="Hand" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Controls:Button}">
+          <Border Name="Root" Background="{TemplateBinding Control.Background}" BorderBrush="{TemplateBinding Control.BorderBrush}" BorderThickness="{TemplateBinding Control.BorderThickness}" SnapsToDevicePixels="True" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource TemplatedParent}}">
+            <Grid>
+              <Border Name="HoverOverlay" Background="{DynamicResource Page.Accent}" IsHitTestVisible="False" Opacity="0" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource TemplatedParent}}" />
+              <Border Name="PressOverlay" Background="{DynamicResource Page.Accent}" IsHitTestVisible="False" Opacity="0" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource TemplatedParent}}" />
+              <ContentPresenter Name="PART_ContentHost" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                <UIElement.RenderTransform>
+                  <ScaleTransform ScaleX="1" ScaleY="1" />
+                </UIElement.RenderTransform>
+              </ContentPresenter>
+            </Grid>
+          </Border>
+          <ControlTemplate.Triggers>
+            <MultiDataTrigger>
+              <MultiDataTrigger.Conditions>
+                <Condition Value="True" Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Self}}" />
+                <Condition Value="True" Binding="{Binding IsEnabled, RelativeSource={RelativeSource Self}}" />
+                <Condition Value="False" Binding="{Binding IsLoading, RelativeSource={RelativeSource Self}}" />
+              </MultiDataTrigger.Conditions>
+              <MultiDataTrigger.Setters>
+                <Setter Value="{DynamicResource Page.Accent}" Property="Foreground" />
+              </MultiDataTrigger.Setters>
+              <TriggerBase.EnterActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="HoverOverlay" Storyboard.TargetProperty="Opacity" To="0.18" Duration="0:0:0.14" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.EnterActions>
+              <TriggerBase.ExitActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="HoverOverlay" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.16" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.ExitActions>
+            </MultiDataTrigger>
+            <Trigger Property="IsPressed" Value="True">
+              <TriggerBase.EnterActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="PressOverlay" Storyboard.TargetProperty="Opacity" To="0.12" Duration="0:0:0.05" />
+                    <DoubleAnimation Storyboard.TargetName="PART_ContentHost" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)" To="0.9" Duration="0:0:0.05" />
+                    <DoubleAnimation Storyboard.TargetName="PART_ContentHost" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)" To="0.9" Duration="0:0:0.05" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.EnterActions>
+              <TriggerBase.ExitActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="PressOverlay" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.12" />
+                    <DoubleAnimation Storyboard.TargetName="PART_ContentHost" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)" To="1" Duration="0:0:0.1" />
+                    <DoubleAnimation Storyboard.TargetName="PART_ContentHost" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)" To="1" Duration="0:0:0.1" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.ExitActions>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+              <Setter TargetName="Root" Property="UIElement.Opacity" Value="0.4" />
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="{x:Type Controls:TabControl}" TargetType="{x:Type Controls:TabControl}">
+    <Setter Property="FrameworkElement.FocusVisualStyle" Value="{x:Null}" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Controls:TabControl}">
+          <Grid ClipToBounds="True" SnapsToDevicePixels="True">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid Name="PART_HeaderHost" Row="0" ZIndex="2" Background="#00FFFFFF">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <ScrollViewer Name="PART_TabScroller" Grid.Column="0" Margin="0,0,0,-1" Panel.ZIndex="1" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Disabled" Style="{StaticResource OverlayScrollViewer}" MaxWidth="{Binding ActualWidth, ElementName=PART_HeaderHost, ConverterParameter=40, Converter={StaticResource SubtractConverter}}">
+                <StackPanel Name="PART_TabPanel" Margin="2,2,2,0" IsItemsHost="True" Orientation="Horizontal" />
+              </ScrollViewer>
+              <Controls:Button x:Name="PART_AddTab" Grid.Column="1" Width="22" Height="22" Margin="-4,2,6,0" VerticalAlignment="Top" AutomationProperties.Name="New Tab" Command="{x:Static Controls:TabControl.NewTabCommand}" CornerRadius="6" ToolTip="New Tab" UseLayoutRounding="True" Style="{StaticResource TabCloseButton}">
+                <Path Width="10" Height="10" HorizontalAlignment="Center" VerticalAlignment="Center" Data="{DynamicResource Icon.Plus}" SnapsToDevicePixels="True" Stretch="Uniform" Stroke="#C9CCD6" StrokeEndLineCap="Round" StrokeStartLineCap="Round" StrokeThickness="1.5" />
+              </Controls:Button>
+              <Border Name="PART_DropIndicator" Grid.ColumnSpan="2" Width="2" Height="20" Margin="0,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Panel.ZIndex="10" Background="{DynamicResource Page.Accent}" CornerRadius="1" IsHitTestVisible="False" Visibility="Collapsed" />
+            </Grid>
+            <Grid Row="1">
+              <Border Name="ContentFrame" BorderBrush="#1E2029" BorderThickness="1" CornerRadius="0,5,5,5">
+                <Border.Background>
+                  <ImageBrush ImageSource="/Assets/Images/Secondary-1.png" RenderOptions.BitmapScalingMode="HighQuality" Stretch="UniformToFill" />
+                </Border.Background>
+              </Border>
+              <Grid>
+                <ContentPresenter Name="EditorHost" Margin="1" Content="{TemplateBinding Controls:TabControl.Content}" SnapsToDevicePixels="True" />
+                <Grid Name="EmptyHost" IsEnabled="False" IsHitTestVisible="False" Opacity="0">
+                  <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Controls:EmptyState Title="No Open Tabs" HorizontalAlignment="Center" Message="Create a new tab to start editing." Icon="{StaticResource Icon.File}" />
+                    <Controls:Button Margin="0,14,0,0" HorizontalAlignment="Center" AutomationProperties.Name="New Tab" Command="{x:Static Controls:TabControl.NewTabCommand}" Style="{StaticResource ActionBarAccent}">
+                      <StackPanel Orientation="Horizontal">
+                        <Path Width="10" Height="10" Margin="0,0,6,0" Data="{DynamicResource Icon.Plus}" Stretch="Uniform" StrokeEndLineCap="Round" StrokeStartLineCap="Round" StrokeThickness="1.4" Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Controls:Button}}}" />
+                        <TextBlock VerticalAlignment="Center" Text="New Tab" />
+                      </StackPanel>
+                    </Controls:Button>
+                  </StackPanel>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+          <ControlTemplate.Triggers>
+            <Trigger Property="Controls:TabControl.HasTabs" Value="False">
+              <Setter TargetName="ContentFrame" Property="Visibility" Value="Collapsed" />
+              <Setter TargetName="PART_HeaderHost" Property="Visibility" Value="Collapsed" />
+              <Setter TargetName="EditorHost" Property="Visibility" Value="Hidden" />
+              <Setter TargetName="EmptyHost" Property="IsEnabled" Value="True" />
+              <Setter TargetName="EmptyHost" Property="UIElement.IsHitTestVisible" Value="True" />
+              <TriggerBase.EnterActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="EmptyHost" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.15" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.EnterActions>
+              <TriggerBase.ExitActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="EmptyHost" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.1" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.ExitActions>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="dotnet_codex_ui.Features.Auth.DevAuthPanel" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:Controls="clr-namespace:dotnet_codex_ui.Controls" TextElement.FontFamily="{StaticResource Inter}" xmlns:auth="clr-namespace:dotnet_codex_ui.Features.Auth">
+  <Border Padding="12,10" Background="#15161C" BorderBrush="{StaticResource Page.ControlBorder}" BorderThickness="1" CornerRadius="8">
+    <StackPanel>
+      <Controls:SpacedTextBlock CharacterSpacing="7" FontFamily="{StaticResource Inter}" FontSize="8" FontWeight="SemiBold" Foreground="{StaticResource Toast.Warning}" Text="DEVELOPER · AUTH" />
+      <TextBlock Margin="0,5,0,0" FontSize="8.5" Foreground="{StaticResource Page.Dim}" Text="Simulated data for UI testing. Switching mode takes effect immediately." TextWrapping="Wrap" />
+      <StackPanel Name="ModeRow" Margin="0,10,0,0" Orientation="Horizontal">
+        <RadioButton Name="MockPill" Margin="0,0,6,0" Content="Mock" Style="{StaticResource FilterPill}" Tag="{StaticResource Icon.Zap}" Checked="Mode_Checked" />
+        <RadioButton Name="DisabledPill" Margin="0,0,6,0" Content="Disabled" Style="{StaticResource FilterPill}" Tag="{StaticResource Icon.Stop}" Checked="Mode_Checked" />
+        <RadioButton Name="RealPill" Margin="0" Content="Real" Style="{StaticResource FilterPill}" Tag="{StaticResource Icon.Sync}" Checked="Mode_Checked" />
+      </StackPanel>
+      <WrapPanel Name="ScenarioRow" Margin="0,10,0,0">
+        <Controls:Button x:Name="LinkButton" Click="Link_Click" Margin="0,0,6,6" AutomationProperties.Name="Mock link scenario" Style="{StaticResource ActionBarButton}" />
+        <Controls:Button x:Name="CompletionButton" Click="Completion_Click" Margin="0,0,6,6" AutomationProperties.Name="Mock completion scenario" Style="{StaticResource ActionBarButton}" />
+        <Controls:Button x:Name="SubscriptionButton" Click="Subscription_Click" Margin="0,0,6,6" AutomationProperties.Name="Mock subscription status" Style="{StaticResource ActionBarButton}" />
+      </WrapPanel>
+      <WrapPanel Name="ActionRow" Margin="0,4,0,0">
+        <Controls:Button x:Name="CompleteButton" Click="Complete_Click" Margin="0,0,6,6" AutomationProperties.Name="Complete Mock Login" Content="Complete Mock Login" Style="{StaticResource ActionBarAccent}" />
+        <Controls:Button x:Name="ExpireButton" Click="Expire_Click" Margin="0,0,6,6" AutomationProperties.Name="Expire mock session" Content="Expire Session" Style="{StaticResource ActionBarDanger}" />
+        <Controls:Button x:Name="RefreshButton" Click="Refresh_Click" Margin="0,0,6,6" AutomationProperties.Name="Refresh Subscription" Content="Refresh Subscription" Style="{StaticResource ActionBarButton}" />
+      </WrapPanel>
+    </StackPanel>
+  </Border>
+</UserControl>

@@ -1,0 +1,20 @@
+.DS_Store
+Thumbs.db
+__pycache__/
+*.py[cod]
+.idea/
+.vscode/
+
+# Local archives and progress checkpoints
+*.zip
+*.tar
+*.tar.gz
+*checkpoint*.tar.gz
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+

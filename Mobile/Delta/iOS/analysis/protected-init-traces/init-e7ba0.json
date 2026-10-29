@@ -1,0 +1,82 @@
+{
+  "target": "0xe7ba0",
+  "stopped_reason": "returned",
+  "unicorn_error": null,
+  "instruction_count": 32,
+  "heap_used": 306,
+  "function_entries": [
+    {
+      "at_instruction": 1,
+      "address": "0xe7ba0",
+      "arguments": [
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {}
+    }
+  ],
+  "import_calls": [
+    {
+      "at_instruction": 15,
+      "target": "0xc7a88c",
+      "symbol": "___cxa_guard_acquire",
+      "arguments": [
+        "0xf013a0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {}
+    },
+    {
+      "at_instruction": 24,
+      "target": "0xc7a850",
+      "symbol": "___cxa_atexit",
+      "arguments": [
+        "0x2300090",
+        "0xf01360",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {}
+    },
+    {
+      "at_instruction": 28,
+      "target": "0xc7a898",
+      "symbol": "___cxa_guard_release",
+      "arguments": [
+        "0xf013a0",
+        "0xf01360",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {}
+    }
+  ],
+  "import_counts": {
+    "___cxa_guard_acquire": 1,
+    "___cxa_atexit": 1,
+    "___cxa_guard_release": 1
+  },
+  "invalid_accesses": [],
+  "data_dump": "delta-ios-decompiled/analysis/protected-init-traces/init-e7ba0-data.bin",
+  "heap_dump": "delta-ios-decompiled/analysis/protected-init-traces/init-e7ba0-heap.bin"
+}

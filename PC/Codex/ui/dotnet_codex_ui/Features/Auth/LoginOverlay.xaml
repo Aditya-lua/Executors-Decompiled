@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="dotnet_codex_ui.Features.Auth.LoginOverlay" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:Controls="clr-namespace:dotnet_codex_ui.Controls" KeyboardNavigation.ControlTabNavigation="Cycle" KeyboardNavigation.TabNavigation="Cycle" TextElement.FontFamily="{StaticResource Inter}" Visibility="Collapsed" xmlns:auth="clr-namespace:dotnet_codex_ui.Features.Auth">
+  <Border Name="Scrim" Background="#E6090A0F" CornerRadius="10">
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled" Style="{StaticResource OverlayScrollViewer}" VerticalScrollBarVisibility="Auto">
+      <Border Name="Card" MaxWidth="360" Margin="24" Padding="22,20" HorizontalAlignment="Stretch" VerticalAlignment="Center" Background="#13141A" BorderBrush="{StaticResource Page.ControlBorder}" BorderThickness="1" CornerRadius="10">
+        <UIElement.Effect>
+          <DropShadowEffect BlurRadius="24" Opacity="0.6" ShadowDepth="0" Color="Black" />
+        </UIElement.Effect>
+        <Grid>
+          <Controls:Button x:Name="CloseButton" Click="Close_Click" HorizontalAlignment="Right" VerticalAlignment="Top" AutomationProperties.Name="Exit Codex" Style="{StaticResource TabCloseButton}" ToolTip="Exit Codex">
+            <Path Width="8" Height="8" Data="{StaticResource Icon.Close}" Stretch="Uniform" Stroke="{StaticResource Page.Muted}" StrokeEndLineCap="Round" StrokeStartLineCap="Round" StrokeThickness="1.4" />
+          </Controls:Button>
+          <StackPanel>
+            <Border Width="34" Height="34" HorizontalAlignment="Left" Background="{DynamicResource Page.AccentSurface}" CornerRadius="9">
+              <Path Name="HeaderIcon" Width="16" Height="16" HorizontalAlignment="Center" VerticalAlignment="Center" Data="{StaticResource Icon.Mail}" Stretch="Uniform" Stroke="{DynamicResource Page.Accent}" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeThickness="1.4" />
+            </Border>
+            <Controls:SpacedTextBlock x:Name="TitleText" Margin="0,14,0,0" CharacterSpacing="2" FontFamily="{StaticResource Inter}" FontSize="15" FontWeight="Bold" Foreground="{StaticResource Page.Foreground}" Text="Welcome Back" TextWrapping="Wrap" />
+            <TextBlock Name="SubText" Margin="0,6,0,0" FontSize="10" Foreground="{StaticResource Page.Muted}" TextWrapping="Wrap" />
+            <StackPanel Name="FormPanel" Margin="0,18,0,0">
+              <Controls:SpacedTextBlock Margin="0,0,0,6" CharacterSpacing="7" FontFamily="{StaticResource Inter}" FontSize="8" FontWeight="SemiBold" Foreground="{StaticResource Page.Dim}" Text="EMAIL" />
+              <TextBox Name="EmailBox" AutomationProperties.Name="Email address" Style="{StaticResource EmailBox}" Tag="you@example.com" PreviewKeyDown="EmailBox_PreviewKeyDown" TextChanged="EmailBox_TextChanged" />
+            </StackPanel>
+            <Grid Name="ErrorRow" Margin="0,10,0,0" Visibility="Collapsed">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+              <Path Width="11" Height="11" Margin="0,1,7,0" VerticalAlignment="Top" Data="{StaticResource Icon.Alert}" Stretch="Uniform" Stroke="{StaticResource Toast.Error}" StrokeEndLineCap="Round" StrokeStartLineCap="Round" StrokeThickness="1.3" />
+              <TextBlock Name="ErrorText" Grid.Column="1" FontSize="9" Foreground="{StaticResource Toast.Error}" TextWrapping="Wrap" />
+            </Grid>
+            <Controls:Button x:Name="ContinueButton" Click="Continue_Click" Height="34" Margin="0,14,0,0" AutomationProperties.Name="Continue with Email" CornerRadius="8" Style="{StaticResource ActionBarAccent}">
+              <StackPanel Orientation="Horizontal">
+                <Path Name="ContinueSpinner" Width="11" Height="11" Margin="0,0,8,0" VerticalAlignment="Center" Data="{StaticResource Icon.Sync}" RenderTransformOrigin="0.5,0.5" Stretch="Uniform" StrokeThickness="1.4" Visibility="Collapsed" Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Controls:Button}}}">
+                  <UIElement.RenderTransform>
+                    <RotateTransform />
+                  </UIElement.RenderTransform>
+                </Path>
+                <Controls:SpacedTextBlock x:Name="ContinueLabel" VerticalAlignment="Center" CharacterSpacing="2" FontFamily="{StaticResource Inter}" FontSize="10" FontWeight="SemiBold" Text="Continue with Email" Foreground="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Controls:Button}}}" />
+              </StackPanel>
+            </Controls:Button>
+            <StackPanel Name="SentPanel" Margin="0,16,0,0" Visibility="Collapsed">
+              <Button Name="ResendButton" HorizontalAlignment="Left" AutomationProperties.Name="Resend sign-in link" Content="Resend Link" Style="{StaticResource LinkButton}" Click="Resend_Click" />
+              <Button Name="ChangeEmailButton" HorizontalAlignment="Left" AutomationProperties.Name="Use a Different Email" Content="Use a Different Email" Style="{StaticResource LinkButton}" Click="ChangeEmail_Click" />
+            </StackPanel>
+            <StackPanel Name="CompletingPanel" Margin="0,16,0,0" Orientation="Horizontal" Visibility="Collapsed">
+              <Path Name="CompletingSpinner" Width="12" Height="12" Margin="0,0,8,0" VerticalAlignment="Center" Data="{StaticResource Icon.Sync}" RenderTransformOrigin="0.5,0.5" Stretch="Uniform" Stroke="{DynamicResource Page.Accent}" StrokeThickness="1.4">
+                <UIElement.RenderTransform>
+                  <RotateTransform />
+                </UIElement.RenderTransform>
+              </Path>
+              <TextBlock VerticalAlignment="Center" FontSize="10" Foreground="{StaticResource Page.Muted}" Text="Verifying your account..." />
+            </StackPanel>
+            <Grid Name="FooterRow" Margin="0,14,0,0">
+              <Button Name="RegisterButton" HorizontalAlignment="Left" AutomationProperties.Name="Register" Content="Register" Style="{StaticResource LinkButton}" Click="Register_Click" />
+              <Button Name="ForgotButton" HorizontalAlignment="Right" AutomationProperties.Name="Forgot password" Content="Forgot Password?" Style="{StaticResource LinkButton}" Click="Forgot_Click" />
+            </Grid>
+            <StackPanel Name="DevArea" Margin="0,6,0,0" Visibility="Collapsed">
+              <Button Name="DevToggle" HorizontalAlignment="Center" AutomationProperties.Name="Developer Options" Content="Developer Options" Style="{StaticResource LinkButton}" Click="DevToggle_Click" />
+              <Border Name="DevHost" Margin="0,6,0,0" Visibility="Collapsed" />
+            </StackPanel>
+          </StackPanel>
+        </Grid>
+      </Border>
+    </ScrollViewer>
+  </Border>
+</UserControl>

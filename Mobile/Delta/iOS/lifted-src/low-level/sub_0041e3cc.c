@@ -1,0 +1,136 @@
+/* Instruction-faithful low-level lift; not original vendor source.
+ * Mach-O extent: 0x41e3cc..0x41e5bc (496 bytes). */
+#include "../lift_runtime.hpp"
+
+void sub_0041e3cc(Arm64Context& cpu) {
+loc_0041e3cc:
+    /* 0x0041e3cc: adr      x16, #0x41e3cc */ ARM64("adr x16, #0x41e3cc");
+    /* 0x0041e3d0: ldr      x0, [x1, #0x18] */ ARM64("ldr x0, [x1, #0x18]");
+    /* 0x0041e3d4: ldr      x1, #0x41e3dc */ ARM64("ldr x1, #0x41e3dc");
+    /* 0x0041e3d8: blr      x17 */ CALL_INDIRECT(x17);
+loc_0041e3dc:
+    /* 0x0041e3dc: ldr      x1, #0x41e3e4 */ ARM64("ldr x1, #0x41e3e4");
+    /* 0x0041e3e0: .byte    0x60, 0x06, 0x3f, 0xd6 */ ARM64(".byte 0x60, 0x06, 0x3f, 0xd6");
+loc_0041e3e4:
+    /* 0x0041e3e4: .byte    0xf1, 0xff, 0xf2, 0xa2 */ ARM64(".byte 0xf1, 0xff, 0xf2, 0xa2");
+    /* 0x0041e3e8: .byte    0xf8, 0xff, 0xe2, 0xc2 */ ARM64(".byte 0xf8, 0xff, 0xe2, 0xc2");
+    /* 0x0041e3ec: sub      sp, sp, #0x60 */ ARM64("sub sp, sp, #0x60");
+    /* 0x0041e3f0: stp      x29, x30, [sp, #0x50] */ ARM64("stp x29, x30, [sp, #0x50]");
+    /* 0x0041e3f4: add      x29, sp, #0x50 */ ARM64("add x29, sp, #0x50");
+    /* 0x0041e3f8: adrp     x8, #0xe5c000 */ ARM64("adrp x8, #0xe5c000");
+    /* 0x0041e3fc: ldr      x8, [x8, #0xd8] */ ARM64("ldr x8, [x8, #0xd8]");
+    /* 0x0041e400: ldr      x8, [x8] */ ARM64("ldr x8, [x8]");
+    /* 0x0041e404: stur     x8, [x29, #-8] */ ARM64("stur x8, [x29, #-8]");
+    /* 0x0041e408: add      x8, sp, #0x10 */ ARM64("add x8, sp, #0x10");
+    /* 0x0041e40c: adrp     x9, #0xf0d000 */ ARM64("adrp x9, #0xf0d000");
+    /* 0x0041e410: add      x9, x9, #0x198 */ ARM64("add x9, x9, #0x198");
+    /* 0x0041e414: str      w8, [sp, #8] */ ARM64("str w8, [sp, #8]");
+    /* 0x0041e418: ldr      x8, [x9] */ ARM64("ldr x8, [x9]");
+    /* 0x0041e41c: ldr      x8, [x8, #0x60] */ ARM64("ldr x8, [x8, #0x60]");
+    /* 0x0041e420: adrp     x9, #0xd1e000 */ ARM64("adrp x9, #0xd1e000");
+    /* 0x0041e424: ldr      d0, [x9, #0x990] */ ARM64("ldr d0, [x9, #0x990]");
+    /* 0x0041e428: str      d0, [sp, #0x20] */ ARM64("str d0, [sp, #0x20]");
+    /* 0x0041e42c: stp      xzr, xzr, [sp, #0x28] */ ARM64("stp xzr, xzr, [sp, #0x28]");
+    /* 0x0041e430: stur     xzr, [sp, #0x37] */ ARM64("stur xzr, [sp, #0x37]");
+    /* 0x0041e434: str      xzr, [sp, #0x18] */ ARM64("str xzr, [sp, #0x18]");
+    /* 0x0041e438: ldr      x9, [sp, #0x18] */ ARM64("ldr x9, [sp, #0x18]");
+    /* 0x0041e43c: cmp      x9, #0x1e */ ARM64("cmp x9, #0x1e");
+    /* 0x0041e440: b.hi     #0x41e500 */ if (COND_HI) goto loc_0041e500;
+    /* 0x0041e444: add      x9, sp, #0x20 */ ARM64("add x9, sp, #0x20");
+    /* 0x0041e448: mov      w10, #0x9f04 */ ARM64("mov w10, #0x9f04");
+    /* 0x0041e44c: movk     w10, #0xafa, lsl #16 */ ARM64("movk w10, #0xafa, lsl #16");
+    /* 0x0041e450: mov      w11, #0x3e08 */ ARM64("mov w11, #0x3e08");
+    /* 0x0041e454: movk     w11, #0x15f5, lsl #16 */ ARM64("movk w11, #0x15f5, lsl #16");
+    /* 0x0041e458: mov      w12, #1 */ ARM64("mov w12, #1");
+    /* 0x0041e45c: mov      w13, #0xd6 */ ARM64("mov w13, #0xd6");
+    /* 0x0041e460: mov      w14, #0x6b */ ARM64("mov w14, #0x6b");
+loc_0041e464:
+    /* 0x0041e464: ldr      x15, [sp, #0x18] */ ARM64("ldr x15, [sp, #0x18]");
+    /* 0x0041e468: ldrb     w15, [x9, x15] */ ARM64("ldrb w15, [x9, x15]");
+    /* 0x0041e46c: ldr      x16, [sp, #0x18] */ ARM64("ldr x16, [sp, #0x18]");
+    /* 0x0041e470: eor      w17, w16, w10 */ ARM64("eor w17, w16, w10");
+    /* 0x0041e474: and      w16, w11, w16, lsl #1 */ ARM64("and w16, w11, w16, lsl #1");
+    /* 0x0041e478: add      w16, w17, w16 */ ARM64("add w16, w17, w16");
+    /* 0x0041e47c: sub      w16, w16, #1 */ ARM64("sub w16, w16, #1");
+    /* 0x0041e480: add      w17, w16, w15 */ ARM64("add w17, w16, w15");
+    /* 0x0041e484: and      w15, w16, w15 */ ARM64("and w15, w16, w15");
+    /* 0x0041e488: add      w16, w15, #1 */ ARM64("add w16, w15, #1");
+    /* 0x0041e48c: eor      w1, w16, w15 */ ARM64("eor w1, w16, w15");
+    /* 0x0041e490: and      w15, w16, w15 */ ARM64("and w15, w16, w15");
+    /* 0x0041e494: add      w15, w1, w15, lsl #1 */ ARM64("add w15, w1, w15, lsl #1");
+    /* 0x0041e498: sub      w16, w12, w15 */ ARM64("sub w16, w12, w15");
+    /* 0x0041e49c: eor      w1, w16, w17 */ ARM64("eor w1, w16, w17");
+    /* 0x0041e4a0: orr      w16, w16, w17 */ ARM64("orr w16, w16, w17");
+    /* 0x0041e4a4: sub      w15, w17, w15 */ ARM64("sub w15, w17, w15");
+    /* 0x0041e4a8: sub      w15, w15, w16 */ ARM64("sub w15, w15, w16");
+    /* 0x0041e4ac: add      w15, w1, w15, lsl #1 */ ARM64("add w15, w1, w15, lsl #1");
+    /* 0x0041e4b0: add      w15, w15, #2 */ ARM64("add w15, w15, #2");
+    /* 0x0041e4b4: bic      w16, w13, w15, lsl #1 */ ARM64("bic w16, w13, w15, lsl #1");
+    /* 0x0041e4b8: add      w16, w15, w16 */ ARM64("add w16, w15, w16");
+    /* 0x0041e4bc: orn      w17, w14, w15 */ ARM64("orn w17, w14, w15");
+    /* 0x0041e4c0: add      w15, w15, w17 */ ARM64("add w15, w15, w17");
+    /* 0x0041e4c4: add      w15, w16, w15, lsl #1 */ ARM64("add w15, w16, w15, lsl #1");
+    /* 0x0041e4c8: add      w15, w15, #0x17 */ ARM64("add w15, w15, #0x17");
+    /* 0x0041e4cc: ldr      x16, [sp, #0x18] */ ARM64("ldr x16, [sp, #0x18]");
+    /* 0x0041e4d0: strb     w15, [x9, x16] */ ARM64("strb w15, [x9, x16]");
+    /* 0x0041e4d4: ldr      x15, [sp, #0x18] */ ARM64("ldr x15, [sp, #0x18]");
+    /* 0x0041e4d8: eor      x16, x15, #2 */ ARM64("eor x16, x15, #2");
+    /* 0x0041e4dc: lsl      x15, x15, #1 */ ARM64("lsl x15, x15, #1");
+    /* 0x0041e4e0: and      x15, x15, #4 */ ARM64("and x15, x15, #4");
+    /* 0x0041e4e4: add      x15, x15, x16 */ ARM64("add x15, x15, x16");
+    /* 0x0041e4e8: mvn      x16, x15 */ ARM64("mvn x16, x15");
+    /* 0x0041e4ec: add      x15, x16, x15, lsl #1 */ ARM64("add x15, x16, x15, lsl #1");
+    /* 0x0041e4f0: str      x15, [sp, #0x18] */ ARM64("str x15, [sp, #0x18]");
+    /* 0x0041e4f4: ldr      x15, [sp, #0x18] */ ARM64("ldr x15, [sp, #0x18]");
+    /* 0x0041e4f8: cmp      x15, #0x1f */ ARM64("cmp x15, #0x1f");
+    /* 0x0041e4fc: b.lo     #0x41e464 */ if (COND_LO) goto loc_0041e464;
+loc_0041e500:
+    /* 0x0041e500: ldr      x9, [sp, #0x20] */ ARM64("ldr x9, [sp, #0x20]");
+    /* 0x0041e504: ldr      x8, [x8, #0x100] */ ARM64("ldr x8, [x8, #0x100]");
+    /* 0x0041e508: orn      x10, x9, x8 */ ARM64("orn x10, x9, x8");
+    /* 0x0041e50c: add      x8, x8, #1 */ ARM64("add x8, x8, #1");
+    /* 0x0041e510: eor      x11, x8, x10 */ ARM64("eor x11, x8, x10");
+    /* 0x0041e514: and      x8, x8, x10 */ ARM64("and x8, x8, x10");
+    /* 0x0041e518: add      x8, x11, x8, lsl #1 */ ARM64("add x8, x11, x8, lsl #1");
+    /* 0x0041e51c: cmp      x8, x9 */ ARM64("cmp x8, x9");
+    /* 0x0041e520: cset     w8, eq */ ARM64("cset w8, eq");
+    /* 0x0041e524: ldr      x9, [x0, #0x58] */ ARM64("ldr x9, [x0, #0x58]");
+    /* 0x0041e528: str      w8, [x9] */ ARM64("str w8, [x9]");
+    /* 0x0041e52c: mov      w8, #1 */ ARM64("mov w8, #1");
+    /* 0x0041e530: str      w8, [x9, #0xc] */ ARM64("str w8, [x9, #0xc]");
+    /* 0x0041e534: ldr      x8, [x0, #0x58] */ ARM64("ldr x8, [x0, #0x58]");
+    /* 0x0041e538: add      x8, x8, #0x10 */ ARM64("add x8, x8, #0x10");
+    /* 0x0041e53c: str      x8, [x0, #0x58] */ ARM64("str x8, [x0, #0x58]");
+    /* 0x0041e540: ldr      w8, [sp, #8] */ ARM64("ldr w8, [sp, #8]");
+    /* 0x0041e544: ldur     x9, [x29, #-8] */ ARM64("ldur x9, [x29, #-8]");
+    /* 0x0041e548: adrp     x10, #0xe5c000 */ ARM64("adrp x10, #0xe5c000");
+    /* 0x0041e54c: ldr      x10, [x10, #0xd8] */ ARM64("ldr x10, [x10, #0xd8]");
+    /* 0x0041e550: ldr      x10, [x10] */ ARM64("ldr x10, [x10]");
+    /* 0x0041e554: cmp      x10, x9 */ ARM64("cmp x10, x9");
+    /* 0x0041e558: b.ne     #0x41e5b8 */ if (COND_NE) goto loc_0041e5b8;
+    /* 0x0041e55c: neg      w9, w8 */ ARM64("neg w9, w8");
+    /* 0x0041e560: mov      w10, #0x45 */ ARM64("mov w10, #0x45");
+    /* 0x0041e564: eor      w9, w9, w10 */ ARM64("eor w9, w9, w10");
+    /* 0x0041e568: lsl      w10, w8, #1 */ ARM64("lsl w10, w8, #1");
+    /* 0x0041e56c: neg      w11, w10 */ ARM64("neg w11, w10");
+    /* 0x0041e570: mov      w12, #0x8a */ ARM64("mov w12, #0x8a");
+    /* 0x0041e574: and      w11, w11, w12 */ ARM64("and w11, w11, w12");
+    /* 0x0041e578: mov      w12, #-0x8c */ ARM64("mov w12, #-0x8c");
+    /* 0x0041e57c: and      w10, w10, w12 */ ARM64("and w10, w10, w12");
+    /* 0x0041e580: add      w9, w9, w10 */ ARM64("add w9, w9, w10");
+    /* 0x0041e584: add      w9, w11, w9 */ ARM64("add w9, w11, w9");
+    /* 0x0041e588: orr      w10, w9, w8 */ ARM64("orr w10, w9, w8");
+    /* 0x0041e58c: and      w8, w9, w8 */ ARM64("and w8, w9, w8");
+    /* 0x0041e590: sub      w8, w10, w8 */ ARM64("sub w8, w10, w8");
+    /* 0x0041e594: orr      w8, w8, #1 */ ARM64("orr w8, w8, #1");
+    /* 0x0041e598: add      w9, w8, #1 */ ARM64("add w9, w8, #1");
+    /* 0x0041e59c: neg      w8, w8 */ ARM64("neg w8, w8");
+    /* 0x0041e5a0: eor      w10, w9, w8 */ ARM64("eor w10, w9, w8");
+    /* 0x0041e5a4: and      w8, w9, w8 */ ARM64("and w8, w9, w8");
+    /* 0x0041e5a8: add      w0, w10, w8, lsl #1 */ ARM64("add w0, w10, w8, lsl #1");
+    /* 0x0041e5ac: ldp      x29, x30, [sp, #0x50] */ ARM64("ldp x29, x30, [sp, #0x50]");
+    /* 0x0041e5b0: add      sp, sp, #0x60 */ ARM64("add sp, sp, #0x60");
+    /* 0x0041e5b4: ret       */ return;
+loc_0041e5b8:
+    /* 0x0041e5b8: bl       #0xc7a904 */ CALL_DIRECT(sub_00c7a904);
+}

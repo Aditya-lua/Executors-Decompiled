@@ -1,0 +1,9 @@
+/*
+ * Machine-reconstructed pseudocode; not original vendor source.
+ * Mach-O extent: 0xae75d4..0xae75e0 (12 bytes).
+ * Function and variable names are synthetic unless documented elsewhere.
+ */
+
+long long sub_ae75d4(void)
+{
+}

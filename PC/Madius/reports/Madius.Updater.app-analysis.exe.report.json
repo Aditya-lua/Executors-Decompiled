@@ -1,0 +1,29 @@
+{
+  "input": "targets/madius_updater/triage/Madius.Updater.unpacked.exe",
+  "input_sha256": "2b9271a5a54f88712386c452ae87598eaa875a2665d0a7dd1f6b08137e4468e4",
+  "analysis_entry_rva": "0x27c540",
+  "sections_made_non_executable": [
+    ".n5u",
+    ".(hX"
+  ],
+  "directories_disabled": [
+    {
+      "name": "exception",
+      "rva": "0x29f5a50",
+      "size": "0x1f494"
+    },
+    {
+      "name": "tls",
+      "rva": "0x1a3f380",
+      "size": "0x28"
+    },
+    {
+      "name": "load_config",
+      "rva": "0x29f5910",
+      "size": "0x140"
+    }
+  ],
+  "output": "targets/madius_updater/triage/Madius.Updater.app-analysis.exe",
+  "output_sha256": "f84b0631283a2a62c9c5c578544549d82fa31d6ce822ea6d3ee2b7c3841c7f91",
+  "warning": "Static-analysis-only image; do not execute."
+}

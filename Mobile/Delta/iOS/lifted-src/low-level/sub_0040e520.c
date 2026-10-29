@@ -1,0 +1,117 @@
+/* Instruction-faithful low-level lift; not original vendor source.
+ * Mach-O extent: 0x40e520..0x40e6cc (428 bytes). */
+#include "../lift_runtime.hpp"
+
+void sub_0040e520(Arm64Context& cpu) {
+loc_0040e520:
+    /* 0x0040e520: adr      x16, #0x40e520 */ ARM64("adr x16, #0x40e520");
+    /* 0x0040e524: ldr      x0, [x1, #0x18] */ ARM64("ldr x0, [x1, #0x18]");
+    /* 0x0040e528: ldr      x1, #0x40e530 */ ARM64("ldr x1, #0x40e530");
+    /* 0x0040e52c: blr      x17 */ CALL_INDIRECT(x17);
+loc_0040e530:
+    /* 0x0040e530: ldr      x1, #0x40e538 */ ARM64("ldr x1, #0x40e538");
+    /* 0x0040e534: .byte    0x60, 0x06, 0x3f, 0xd6 */ ARM64(".byte 0x60, 0x06, 0x3f, 0xd6");
+loc_0040e538:
+    /* 0x0040e538: .byte    0xf1, 0xff, 0xf2, 0xa2 */ ARM64(".byte 0xf1, 0xff, 0xf2, 0xa2");
+    /* 0x0040e53c: .byte    0xf8, 0xff, 0xe2, 0xc2 */ ARM64(".byte 0xf8, 0xff, 0xe2, 0xc2");
+    /* 0x0040e540: sub      sp, sp, #0x70 */ ARM64("sub sp, sp, #0x70");
+    /* 0x0040e544: stp      x22, x21, [sp, #0x40] */ ARM64("stp x22, x21, [sp, #0x40]");
+    /* 0x0040e548: stp      x20, x19, [sp, #0x50] */ ARM64("stp x20, x19, [sp, #0x50]");
+    /* 0x0040e54c: stp      x29, x30, [sp, #0x60] */ ARM64("stp x29, x30, [sp, #0x60]");
+    /* 0x0040e550: add      x29, sp, #0x60 */ ARM64("add x29, sp, #0x60");
+    /* 0x0040e554: mov      x19, x0 */ ARM64("mov x19, x0");
+    /* 0x0040e558: adrp     x8, #0xe5c000 */ ARM64("adrp x8, #0xe5c000");
+    /* 0x0040e55c: ldr      x8, [x8, #0xd8] */ ARM64("ldr x8, [x8, #0xd8]");
+    /* 0x0040e560: ldr      x8, [x8] */ ARM64("ldr x8, [x8]");
+    /* 0x0040e564: stur     x8, [x29, #-0x28] */ ARM64("stur x8, [x29, #-0x28]");
+    /* 0x0040e568: mov      x8, sp */ ARM64("mov x8, sp");
+    /* 0x0040e56c: str      x8, [sp, #8] */ ARM64("str x8, [sp, #8]");
+    /* 0x0040e570: add      x8, sp, #8 */ ARM64("add x8, sp, #8");
+    /* 0x0040e574: str      x8, [sp] */ ARM64("str x8, [sp]");
+    /* 0x0040e578: mov      x8, #0x7775 */ ARM64("mov x8, #0x7775");
+    /* 0x0040e57c: movk     x8, #0x7370, lsl #16 */ ARM64("movk x8, #0x7370, lsl #16");
+    /* 0x0040e580: movk     x8, #0x16a, lsl #32 */ ARM64("movk x8, #0x16a, lsl #32");
+    /* 0x0040e584: movk     x8, #0x1899, lsl #48 */ ARM64("movk x8, #0x1899, lsl #48");
+    /* 0x0040e588: mov      x9, #0x87b4 */ ARM64("mov x9, #0x87b4");
+    /* 0x0040e58c: movk     x9, #0x5d5d, lsl #16 */ ARM64("movk x9, #0x5d5d, lsl #16");
+    /* 0x0040e590: movk     x9, #0xfc7c, lsl #32 */ ARM64("movk x9, #0xfc7c, lsl #32");
+    /* 0x0040e594: movk     x9, #0x1990, lsl #48 */ ARM64("movk x9, #0x1990, lsl #48");
+    /* 0x0040e598: stp      x8, x9, [sp, #0x10] */ ARM64("stp x8, x9, [sp, #0x10]");
+    /* 0x0040e59c: mov      x8, #0x1e11 */ ARM64("mov x8, #0x1e11");
+    /* 0x0040e5a0: movk     x8, #0x1203, lsl #16 */ ARM64("movk x8, #0x1203, lsl #16");
+    /* 0x0040e5a4: movk     x8, #0x6d08, lsl #32 */ ARM64("movk x8, #0x6d08, lsl #32");
+    /* 0x0040e5a8: movk     x8, #0x79fc, lsl #48 */ ARM64("movk x8, #0x79fc, lsl #48");
+    /* 0x0040e5ac: mov      x9, #0xf3da */ ARM64("mov x9, #0xf3da");
+    /* 0x0040e5b0: movk     x9, #0x2e34, lsl #16 */ ARM64("movk x9, #0x2e34, lsl #16");
+    /* 0x0040e5b4: movk     x9, #0x9d1f, lsl #32 */ ARM64("movk x9, #0x9d1f, lsl #32");
+    /* 0x0040e5b8: movk     x9, #0x19fd, lsl #48 */ ARM64("movk x9, #0x19fd, lsl #48");
+    /* 0x0040e5bc: stp      x8, x9, [sp, #0x20] */ ARM64("stp x8, x9, [sp, #0x20]");
+    /* 0x0040e5c0: add      x8, sp, #0x20 */ ARM64("add x8, sp, #0x20");
+    /* 0x0040e5c4: add      x20, sp, #0x10 */ ARM64("add x20, sp, #0x10");
+    /* 0x0040e5c8: ldr      q0, [x20] */ ARM64("ldr q0, [x20]");
+    /* 0x0040e5cc: rev64    v0.16b, v0.16b */ ARM64("rev64 v0.16b, v0.16b");
+    /* 0x0040e5d0: ldr      q1, [x8] */ ARM64("ldr q1, [x8]");
+    /* 0x0040e5d4: rev64    v1.16b, v1.16b */ ARM64("rev64 v1.16b, v1.16b");
+    /* 0x0040e5d8: mvn      v2.16b, v0.16b */ ARM64("mvn v2.16b, v0.16b");
+    /* 0x0040e5dc: add      v3.2d, v2.2d, v2.2d */ ARM64("add v3.2d, v2.2d, v2.2d");
+    /* 0x0040e5e0: sub      v2.2d, v3.2d, v2.2d */ ARM64("sub v2.2d, v3.2d, v2.2d");
+    /* 0x0040e5e4: mvn      v3.16b, v2.16b */ ARM64("mvn v3.16b, v2.16b");
+    /* 0x0040e5e8: orn      v2.16b, v1.16b, v2.16b */ ARM64("orn v2.16b, v1.16b, v2.16b");
+    /* 0x0040e5ec: sub      v2.2d, v2.2d, v3.2d */ ARM64("sub v2.2d, v2.2d, v3.2d");
+    /* 0x0040e5f0: neg      v1.2d, v1.2d */ ARM64("neg v1.2d, v1.2d");
+    /* 0x0040e5f4: eor      v3.16b, v1.16b, v0.16b */ ARM64("eor v3.16b, v1.16b, v0.16b");
+    /* 0x0040e5f8: and      v0.16b, v1.16b, v0.16b */ ARM64("and v0.16b, v1.16b, v0.16b");
+    /* 0x0040e5fc: add      v0.2d, v0.2d, v2.2d */ ARM64("add v0.2d, v0.2d, v2.2d");
+    /* 0x0040e600: add      v0.2d, v0.2d, v0.2d */ ARM64("add v0.2d, v0.2d, v0.2d");
+    /* 0x0040e604: add      v0.2d, v0.2d, v3.2d */ ARM64("add v0.2d, v0.2d, v3.2d");
+    /* 0x0040e608: rev64    v0.16b, v0.16b */ ARM64("rev64 v0.16b, v0.16b");
+    /* 0x0040e60c: str      q0, [x20] */ ARM64("str q0, [x20]");
+    /* 0x0040e610: mov      x21, #0x100000000000 */ ARM64("mov x21, #0x100000000000");
+    /* 0x0040e614: add      x1, sp, #0x10 */ ARM64("add x1, sp, #0x10");
+    /* 0x0040e618: mov      x2, #0x100000000000 */ ARM64("mov x2, #0x100000000000");
+    /* 0x0040e61c: mov      w3, #0 */ ARM64("mov w3, #0");
+    /* 0x0040e620: mov      w4, #0 */ ARM64("mov w4, #0");
+    /* 0x0040e624: bl       #0x3ff078 */ CALL_DIRECT(sub_003ff078);
+    /* 0x0040e628: movi     v0.16b, #0 */ ARM64("movi v0.16b, #0");
+    /* 0x0040e62c: str      q0, [x20] */ ARM64("str q0, [x20]");
+    /* 0x0040e630: add      x8, sp, #0x10 */ ARM64("add x8, sp, #0x10");
+    /* 0x0040e634: adrp     x8, #0xf0d000 */ ARM64("adrp x8, #0xf0d000");
+    /* 0x0040e638: add      x8, x8, #0x198 */ ARM64("add x8, x8, #0x198");
+    /* 0x0040e63c: ldr      x8, [x8] */ ARM64("ldr x8, [x8]");
+    /* 0x0040e640: ldr      x8, [x8, #0x60] */ ARM64("ldr x8, [x8, #0x60]");
+    /* 0x0040e644: ldr      x8, [x8, #0x180] */ ARM64("ldr x8, [x8, #0x180]");
+    /* 0x0040e648: mvn      x9, x8 */ ARM64("mvn x9, x8");
+    /* 0x0040e64c: orr      x9, x9, #0x100000000000 */ ARM64("orr x9, x9, #0x100000000000");
+    /* 0x0040e650: add      x8, x8, #1 */ ARM64("add x8, x8, #1");
+    /* 0x0040e654: eor      x10, x9, x8 */ ARM64("eor x10, x9, x8");
+    /* 0x0040e658: and      x8, x9, x8 */ ARM64("and x8, x9, x8");
+    /* 0x0040e65c: add      x8, x10, x8, lsl #1 */ ARM64("add x8, x10, x8, lsl #1");
+    /* 0x0040e660: cmp      x8, x21 */ ARM64("cmp x8, x21");
+    /* 0x0040e664: cset     w8, eq */ ARM64("cset w8, eq");
+    /* 0x0040e668: ldr      x9, [x19, #0x58] */ ARM64("ldr x9, [x19, #0x58]");
+    /* 0x0040e66c: str      w8, [x9] */ ARM64("str w8, [x9]");
+    /* 0x0040e670: mov      w8, #1 */ ARM64("mov w8, #1");
+    /* 0x0040e674: str      w8, [x9, #0xc] */ ARM64("str w8, [x9, #0xc]");
+    /* 0x0040e678: ldr      x8, [x19, #0x58] */ ARM64("ldr x8, [x19, #0x58]");
+    /* 0x0040e67c: add      x8, x8, #0x10 */ ARM64("add x8, x8, #0x10");
+    /* 0x0040e680: str      x8, [x19, #0x58] */ ARM64("str x8, [x19, #0x58]");
+    /* 0x0040e684: ldr      w8, [sp] */ ARM64("ldr w8, [sp]");
+    /* 0x0040e688: ldur     x8, [x29, #-0x28] */ ARM64("ldur x8, [x29, #-0x28]");
+    /* 0x0040e68c: adrp     x9, #0xe5c000 */ ARM64("adrp x9, #0xe5c000");
+    /* 0x0040e690: ldr      x9, [x9, #0xd8] */ ARM64("ldr x9, [x9, #0xd8]");
+    /* 0x0040e694: ldr      x9, [x9] */ ARM64("ldr x9, [x9]");
+    /* 0x0040e698: cmp      x9, x8 */ ARM64("cmp x9, x8");
+    /* 0x0040e69c: b.ne     #0x40e6b8 */ if (COND_NE) goto loc_0040e6b8;
+    /* 0x0040e6a0: mov      w0, #1 */ ARM64("mov w0, #1");
+    /* 0x0040e6a4: ldp      x29, x30, [sp, #0x60] */ ARM64("ldp x29, x30, [sp, #0x60]");
+    /* 0x0040e6a8: ldp      x20, x19, [sp, #0x50] */ ARM64("ldp x20, x19, [sp, #0x50]");
+    /* 0x0040e6ac: ldp      x22, x21, [sp, #0x40] */ ARM64("ldp x22, x21, [sp, #0x40]");
+    /* 0x0040e6b0: add      sp, sp, #0x70 */ ARM64("add sp, sp, #0x70");
+    /* 0x0040e6b4: ret       */ return;
+loc_0040e6b8:
+    /* 0x0040e6b8: bl       #0xc7a904 */ CALL_DIRECT(sub_00c7a904);
+    /* 0x0040e6bc: movi     v0.16b, #0 */ ARM64("movi v0.16b, #0");
+    /* 0x0040e6c0: str      q0, [x20] */ ARM64("str q0, [x20]");
+    /* 0x0040e6c4: add      x8, sp, #0x10 */ ARM64("add x8, sp, #0x10");
+    /* 0x0040e6c8: bl       #0xc7a334 */ CALL_DIRECT(sub_00c7a334);
+}

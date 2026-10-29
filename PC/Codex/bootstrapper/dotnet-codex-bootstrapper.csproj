@@ -1,0 +1,119 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>dotnet-codex-bootstrapper</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <UseWPF>True</UseWPF>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>dotnet_codex_bootstrapper</RootNamespace>
+    <EnableWindowsTargeting>True</EnableWindowsTargeting>
+    <Nullable>annotations</Nullable>
+    <TargetFramework>net10.0-windows7.0</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>14.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Remove="dotnet_codex_bootstrapper/App.xaml" />
+    <ApplicationDefinition Include="dotnet_codex_bootstrapper/App.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="app.xaml" />
+    <Page Remove="dotnet_codex_bootstrapper/MainWindow.xaml" />
+    <Page Remove="resources/fonts.xaml" />
+    <Page Remove="resources/styles.xaml" />
+    <Page Remove="resources/theme.xaml" />
+    <Page Include="dotnet_codex_bootstrapper/MainWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="mainwindow.xaml" />
+    <Page Include="resources/fonts.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="resources/fonts.xaml" />
+    <Page Include="resources/styles.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="resources/styles.xaml" />
+    <Page Include="resources/theme.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="resources/theme.xaml" />
+    <Resource Remove="assets/fonts/inter-variablefont_opsz-wght.ttf" />
+    <Resource Remove="assets/images/logo.png" />
+    <Resource Remove="assets/images/primary.png" />
+    <Resource Include="assets/fonts/inter-variablefont_opsz-wght.ttf" LogicalName="assets/fonts/inter-variablefont_opsz,wght.ttf" />
+    <Resource Include="assets/images/logo.png" LogicalName="assets/images/logo.png" />
+    <Resource Include="assets/images/primary.png" LogicalName="assets/images/primary.png" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(UseDecompiledHintPaths)' == 'true'">
+    <Reference Include="System.Collections">
+      <HintPath>targets/codex-bootstrapper/bundle/System.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ObjectModel">
+      <HintPath>targets/codex-bootstrapper/bundle/System.ObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Registry">
+      <HintPath>targets/codex-bootstrapper/bundle/Microsoft.Win32.Registry.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives">
+      <HintPath>targets/codex-bootstrapper/bundle/Microsoft.Win32.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>targets/codex-bootstrapper/bundle/System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Process">
+      <HintPath>targets/codex-bootstrapper/bundle/System.Diagnostics.Process.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json">
+      <HintPath>targets/codex-bootstrapper/bundle/System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions">
+      <HintPath>targets/codex-bootstrapper/bundle/System.Text.RegularExpressions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression">
+      <HintPath>targets/codex-bootstrapper/bundle/System.IO.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography">
+      <HintPath>targets/codex-bootstrapper/bundle/System.Security.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading">
+      <HintPath>targets/codex-bootstrapper/bundle/System.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices">
+      <HintPath>targets/codex-bootstrapper/bundle/System.Runtime.InteropServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>targets/codex-bootstrapper/bundle/System.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog">
+      <HintPath>targets/codex-bootstrapper/bundle/Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows">
+      <HintPath>targets/codex-bootstrapper/bundle/System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Primitives">
+      <HintPath>targets/codex-bootstrapper/bundle/System.Net.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.FileVersionInfo">
+      <HintPath>targets/codex-bootstrapper/bundle/System.Diagnostics.FileVersionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Thread">
+      <HintPath>targets/codex-bootstrapper/bundle/System.Threading.Thread.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.Async">
+      <HintPath>targets/codex-bootstrapper/bundle/Serilog.Sinks.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>targets/codex-bootstrapper/bundle/System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Parallel">
+      <HintPath>targets/codex-bootstrapper/bundle/System.Threading.Tasks.Parallel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.ZipFile">
+      <HintPath>targets/codex-bootstrapper/bundle/System.IO.Compression.ZipFile.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.File">
+      <HintPath>targets/codex-bootstrapper/bundle/Serilog.Sinks.File.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Primitives">
+      <HintPath>targets/codex-bootstrapper/bundle/System.ComponentModel.Primitives.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Serilog" Version="4.4.0" />
+    <PackageReference Include="Serilog.Sinks.Async" Version="2.1.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
+  </ItemGroup>
+</Project>

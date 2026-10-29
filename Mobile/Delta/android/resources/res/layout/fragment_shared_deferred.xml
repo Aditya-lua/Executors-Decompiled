@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/activity_main_view" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ViewStub android:id="@id/retry_layout_stub" android:layout="@layout/retry_layout_wrapper" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <com.roblox.client.RBXSurfaceView android:id="@id/surfaceview" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <ViewStub android:id="@id/loading_layout_stub" android:layout="@layout/loading_layout_wrapper" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <ViewStub android:id="@id/keyboard_layout_stub" android:layout="@layout/keyboard_layout_wrapper" android:layout_width="match_parent" android:layout_height="match_parent" />
+</FrameLayout>

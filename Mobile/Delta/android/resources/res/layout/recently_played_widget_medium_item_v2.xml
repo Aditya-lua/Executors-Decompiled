@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/experience_item" android:padding="4.0dp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/experience_img" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@color/black" android:scaleType="fitCenter" android:adjustViewBounds="true" android:maxWidth="@dimen/recently_played_widget_item_max_img_size_v2" android:maxHeight="@dimen/recently_played_widget_item_max_img_size_v2" />
+    <TextView android:textSize="12.0sp" android:textColor="@color/widget_primary_text" android:ellipsize="end" android:gravity="center" android:id="@id/experience_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:maxLines="1" android:fontFamily="sans-serif" />
+</LinearLayout>

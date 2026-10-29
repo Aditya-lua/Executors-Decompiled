@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application x:Class="dotnet_codex_bootstrapper.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:dotnet_codex_bootstrapper="clr-namespace:dotnet_codex_bootstrapper;assembly=dotnet-codex-bootstrapper">
+  <Application.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Resources/Fonts.xaml" />
+        <ResourceDictionary Source="/Resources/Theme.xaml" />
+        <ResourceDictionary Source="/Resources/Styles.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Application.Resources>
+</Application>

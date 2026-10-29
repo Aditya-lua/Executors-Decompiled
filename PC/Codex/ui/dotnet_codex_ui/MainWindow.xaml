@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window x:Class="dotnet_codex_ui.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:Auth="clr-namespace:dotnet_codex_ui.Features.Auth" xmlns:Clients="clr-namespace:dotnet_codex_ui.Features.Clients" xmlns:Controls="clr-namespace:dotnet_codex_ui.Controls" xmlns:Explorer="clr-namespace:dotnet_codex_ui.Features.Explorer" xmlns:FeatureSettings="clr-namespace:dotnet_codex_ui.Features.Settings" xmlns:Internet="clr-namespace:dotnet_codex_ui.Features.Internet" xmlns:Versioning="clr-namespace:dotnet_codex_ui.Core.Versioning" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:dotnet_codex_ui" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Width="800" Height="500" MinWidth="660" MinHeight="360" AllowsTransparency="True" Background="#00FFFFFF" ResizeMode="CanResize" UseLayoutRounding="True" WindowStartupLocation="CenterScreen" WindowStyle="None" Loaded="Window_Loaded">
+  <WindowChrome.WindowChrome>
+    <WindowChrome CaptionHeight="42.5" CornerRadius="0" GlassFrameThickness="0" ResizeBorderThickness="6" UseAeroCaptionButtons="False" />
+  </WindowChrome.WindowChrome>
+  <Grid Name="Root" RenderTransformOrigin="0.5,0.5">
+    <UIElement.RenderTransform>
+      <ScaleTransform x:Name="RootScale" />
+    </UIElement.RenderTransform>
+    <Border Name="WindowBackground" BorderBrush="#1C1E28" BorderThickness="1" CornerRadius="10">
+      <Border.Background>
+        <ImageBrush ImageSource="/Assets/Images/Primary.png" RenderOptions.BitmapScalingMode="HighQuality" Stretch="Fill" />
+      </Border.Background>
+      <Grid>
+        <Grid Width="42.5" Height="42.5" HorizontalAlignment="Left" VerticalAlignment="Top">
+          <Rectangle Width="20" Height="12" Fill="{DynamicResource Page.Accent}">
+            <UIElement.OpacityMask>
+              <ImageBrush ImageSource="/Assets/Images/Logo.png" Stretch="Uniform" />
+            </UIElement.OpacityMask>
+          </Rectangle>
+        </Grid>
+        <Grid Height="42.5" Margin="0,0,0,0" VerticalAlignment="Top">
+          <DockPanel Margin="52.5,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Controls:SpacedTextBlock CharacterSpacing="4" FontFamily="pack://application:,,,/Assets/Fonts/#Inter" FontSize="9" FontWeight="Bold" Foreground="#9FA6AF" Text="Codex" />
+            <Border Margin="7.5,0,0,0" Background="{DynamicResource Page.Accent}" CornerRadius="3.5">
+              <Controls:SpacedTextBlock Margin="6,1.5,6,2.5" HorizontalAlignment="Center" VerticalAlignment="Center" CharacterSpacing="4" FontFamily="pack://application:,,,/Assets/Fonts/#Inter" FontSize="7" FontWeight="SemiBold" Foreground="#1A0A1A" Text="{x:Static Versioning:AppVersions.UI}" />
+            </Border>
+            <Controls:Button x:Name="ClientBadge" Click="ClientsButton_Click" Margin="7.5,0,0,0" AutomationProperties.Name="Connected clients" Background="#1E2028" BorderThickness="0" CornerRadius="3.5" Cursor="Hand" Foreground="#9FA6AF" Style="{StaticResource ChromeButton}" ToolTip="View Connected Clients" WindowChrome.IsHitTestVisibleInChrome="True">
+              <StackPanel Margin="6,2.5,8,2.5" Orientation="Horizontal">
+                <Ellipse Width="5" Height="5" Margin="0,0,5,0" VerticalAlignment="Center" Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Controls:Button}}}" />
+                <TextBlock Name="ClientCountText" VerticalAlignment="Center" FontFamily="pack://application:,,,/Assets/Fonts/#Inter" FontSize="7" FontWeight="SemiBold" Text="0 Connected Clients" TextTrimming="CharacterEllipsis" Foreground="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Controls:Button}}}" />
+              </StackPanel>
+            </Controls:Button>
+            <Controls:Button x:Name="SubscriptionBadge" Click="SubscriptionBadge_Click" Margin="7.5,0,0,0" AutomationProperties.Name="Subscription status" Background="#2A2218" BorderThickness="0" CornerRadius="3.5" Foreground="#E5B14B" Style="{StaticResource ChromeButton}" Visibility="Collapsed" WindowChrome.IsHitTestVisibleInChrome="True">
+              <StackPanel Margin="6,2.5,8,2.5" Orientation="Horizontal">
+                <Path Width="7" Height="7" Margin="0,0,5,0" VerticalAlignment="Center" Data="{StaticResource Icon.Warning}" Stretch="Uniform" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeThickness="1.6" Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Controls:Button}}}" />
+                <Controls:SpacedTextBlock x:Name="SubscriptionText" MaxWidth="150" VerticalAlignment="Center" CharacterSpacing="4" FontFamily="pack://application:,,,/Assets/Fonts/#Inter" FontSize="7" FontWeight="SemiBold" Text="Subscription Required" TextTrimming="CharacterEllipsis" Foreground="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Controls:Button}}}" />
+              </StackPanel>
+            </Controls:Button>
+            <Border Name="ModeBadge" Margin="7.5,0,0,0" Background="#1E2028" CornerRadius="3.5" Visibility="Collapsed">
+              <Controls:SpacedTextBlock x:Name="ModeBadgeText" Margin="6,2.5,6,2.5" VerticalAlignment="Center" CharacterSpacing="4" FontFamily="pack://application:,,,/Assets/Fonts/#Inter" FontSize="7" FontWeight="SemiBold" Foreground="#E5B14B" />
+            </Border>
+            <Border Name="LoaderBadge" Margin="7.5,0,0,0" Background="#1E2028" CornerRadius="3.5" Visibility="Collapsed">
+              <Controls:SpacedTextBlock x:Name="LoaderBadgeText" Margin="6,2.5,6,2.5" VerticalAlignment="Center" CharacterSpacing="4" FontFamily="pack://application:,,,/Assets/Fonts/#Inter" FontSize="7" FontWeight="SemiBold" Foreground="#E5B14B" />
+            </Border>
+          </DockPanel>
+          <DockPanel Margin="0,0,10,0" HorizontalAlignment="Right">
+            <Controls:Button x:Name="MinimizeButton" Click="MinimizeButton_Click" Width="21" Height="21" Margin="0,0,10,0" Background="#1E2028" BorderThickness="0" CornerRadius="5" Foreground="#474954" Style="{StaticResource ChromeButton}" WindowChrome.IsHitTestVisibleInChrome="True">
+              <Path Width="9" Height="9" Stretch="Fill" Data="M19.26,84.04 C15.100000000000001,83 13.020000000000001,80.97000000000001 12.010000000000002,76.78 L12.010000000000002,19.240000000000002 C13.280000000000001,15.080000000000002 15.020000000000001,13.3 19.270000000000003,12.220000000000002 L76.73,12.220000000000002 C80.96000000000001,13.250000000000002 82.98,15.290000000000003 84.02000000000001,19.490000000000002 L84.02000000000001,76.76 C82.98,80.97 80.95000000000002,82.99000000000001 76.73,84.04 M76.01,20.2 L20.000000000000007,20.2 L20.000000000000007,76.06 L76.01,76.06 M32,68.07 L32,60.08999999999999 L64.00999999999999,60.08999999999999 L64.00999999999999,68.07" Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Controls:Button}}}" />
+            </Controls:Button>
+            <Controls:Button x:Name="MaximizeButton" Click="MaximizeButton_Click" Width="21" Height="21" Margin="0,0,10,0" Background="#1E2028" BorderThickness="0" CornerRadius="5" Foreground="#474954" Style="{StaticResource ChromeButton}" WindowChrome.IsHitTestVisibleInChrome="True">
+              <Path Name="MaximizeIcon" Width="9" Height="9" Stretch="Fill" Data="M20.01,21.3 L19.990000000000002,36.120000000000005 L12.05,36.150000000000006 L12.110000000000001,19.200000000000006 C12.110000000000001,17.650000000000006 13.410000000000002,15.770000000000007 14.48,14.690000000000007 C15.55,13.610000000000007 17.44,12.340000000000007 19,12.330000000000007 L35.96,12.240000000000007 L35.99,20.150000000000006 L21,20.210000000000004 C20.43,20.210000000000004 20.02,20.660000000000004 20.01,21.290000000000006 M84,36.09 L76.02,36.11000000000001 L76.02,21.190000000000005 C76.02,20.860000000000007 75.57,20.210000000000004 75.25999999999999,20.210000000000004 L60.02999999999999,20.180000000000003 L60.02999999999999,12.240000000000002 L76.77999999999999,12.300000000000002 C78.43,12.300000000000002 80.36999999999999,13.550000000000002 81.51999999999998,14.690000000000003 C82.58999999999997,15.750000000000004 83.88999999999999,17.660000000000004 83.88999999999999,19.220000000000002 L83.98999999999998,36.09 M35.94,76.06 L35.94,84.01 C30.049999999999997,83.99000000000001 24.54,84.2 18.799999999999997,83.89 C17.33,83.81 15.479999999999997,82.54 14.489999999999998,81.56 C13.399999999999999,80.48 12.129999999999999,78.62 12.119999999999997,77.05 L12.029999999999998,60.14 L19.999999999999996,60.16 L20.029999999999998,75.30000000000001 C20.029999999999998,75.63000000000001 20.689999999999998,76.06000000000002 21.009999999999998,76.06000000000002 M77.29,83.86 C71.41000000000001,84.26 65.94000000000001,83.96 60.040000000000006,84.02 L60.040000000000006,76.07 L75.01,76.05 C75.5,76.05 76.02000000000001,75.53 76.02000000000001,75.07 L76.02000000000001,60.13999999999999 L83.99000000000001,60.13999999999999 L83.94000000000001,76.83 C83.94000000000001,78.43 82.64000000000001,80.43 81.53000000000002,81.56 C80.59000000000002,82.52 78.80000000000001,83.76 77.30000000000001,83.86" Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Controls:Button}}}" />
+            </Controls:Button>
+            <Controls:Button x:Name="ExitButton" Click="ExitButton_Click" Width="21" Height="21" Background="{DynamicResource Page.Accent}" BorderThickness="0" CornerRadius="5" Foreground="#1A0A1A" Style="{StaticResource ChromeButton}" WindowChrome.IsHitTestVisibleInChrome="True">
+              <Path Width="11" Height="11" Stretch="Fill" Data="F1 M96,96 M0,0 M82.17,77.76 L77.82,82.13 C77.62,82.33 76.86,82.33 76.65,82.11 L48.42,53.98 C47.89,53.45 46.97,54.64 46.54,55.07 L19.8,81.73 C19.46,82.07 18.93,82.39 18.65,82.34 C18.37,82.29 18,81.84 17.73,81.57 L14.89,78.66 C14.39,78.47 13.65,77.65 13.67,76.99 L42.58,48.12 L14.07,19.68 C13.73,19.34 13.7,18.72 13.89,18.41 L18.08,14.23 C18.46,13.85 19.18,13.88 19.66,14.35 L46.75,41.37 C47.24,41.86 47.67,42.47 48.45,42.28 L76.53,14.27 C76.94,13.86 77.62,13.89 77.95,14.23 L81.87,18.14 C82.05,18.32 82.36,18.82 82.31,19.06 C82.26,19.3 82.01,19.72 81.76,19.98 L54.66,47 C54.35,47.31 53.89,47.76 53.85,48.06 C53.8,48.41 54.31,48.93 54.67,49.28 L81.77,76.29 C82.09,76.61 82.52,77.45 82.2,77.77" Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Controls:Button}}}" />
+            </Controls:Button>
+          </DockPanel>
+        </Grid>
+        <StackPanel Name="NavRail" Width="42.5" Margin="0,42.5,0,0" HorizontalAlignment="Left">
+          <Controls:Button x:Name="EditorButton" Click="EditorButton_Click" MouseEnter="NavigationButton_MouseEnter" MouseLeave="NavigationButton_MouseLeave" Width="24" Height="24" Margin="0,12.5,0,0" Background="{DynamicResource Page.AccentSurface}" BorderThickness="0" CornerRadius="5" Foreground="{DynamicResource Page.Accent}">
+            <Path Width="12" Height="10" Stretch="Fill" Data="M48.35,79.58 C47.76,83.53 48.38,84.07 46.71,84.05 L39.980000000000004,83.95 C40.330000000000005,81.32 40.74,79.03 40.93000000000001,76.51 C41.040000000000006,75.09 41.11000000000001,73.77000000000001 41.32000000000001,72.4 C41.99000000000001,68.04 41.82000000000001,66.66000000000001 42.38000000000001,62.99000000000001 C42.60000000000001,61.50000000000001 42.85000000000001,60.00000000000001 42.94000000000001,58.53000000000001 C43.180000000000014,54.400000000000006 43.67000000000001,53.24000000000001 43.92000000000001,49.78000000000001 C44.03000000000001,48.25000000000001 44.10000000000001,46.870000000000005 44.32000000000001,45.41000000000001 C45.00000000000001,41.04000000000001 44.82000000000001,39.68000000000001 45.38000000000001,36.000000000000014 C45.60000000000001,34.51000000000001 45.85000000000001,33.01000000000001 45.94000000000001,31.540000000000013 C46.180000000000014,27.390000000000015 46.640000000000015,26.37000000000001 46.92000000000001,22.780000000000015 C47.02000000000001,21.460000000000015 47.07000000000001,20.230000000000015 47.24000000000001,18.990000000000016 L48.21000000000001,11.980000000000016 L56.00000000000001,12.060000000000016 L55.07000000000001,19.000000000000018 C54.86000000000001,20.570000000000018 54.900000000000006,22.070000000000018 54.66000000000001,23.610000000000017 L54.08000000000001,27.310000000000016 L53.920000000000016,30.970000000000017 L53.390000000000015,34.20000000000002 C53.110000000000014,35.91000000000002 53.04000000000001,37.51000000000002 52.930000000000014,39.30000000000002 C52.850000000000016,40.57000000000002 52.59000000000001,41.920000000000016 52.390000000000015,43.19000000000002 C51.81000000000002,46.88000000000002 52.09000000000002,47.77000000000002 51.360000000000014,52.40000000000002 C51.100000000000016,54.05000000000002 51.04000000000001,55.58000000000002 50.930000000000014,57.30000000000002 C50.84000000000001,58.64000000000002 50.58000000000001,60.06000000000002 50.360000000000014,61.40000000000002 C50.100000000000016,63.05000000000002 50.04000000000001,64.58000000000003 49.930000000000014,66.30000000000003 C49.84000000000001,67.64000000000003 49.58000000000001,69.06000000000003 49.360000000000014,70.40000000000002 C49.100000000000016,72.05000000000003 49.04000000000001,73.58000000000003 48.920000000000016,75.30000000000003 C48.820000000000014,76.72000000000003 48.55000000000002,78.20000000000003 48.34000000000002,79.61000000000003 M73.34,70.54 C71.22,68.76 69.54,67.04 67.78,65.06 L84.02,48.81 C84.24,48.59 84.55,48.13 84.49,47.900000000000006 C84.43,47.67000000000001 84.14999999999999,47.32000000000001 83.89999999999999,47.07000000000001 L67.74,30.880000000000006 L72.69999999999999,25.860000000000007 C72.99999999999999,25.560000000000006 73.75999999999999,25.840000000000007 74.1,26.170000000000005 L95.61,47.7 L94.3,49.59 L73.33,70.52000000000001 M27.74991,65.80009 C27.75131,65.79863999999999 27.75269,65.79718 27.75407,65.79571 L27.759999999999998,65.79 M23.15,70.23 C22.67,70.69 22.04,69.81 21.709999999999997,69.48 L1.9099999999999966,49.650000000000006 C1.3699999999999966,49.11000000000001 0.9699999999999966,48.60000000000001 0.46999999999999664,48.02 C0.8999999999999966,47.45 1.2299999999999967,46.870000000000005 1.6899999999999966,46.41 L21.9,26.190000000000005 C22.139999999999997,25.950000000000006 22.61,25.650000000000006 22.84,25.710000000000004 C23.07,25.770000000000003 23.54,26.030000000000005 23.73,26.230000000000004 L28.26,30.880000000000003 L12.09,47.08 C11.85,47.32 11.54,47.68 11.51,47.91 C11.47,48.18 11.82,48.65 12.09,48.93 L27.71,64.53999999999999 C27.945890000000002,64.77588999999999 28.01755,65.51414 27.754070000000002,65.79570999999999 M27.74,65.81 L27.74991,65.80009 C27.74666,65.80346 27.74336,65.80676 27.74,65.81" Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Controls:Button}}}" />
+          </Controls:Button>
+          <Controls:Button x:Name="InternetButton" Click="InternetButton_Click" MouseEnter="NavigationButton_MouseEnter" MouseLeave="NavigationButton_MouseLeave" Width="24" Height="24" Margin="0,20,0,0" Background="#00FFFFFF" BorderThickness="0" CornerRadius="5" Foreground="#474954">
+            <Path Width="12" Height="12" Stretch="Fill" Data="F1 M96,96 M0,0 M64.83,66.23 L62.15,63.61 L50.53,52.01 L32.51,52.01 C31.81,51.72 31.22,52 30.87,52.6 C29.61,55.65 27.16,57.79 24.26,59.04 C21.36,60.29 18.68,60.26 15.76,59.04 C12.63,57.74 10.25,55.36 8.96,52.23 C7.75,49.32 7.76,46.65 8.96,43.75 C10.29,40.53 12.72,38.14 15.96,36.86 C18.87,35.71 21.53,35.75 24.45,37.03 C27.37,38.31 29.73,40.5 30.95,43.55 C31.31,43.97 31.77,44.23 32.3,44 L50.53,43.98 L64.41,30.13 C65.07,29.47 65.39,28.89 65.05,27.95 C63.62,25.58 63.87,22.97 64.7,20.49 C65.95,16.73 68.67,14.08 72.33,12.71 C75.06,11.69 77.54,11.82 80.26,12.92 C83.47,14.22 85.87,16.7 87.16,19.9 C88.31,22.77 88.27,25.36 87.08,28.22 C85.63,31.72 82.83,34.27 79.17,35.4 C72.24,37.55 72.5,32.98 69.77,35.7 L58.64,46.83 C58.36,47.11 57.9,47.58 57.85,47.88 C57.79,48.22 58.33,48.78 58.64,49.09 L69.88,60.34 C72.44,62.9 72.66,57.94 80.23,60.91 C83.48,62.19 85.85,64.7 87.14,67.89 C88.31,70.76 88.24,73.35 87.06,76.21 C85.66,79.61 82.98,82.07 79.52,83.29 C77.08,84.16 74.92,84.16 72.49,83.29 C68.7,81.93 65.88,79.15 64.63,75.28 C62.58,68.92 66.2,68.48 64.83,66.19 M80.1,23.99 C80.1,21.73 78.27,19.89 76,19.89 C73.73,19.89 71.9,21.72 71.9,23.99 C71.9,26.26 73.73,28.09 76,28.09 C78.27,28.09 80.1,26.26 80.1,23.99 M24.1,47.99 C24.1,45.73 22.27,43.89 20,43.89 C17.73,43.89 15.9,45.72 15.9,47.99 C15.9,50.26 17.73,52.09 20,52.09 C22.27,52.09 24.1,50.26 24.1,47.99 M80.1,72 C80.1,69.74 78.27,67.91 76.01,67.91 C73.75,67.91 71.92,69.74 71.92,72 C71.92,74.26 73.75,76.09 76.01,76.09 C78.27,76.09 80.1,74.26 80.1,72" Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Controls:Button}}}" />
+          </Controls:Button>
+          <Controls:Button x:Name="ClientsButton" Click="ClientsButton_Click" MouseEnter="NavigationButton_MouseEnter" MouseLeave="NavigationButton_MouseLeave" Width="24" Height="24" Margin="0,20,0,0" Background="#00FFFFFF" BorderThickness="0" CornerRadius="5" Foreground="#474954">
+            <Path Width="12" Height="11" Stretch="Fill" Data="M20,14 L76,14 C80.42,14 84,17.58 84,22 L84,62 C84,66.42 80.42,70 76,70 L20,70 C15.58,70 12,66.42 12,62 L12,22 C12,17.58 15.58,14 20,14 M21,22 L21,61 L75,61 L75,22 M40,72 L56,72 L56,78 L40,78 M30,78 L66,78 C67.66,78 69,79.34 69,81 L69,81 C69,82.66 67.66,84 66,84 L30,84 C28.34,84 27,82.66 27,81 L27,81 C27,79.34 28.34,78 30,78" Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Controls:Button}}}" />
+          </Controls:Button>
+          <Controls:Button x:Name="SettingsButton" Click="SettingsButton_Click" MouseEnter="NavigationButton_MouseEnter" MouseLeave="NavigationButton_MouseLeave" Width="24" Height="24" Margin="0,20,0,0" Background="#00FFFFFF" BorderThickness="0" CornerRadius="5" Foreground="#474954">
+            <Path Width="12" Height="12" Stretch="Fill" Data="M57.41,87.18 C57.34,87.60000000000001 56.459999999999994,88.01 56.05,88.01 L39.989999999999995,88.01 C39.379999999999995,88.01 38.66,87.57 38.559999999999995,86.99000000000001 C38.05,83.92000000000002 37.529999999999994,81.19000000000001 36.8,78.16000000000001 C36.419999999999995,77.57 35.269999999999996,77.18 34.61,76.88000000000001 C32.76,76.02000000000001 30.869999999999997,74.96000000000001 29.34,73.75000000000001 C27.97,72.67000000000002 27.07,72.84000000000002 25.56,73.37000000000002 L19.479999999999997,75.48000000000002 C19.139999999999997,75.60000000000002 18.479999999999997,75.82000000000002 18.189999999999998,75.75000000000001 C17.9,75.68000000000002 17.639999999999997,75.18000000000002 17.42,74.80000000000001 L9.279999999999998,60.74000000000001 C8.939999999999998,60.150000000000006 9.139999999999997,59.59000000000001 9.649999999999997,59.16000000000001 C12.069999999999997,57.21000000000001 14.329999999999997,55.28000000000001 16.619999999999997,53.03000000000001 C15.779999999999998,49.56000000000001 15.779999999999998,46.470000000000006 16.619999999999997,43.00000000000001 C14.339999999999998,40.760000000000005 12.069999999999997,38.81000000000001 9.659999999999997,36.870000000000005 C8.999999999999996,36.35 8.989999999999997,35.81 9.379999999999997,35.120000000000005 L17.419999999999995,21.230000000000004 C17.629999999999995,20.860000000000003 17.899999999999995,20.360000000000003 18.189999999999994,20.280000000000005 C18.549999999999994,20.190000000000005 19.219999999999995,20.460000000000004 19.619999999999994,20.590000000000003 L25.929999999999993,22.740000000000002 C26.449999999999992,22.92 27.50999999999999,23.53 27.91999999999999,23.240000000000002 C30.14999999999999,21.630000000000003 32.14999999999999,20.26 34.62999999999999,19.110000000000003 C35.249999999999986,18.820000000000004 36.66999999999999,18.430000000000003 36.82999999999999,17.690000000000005 L37.83999999999999,13.160000000000004 C38.319999999999986,10.980000000000004 38.14999999999999,8.020000000000003 39.749999999999986,8.020000000000003 L56.01999999999998,8.020000000000003 C56.63999999999998,8.010000000000003 57.36999999999998,8.450000000000003 57.45999999999998,9.030000000000003 C57.97999999999998,12.100000000000003 58.48999999999998,14.830000000000002 59.19999999999998,17.840000000000003 C59.65999999999998,18.500000000000004 60.83999999999998,18.840000000000003 61.54999999999998,19.180000000000003 C63.789999999999985,20.250000000000004 65.75999999999998,21.560000000000002 67.80999999999999,22.950000000000003 C68.62999999999998,23.500000000000004 69.46,23.000000000000004 70.25999999999999,22.710000000000004 L76.52999999999999,20.520000000000003 C76.86999999999999,20.400000000000002 77.49999999999999,20.180000000000003 77.77999999999999,20.26 C78.05999999999999,20.34 78.37999999999998,20.84 78.57999999999998,21.200000000000003 L86.92999999999998,35.66 C87.10999999999999,35.980000000000004 86.48999999999998,36.74 86.21999999999998,36.96 C83.85999999999999,38.87 81.75999999999999,40.69 79.50999999999999,42.81 C79.64999999999999,45.86 80.41,46.68 79.88,50.2 C79.72999999999999,51.21 79.55,52.2 79.50999999999999,53.2 C81.71,55.27 83.77999999999999,57.06 86.07999999999998,58.93000000000001 C86.42999999999998,59.220000000000006 86.77999999999999,59.720000000000006 87.00999999999999,60.20000000000001 L78.57999999999998,74.79 C78.35999999999999,75.18 78.07999999999998,75.65 77.78999999999998,75.74000000000001 C77.49999999999997,75.83000000000001 76.84999999999998,75.61000000000001 76.51999999999998,75.49000000000001 L70.25999999999998,73.29 C69.24999999999997,72.94000000000001 68.43999999999998,72.53 67.42999999999998,73.25 C65.50999999999998,74.62 63.549999999999976,75.87 61.369999999999976,76.91 C60.729999999999976,77.22 59.32999999999998,77.57 59.159999999999975,78.33 L58.16999999999997,82.85 L57.38999999999997,87.18 M52.04,73.92 C52.29,72.65 52.55,71.96000000000001 53.84,71.5 C56.54,70.54 59.42999999999999,69.57 61.739999999999995,67.77 L66.6,63.99999999999999 C67.41999999999999,64.08 68.43,64.41 69.22,64.69 L73.07,66.1 C74.1,66.47999999999999 74.72,66.11999999999999 75.22,65.19 L77.05,61.76 C76.89,61.3 76.28,60.699999999999996 75.89999999999999,60.39 L72.08,57.230000000000004 C70.09,55.580000000000005 71.67,54.39 71.92,51 C72.07,48.98 72.06,47.04 71.92,45.01 C71.67,41.57 70.10000000000001,40.42 72.08,38.78 L76.03999999999999,35.51 C76.47,35.15 77.28999999999999,34.4 76.96,33.85 L74.8,30.19 C74.33,29.39 73.23,29.900000000000002 72.58,30.130000000000003 L66.83,32.13 L61.9,28.340000000000003 C58.46,25.700000000000003 55.65,25.640000000000004 52.42,23.6 C52.18,23 52,21.76 51.88,21.08 L51.11,16.790000000000003 C51.04,16.410000000000004 50.51,15.980000000000002 50.07,15.980000000000002 L45.32,16.060000000000002 C44.89,16.6 44.85,17.540000000000003 44.72,18.21 L43.699999999999996,23.47 C43.04,24.29 41.63999999999999,24.72 40.58,25.11 C38.36,25.92 36.11,26.84 34.28,28.25 L29.25,32.14 L22.94,29.86 C22.05,29.54 21.35,29.91 20.93,30.64 L19.08,33.87 C18.759999999999998,34.43 19.549999999999997,35.15 20,35.51 L23.95,38.78 C25.95,40.44 24.36,41.620000000000005 24.12,45.010000000000005 C23.900000000000002,48.14000000000001 23.91,51.2 24.71,54.10000000000001 C25.07,55.41000000000001 25.09,56.290000000000006 23.95,57.23000000000001 L19.99,60.500000000000014 C19.549999999999997,60.860000000000014 18.759999999999998,61.59000000000002 19.08,62.140000000000015 L21.04,65.54000000000002 C21.33,66.04000000000002 22.08,66.45000000000002 22.7,66.23000000000002 L29.259999999999998,63.88000000000002 L34.15,67.66000000000001 C36.44,69.43 39.32,70.51 42.019999999999996,71.41000000000001 C43.599999999999994,71.94000000000001 43.769999999999996,72.84000000000002 44.06999999999999,74.28000000000002 L45.24999999999999,80.00000000000001 L50.86999999999999,79.96000000000001 L52.07999999999999,73.92 M63.88,48 C63.88,56.769999999999996 56.77,63.87 48.010000000000005,63.87 C39.25000000000001,63.87 32.14000000000001,56.76 32.14000000000001,48 C32.14000000000001,39.24 39.25000000000001,32.13 48.010000000000005,32.13 C56.77,32.13 63.88,39.24 63.88,48 M56.1,48 C56.1,43.53 52.480000000000004,39.9 48,39.9 C43.519999999999996,39.9 39.9,43.519999999999996 39.9,48 C39.9,52.480000000000004 43.519999999999996,56.1 48,56.1 C52.480000000000004,56.1 56.1,52.480000000000004 56.1,48" Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Controls:Button}}}" />
+          </Controls:Button>
+          <Controls:Button x:Name="ProfileButton" Click="ProfileButton_Click" MouseEnter="NavigationButton_MouseEnter" MouseLeave="NavigationButton_MouseLeave" Width="24" Height="24" Margin="0,20,0,0" AutomationProperties.Name="Profile" Background="#00FFFFFF" BorderThickness="0" CornerRadius="5" Foreground="#474954">
+            <Path Width="12" Height="12" Data="{StaticResource Icon.User}" Stretch="Uniform" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeThickness="1.3" Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Controls:Button}}}" />
+          </Controls:Button>
+        </StackPanel>
+        <Controls:Button x:Name="LogoutButton" Click="LogoutButton_Click" Width="24" Height="24" Margin="9.25,0,0,12" HorizontalAlignment="Left" VerticalAlignment="Bottom" AutomationProperties.Name="Log Out" Background="#00FFFFFF" BorderThickness="0" CornerRadius="5" Foreground="#474954" Style="{StaticResource ChromeButton}" ToolTip="Log Out" Visibility="Collapsed">
+          <Path Width="12" Height="12" Data="{StaticResource Icon.Logout}" Stretch="Uniform" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeThickness="1.3" Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Controls:Button}}}" />
+        </Controls:Button>
+        <Grid Name="PageHost" Margin="42.5,42.5,0,0" ClipToBounds="True">
+          <Grid Name="EditorPage" Margin="0,0,10,10" Opacity="1" Visibility="Visible">
+            <UIElement.RenderTransform>
+              <TranslateTransform />
+            </UIElement.RenderTransform>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*" MinWidth="165" />
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="3*" MinWidth="240" />
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" Margin="0,0,2.5,0" BorderBrush="#1E2029" BorderThickness="1" CornerRadius="5">
+              <Border.Background>
+                <ImageBrush ImageSource="/Assets/Images/Secondary-1.png" RenderOptions.BitmapScalingMode="HighQuality" Stretch="UniformToFill">
+                  <Brush.RelativeTransform>
+                    <RotateTransform Angle="180" CenterX="0.5" CenterY="0.5" />
+                  </Brush.RelativeTransform>
+                </ImageBrush>
+              </Border.Background>
+              <Grid>
+                <Controls:SpacedTextBlock Margin="10" HorizontalAlignment="Left" VerticalAlignment="Top" CharacterSpacing="7" FontFamily="pack://application:,,,/Assets/Fonts/#Inter" FontSize="8" FontWeight="SemiBold" Foreground="#595C68" Text="EXPLORER" />
+                <Controls:Button Click="ExplorerRefresh_Click" Width="22" Height="22" Margin="0,4,6,0" HorizontalAlignment="Right" VerticalAlignment="Top" AutomationProperties.Name="Refresh Explorer" CornerRadius="6" Style="{StaticResource AccentIconButton}" ToolTip="Refresh">
+                  <Path Width="10" Height="10" Data="{StaticResource Icon.Sync}" Stretch="Uniform" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeThickness="1.3" Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Controls:Button}}}" />
+                </Controls:Button>
+                <TreeView Name="ExplorerTree" Margin="-11,28,6,8" AllowDrop="True" AutomationProperties.Name="Explorer" Background="#00FFFFFF" BorderThickness="0" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" DragLeave="ExplorerTree_DragLeave" DragOver="ExplorerTree_DragOver" Drop="ExplorerTree_Drop" MouseDoubleClick="ExplorerTree_MouseDoubleClick" PreviewKeyDown="ExplorerTree_PreviewKeyDown" PreviewMouseLeftButtonDown="ExplorerTree_PreviewMouseLeftButtonDown" PreviewMouseMove="ExplorerTree_PreviewMouseMove" PreviewMouseRightButtonDown="ExplorerTree_PreviewMouseRightButtonDown">
+                  <FrameworkElement.Resources>
+                    <ResourceDictionary>
+                      <HierarchicalDataTemplate x:Key="{DataTemplateKey {x:Type Explorer:ExplorerNode}}" DataType="{x:Type Explorer:ExplorerNode}" ItemsSource="{Binding Children}" />
+                    </ResourceDictionary>
+                  </FrameworkElement.Resources>
+                  <ItemsControl.ItemContainerStyle>
+                    <Style BasedOn="{StaticResource {x:Type TreeViewItem}}" TargetType="{x:Type TreeViewItem}">
+                      <Setter Property="TreeViewItem.IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
+                      <Setter Property="TreeViewItem.IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+                      <Setter Property="Explorer:TreeItemState.IsNote" Value="{Binding IsNote, Mode=OneWay}" />
+                      <Setter Property="Explorer:TreeItemState.HasCount" Value="{Binding HasLeaves, Mode=OneWay}" />
+                      <Setter Property="Explorer:TreeItemState.IsDropTarget" Value="{Binding IsDropTarget, Mode=OneWay}" />
+                      <Setter Property="Explorer:TreeItemState.IsRenaming" Value="{Binding IsRenaming, Mode=OneWay}" />
+                      <Setter Property="FrameworkElement.ToolTip" Value="{Binding FullPath, Mode=OneWay}" />
+                    </Style>
+                  </ItemsControl.ItemContainerStyle>
+                </TreeView>
+              </Grid>
+            </Border>
+            <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#00FFFFFF" />
+            <Grid Column="2" Margin="2.5,0,0,0">
+              <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+              </Grid.RowDefinitions>
+              <Controls:TabControl x:Name="EditorTabs" SelectionChanged="EditorTabs_SelectionChanged">
+                <Controls:TabItem Header="Untitled Tab" />
+              </Controls:TabControl>
+              <DockPanel Grid.Row="1" Margin="0,6,0,0" LastChildFill="False">
+                <Controls:Button x:Name="KillRobloxButton" Click="KillRoblox_Click" AutomationProperties.Name="Kill Roblox" DockPanel.Dock="Right" Style="{StaticResource ActionBarAccent}">
+                  <StackPanel Orientation="Horizontal">
+                    <Path Width="10" Height="10" Margin="0,0,6,0" Data="{StaticResource Icon.Stop}" Stretch="Uniform" StrokeLineJoin="Round" StrokeThickness="2" Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Controls:Button}}}" Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Controls:Button}}}" />
+                    <TextBlock VerticalAlignment="Center" Text="Kill Roblox" />
+                  </StackPanel>
+                </Controls:Button>
+                <StackPanel DockPanel.Dock="Left" Orientation="Horizontal">
+                  <Controls:Button x:Name="ExecuteButton" Click="Execute_Click" Margin="0,0,6,0" AutomationProperties.Name="Execute" Style="{StaticResource ActionBarAccent}">
+                    <StackPanel Orientation="Horizontal">
+                      <Path Width="10" Height="10" Margin="0,0,6,0" Data="{StaticResource Icon.Play}" Stretch="Uniform" StrokeLineJoin="Round" StrokeThickness="1.3" Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Controls:Button}}}" />
+                      <TextBlock VerticalAlignment="Center" Text="Execute" />
+                    </StackPanel>
+                  </Controls:Button>
+                  <Controls:Button x:Name="ClearButton" Click="Clear_Click" Margin="0,0,6,0" AutomationProperties.Name="Clear" IsEnabled="False" Style="{StaticResource ActionBarButton}">
+                    <StackPanel Orientation="Horizontal">
+                      <Path Width="10" Height="10" Margin="0,0,6,0" Data="{StaticResource Icon.Trash}" Stretch="Uniform" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeThickness="1.3" Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Controls:Button}}}" />
+                      <TextBlock VerticalAlignment="Center" Text="Clear" />
+                    </StackPanel>
+                  </Controls:Button>
+                  <Controls:Button x:Name="OpenButton" Click="OpenFile_Click" Margin="0,0,6,0" AutomationProperties.Name="Open File" IsEnabled="False" Style="{StaticResource ActionBarButton}">
+                    <StackPanel Orientation="Horizontal">
+                      <Path Width="10" Height="10" Margin="0,0,6,0" Data="{StaticResource Icon.FolderOpen}" Stretch="Uniform" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeThickness="1.3" Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Controls:Button}}}" />
+                      <TextBlock VerticalAlignment="Center" Text="Open File" />
+                    </StackPanel>
+                  </Controls:Button>
+                  <Controls:Button x:Name="SaveButton" Click="SaveFile_Click" Margin="0,0,6,0" AutomationProperties.Name="Save File" IsEnabled="False" Style="{StaticResource ActionBarButton}">
+                    <StackPanel Orientation="Horizontal">
+                      <Path Width="10" Height="10" Margin="0,0,6,0" Data="{StaticResource Icon.Save}" Stretch="Uniform" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeThickness="1.3" Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Controls:Button}}}" />
+                      <TextBlock VerticalAlignment="Center" Text="Save File" />
+                    </StackPanel>
+                  </Controls:Button>
+                  <Controls:Button x:Name="FormatButton" Click="Format_Click" AutomationProperties.Name="Format Document" IsEnabled="False" Style="{StaticResource ActionBarButton}" ToolTip="Format this script (scripts with comments are left unchanged)">
+                    <StackPanel Orientation="Horizontal">
+                      <Path Width="10" Height="10" Margin="0,0,6,0" Data="{StaticResource Icon.Spark}" Stretch="Uniform" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeThickness="1.3" Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Controls:Button}}}" />
+                      <TextBlock VerticalAlignment="Center" Text="Format" />
+                    </StackPanel>
+                  </Controls:Button>
+                </StackPanel>
+              </DockPanel>
+            </Grid>
+          </Grid>
+          <Internet:InternetPage x:Name="InternetPage" Margin="0,0,10,10" Opacity="0" Visibility="Collapsed">
+            <UIElement.RenderTransform>
+              <TranslateTransform />
+            </UIElement.RenderTransform>
+          </Internet:InternetPage>
+          <Clients:ClientsPage x:Name="ClientsPage" Margin="0,0,10,10" Opacity="0" Visibility="Collapsed">
+            <UIElement.RenderTransform>
+              <TranslateTransform />
+            </UIElement.RenderTransform>
+          </Clients:ClientsPage>
+          <FeatureSettings:SettingsPage x:Name="SettingsPage" Margin="0,0,10,10" Opacity="0" Visibility="Collapsed">
+            <UIElement.RenderTransform>
+              <TranslateTransform />
+            </UIElement.RenderTransform>
+          </FeatureSettings:SettingsPage>
+        </Grid>
+      </Grid>
+    </Border>
+    <Border Name="NavigationToolTip" HorizontalAlignment="Left" VerticalAlignment="Top" Background="{StaticResource NavTooltip.Background}" BorderBrush="{StaticResource Page.Border}" BorderThickness="1" CornerRadius="8" IsHitTestVisible="False" Opacity="0" SnapsToDevicePixels="True" Visibility="Collapsed">
+      <UIElement.RenderTransform>
+        <TranslateTransform />
+      </UIElement.RenderTransform>
+      <UIElement.Effect>
+        <DropShadowEffect BlurRadius="12" Direction="270" Opacity="0.4" ShadowDepth="4" Color="Black" />
+      </UIElement.Effect>
+      <Grid>
+        <Border Width="2" Margin="0,9" HorizontalAlignment="Left" Background="{DynamicResource Page.Accent}" CornerRadius="1" />
+        <StackPanel Margin="14,9,12,9">
+          <Controls:SpacedTextBlock x:Name="NavigationToolTipTitle" CharacterSpacing="1" FontFamily="pack://application:,,,/Assets/Fonts/#Inter" FontSize="10" FontWeight="Bold" Foreground="#F8F5F2" Text="Editor" />
+          <Controls:SpacedTextBlock x:Name="NavigationToolTipDescription" Margin="0,5,0,0" CharacterSpacing="0.5" FontFamily="pack://application:,,,/Assets/Fonts/#Inter" FontSize="9" FontWeight="SemiBold" Foreground="#9FA6AF" />
+        </StackPanel>
+      </Grid>
+    </Border>
+    <Auth:LoginOverlay x:Name="Login" />
+    <Controls:ConfirmDialog x:Name="Confirm" />
+    <Controls:ToastHost x:Name="Toasts" Width="340" Margin="0,52,16,0" HorizontalAlignment="Right" VerticalAlignment="Top" />
+    <Controls:FatalErrorOverlay x:Name="FatalOverlay" />
+  </Grid>
+</Window>

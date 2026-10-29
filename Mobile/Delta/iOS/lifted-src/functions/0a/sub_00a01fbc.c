@@ -1,0 +1,9 @@
+/*
+ * Machine-reconstructed pseudocode; not original vendor source.
+ * Mach-O extent: 0xa01fbc..0xa01fc8 (12 bytes).
+ * Function and variable names are synthetic unless documented elsewhere.
+ */
+
+void sub_a01fbc(unsigned long a0)
+{
+}

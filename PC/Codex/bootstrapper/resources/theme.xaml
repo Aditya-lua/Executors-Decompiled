@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:po="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options">
+  <SolidColorBrush x:Key="Page.Foreground" Color="#F8F5F2" />
+  <SolidColorBrush x:Key="Page.Muted" Color="#9FA6AF" />
+  <SolidColorBrush x:Key="Page.Dim" Color="#595C68" />
+  <SolidColorBrush x:Key="Page.Border" Color="#1E2029" />
+  <SolidColorBrush x:Key="Page.ControlBorder" Color="#2A2C36" />
+  <SolidColorBrush x:Key="Page.Control" Color="#1E2028" />
+  <SolidColorBrush x:Key="Page.OnAccent" Color="#1A0A1A" />
+  <SolidColorBrush x:Key="Page.WindowBorder" Color="#1C1E28" />
+  <SolidColorBrush x:Key="Toast.Error" Color="#D26064" />
+  <SolidColorBrush x:Key="Page.Accent" po:Freeze="False" Color="#F18081" />
+  <SolidColorBrush x:Key="Page.AccentSurface" po:Freeze="False" Color="#4A282C" />
+  <SolidColorBrush x:Key="Page.AccentBorder" po:Freeze="False" Color="#5E3238" />
+  <SolidColorBrush x:Key="Page.AccentStrong" po:Freeze="False" Color="#E46D67" />
+  <Geometry x:Key="Icon.Close">M3.5,3.5 L12.5,12.5 M12.5,3.5 L3.5,12.5</Geometry>
+  <Geometry x:Key="Icon.Minimize">M3.5,8 H12.5</Geometry>
+</ResourceDictionary>

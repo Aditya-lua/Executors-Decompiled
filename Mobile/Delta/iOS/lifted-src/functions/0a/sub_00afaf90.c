@@ -1,0 +1,9 @@
+/*
+ * Machine-reconstructed pseudocode; not original vendor source.
+ * Mach-O extent: 0xafaf90..0xafaf94 (4 bytes).
+ * Function and variable names are synthetic unless documented elsewhere.
+ */
+
+long long sub_afaf90(void)
+{
+}

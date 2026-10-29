@@ -1,0 +1,26 @@
+# Original app packages and native binaries
+*.ipa
+*.dylib
+*.app/
+Payload/
+
+# Reverse-engineering transient data
+*.bin
+*checkpoint*.tar.gz
+docs/BULK_LIFT_PROGRESS_CHECKPOINT_*.md
+**/docs/BULK_LIFT_PROGRESS_CHECKPOINT_*.md
+
+# Local tooling output
+__pycache__/
+*.py[cod]
+.DS_Store
+.idea/
+.vscode/
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+

@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window x:Class="dotnet_codex_bootstrapper.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:Versioning="clr-namespace:dotnet_codex_bootstrapper.Core.Versioning" Title="Codex Bootstrapper" Width="480" AllowsTransparency="True" Background="#00FFFFFF" ResizeMode="NoResize" SizeToContent="Height" TextElement.FontFamily="{StaticResource Inter}" UseLayoutRounding="True" WindowStartupLocation="CenterScreen" WindowStyle="None" xmlns:dotnet_codex_bootstrapper="clr-namespace:dotnet_codex_bootstrapper;assembly=dotnet-codex-bootstrapper">
+  <WindowChrome.WindowChrome>
+    <WindowChrome CaptionHeight="42.5" CornerRadius="0" GlassFrameThickness="0" ResizeBorderThickness="0" UseAeroCaptionButtons="False" />
+  </WindowChrome.WindowChrome>
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <BooleanToVisibilityConverter x:Key="BoolToVisibility" />
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Border Name="WindowBackground" BorderBrush="{StaticResource Page.WindowBorder}" BorderThickness="1" CornerRadius="10">
+    <Border.Background>
+      <ImageBrush ImageSource="pack://application:,,,/dotnet-codex-bootstrapper;component/Assets/Images/Primary.png" RenderOptions.BitmapScalingMode="HighQuality" Stretch="UniformToFill" />
+    </Border.Background>
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="42.5" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <Grid Row="0">
+        <Grid Width="42.5" Height="42.5" HorizontalAlignment="Left">
+          <Rectangle Width="20" Height="12" Fill="{DynamicResource Page.Accent}">
+            <UIElement.OpacityMask>
+              <ImageBrush ImageSource="pack://application:,,,/dotnet-codex-bootstrapper;component/Assets/Images/Logo.png" Stretch="Uniform" />
+            </UIElement.OpacityMask>
+          </Rectangle>
+        </Grid>
+        <StackPanel Margin="52.5,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+          <TextBlock VerticalAlignment="Center" FontSize="9" FontWeight="Bold" Foreground="{StaticResource Page.Muted}" Text="Codex Bootstrapper" />
+          <Border Margin="7.5,0,0,0" Background="{DynamicResource Page.Accent}" CornerRadius="3.5">
+            <TextBlock Margin="6,1.5,6,2.5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="7" FontWeight="SemiBold" Foreground="{StaticResource Page.OnAccent}" Text="{x:Static Versioning:BootstrapperVersion.Display}" />
+          </Border>
+          <Border Margin="7.5,0,0,0" Background="{StaticResource Page.Control}" CornerRadius="3.5">
+            <StackPanel Margin="6,2.5,8,2.5" Orientation="Horizontal">
+              <Ellipse Width="5" Height="5" Margin="0,0,5,0" VerticalAlignment="Center">
+                <FrameworkElement.Style>
+                  <Style TargetType="{x:Type Ellipse}">
+                    <Setter Property="Fill" Value="{DynamicResource Page.Accent}" />
+                    <Style.Triggers>
+                      <DataTrigger Value="True" Binding="{Binding Snapshot.IsFailed}">
+                        <Setter Property="Fill" Value="{StaticResource Toast.Error}" />
+                      </DataTrigger>
+                    </Style.Triggers>
+                  </Style>
+                </FrameworkElement.Style>
+              </Ellipse>
+              <TextBlock VerticalAlignment="Center" FontSize="7" FontWeight="SemiBold" Foreground="{StaticResource Page.Muted}" Text="{Binding Snapshot.StatusText}" />
+            </StackPanel>
+          </Border>
+        </StackPanel>
+        <StackPanel Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" Orientation="Horizontal">
+          <Button AutomationProperties.Name="Minimize" Style="{StaticResource ChromeButton}" ToolTip="Minimize" WindowChrome.IsHitTestVisibleInChrome="True" Click="Minimize_Click">
+            <Path Width="10" Height="10" Data="{StaticResource Icon.Minimize}" Stretch="Uniform" StrokeEndLineCap="Round" StrokeStartLineCap="Round" StrokeThickness="1.4" Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Button}}}" />
+          </Button>
+          <Button Margin="2,0,0,0" AutomationProperties.Name="Close" Style="{StaticResource ChromeButton}" ToolTip="Close" WindowChrome.IsHitTestVisibleInChrome="True" Click="Close_Click">
+            <Path Width="10" Height="10" Data="{StaticResource Icon.Close}" Stretch="Uniform" StrokeEndLineCap="Round" StrokeStartLineCap="Round" StrokeThickness="1.4" Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Button}}}" />
+          </Button>
+        </StackPanel>
+      </Grid>
+      <StackPanel Grid.Row="1" Margin="24,12,24,0">
+        <TextBlock Name="TitleText" Text="{Binding Snapshot.Title}">
+          <FrameworkElement.Style>
+            <Style BasedOn="{StaticResource Text.Title}" TargetType="{x:Type TextBlock}">
+              <Style.Triggers>
+                <DataTrigger Value="True" Binding="{Binding Snapshot.IsFailed}">
+                  <Setter Property="Foreground" Value="{StaticResource Toast.Error}" />
+                </DataTrigger>
+              </Style.Triggers>
+            </Style>
+          </FrameworkElement.Style>
+        </TextBlock>
+        <TextBlock Name="DescriptionText" MinHeight="28" Margin="0,5,0,0" Style="{StaticResource Text.Description}" Text="{Binding Snapshot.Description}" />
+        <Grid Margin="0,12,0,0">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+          </Grid.ColumnDefinitions>
+          <ProgressBar Name="Bar" VerticalAlignment="Center" AutomationProperties.Name="Overall progress" IsIndeterminate="{Binding Snapshot.IsIndeterminate}">
+            <FrameworkElement.Style>
+              <Style BasedOn="{StaticResource BootstrapperProgress}" TargetType="{x:Type ProgressBar}">
+                <Style.Triggers>
+                  <DataTrigger Value="True" Binding="{Binding Snapshot.IsFailed}">
+                    <Setter Property="Foreground" Value="{StaticResource Toast.Error}" />
+                  </DataTrigger>
+                </Style.Triggers>
+              </Style>
+            </FrameworkElement.Style>
+          </ProgressBar>
+          <TextBlock Grid.Column="1" Width="40" Margin="10,0,0,0" VerticalAlignment="Center" FontSize="10" FontWeight="SemiBold" Foreground="{StaticResource Page.Foreground}" TextAlignment="Right" Text="{Binding Snapshot.PercentText}" />
+        </Grid>
+      </StackPanel>
+      <Border Grid.Row="2" Margin="24,16,24,0" Padding="14,12,14,2" Background="{StaticResource Page.Control}" BorderBrush="{StaticResource Page.Border}" BorderThickness="1" CornerRadius="8">
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+          <StackPanel Grid.ColumnSpan="2" Margin="0,0,0,10">
+            <TextBlock Style="{StaticResource Text.Label}" Text="CURRENT FILE" />
+            <TextBlock Name="FileText" Margin="0,3,0,0" Style="{StaticResource Text.Value}" Text="{Binding Snapshot.FileText}" ToolTip="{Binding Snapshot.FileText}" />
+          </StackPanel>
+          <StackPanel Grid.Row="1" Margin="0,0,10,10">
+            <TextBlock Style="{StaticResource Text.Label}" Text="OPERATION" />
+            <TextBlock Margin="0,3,0,0" Style="{StaticResource Text.Value}" Text="{Binding Snapshot.Operation}" ToolTip="{Binding Snapshot.Operation}" />
+          </StackPanel>
+          <StackPanel Grid.Row="1" Grid.Column="1" Margin="0,0,0,10">
+            <TextBlock Style="{StaticResource Text.Label}" Text="TARGET VERSION" />
+            <TextBlock Margin="0,3,0,0" Style="{StaticResource Text.Value}" Text="{Binding Snapshot.TargetText}" ToolTip="{Binding Snapshot.TargetText}" />
+            <TextBlock Margin="0,1,0,0" Style="{StaticResource Text.Hint}" Text="{Binding Snapshot.CurrentVersionText}" Visibility="{Binding Snapshot.HasCurrentVersion, Converter={StaticResource BoolToVisibility}}" />
+          </StackPanel>
+          <StackPanel Grid.Row="2" Margin="0,0,10,10">
+            <TextBlock Style="{StaticResource Text.Label}" Text="DOWNLOAD SPEED" />
+            <TextBlock Margin="0,3,0,0" Style="{StaticResource Text.Value}" Text="{Binding Snapshot.DownloadText}" />
+          </StackPanel>
+          <StackPanel Grid.Row="2" Grid.Column="1" Margin="0,0,0,10">
+            <TextBlock Style="{StaticResource Text.Label}" Text="EXTRACTION SPEED" />
+            <TextBlock Margin="0,3,0,0" Style="{StaticResource Text.Value}" Text="{Binding Snapshot.ExtractionText}" />
+          </StackPanel>
+        </Grid>
+      </Border>
+      <Grid Row="3" Margin="24,12,24,14">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Style="{StaticResource Text.Hint}" Text="{Binding Snapshot.Footer}" ToolTip="{Binding Snapshot.Footer}" />
+        <TextBlock Grid.Column="1" Margin="12,0,0,0" Style="{StaticResource Text.Hint}" Text="{Binding Snapshot.StepText}" />
+      </Grid>
+      <Grid Name="DemoBar" Row="4" Margin="24,0,24,14" Visibility="Collapsed">
+        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+          <Button AutomationProperties.Name="Previous scenario" Content="‹" Style="{StaticResource DemoButton}" Click="PreviousScenario_Click" />
+          <TextBlock MinWidth="130" Margin="10,0" VerticalAlignment="Center" FontSize="9" FontWeight="SemiBold" Foreground="{StaticResource Page.Muted}" TextAlignment="Center" Text="{Binding Selected.Name}" />
+          <Button AutomationProperties.Name="Next scenario" Content="›" Style="{StaticResource DemoButton}" Click="NextScenario_Click" />
+        </StackPanel>
+        <Button HorizontalAlignment="Right" AutomationProperties.Name="Replay scenario" Content="Replay" Style="{StaticResource DemoButton}" Click="Replay_Click" />
+      </Grid>
+      <StackPanel Name="ActionBar" Grid.Row="5" Margin="24,0,24,14" HorizontalAlignment="Right" Orientation="Horizontal" Visibility="{Binding Snapshot.IsFailed, Converter={StaticResource BoolToVisibility}}">
+        <Button Name="RetryButton" Margin="0,0,8,0" AutomationProperties.Name="Retry" Content="Retry" Style="{StaticResource DemoButton}" Click="Replay_Click" />
+        <Button AutomationProperties.Name="Close" Content="Close" Style="{StaticResource DemoButton}" Click="Close_Click" />
+      </StackPanel>
+    </Grid>
+  </Border>
+</Window>

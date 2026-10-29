@@ -1,0 +1,42 @@
+[
+  {
+    "offset": "0x0",
+    "size": 24069632,
+    "sha256": "5172591a0f0168602e9beca2c95a41879c19f614e877474203c766a09f952851",
+    "path": "targets/madius_updater/triage/embedded-pe/embedded_00000000_5172591a0f01.exe",
+    "machine": "0x8664",
+    "subsystem": 2,
+    "image_base": "0x7ff70c780000",
+    "entry_point_rva": "0x295ecd3",
+    "sections": [
+      ".text",
+      ".rdata",
+      ".data",
+      ".pdata",
+      ".tls",
+      ".n5u",
+      ".]%8",
+      ".(hX",
+      ".rsrc",
+      ".reloc"
+    ]
+  },
+  {
+    "offset": "0x3c7350",
+    "size": 34568,
+    "sha256": "4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b",
+    "path": "targets/madius_updater/triage/embedded-pe/embedded_003c7350_4429f32db1cc.sys",
+    "machine": "0x8664",
+    "subsystem": 1,
+    "image_base": "0x10000",
+    "entry_point_rva": "0x5d2200",
+    "sections": [
+      ".text",
+      ".rdata",
+      ".data",
+      ".pdata",
+      "INIT",
+      ".rsrc"
+    ]
+  }
+]

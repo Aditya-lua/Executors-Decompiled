@@ -1,0 +1,13 @@
+/*
+ * Machine-reconstructed pseudocode; not original vendor source.
+ * Mach-O extent: 0xa7c2a0..0xa7c2b0 (16 bytes).
+ * Function and variable names are synthetic unless documented elsewhere.
+ */
+
+
+int sub_a7c2a0(unsigned long long *a0, unsigned long long *a1)
+{
+    /* unsupported instruction */;
+    *a1 = *a0;
+    return 1;
+}

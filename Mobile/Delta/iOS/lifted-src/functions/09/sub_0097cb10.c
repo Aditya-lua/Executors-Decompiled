@@ -1,0 +1,16 @@
+/*
+ * Machine-reconstructed pseudocode; not original vendor source.
+ * Mach-O extent: 0x97cb10..0x97cb28 (24 bytes).
+ * Function and variable names are synthetic unless documented elsewhere.
+ */
+
+
+int sub_97cb10(void)
+{
+    char *v0;  // [bp-0x10]
+    char v1;  // [bp+0x0]
+
+    v0 = &v1;
+    sub_97cb28();
+    return 0;
+}

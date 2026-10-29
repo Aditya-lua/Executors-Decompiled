@@ -1,0 +1,219 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>dotnet-codex-ui</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <UseWPF>True</UseWPF>
+    <TargetFramework>net10.0-windows7.0</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+    <RootNamespace>dotnet_codex_ui</RootNamespace>
+    <EnableWindowsTargeting>True</EnableWindowsTargeting>
+    <Nullable>annotations</Nullable>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>14.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Remove="dotnet_codex_ui/App.xaml" />
+    <ApplicationDefinition Include="dotnet_codex_ui/App.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="app.xaml" />
+    <Page Remove="dotnet_codex_ui/Controls/ConfirmDialog.xaml" />
+    <Page Remove="dotnet_codex_ui/Controls/FatalErrorOverlay.xaml" />
+    <Page Remove="dotnet_codex_ui/Controls/Settings/SliderSetting.xaml" />
+    <Page Remove="dotnet_codex_ui/Controls/ToastHost.xaml" />
+    <Page Remove="dotnet_codex_ui/Core/Lifecycle/StartupGateWindow.xaml" />
+    <Page Remove="dotnet_codex_ui/Features/Auth/DevAuthPanel.xaml" />
+    <Page Remove="dotnet_codex_ui/Features/Auth/LoginOverlay.xaml" />
+    <Page Remove="dotnet_codex_ui/Features/Clients/ClientsPage.xaml" />
+    <Page Remove="dotnet_codex_ui/Features/Internet/InternetPage.xaml" />
+    <Page Remove="dotnet_codex_ui/Features/Internet/ScriptDetailOverlay.xaml" />
+    <Page Remove="dotnet_codex_ui/Features/Settings/SettingsPage.xaml" />
+    <Page Remove="dotnet_codex_ui/MainWindow.xaml" />
+    <Page Remove="resources/controlstyles.xaml" />
+    <Page Remove="resources/defaultstyles.xaml" />
+    <Page Remove="resources/drawing.xaml" />
+    <Page Remove="resources/fonts.xaml" />
+    <Page Remove="resources/pagestyles.xaml" />
+    <Page Remove="resources/settingsstyles.xaml" />
+    <Page Include="dotnet_codex_ui/Controls/ConfirmDialog.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="controls/confirmdialog.xaml" />
+    <Page Include="dotnet_codex_ui/Controls/FatalErrorOverlay.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="controls/fatalerroroverlay.xaml" />
+    <Page Include="dotnet_codex_ui/Controls/Settings/SliderSetting.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="controls/settings/slidersetting.xaml" />
+    <Page Include="dotnet_codex_ui/Controls/ToastHost.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="controls/toasthost.xaml" />
+    <Page Include="dotnet_codex_ui/Core/Lifecycle/StartupGateWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="core/lifecycle/startupgatewindow.xaml" />
+    <Page Include="dotnet_codex_ui/Features/Auth/DevAuthPanel.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="features/auth/devauthpanel.xaml" />
+    <Page Include="dotnet_codex_ui/Features/Auth/LoginOverlay.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="features/auth/loginoverlay.xaml" />
+    <Page Include="dotnet_codex_ui/Features/Clients/ClientsPage.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="features/clients/clientspage.xaml" />
+    <Page Include="dotnet_codex_ui/Features/Internet/InternetPage.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="features/internet/internetpage.xaml" />
+    <Page Include="dotnet_codex_ui/Features/Internet/ScriptDetailOverlay.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="features/internet/scriptdetailoverlay.xaml" />
+    <Page Include="dotnet_codex_ui/Features/Settings/SettingsPage.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="features/settings/settingspage.xaml" />
+    <Page Include="dotnet_codex_ui/MainWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="mainwindow.xaml" />
+    <Page Include="resources/controlstyles.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="resources/controlstyles.xaml" />
+    <Page Include="resources/defaultstyles.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="resources/defaultstyles.xaml" />
+    <Page Include="resources/drawing.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="resources/drawing.xaml" />
+    <Page Include="resources/fonts.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="resources/fonts.xaml" />
+    <Page Include="resources/pagestyles.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="resources/pagestyles.xaml" />
+    <Page Include="resources/settingsstyles.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="resources/settingsstyles.xaml" />
+    <Resource Remove="assets/fonts/inter-italic-variablefont_opsz-wght.ttf" />
+    <Resource Remove="assets/fonts/inter-variablefont_opsz-wght.ttf" />
+    <Resource Remove="assets/images/logo.png" />
+    <Resource Remove="assets/images/primary.png" />
+    <Resource Remove="assets/images/secondary-1.png" />
+    <Resource Remove="assets/images/secondary-2.png" />
+    <Resource Remove="assets/images/secondary-3.png" />
+    <Resource Remove="assets/images/secondary-4.png" />
+    <Resource Remove="assets/images/secondary-5.png" />
+    <Resource Remove="assets/images/tetriary.png" />
+    <Resource Include="assets/fonts/inter-italic-variablefont_opsz-wght.ttf" LogicalName="assets/fonts/inter-italic-variablefont_opsz,wght.ttf" />
+    <Resource Include="assets/fonts/inter-variablefont_opsz-wght.ttf" LogicalName="assets/fonts/inter-variablefont_opsz,wght.ttf" />
+    <Resource Include="assets/images/logo.png" LogicalName="assets/images/logo.png" />
+    <Resource Include="assets/images/primary.png" LogicalName="assets/images/primary.png" />
+    <Resource Include="assets/images/secondary-1.png" LogicalName="assets/images/secondary-1.png" />
+    <Resource Include="assets/images/secondary-2.png" LogicalName="assets/images/secondary-2.png" />
+    <Resource Include="assets/images/secondary-3.png" LogicalName="assets/images/secondary-3.png" />
+    <Resource Include="assets/images/secondary-4.png" LogicalName="assets/images/secondary-4.png" />
+    <Resource Include="assets/images/secondary-5.png" LogicalName="assets/images/secondary-5.png" />
+    <Resource Include="assets/images/tetriary.png" LogicalName="assets/images/tetriary.png" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(UseDecompiledHintPaths)' == 'true'">
+    <Reference Include="System.Text.RegularExpressions">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/System.Text.RegularExpressions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/System.Security.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebSockets">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/System.Net.WebSockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Primitives">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/System.Net.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Process">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/System.Diagnostics.Process.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Channels">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/System.Threading.Channels.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Concurrent">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/System.Collections.Concurrent.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/System.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Sockets">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/System.Net.Sockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/System.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ObjectModel">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/System.ObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/System.ComponentModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog">
+      <HintPath>targets/codex-bootstrapper/app-payload/Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Registry">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/Microsoft.Win32.Registry.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>targets/codex-bootstrapper/app-payload/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/System.Runtime.InteropServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Watcher">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/System.IO.FileSystem.Watcher.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.Wpf">
+      <HintPath>targets/codex-bootstrapper/app-payload/CefSharp.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp">
+      <HintPath>targets/codex-bootstrapper/app-payload/CefSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.HttpListener">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/System.Net.HttpListener.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Mail">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/System.Net.Mail.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.FileVersionInfo">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/System.Diagnostics.FileVersionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.TraceSource">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/System.Diagnostics.TraceSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/System.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.Core">
+      <HintPath>targets/codex-bootstrapper/app-payload/CefSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/Microsoft.Win32.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.Async">
+      <HintPath>targets/codex-bootstrapper/app-payload/Serilog.Sinks.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Primitives">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/System.ComponentModel.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.Core">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/Microsoft.VisualBasic.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.Core.Runtime">
+      <HintPath>targets/codex-bootstrapper/app-payload/CefSharp.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.SystemEvents">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/Microsoft.Win32.SystemEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.ProtectedData">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/System.Security.Cryptography.ProtectedData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.TypeConverter">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/System.ComponentModel.TypeConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.File">
+      <HintPath>targets/codex-bootstrapper/app-payload/Serilog.Sinks.File.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.Extensions">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/System.Text.Encoding.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Specialized">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/System.Collections.Specialized.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebHeaderCollection">
+      <HintPath>targets/codex-bootstrapper/decompiler-refs-abs/System.Net.WebHeaderCollection.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CefSharp.Common.NETCore" Version="140.1.140" />
+    <PackageReference Include="CefSharp.Wpf.NETCore" Version="140.1.140" />
+    <PackageReference Include="D2Phap.FileWatcherEx" Version="3.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageReference Include="Serilog" Version="4.4.0" />
+    <PackageReference Include="Serilog.Sinks.Async" Version="2.1.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
+  </ItemGroup>
+</Project>

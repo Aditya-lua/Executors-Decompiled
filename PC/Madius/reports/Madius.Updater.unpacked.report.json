@@ -1,0 +1,92 @@
+{
+  "input": "targets/madius_updater/triage/4232-1-full-memory.dmp",
+  "output": "targets/madius_updater/triage/Madius.Updater.unpacked.exe",
+  "input_sha256": "518b12cfd010784a2d141fb9b6de139fdab034b9dc9c413253deadc0a17e7b85",
+  "output_sha256": "2b9271a5a54f88712386c452ae87598eaa875a2665d0a7dd1f6b08137e4468e4",
+  "loaded_image_base": "0x7ff70c780000",
+  "entry_point_rva": "0x295ecd3",
+  "size_of_image": "0x2a23000",
+  "rebuilt_file_size": 44160512,
+  "sections": [
+    {
+      "name": ".text",
+      "rva": "0x1000",
+      "virtual_size": "0x391e86",
+      "raw_pointer": "0x400",
+      "raw_size": "0x392000",
+      "nonzero_bytes": 3226046
+    },
+    {
+      "name": ".rdata",
+      "rva": "0x393000",
+      "virtual_size": "0xd3308",
+      "raw_pointer": "0x392400",
+      "raw_size": "0xd3400",
+      "nonzero_bytes": 650423
+    },
+    {
+      "name": ".data",
+      "rva": "0x467000",
+      "virtual_size": "0x35618",
+      "raw_pointer": "0x465800",
+      "raw_size": "0x35800",
+      "nonzero_bytes": 164902
+    },
+    {
+      "name": ".pdata",
+      "rva": "0x49d000",
+      "virtual_size": "0x1c7c4",
+      "raw_pointer": "0x49b000",
+      "raw_size": "0x1c800",
+      "nonzero_bytes": 116198
+    },
+    {
+      "name": ".tls",
+      "rva": "0x4ba000",
+      "virtual_size": "0x148",
+      "raw_pointer": "0x4b7800",
+      "raw_size": "0x200",
+      "nonzero_bytes": 1
+    },
+    {
+      "name": ".n5u",
+      "rva": "0x4bb000",
+      "virtual_size": "0xe71903",
+      "raw_pointer": "0x4b7a00",
+      "raw_size": "0xe71a00",
+      "nonzero_bytes": 13969084
+    },
+    {
+      "name": ".]%8",
+      "rva": "0x132d000",
+      "virtual_size": "0x360",
+      "raw_pointer": "0x1329400",
+      "raw_size": "0x400",
+      "nonzero_bytes": 220
+    },
+    {
+      "name": ".(hX",
+      "rva": "0x132e000",
+      "virtual_size": "0x16e6ee4",
+      "raw_pointer": "0x1329800",
+      "raw_size": "0x16e7000",
+      "nonzero_bytes": 23169298
+    },
+    {
+      "name": ".rsrc",
+      "rva": "0x2a15000",
+      "virtual_size": "0xcadc",
+      "raw_pointer": "0x2a10800",
+      "raw_size": "0xcc00",
+      "nonzero_bytes": 51060
+    },
+    {
+      "name": ".reloc",
+      "rva": "0x2a22000",
+      "virtual_size": "0xb4",
+      "raw_pointer": "0x2a1d400",
+      "raw_size": "0x200",
+      "nonzero_bytes": 126
+    }
+  ]
+}

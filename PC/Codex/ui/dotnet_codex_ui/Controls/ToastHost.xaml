@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="dotnet_codex_ui.Controls.ToastHost" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:Controls="clr-namespace:dotnet_codex_ui.Controls" xmlns:Impl="clr-namespace:dotnet_codex_ui.Services" TextElement.FontFamily="{StaticResource Inter}">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <BooleanToVisibilityConverter x:Key="B2V" />
+      <Style x:Key="ToastAccent" TargetType="{x:Type Border}">
+        <Setter Property="Background" Value="{StaticResource Toast.Info}" />
+        <Style.Triggers>
+          <DataTrigger Value="{x:Static Impl:ToastType.Success}" Binding="{Binding Type}">
+            <Setter Property="Background" Value="{StaticResource Toast.Success}" />
+          </DataTrigger>
+          <DataTrigger Value="{x:Static Impl:ToastType.Warning}" Binding="{Binding Type}">
+            <Setter Property="Background" Value="{StaticResource Toast.Warning}" />
+          </DataTrigger>
+          <DataTrigger Value="{x:Static Impl:ToastType.Error}" Binding="{Binding Type}">
+            <Setter Property="Background" Value="{StaticResource Toast.Error}" />
+          </DataTrigger>
+        </Style.Triggers>
+      </Style>
+      <Style x:Key="ToastIcon" TargetType="{x:Type Path}">
+        <Setter Property="Data" Value="{StaticResource Icon.Info}" />
+        <Setter Property="Stroke" Value="{StaticResource Toast.Info}" />
+        <Style.Triggers>
+          <DataTrigger Value="{x:Static Impl:ToastType.Success}" Binding="{Binding Type}">
+            <Setter Property="Data" Value="{StaticResource Icon.CircleCheck}" />
+            <Setter Property="Stroke" Value="{StaticResource Toast.Success}" />
+          </DataTrigger>
+          <DataTrigger Value="{x:Static Impl:ToastType.Warning}" Binding="{Binding Type}">
+            <Setter Property="Data" Value="{StaticResource Icon.Warning}" />
+            <Setter Property="Stroke" Value="{StaticResource Toast.Warning}" />
+          </DataTrigger>
+          <DataTrigger Value="{x:Static Impl:ToastType.Error}" Binding="{Binding Type}">
+            <Setter Property="Data" Value="{StaticResource Icon.CircleX}" />
+            <Setter Property="Stroke" Value="{StaticResource Toast.Error}" />
+          </DataTrigger>
+          <DataTrigger Value="{x:Static Impl:ToastType.Loading}" Binding="{Binding Type}">
+            <Setter Property="Visibility" Value="Collapsed" />
+          </DataTrigger>
+        </Style.Triggers>
+      </Style>
+      <Style x:Key="ToastSpinner" TargetType="{x:Type Path}">
+        <Setter Property="Visibility" Value="Collapsed" />
+        <Style.Triggers>
+          <DataTrigger Value="{x:Static Impl:ToastType.Loading}" Binding="{Binding Type}">
+            <Setter Property="Visibility" Value="Visible" />
+            <TriggerBase.EnterActions>
+              <BeginStoryboard Name="SpinBegin">
+                <Storyboard>
+                  <DoubleAnimation RepeatBehavior="Forever" Storyboard.TargetProperty="(UIElement.RenderTransform).(RotateTransform.Angle)" From="0" To="360" Duration="0:0:1" />
+                </Storyboard>
+              </BeginStoryboard>
+            </TriggerBase.EnterActions>
+            <TriggerBase.ExitActions>
+              <StopStoryboard BeginStoryboardName="SpinBegin" />
+            </TriggerBase.ExitActions>
+          </DataTrigger>
+        </Style.Triggers>
+      </Style>
+      <Style x:Key="ToastDetailsBox" TargetType="{x:Type TextBox}">
+        <Setter Property="FrameworkElement.FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Background" Value="#0E0F14" />
+        <Setter Property="BorderBrush" Value="{StaticResource Page.ControlBorder}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Foreground" Value="{StaticResource Page.Muted}" />
+        <Setter Property="FontFamily" Value="Consolas" />
+        <Setter Property="FontSize" Value="9" />
+        <Setter Property="TextBoxBase.IsReadOnly" Value="True" />
+        <Setter Property="TextBox.TextWrapping" Value="NoWrap" />
+        <Setter Property="TextBoxBase.HorizontalScrollBarVisibility" Value="Auto" />
+        <Setter Property="TextBoxBase.VerticalScrollBarVisibility" Value="Auto" />
+        <Setter Property="Template">
+          <Setter.Value>
+            <ControlTemplate TargetType="{x:Type TextBox}">
+              <Border Padding="6" Background="{TemplateBinding Control.Background}" BorderBrush="{TemplateBinding Control.BorderBrush}" BorderThickness="{TemplateBinding Control.BorderThickness}" CornerRadius="6" SnapsToDevicePixels="True">
+                <ScrollViewer Name="PART_ContentHost" Padding="0" Focusable="False" Style="{StaticResource OverlayScrollViewer}" />
+              </Border>
+            </ControlTemplate>
+          </Setter.Value>
+        </Setter>
+      </Style>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Border Name="Card" AutomationProperties.LiveSetting="Polite" Background="#15161C" BorderBrush="{StaticResource Page.ControlBorder}" BorderThickness="1" CornerRadius="9" Opacity="0" SnapsToDevicePixels="True" Visibility="Collapsed" MouseEnter="Card_MouseChanged" MouseLeave="Card_MouseChanged">
+    <UIElement.Effect>
+      <DropShadowEffect BlurRadius="16" Opacity="0.5" ShadowDepth="2" Color="Black" />
+    </UIElement.Effect>
+    <UIElement.RenderTransform>
+      <TranslateTransform x:Name="CardShift" />
+    </UIElement.RenderTransform>
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <Border Grid.RowSpan="3" Width="3" HorizontalAlignment="Left" CornerRadius="9,0,0,9" Style="{StaticResource ToastAccent}" />
+      <Grid Row="0" Margin="16,10,8,8">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="Auto" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid Width="16" Height="16" Margin="0,1,10,0" VerticalAlignment="Top">
+          <Path Stretch="Uniform" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeThickness="1.4" Style="{StaticResource ToastIcon}" />
+          <Path Data="{StaticResource Icon.Sync}" RenderTransformOrigin="0.5,0.5" Stretch="Uniform" Stroke="{StaticResource Toast.Info}" StrokeThickness="1.4" Style="{StaticResource ToastSpinner}">
+            <UIElement.RenderTransform>
+              <RotateTransform />
+            </UIElement.RenderTransform>
+          </Path>
+        </Grid>
+        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+          <TextBlock FontSize="11" FontWeight="SemiBold" Foreground="{StaticResource Page.Foreground}" TextWrapping="Wrap" Text="{Binding Title}" />
+          <TextBlock Margin="0,3,0,0" FontSize="10" Foreground="{StaticResource Page.Muted}" TextWrapping="Wrap" Text="{Binding Message}" />
+          <TextBlock Margin="0,4,0,0" FontSize="9" Foreground="{StaticResource Page.Dim}" TextWrapping="Wrap" Text="{Binding Meta}" Visibility="{Binding HasMeta, Converter={StaticResource B2V}}" />
+          <Controls:Button Click="Action_Click" Height="22" Margin="0,6,0,0" HorizontalAlignment="Left" Style="{StaticResource ActionBarAccent}" Content="{Binding ActionText}" Visibility="{Binding HasAction, Converter={StaticResource B2V}}" />
+          <ToggleButton Name="DetailsToggle" Margin="-3,3,0,0" AutomationProperties.Name="Toggle diagnostic details" Style="{StaticResource ToastLink}" Visibility="{Binding HasDetails, Converter={StaticResource B2V}}" Checked="Details_Changed" Unchecked="Details_Changed" />
+        </StackPanel>
+        <Controls:Button Click="Close_Click" Grid.Column="2" Width="22" Height="22" VerticalAlignment="Top" AutomationProperties.Name="Dismiss notification" CornerRadius="6" Style="{StaticResource KickButton}" ToolTip="Dismiss">
+          <Path Width="9" Height="9" Data="{StaticResource Icon.Close}" Stretch="Uniform" StrokeEndLineCap="Round" StrokeStartLineCap="Round" StrokeThickness="1.4" Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Controls:Button}}}" />
+        </Controls:Button>
+      </Grid>
+      <StackPanel Grid.Row="1" Margin="16,0,12,8" Visibility="{Binding IsChecked, ElementName=DetailsToggle, Converter={StaticResource B2V}}">
+        <TextBox MaxHeight="110" Style="{StaticResource ToastDetailsBox}" Text="{Binding Details, Mode=OneWay}" PreviewMouseWheel="Details_PreviewMouseWheel" />
+        <Controls:Button x:Name="CopyButton" Click="Copy_Click" Height="22" Margin="0,6,0,0" HorizontalAlignment="Right" AutomationProperties.Name="Copy diagnostic details" Content="Copy" Style="{StaticResource ActionBarButton}" />
+      </StackPanel>
+      <Border Name="LifeBar" Grid.Row="2" Height="2" Margin="16,0,12,8" CornerRadius="1" RenderTransformOrigin="0,0.5" Style="{StaticResource ToastAccent}" Visibility="Collapsed">
+        <UIElement.RenderTransform>
+          <ScaleTransform x:Name="LifeScale" />
+        </UIElement.RenderTransform>
+      </Border>
+    </Grid>
+  </Border>
+</UserControl>

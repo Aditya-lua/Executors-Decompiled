@@ -1,0 +1,14 @@
+# Reconstructed .NET build outputs
+bootstrapper/bin/
+bootstrapper/obj/
+ui/bin/
+ui/obj/
+*_wpftmp.csproj
+
+# IDE and OS noise
+.vs/
+.vscode/
+*.user
+*.suo
+.DS_Store
+Thumbs.db

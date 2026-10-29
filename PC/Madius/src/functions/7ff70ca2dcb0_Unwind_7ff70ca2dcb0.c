@@ -1,0 +1,10 @@
+/* 7ff70ca2dcb0 Unwind@7ff70ca2dcb0 */
+
+void Unwind_7ff70ca2dcb0(undefined8 param_1,longlong param_2)
+
+{
+  func_0x7ff70c7aae50(param_2 + 0x310);
+  return;
+}
+
+

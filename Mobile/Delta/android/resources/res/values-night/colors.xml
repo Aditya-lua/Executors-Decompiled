@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pi2_default_background_color">#21222d</color>
+    <color name="widget_primary_text">#f7f7f8</color>
+    <color name="widget_secondary_text">#bcbec8</color>
+    <color name="widget_surface_container">#121215</color>
+</resources>

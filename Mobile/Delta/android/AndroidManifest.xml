@@ -1,0 +1,393 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="18934" android:versionName="2.743.1136" android:compileSdkVersion="36" android:compileSdkVersionCodename="16" package="com.roblox.client" platformBuildVersionCode="36" platformBuildVersionName="16">
+  <uses-sdk android:minSdkVersion="26" android:targetSdkVersion="35"/>
+  <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30"/>
+  <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+  <uses-permission android:name="android.permission.VIBRATE"/>
+  <uses-feature android:name="android.hardware.camera" android:required="false"/>
+  <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+  <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
+  <queries>
+    <intent>
+      <action android:name="com.appsflyer.referrer.INSTALL_PROVIDER"/>
+    </intent>
+    <intent>
+      <action android:name="android.support.customtabs.action.CustomTabsService"/>
+    </intent>
+    <intent>
+      <action android:name="android.intent.action.VIEW"/>
+      <category android:name="android.intent.category.BROWSABLE"/>
+      <data android:scheme="https"/>
+    </intent>
+    <intent>
+      <action android:name="android.media.action.IMAGE_CAPTURE"/>
+    </intent>
+    <intent>
+      <action android:name="com.android.vending.billing.InAppBillingService.BIND"/>
+    </intent>
+    <intent>
+      <action android:name="com.google.android.apps.play.billingtestcompanion.BillingOverrideService.BIND"/>
+    </intent>
+    <package android:name="com.google.android.gms"/>
+    <package android:name="com.android.vending"/>
+    <intent>
+      <action android:name="android.intent.action.INSERT"/>
+      <data android:mimeType="vnd.android.cursor.dir/event"/>
+    </intent>
+    <intent>
+      <action android:name="android.intent.action.VIEW"/>
+      <data android:scheme="sms"/>
+    </intent>
+    <intent>
+      <action android:name="android.intent.action.DIAL"/>
+      <data android:path="tel:"/>
+    </intent>
+    <package android:name="com.facebook.katana"/>
+  </queries>
+  <queries>
+    <package android:name="com.facebook.katana"/>
+  </queries>
+  <queries>
+    <package android:name="com.instagram.android"/>
+  </queries>
+  <queries>
+    <package android:name="com.facebook.lite"/>
+  </queries>
+  <queries>
+    <package android:name="com.samsung.android.mapsagent"/>
+  </queries>
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+  <uses-permission android:name="com.samsung.android.mapsagent.permission.READ_APP_INFO"/>
+  <supports-screens android:smallScreens="false" android:normalScreens="true" android:largeScreens="true" android:xlargeScreens="true" android:requiresSmallestWidthDp="300"/>
+  <permission android:name="com.roblox.client.permission.CONFIGURATION" android:protectionLevel="0x00000002"/>
+  <uses-permission android:name="com.android.vending.BILLING"/>
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+  <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+  <uses-permission android:name="android.permission.READ_CONTACTS"/>
+  <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT"/>
+  <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28"/>
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32"/>
+  <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" android:minSdkVersion="30"/>
+  <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+  <uses-permission android:name="android.permission.CAMERA"/>
+  <uses-permission android:name="android.permission.DETECT_SCREEN_CAPTURE"/>
+  <uses-feature android:glEsVersion="0x00030000" android:required="true"/>
+  <uses-feature android:name="android.hardware.type.pc" android:required="false"/>
+  <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="false"/>
+  <uses-feature android:name="android.hardware.sensor.gyroscope" android:required="false"/>
+  <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+  <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+  <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+  <uses-permission android:name="android.permission.WAKE_LOCK"/>
+  <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+  <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+  <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION"/>
+  <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID"/>
+  <permission android:name="com.roblox.client.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="0x00000002"/>
+  <uses-permission android:name="com.roblox.client.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+  <uses-permission android:name="android.permission.READ_BASIC_PHONE_STATE"/>
+  <uses-permission android:name="android.permission.ACCESS_ADSERVICES_TOPICS"/>
+  <uses-feature android:name="android.hardware.microphone" android:required="false"/>
+  <application android:theme="@7F1302B6" android:label="@7F12072A" android:icon="@7F0F0000" android:name="com.roblox.client.RobloxApplication" android:allowBackup="true" android:hardwareAccelerated="true" android:largeHeap="false" android:fullBackupContent="@7F150000" android:resizeableActivity="false" android:networkSecurityConfig="@7F150006" android:appCategory="0" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:dataExtractionRules="@7F150001">
+    <profileable android:shell="false"/>
+    <activity android:name="com.roblox.client.ActivityProtocolLaunch" android:exported="true" android:noHistory="true">
+      <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="https" android:host="www.roblox.com" android:pathPattern="/games/..*"/>
+      </intent-filter>
+      <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="https" android:host="www.roblox.com" android:pathPrefix="/shortlink"/>
+      </intent-filter>
+      <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="https" android:host="www.roblox.com" android:pathPrefix="/share"/>
+      </intent-filter>
+      <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="https" android:host="connections.roblox.com" android:pathPrefix="/share"/>
+      </intent-filter>
+      <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="https" android:host="www.roblox.com" android:pathPrefix="/join"/>
+      </intent-filter>
+      <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="https" android:host="roblox.com" android:pathPrefix="/join"/>
+      </intent-filter>
+      <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="https" android:host="ro.blox.com" android:pathPrefix="/Ebh5"/>
+      </intent-filter>
+      <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="https" android:host="www.roblox.com" android:pathPattern="/.*/games/..*"/>
+      </intent-filter>
+      <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="https" android:host="www.roblox.com" android:pathPattern="/.*/join/*"/>
+      </intent-filter>
+      <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="https" android:host="roblox.com" android:pathPattern="/.*/join/*"/>
+      </intent-filter>
+      <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="https" android:host="www.roblox.com" android:pathPattern="/.*/catalog/..*"/>
+      </intent-filter>
+      <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="https" android:host="www.roblox.com" android:pathPattern="/catalog/..*"/>
+      </intent-filter>
+      <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="https" android:host="www.roblox.com" android:pathPattern="/.*/bundles/..*"/>
+      </intent-filter>
+      <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="https" android:host="www.roblox.com" android:pathPattern="/bundles/..*"/>
+      </intent-filter>
+      <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="https" android:host="www.roblox.com" android:pathPattern="/commerce/app-redirect"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="robloxglobal"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="roblox"/>
+        <data android:scheme="robloxmobile"/>
+      </intent-filter>
+    </activity>
+    <meta-data android:name="firebase_messaging_auto_init_enabled" android:value="false"/>
+    <meta-data android:name="com.google.android.gms.games.APP_ID" android:value="@7F12079F"/>
+    <service android:name="com.roblox.client.fcm.RbxFcmListenerService" android:exported="false">
+      <intent-filter>
+        <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+      </intent-filter>
+    </service>
+    <meta-data android:name="com.google.android.gms.version" android:value="@7F0A0012"/>
+    <receiver android:name="com.roblox.client.sms.SMSBroadcastReceiver" android:exported="true">
+      <intent-filter>
+        <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED"/>
+      </intent-filter>
+    </receiver>
+    <provider android:name="androidx.startup.InitializationProvider" android:exported="false" android:authorities="com.roblox.client.androidx-startup">
+      <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+      <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+      <meta-data android:name="androidx.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup"/>
+      <meta-data android:name="okhttp3.internal.platform.PlatformInitializer" android:value="androidx.startup"/>
+    </provider>
+    <meta-data android:name="com.google.android.gms.games.SUPPRESS_GAME_PROFILE_CREATION" android:value="true"/>
+    <meta-data android:name="android.max_aspect" android:value="2.400000"/>
+    <receiver android:name="com.roblox.client.shortcuts.PinShortcutConfirmationReceiver" android:exported="false"/>
+    <receiver android:name="com.roblox.client.pushnotification.v2.receiver.Sendr1PushNotificationReceiver"/>
+    <receiver android:name="com.roblox.client.pushnotification.notificationreceivers.FriendRequestReceivedNotificationReceiver"/>
+    <receiver android:name="com.roblox.client.pushnotification.notificationreceivers.FriendRequestAcceptedNotificationReceiver"/>
+    <receiver android:name="com.roblox.client.pushnotification.notificationreceivers.ChatMessageNotificationReceiver"/>
+    <receiver android:name="com.roblox.client.pushnotification.v2.SendrChatMessageReplyHandler"/>
+    <receiver android:name="com.roblox.client.pushnotification.notificationreceivers.PrivateMessageReceivedNotificationReceiver"/>
+    <receiver android:name="com.roblox.client.pushnotification.ossettingsreporting.NotificationOSSettingsBroadcastReceiver" android:exported="false">
+      <intent-filter>
+        <action android:name="android.app.action.NOTIFICATION_CHANNEL_BLOCK_STATE_CHANGED"/>
+        <action android:name="android.app.action.NOTIFICATION_CHANNEL_GROUP_BLOCK_STATE_CHANGED"/>
+        <action android:name="android.app.action.APP_BLOCK_STATE_CHANGED"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="com.roblox.client.ShareAppChosenReceiver" android:exported="false"/>
+    <receiver android:name="com.roblox.client.widgets.RecentlyPlayedWidgetProvider" android:enabled="false" android:exported="true">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider" android:resource="@7F150008"/>
+    </receiver>
+    <service android:name="com.roblox.client.realtime.RealtimeService"/>
+    <receiver android:name="com.roblox.client.pushnotification.v2.CallActionReceiver" android:exported="false"/>
+    <receiver android:name="com.roblox.client.pushnotification.actions.NotificationActionBroadcastReceiver" android:exported="false"/>
+    <activity android:theme="@7F1302A0" android:name="com.roblox.client.startup.ActivitySplash" android:exported="true" android:launchMode="1"/>
+    <activity-alias android:name="com.roblox.client.startup.LauncherAliasMain" android:enabled="true" android:exported="true" android:targetActivity="com.roblox.client.startup.ActivitySplash">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+      </intent-filter>
+    </activity-alias>
+    <activity-alias android:icon="@7F0F0002" android:name="com.roblox.client.startup.LauncherAliasClassic" android:enabled="false" android:exported="true" android:targetActivity="com.roblox.client.startup.ActivitySplash">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+      </intent-filter>
+    </activity-alias>
+    <activity-alias android:icon="@7F0F0005" android:name="com.roblox.client.startup.LauncherAliasHalloween2026" android:enabled="false" android:exported="true" android:targetActivity="com.roblox.client.startup.ActivitySplash">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+      </intent-filter>
+    </activity-alias>
+    <activity android:theme="@7F1302A0" android:name="com.roblox.client.ActivityNativeMain" android:launchMode="2" android:configChanges="0x00000FB0" android:alwaysRetainTaskState="true" android:windowSoftInputMode="0x00000010"/>
+    <activity android:theme="@7F1302A0" android:name="com.roblox.client.startup.MainGameActivity" android:exported="false" android:launchMode="2" android:configChanges="0x00000FB0" android:alwaysRetainTaskState="true" android:windowSoftInputMode="0x00000010">
+      <meta-data android:name="android.app.lib_name" android:value="roblox"/>
+    </activity>
+    <activity android:theme="@7F1302A0" android:name="com.roblox.client.RobloxWebActivity" android:configChanges="0x00000480"/>
+    <activity android:theme="@7F1302A0" android:name="com.roblox.client.NotificationStreamActivity" android:configChanges="0x00000480"/>
+    <activity android:theme="@7F1302A1" android:name="com.roblox.client.captcha.ActivityFunCaptcha"/>
+    <activity android:theme="@7F1302A0" android:name="com.roblox.client.IncomingCallActivity" android:taskAffinity="com.roblox.client.calling" android:excludeFromRecents="true" android:launchMode="3" android:showOnLockScreen="true" android:showForAllUsers="true"/>
+    <provider android:name="com.roblox.client.provider.ShellConfigurationContentProvider" android:permission="com.roblox.client.permission.CONFIGURATION" android:exported="true" android:authorities="com.roblox.client.ShellConfigurationProvider"/>
+    <provider android:name="com.roblox.client.provider.AppAssetsContentProvider" android:exported="false" android:authorities="com.roblox.client" android:grantUriPermissions="true"/>
+    <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="com.roblox.client.fileprovider" android:grantUriPermissions="true">
+      <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F150003"/>
+    </provider>
+    <service android:name="androidx.camera.core.impl.MetadataHolderService" android:enabled="false" android:exported="false">
+      <meta-data android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER" android:value="androidx.camera.camera2.Camera2Config$DefaultProvider"/>
+    </service>
+    <provider android:name="com.withpersona.sdk2.inquiry.DocumentFileProvider" android:exported="false" android:process=":personaIsolate" android:authorities="com.roblox.client.persona.provider" android:grantUriPermissions="true">
+      <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F150007"/>
+    </provider>
+    <service android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService" android:exported="false" android:directBootAware="true">
+      <meta-data android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+      <meta-data android:name="com.google.firebase.components:com.google.mlkit.vision.face.internal.FaceRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+      <meta-data android:name="com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+      <meta-data android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+      <meta-data android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+    </service>
+    <service android:name="androidx.credentials.playservices.CredentialProviderMetadataHolder" android:enabled="true" android:exported="false">
+      <meta-data android:name="androidx.credentials.CREDENTIAL_PROVIDER_KEY" android:value="androidx.credentials.playservices.CredentialProviderPlayServicesImpl"/>
+    </service>
+    <activity android:theme="@7F130251" android:name="androidx.credentials.playservices.controllers.identityauth.HiddenActivity" android:enabled="true" android:exported="false" android:configChanges="0x000005A0" android:fitsSystemWindows="true"/>
+    <activity android:theme="@7F130251" android:name="androidx.credentials.playservices.controllers.identitycredentials.IdentityCredentialApiHiddenActivity" android:enabled="true" android:exported="false" android:configChanges="0x000005A0" android:fitsSystemWindows="true"/>
+    <activity android:theme="@android:01030055" android:name="androidx.core.google.shortcuts.TrampolineActivity" android:exported="true" android:noHistory="true">
+      <intent-filter>
+        <action android:name="androidx.core.content.pm.SHORTCUT_LISTENER"/>
+      </intent-filter>
+      <meta-data android:name="androidx.core.content.pm.shortcut_listener_impl" android:value="androidx.core.google.shortcuts.ShortcutInfoChangeListenerImpl"/>
+    </activity>
+    <meta-data android:name="com.google.android.play.billingclient.version" android:value="9.0.0"/>
+    <activity android:theme="@android:01030010" android:name="com.android.billingclient.api.ProxyBillingActivity" android:exported="false" android:configChanges="0x000005B0"/>
+    <activity android:theme="@android:01030010" android:name="com.android.billingclient.api.ProxyBillingActivityV2" android:exported="false" android:configChanges="0x000005B0"/>
+    <activity android:theme="@android:01030010" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:exported="false" android:excludeFromRecents="true"/>
+    <service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:exported="true" android:visibleToInstantApps="true"/>
+    <activity android:theme="@7F13024F" android:name="com.google.android.gms.games.internal.v2.resolution.GamesResolutionActivity" android:exported="false"/>
+    <activity android:theme="@7F13024F" android:name="com.google.android.gms.games.internal.v2.appshortcuts.PlayGamesAppShortcutsActivity" android:exported="true"/>
+    <meta-data android:name="com.google.android.gms.games.version" android:value="@7F120872"/>
+    <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+      <intent-filter>
+        <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+      </intent-filter>
+      <meta-data android:name="com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED" android:value="true"/>
+    </receiver>
+    <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="false" android:directBootAware="true">
+      <intent-filter android:priority="-500">
+        <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+      </intent-filter>
+    </service>
+    <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false" android:directBootAware="true">
+      <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+      <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+      <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+      <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+      <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+      <meta-data android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+      <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+    </service>
+    <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+    <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+    <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+    <activity android:theme="@android:01030010" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+    <service android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="@7F050004" android:exported="true" android:directBootAware="false"/>
+    <service android:name="androidx.work.impl.foreground.SystemForegroundService" android:enabled="@7F050003" android:exported="false" android:directBootAware="false"/>
+    <receiver android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver" android:enabled="true" android:exported="false" android:directBootAware="false"/>
+    <receiver android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver" android:enabled="false" android:exported="false" android:directBootAware="false">
+      <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver" android:permission="android.permission.DUMP" android:enabled="true" android:exported="true" android:directBootAware="false">
+      <intent-filter>
+        <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+      </intent-filter>
+    </receiver>
+    <service android:name="androidx.room.MultiInstanceInvalidationService" android:exported="false" android:directBootAware="true"/>
+    <uses-library android:name="android.ext.adservices" android:required="false"/>
+    <receiver android:name="androidx.profileinstaller.ProfileInstallReceiver" android:permission="android.permission.DUMP" android:enabled="true" android:exported="true" android:directBootAware="false">
+      <intent-filter>
+        <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+      </intent-filter>
+    </receiver>
+    <service android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery" android:exported="false">
+      <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+    </service>
+    <service android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+    <receiver android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" android:exported="false"/>
+    <activity android:theme="@7F13029F" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:exported="false" android:stateNotNeeded="true"/>
+    <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-6934957019599250~2990093015"/>
+    <activity android:theme="@7F13024E" android:name="com.roblox.client.gmasdk.isolate.sandbox.RemoteNativeAdActivity" android:enabled="true" android:exported="false" android:process=":isolate" android:screenOrientation="0" android:configChanges="0x00000FB0"/>
+    <activity android:theme="@7F13024E" android:name="com.roblox.client.gmasdk.isolate.sandbox.LocalNativeAdActivity" android:enabled="true" android:exported="false" android:screenOrientation="0" android:configChanges="0x00000FB0"/>
+    <activity android:theme="@7F13024E" android:name="com.roblox.client.gmasdk.rewarded.RemoteRewardedAdActivity" android:enabled="true" android:exported="false" android:process=":isolate" android:screenOrientation="0" android:configChanges="0x00000FB0"/>
+    <activity android:theme="@7F13024E" android:name="com.roblox.client.gmasdk.rewarded.LocalRewardedAdActivity" android:enabled="true" android:exported="false" android:screenOrientation="0" android:configChanges="0x00000FB0"/>
+    <service android:name="com.roblox.client.gmasdk.isolate.sandbox.RemoteNativeAdService" android:enabled="true" android:exported="false" android:process=":isolate"/>
+    <service android:name="com.roblox.client.gmasdk.isolate.sandbox.LocalNativeAdService" android:enabled="true" android:exported="false"/>
+    <service android:name="com.roblox.client.gmasdk.rewarded.RemoteRewardedAdService" android:enabled="true" android:exported="false" android:process=":isolate"/>
+    <service android:name="com.roblox.client.gmasdk.rewarded.LocalRewardedAdService" android:enabled="true" android:exported="false"/>
+    <provider android:name="com.roblox.client.gmasdk.isolate.sandbox.GmaWebViewInitializerProvider" android:process=":isolate" android:authorities="com.roblox.client.gmasdk.isolate.init"/>
+    <activity android:theme="@7F130250" android:name="com.google.android.libraries.ads.mobile.sdk.common.AdActivity" android:exported="false" android:multiprocess="true" android:configChanges="0x00000FB0"/>
+    <activity android:theme="@android:01030010" android:name="com.facebook.ads.AudienceNetworkActivity" android:exported="false" android:multiprocess="true" android:configChanges="0x00000DA0"/>
+    <property android:name="android.adservices.AD_SERVICES_CONFIG" android:resource="@7F150004"/>
+    <provider android:name="com.roblox.client.personasdk.PersonaInitProvider" android:process=":personaIsolate" android:authorities="com.roblox.client.personasdk.isolate.init"/>
+    <activity android:theme="@7F130143" android:name="com.withpersona.sdk2.inquiry.internal.InquiryActivity" android:exported="false" android:process=":personaIsolate" android:screenOrientation="1" android:windowSoftInputMode="0x00000010"/>
+    <meta-data android:name="com.google.mlkit.vision.DEPENDENCIES" android:value="ocr,face,barcode"/>
+    <meta-data android:name="com.android.dynamic.apk.fused.modules" android:value="base,personasdk"/>
+    <meta-data android:name="com.android.stamp.source" android:value="https://play.google.com/store"/>
+    <meta-data android:name="com.android.stamp.type" android:value="STAMP_TYPE_STANDALONE_APK"/>
+    <meta-data android:name="com.android.vending.derived.apk.id" android:value="3"/>
+  </application>
+</manifest>

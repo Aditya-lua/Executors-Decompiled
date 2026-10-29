@@ -1,0 +1,886 @@
+{
+  "schemaVersion": 1,
+  "channel": "stable",
+  "bootstrapper": {
+    "version": "1.0.1-stable.20261027"
+  },
+  "app": {
+    "version": "1.0.1-stable.20261027",
+    "executable": "dotnet-codex-ui.exe",
+    "files": [
+      {
+        "path": "CefSharp.BrowserSubprocess.Core.dll",
+        "source": "nuget",
+        "required": true,
+        "package": "CefSharp.Common.NETCore/140.1.140",
+        "packagePath": "runtimes/win-x64/native/CefSharp.BrowserSubprocess.Core.dll"
+      },
+      {
+        "path": "CefSharp.BrowserSubprocess.dll",
+        "source": "nuget",
+        "required": true,
+        "package": "CefSharp.Common.NETCore/140.1.140",
+        "packagePath": "runtimes/win-x64/native/CefSharp.BrowserSubprocess.dll"
+      },
+      {
+        "path": "CefSharp.BrowserSubprocess.exe",
+        "source": "nuget",
+        "required": true,
+        "package": "CefSharp.Common.NETCore/140.1.140",
+        "packagePath": "runtimes/win-x64/native/CefSharp.BrowserSubprocess.exe"
+      },
+      {
+        "path": "CefSharp.BrowserSubprocess.runtimeconfig.json",
+        "source": "nuget",
+        "required": true,
+        "package": "CefSharp.Common.NETCore/140.1.140",
+        "packagePath": "runtimes/win-x86/native/CefSharp.BrowserSubprocess.runtimeconfig.json"
+      },
+      {
+        "path": "CefSharp.Core.Runtime.dll",
+        "source": "nuget",
+        "required": true,
+        "package": "CefSharp.Common.NETCore/140.1.140",
+        "packagePath": "runtimes/win-x64/lib/net6.0/CefSharp.Core.Runtime.dll"
+      },
+      {
+        "path": "CefSharp.Core.dll",
+        "source": "nuget",
+        "required": true,
+        "package": "CefSharp.Common.NETCore/140.1.140",
+        "packagePath": "runtimes/win-x64/lib/net6.0/CefSharp.Core.dll"
+      },
+      {
+        "path": "CefSharp.Wpf.dll",
+        "source": "nuget",
+        "required": true,
+        "package": "CefSharp.Wpf.NETCore/140.1.140",
+        "packagePath": "lib/net6.0-windows7.0/CefSharp.Wpf.dll"
+      },
+      {
+        "path": "CefSharp.dll",
+        "source": "nuget",
+        "required": true,
+        "package": "CefSharp.Common.NETCore/140.1.140",
+        "packagePath": "runtimes/win-x64/lib/net6.0/CefSharp.dll"
+      },
+      {
+        "path": "D2Phap.FileWatcherEx.dll",
+        "source": "nuget",
+        "required": true,
+        "package": "D2Phap.FileWatcherEx/3.0.0",
+        "packagePath": "lib/net10.0/D2Phap.FileWatcherEx.dll"
+      },
+      {
+        "path": "Ijwhost.dll",
+        "source": "nuget",
+        "required": true,
+        "package": "CefSharp.Common.NETCore/140.1.140",
+        "packagePath": "runtimes/win-x64/lib/net6.0/Ijwhost.dll"
+      },
+      {
+        "path": "Newtonsoft.Json.dll",
+        "source": "nuget",
+        "required": true,
+        "package": "Newtonsoft.Json/13.0.4",
+        "packagePath": "lib/net6.0/Newtonsoft.Json.dll"
+      },
+      {
+        "path": "Serilog.Sinks.Async.dll",
+        "source": "nuget",
+        "required": true,
+        "package": "Serilog.Sinks.Async/2.1.0",
+        "packagePath": "lib/net8.0/Serilog.Sinks.Async.dll"
+      },
+      {
+        "path": "Serilog.Sinks.File.dll",
+        "source": "nuget",
+        "required": true,
+        "package": "Serilog.Sinks.File/7.0.0",
+        "packagePath": "lib/net9.0/Serilog.Sinks.File.dll"
+      },
+      {
+        "path": "Serilog.dll",
+        "source": "nuget",
+        "required": true,
+        "package": "Serilog/4.4.0",
+        "packagePath": "lib/net10.0/Serilog.dll"
+      },
+      {
+        "path": "bin/language-server/assets/bin/darklua.LICENSE.txt",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/assets/bin/darklua.LICENSE.txt"
+      },
+      {
+        "path": "bin/language-server/assets/bin/darklua.VERSION.txt",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/assets/bin/darklua.VERSION.txt"
+      },
+      {
+        "path": "bin/language-server/assets/bin/darklua.exe",
+        "source": "static",
+        "required": false,
+        "remotePath": "language-server/assets/bin/darklua.exe"
+      },
+      {
+        "path": "bin/language-server/assets/bin/en-us.json",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/assets/bin/en-us.json"
+      },
+      {
+        "path": "bin/language-server/assets/bin/globalTypes.d.luau",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/assets/bin/globalTypes.d.luau"
+      },
+      {
+        "path": "bin/language-server/assets/bin/lsp.d.luau",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/assets/bin/lsp.d.luau"
+      },
+      {
+        "path": "bin/language-server/assets/bin/luau-lsp.exe",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/assets/bin/luau-lsp.exe"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/Inter-Variable-0be2399e.ttf",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/Inter-Variable-0be2399e.ttf"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/abap-b43a89e6.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/abap-b43a89e6.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/apex-937df311.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/apex-937df311.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/azcli-282bdb58.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/azcli-282bdb58.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/bat-3e233203.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/bat-3e233203.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/bicep-a145af43.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/bicep-a145af43.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/cameligo-06e900e4.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/cameligo-06e900e4.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/clojure-db811a57.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/clojure-db811a57.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/codicon-71cccbf1.ttf",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/codicon-71cccbf1.ttf"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/coffee-09967f6c.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/coffee-09967f6c.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/cpp-faa9e9b6.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/cpp-faa9e9b6.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/csharp-97f4fb7d.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/csharp-97f4fb7d.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/csp-a35669e2.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/csp-a35669e2.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/css-2476f175.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/css-2476f175.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/cssMode-ae140568.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/cssMode-ae140568.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/cypher-303c3469.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/cypher-303c3469.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/dart-49550748.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/dart-49550748.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/dockerfile-f0d559c9.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/dockerfile-f0d559c9.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/ecl-8f371079.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/ecl-8f371079.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/editor.worker-75310a73.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/editor.worker-75310a73.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/elixir-8520cbc3.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/elixir-8520cbc3.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/flow9-21ceb8bd.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/flow9-21ceb8bd.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/freemarker2-428d4752.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/freemarker2-428d4752.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/fsharp-2e782b00.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/fsharp-2e782b00.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/go-606d7332.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/go-606d7332.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/graphql-503141bc.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/graphql-503141bc.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/handlebars-2bc66846.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/handlebars-2bc66846.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/hcl-41af7310.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/hcl-41af7310.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/html-65710edc.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/html-65710edc.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/htmlMode-4ecbd34d.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/htmlMode-4ecbd34d.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/index-3093d9a0.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/index-3093d9a0.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/index-c4aedd64.css",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/index-c4aedd64.css"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/ini-46e7a95b.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/ini-46e7a95b.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/java-79ea7274.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/java-79ea7274.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/javascript-71c3e60b.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/javascript-71c3e60b.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/jsonMode-c46bb8a1.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/jsonMode-c46bb8a1.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/julia-25a565bd.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/julia-25a565bd.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/kotlin-cef1b1fd.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/kotlin-cef1b1fd.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/less-909e640f.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/less-909e640f.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/lexon-8c13c279.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/lexon-8c13c279.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/liquid-fe1416c6.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/liquid-fe1416c6.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/lua-10f18aa7.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/lua-10f18aa7.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/m3-b84828cd.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/m3-b84828cd.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/markdown-727f1fa6.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/markdown-727f1fa6.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/mips-17479448.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/mips-17479448.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/msdax-2d903eee.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/msdax-2d903eee.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/mysql-c74c16f3.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/mysql-c74c16f3.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/objective-c-465e183d.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/objective-c-465e183d.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/pascal-32b3f17b.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/pascal-32b3f17b.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/pascaligo-54265dfb.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/pascaligo-54265dfb.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/perl-040d59d8.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/perl-040d59d8.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/pgsql-cb78cfb3.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/pgsql-cb78cfb3.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/php-01af256a.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/php-01af256a.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/pla-c7898dec.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/pla-c7898dec.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/postiats-664fccce.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/postiats-664fccce.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/powerquery-3f2f8847.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/powerquery-3f2f8847.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/powershell-ff2186c8.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/powershell-ff2186c8.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/protobuf-ede8c39c.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/protobuf-ede8c39c.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/pug-d64d016c.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/pug-d64d016c.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/python-75905c4b.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/python-75905c4b.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/qsharp-db4d2332.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/qsharp-db4d2332.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/r-fcb36db0.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/r-fcb36db0.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/razor-a3d00c41.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/razor-a3d00c41.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/redis-c9bf3394.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/redis-c9bf3394.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/redshift-8d0f2494.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/redshift-8d0f2494.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/restructuredtext-98785e74.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/restructuredtext-98785e74.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/ruby-f75707b3.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/ruby-f75707b3.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/rust-9b309104.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/rust-9b309104.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/sb-99792fa3.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/sb-99792fa3.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/scala-ec1f6546.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/scala-ec1f6546.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/scheme-2dfeec6d.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/scheme-2dfeec6d.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/scss-1cfe6898.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/scss-1cfe6898.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/shell-09b1527a.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/shell-09b1527a.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/solidity-42cedeeb.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/solidity-42cedeeb.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/sophia-640bb318.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/sophia-640bb318.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/sparql-1350b581.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/sparql-1350b581.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/sql-d6fbbba2.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/sql-d6fbbba2.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/st-39d02679.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/st-39d02679.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/swift-deed2269.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/swift-deed2269.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/systemverilog-fe8f44a0.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/systemverilog-fe8f44a0.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/tcl-c3d9d7a8.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/tcl-c3d9d7a8.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/tsMode-aa9a7ba9.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/tsMode-aa9a7ba9.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/twig-6fc061e8.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/twig-6fc061e8.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/typescript-bb87d65b.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/typescript-bb87d65b.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/vb-4f8c002b.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/vb-4f8c002b.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/xml-422f1782.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/xml-422f1782.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/assets/yaml-5b46198b.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/assets/yaml-5b46198b.js"
+      },
+      {
+        "path": "bin/language-server/dist/client/index.html",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/client/index.html"
+      },
+      {
+        "path": "bin/language-server/dist/server/index.js",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/dist/server/index.js"
+      },
+      {
+        "path": "bin/language-server/node.exe",
+        "source": "static",
+        "required": true,
+        "remotePath": "language-server/node.exe"
+      },
+      {
+        "path": "chrome_100_percent.pak",
+        "source": "nuget",
+        "required": true,
+        "package": "chromiumembeddedframework.runtime.win-x64/140.1.14",
+        "packagePath": "runtimes/win-x64/native/chrome_100_percent.pak"
+      },
+      {
+        "path": "chrome_200_percent.pak",
+        "source": "nuget",
+        "required": true,
+        "package": "chromiumembeddedframework.runtime.win-x64/140.1.14",
+        "packagePath": "runtimes/win-x64/native/chrome_200_percent.pak"
+      },
+      {
+        "path": "chrome_elf.dll",
+        "source": "nuget",
+        "required": true,
+        "package": "chromiumembeddedframework.runtime.win-x64/140.1.14",
+        "packagePath": "runtimes/win-x64/native/chrome_elf.dll"
+      },
+      {
+        "path": "d3dcompiler_47.dll",
+        "source": "nuget",
+        "required": true,
+        "package": "chromiumembeddedframework.runtime.win-x64/140.1.14",
+        "packagePath": "runtimes/win-x64/native/d3dcompiler_47.dll"
+      },
+      {
+        "path": "dotnet-codex-ui.deps.json",
+        "source": "channel",
+        "required": true
+      },
+      {
+        "path": "dotnet-codex-ui.dll",
+        "source": "channel",
+        "required": true
+      },
+      {
+        "path": "dotnet-codex-ui.exe",
+        "source": "channel",
+        "required": true
+      },
+      {
+        "path": "dotnet-codex-ui.runtimeconfig.json",
+        "source": "channel",
+        "required": true
+      },
+      {
+        "path": "dxcompiler.dll",
+        "source": "nuget",
+        "required": true,
+        "package": "chromiumembeddedframework.runtime.win-x64/140.1.14",
+        "packagePath": "runtimes/win-x64/native/dxcompiler.dll"
+      },
+      {
+        "path": "dxil.dll",
+        "source": "nuget",
+        "required": true,
+        "package": "chromiumembeddedframework.runtime.win-x64/140.1.14",
+        "packagePath": "runtimes/win-x64/native/dxil.dll"
+      },
+      {
+        "path": "icudtl.dat",
+        "source": "nuget",
+        "required": true,
+        "package": "chromiumembeddedframework.runtime.win-x64/140.1.14",
+        "packagePath": "runtimes/win-x64/native/icudtl.dat"
+      },
+      {
+        "path": "libEGL.dll",
+        "source": "nuget",
+        "required": true,
+        "package": "chromiumembeddedframework.runtime.win-x64/140.1.14",
+        "packagePath": "runtimes/win-x64/native/libEGL.dll"
+      },
+      {
+        "path": "libGLESv2.dll",
+        "source": "nuget",
+        "required": true,
+        "package": "chromiumembeddedframework.runtime.win-x64/140.1.14",
+        "packagePath": "runtimes/win-x64/native/libGLESv2.dll"
+      },
+      {
+        "path": "libcef.dll",
+        "source": "nuget",
+        "required": true,
+        "package": "chromiumembeddedframework.runtime.win-x64/140.1.14",
+        "packagePath": "runtimes/win-x64/native/libcef.dll"
+      },
+      {
+        "path": "libwebp.COPYING.txt",
+        "source": "static",
+        "required": false
+      },
+      {
+        "path": "libwebpdecoder.dll",
+        "source": "static",
+        "required": true
+      },
+      {
+        "path": "locales/en-US.pak",
+        "source": "nuget",
+        "required": true,
+        "package": "chromiumembeddedframework.runtime/140.1.14",
+        "packagePath": "CEF/win-x86/locales/en-US.pak"
+      },
+      {
+        "path": "resources.pak",
+        "source": "nuget",
+        "required": true,
+        "package": "chromiumembeddedframework.runtime.win-x64/140.1.14",
+        "packagePath": "runtimes/win-x64/native/resources.pak"
+      },
+      {
+        "path": "v8_context_snapshot.bin",
+        "source": "nuget",
+        "required": true,
+        "package": "chromiumembeddedframework.runtime.win-x64/140.1.14",
+        "packagePath": "runtimes/win-x64/native/v8_context_snapshot.bin"
+      },
+      {
+        "path": "vk_swiftshader.dll",
+        "source": "nuget",
+        "required": true,
+        "package": "chromiumembeddedframework.runtime.win-x64/140.1.14",
+        "packagePath": "runtimes/win-x64/native/vk_swiftshader.dll"
+      },
+      {
+        "path": "vk_swiftshader_icd.json",
+        "source": "nuget",
+        "required": true,
+        "package": "chromiumembeddedframework.runtime.win-x64/140.1.14",
+        "packagePath": "runtimes/win-x64/native/vk_swiftshader_icd.json"
+      },
+      {
+        "path": "vulkan-1.dll",
+        "source": "nuget",
+        "required": true,
+        "package": "chromiumembeddedframework.runtime.win-x64/140.1.14",
+        "packagePath": "runtimes/win-x64/native/vulkan-1.dll"
+      }
+    ]
+  },
+  "runtime": {
+    "name": ".NET Desktop Runtime",
+    "minVersion": "10.0.0",
+    "installerUrl": "https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/10.0.13/windowsdesktop-runtime-10.0.13-win-x64.exe",
+    "architecture": "x64"
+  },
+  "packages": [
+    {
+      "id": "CefSharp.Common.NETCore",
+      "version": "140.1.140"
+    },
+    {
+      "id": "CefSharp.Wpf.NETCore",
+      "version": "140.1.140"
+    },
+    {
+      "id": "chromiumembeddedframework.runtime.win-x64",
+      "version": "140.1.14"
+    },
+    {
+      "id": "chromiumembeddedframework.runtime",
+      "version": "140.1.14"
+    },
+    {
+      "id": "D2Phap.FileWatcherEx",
+      "version": "3.0.0"
+    },
+    {
+      "id": "Newtonsoft.Json",
+      "version": "13.0.4"
+    },
+    {
+      "id": "Serilog.Sinks.Async",
+      "version": "2.1.0"
+    },
+    {
+      "id": "Serilog.Sinks.File",
+      "version": "7.0.0"
+    },
+    {
+      "id": "Serilog",
+      "version": "4.4.0"
+    }
+  ],
+  "loaders": [
+    {
+      "robloxVersion": "0.744.0.7441080",
+      "md5": "2957e13f36c3cc59e7212268202bdd99",
+      "size": 9803776
+    }
+  ]
+}

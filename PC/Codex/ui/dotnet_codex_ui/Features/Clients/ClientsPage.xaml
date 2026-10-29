@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="dotnet_codex_ui.Features.Clients.ClientsPage" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:Controls="clr-namespace:dotnet_codex_ui.Controls" TextElement.FontFamily="{StaticResource Inter}" xmlns:clients="clr-namespace:dotnet_codex_ui.Features.Clients">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <Grid Row="0" Margin="0,6,0,20">
+      <StackPanel HorizontalAlignment="Left">
+        <TextBlock Style="{StaticResource Text.PageHeader}" Text="Clients" />
+        <TextBlock Style="{StaticResource Text.PageSubtitle}" Text="Manage your connected game clients." />
+      </StackPanel>
+      <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center" Orientation="Horizontal">
+        <TextBox Width="210" VerticalAlignment="Center" Style="{StaticResource SearchBox}" Tag="Search clients..." />
+      </StackPanel>
+    </Grid>
+    <ScrollViewer Grid.Row="1" Margin="-10,-6,0,0" HorizontalScrollBarVisibility="Disabled" Style="{StaticResource OverlayScrollViewer}">
+      <ItemsControl Name="Clients" Margin="10,6,10,0">
+        <ItemsControl.ItemTemplate>
+          <DataTemplate>
+            <Border Name="Card" Cursor="Hand" Style="{StaticResource ClientCard}" MouseLeftButtonDown="Card_MouseLeftButtonDown">
+              <Grid>
+                <Rectangle Name="HoverOverlay" Fill="#FFFFFFFF" IsHitTestVisible="False" Opacity="0" RadiusX="9" RadiusY="9" />
+                <Rectangle Name="SelectedOverlay" Fill="{DynamicResource Page.AccentSurface}" IsHitTestVisible="False" Opacity="0" RadiusX="9" RadiusY="9" />
+                <Grid Margin="12,0">
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" MinWidth="0" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="116" />
+                  </Grid.ColumnDefinitions>
+                  <Grid Width="40" Height="40" VerticalAlignment="Center">
+                    <Border Background="{StaticResource Page.ThumbnailSurface}" BorderBrush="{StaticResource Page.ControlBorder}" BorderThickness="1" CornerRadius="10">
+                      <Path Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" Data="{StaticResource Icon.User}" Opacity="0.6" Stretch="Uniform" Stroke="{DynamicResource Page.Accent}" StrokeEndLineCap="Round" StrokeStartLineCap="Round" StrokeThickness="1.4" />
+                    </Border>
+                    <Image Stretch="UniformToFill" Source="{Binding Avatar}">
+                      <UIElement.Clip>
+                        <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,40,40" />
+                      </UIElement.Clip>
+                    </Image>
+                    <Ellipse Name="StatusDot" Width="12" Height="12" Margin="0,0,-4,-4" HorizontalAlignment="Right" VerticalAlignment="Bottom" Fill="{StaticResource Page.Muted}" Stroke="{StaticResource Page.CardSurface}" StrokeThickness="2" ToolTip="{Binding StatusText}" />
+                  </Grid>
+                  <StackPanel Grid.Column="1" Margin="12,0,10,0" VerticalAlignment="Center">
+                    <TextBlock FontSize="12" FontWeight="SemiBold" Foreground="{StaticResource Page.Foreground}" TextTrimming="CharacterEllipsis" Text="{Binding PlayerName}" ToolTip="{Binding PlayerName}" />
+                    <StackPanel Margin="0,3,0,0" Orientation="Horizontal">
+                      <Path Width="12" Height="12" Margin="0,0,5,0" VerticalAlignment="Center" Data="{StaticResource Icon.Gamepad}" Stretch="Uniform" Stroke="{StaticResource Page.Muted}" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeThickness="1.2" />
+                      <TextBlock FontSize="10" Foreground="{StaticResource Page.Muted}" TextTrimming="CharacterEllipsis" Text="{Binding GameText}" ToolTip="{Binding GameText}" />
+                    </StackPanel>
+                    <Border Margin="0,6,0,0" Padding="6,2.5,8,2.5" HorizontalAlignment="Left" BorderThickness="1" CornerRadius="3.5" AutomationProperties.Name="{Binding EncryptionText}" ToolTip="{Binding EncryptionHint}">
+                      <FrameworkElement.Style>
+                        <Style TargetType="{x:Type Border}">
+                          <Setter Property="Background" Value="#1FD26064" />
+                          <Setter Property="BorderBrush" Value="#4DD26064" />
+                          <Setter Property="FrameworkElement.Tag">
+                            <Setter.Value>
+                              <SolidColorBrush Color="#D26064" />
+                            </Setter.Value>
+                          </Setter>
+                          <Style.Triggers>
+                            <DataTrigger Value="Unique" Binding="{Binding EncryptionKind}">
+                              <Setter Property="Background" Value="#1F5FBF8A" />
+                              <Setter Property="BorderBrush" Value="#4D5FBF8A" />
+                              <Setter Property="FrameworkElement.Tag">
+                                <Setter.Value>
+                                  <SolidColorBrush Color="#5FBF8A" />
+                                </Setter.Value>
+                              </Setter>
+                            </DataTrigger>
+                            <DataTrigger Value="Shared" Binding="{Binding EncryptionKind}">
+                              <Setter Property="Background" Value="#1FE5B14B" />
+                              <Setter Property="BorderBrush" Value="#4DE5B14B" />
+                              <Setter Property="FrameworkElement.Tag">
+                                <Setter.Value>
+                                  <SolidColorBrush Color="#E5B14B" />
+                                </Setter.Value>
+                              </Setter>
+                            </DataTrigger>
+                          </Style.Triggers>
+                        </Style>
+                      </FrameworkElement.Style>
+                      <StackPanel Orientation="Horizontal">
+                        <Path Width="9" Height="9" Margin="0,0,5,0" VerticalAlignment="Center" Stretch="Uniform" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeThickness="2" Stroke="{Binding Tag, RelativeSource={RelativeSource AncestorType={x:Type Border}}}">
+                          <FrameworkElement.Style>
+                            <Style TargetType="{x:Type Path}">
+                              <Setter Property="Data" Value="M7,11 L7,8 A5,5 0 0 1 15.9,5.2M5,11 L19,11 L19,21 L5,21" />
+                              <Style.Triggers>
+                                <DataTrigger Value="Unique" Binding="{Binding EncryptionKind}">
+                                  <Setter Property="Data" Value="M7,11 L7,8 A5,5 0 0 1 17,8L17,11 M5,11 L19,11 L19,21 L5,21" />
+                                </DataTrigger>
+                                <DataTrigger Value="Shared" Binding="{Binding EncryptionKind}">
+                                  <Setter Property="Data" Value="M12,3 L20,6 L20,12 C20,17 16.5,20 12,21 C7.5,20 4,17 4,12 L4,6" />
+                                </DataTrigger>
+                              </Style.Triggers>
+                            </Style>
+                          </FrameworkElement.Style>
+                        </Path>
+                        <Controls:SpacedTextBlock VerticalAlignment="Center" CharacterSpacing="7" FontFamily="{StaticResource Inter}" FontSize="8" FontWeight="SemiBold" Foreground="{Binding Tag, RelativeSource={RelativeSource AncestorType={x:Type Border}}}" Text="{Binding EncryptionText}" />
+                      </StackPanel>
+                    </Border>
+                  </StackPanel>
+                  <StackPanel Grid.Column="2" Margin="0,0,12,0" VerticalAlignment="Center" Orientation="Horizontal">
+                    <Path Width="13" Height="13" Margin="0,0,6,0" VerticalAlignment="Center" Data="{StaticResource Icon.Alert}" Stretch="Uniform" Stroke="#D26064" StrokeEndLineCap="Round" StrokeStartLineCap="Round" StrokeThickness="1.3" ToolTip="{Binding InjectionError}">
+                      <FrameworkElement.Style>
+                        <Style TargetType="{x:Type Path}">
+                          <Setter Property="Visibility" Value="Collapsed" />
+                          <Style.Triggers>
+                            <DataTrigger Value="True" Binding="{Binding HasError}">
+                              <Setter Property="Visibility" Value="Visible" />
+                            </DataTrigger>
+                          </Style.Triggers>
+                        </Style>
+                      </FrameworkElement.Style>
+                    </Path>
+                    <Path Name="Spinner" Width="12" Height="12" VerticalAlignment="Center" Data="{StaticResource Icon.Sync}" Opacity="0" RenderTransformOrigin="0.5,0.5" Stretch="Uniform" Stroke="{StaticResource Page.Muted}" StrokeThickness="1.4" ToolTip="Disconnecting...">
+                      <UIElement.RenderTransform>
+                        <RotateTransform x:Name="SpinnerRotation" />
+                      </UIElement.RenderTransform>
+                    </Path>
+                  </StackPanel>
+                  <CheckBox Grid.Column="3" Margin="0,0,12,0" VerticalAlignment="Center" AutomationProperties.Name="Select Client" Style="{StaticResource ClientCheckBox}" ToolTip="Select Client" IsChecked="{Binding IsSelected, Mode=TwoWay}" />
+                  <Controls:Button x:Name="InjectButton" Click="Inject_Click" Grid.Column="4" Width="116" AutomationProperties.Name="Inject Client" Style="{StaticResource ActionBarAccent}" ToolTip="Inject Client (click to skip the auto inject wait)" IsLoading="{Binding IsInjecting}">
+                    <StackPanel Orientation="Horizontal">
+                      <Grid Width="12" Height="12" Margin="0,0,6,0" VerticalAlignment="Center">
+                        <Path Name="InjectIcon" Data="{StaticResource Icon.Zap}" Stretch="Uniform" StrokeLineJoin="Round" StrokeThickness="1.3" Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Controls:Button}}}" />
+                        <Path Name="InjectSpin" Data="{StaticResource Icon.Sync}" Opacity="0" RenderTransformOrigin="0.5,0.5" Stretch="Uniform" StrokeThickness="1.4" Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Controls:Button}}}">
+                          <UIElement.RenderTransform>
+                            <RotateTransform x:Name="InjectSpinRotation" />
+                          </UIElement.RenderTransform>
+                        </Path>
+                      </Grid>
+                      <TextBlock Name="InjectLabel" VerticalAlignment="Center" Text="{Binding InjectText}" />
+                    </StackPanel>
+                  </Controls:Button>
+                  <Controls:Button x:Name="KickButton" Click="Kick_Click" Grid.Column="4" HorizontalAlignment="Right" AutomationProperties.Name="Disconnect Client" Style="{StaticResource KickButton}" ToolTip="Disconnect Client">
+                    <Path Width="14" Height="14" Data="{StaticResource Icon.Kick}" Stretch="Uniform" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeThickness="1.4" Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Controls:Button}}}" />
+                  </Controls:Button>
+                  <Popup Grid.Column="4" AllowsTransparency="True" HorizontalOffset="-110" Placement="Bottom" PopupAnimation="None" StaysOpen="False" IsOpen="{Binding IsConfirmShown, Mode=TwoWay}" PlacementTarget="{Binding ElementName=KickButton}">
+                    <Border Margin="6" Padding="12,10" Background="#15161C" BorderBrush="{StaticResource Page.ControlBorder}" BorderThickness="1" CornerRadius="8" Opacity="0" RenderTransformOrigin="0.5,0">
+                      <UIElement.RenderTransform>
+                        <ScaleTransform ScaleX="0.92" ScaleY="0.92" />
+                      </UIElement.RenderTransform>
+                      <FrameworkElement.Style>
+                        <Style TargetType="{x:Type Border}">
+                          <Style.Triggers>
+                            <DataTrigger Value="True" Binding="{Binding IsConfirmOpen}">
+                              <TriggerBase.EnterActions>
+                                <BeginStoryboard>
+                                  <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.16">
+                                      <DoubleAnimation.EasingFunction>
+                                        <CubicEase EasingMode="EaseOut" />
+                                      </DoubleAnimation.EasingFunction>
+                                    </DoubleAnimation>
+                                    <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)" To="1" Duration="0:0:0.16">
+                                      <DoubleAnimation.EasingFunction>
+                                        <CubicEase EasingMode="EaseOut" />
+                                      </DoubleAnimation.EasingFunction>
+                                    </DoubleAnimation>
+                                    <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)" To="1" Duration="0:0:0.16">
+                                      <DoubleAnimation.EasingFunction>
+                                        <CubicEase EasingMode="EaseOut" />
+                                      </DoubleAnimation.EasingFunction>
+                                    </DoubleAnimation>
+                                  </Storyboard>
+                                </BeginStoryboard>
+                              </TriggerBase.EnterActions>
+                              <TriggerBase.ExitActions>
+                                <BeginStoryboard>
+                                  <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.12">
+                                      <DoubleAnimation.EasingFunction>
+                                        <CubicEase EasingMode="EaseIn" />
+                                      </DoubleAnimation.EasingFunction>
+                                    </DoubleAnimation>
+                                    <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)" To="0.94" Duration="0:0:0.12" />
+                                    <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)" To="0.94" Duration="0:0:0.12" />
+                                  </Storyboard>
+                                </BeginStoryboard>
+                              </TriggerBase.ExitActions>
+                            </DataTrigger>
+                          </Style.Triggers>
+                        </Style>
+                      </FrameworkElement.Style>
+                      <StackPanel Width="150">
+                        <TextBlock FontFamily="{StaticResource Inter}" FontSize="10" FontWeight="SemiBold" Foreground="{StaticResource Page.Foreground}" Text="Disconnect Client?" />
+                        <TextBlock Margin="0,3,0,0" FontFamily="{StaticResource Inter}" FontSize="9" Foreground="{StaticResource Page.Muted}" TextTrimming="CharacterEllipsis" Text="{Binding PlayerName}" />
+                        <StackPanel Margin="0,10,0,0" HorizontalAlignment="Right" Orientation="Horizontal">
+                          <Controls:Button Click="CancelKick_Click" Margin="0,0,6,0" Content="Cancel" Style="{StaticResource ActionBarButton}" />
+                          <Controls:Button Click="ConfirmKick_Click" Content="Disconnect" Style="{StaticResource ActionBarDanger}" />
+                        </StackPanel>
+                      </StackPanel>
+                    </Border>
+                  </Popup>
+                </Grid>
+              </Grid>
+            </Border>
+            <DataTemplate.Triggers>
+              <Trigger SourceName="Card" Property="UIElement.IsMouseOver" Value="True">
+                <TriggerBase.EnterActions>
+                  <BeginStoryboard>
+                    <Storyboard>
+                      <DoubleAnimation Storyboard.TargetName="HoverOverlay" Storyboard.TargetProperty="Opacity" To="0.04" Duration="0:0:0.14" />
+                    </Storyboard>
+                  </BeginStoryboard>
+                </TriggerBase.EnterActions>
+                <TriggerBase.ExitActions>
+                  <BeginStoryboard>
+                    <Storyboard>
+                      <DoubleAnimation Storyboard.TargetName="HoverOverlay" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.18" />
+                    </Storyboard>
+                  </BeginStoryboard>
+                </TriggerBase.ExitActions>
+              </Trigger>
+              <DataTrigger Value="True" Binding="{Binding IsSelected}">
+                <Setter TargetName="Card" Value="{DynamicResource Page.AccentBorder}" Property="Border.BorderBrush" />
+                <TriggerBase.EnterActions>
+                  <BeginStoryboard>
+                    <Storyboard>
+                      <DoubleAnimation Storyboard.TargetName="SelectedOverlay" Storyboard.TargetProperty="Opacity" To="0.35" Duration="0:0:0.15" />
+                    </Storyboard>
+                  </BeginStoryboard>
+                </TriggerBase.EnterActions>
+                <TriggerBase.ExitActions>
+                  <BeginStoryboard>
+                    <Storyboard>
+                      <DoubleAnimation Storyboard.TargetName="SelectedOverlay" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.15" />
+                    </Storyboard>
+                  </BeginStoryboard>
+                </TriggerBase.ExitActions>
+              </DataTrigger>
+              <DataTrigger Value="True" Binding="{Binding IsConnected}">
+                <Setter TargetName="InjectButton" Property="UIElement.Visibility" Value="Collapsed" />
+                <Setter TargetName="StatusDot" Value="{DynamicResource Page.Accent}" Property="Shape.Fill" />
+              </DataTrigger>
+              <DataTrigger Value="False" Binding="{Binding IsConnected}">
+                <Setter TargetName="KickButton" Property="UIElement.Visibility" Value="Collapsed" />
+              </DataTrigger>
+              <DataTrigger Value="True" Binding="{Binding IsInjecting}">
+                <Setter TargetName="InjectIcon" Property="UIElement.Opacity" Value="0" />
+                <Setter TargetName="InjectSpin" Property="UIElement.Opacity" Value="1" />
+                <Setter TargetName="InjectLabel" Property="TextBlock.Text" Value="Injecting..." />
+                <Setter TargetName="StatusDot" Value="{DynamicResource Page.Accent}" Property="Shape.Fill" />
+                <TriggerBase.EnterActions>
+                  <BeginStoryboard Name="InjectSpinBegin">
+                    <Storyboard>
+                      <DoubleAnimation RepeatBehavior="Forever" Storyboard.TargetName="InjectSpinRotation" Storyboard.TargetProperty="Angle" From="0" To="360" Duration="0:0:1" />
+                    </Storyboard>
+                  </BeginStoryboard>
+                </TriggerBase.EnterActions>
+                <TriggerBase.ExitActions>
+                  <StopStoryboard BeginStoryboardName="InjectSpinBegin" />
+                </TriggerBase.ExitActions>
+              </DataTrigger>
+              <DataTrigger Value="True" Binding="{Binding IsBusy}">
+                <Setter TargetName="KickButton" Property="UIElement.IsEnabled" Value="False" />
+                <TriggerBase.EnterActions>
+                  <BeginStoryboard Name="SpinBegin">
+                    <Storyboard>
+                      <DoubleAnimation Storyboard.TargetName="Spinner" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.12" />
+                      <DoubleAnimation RepeatBehavior="Forever" Storyboard.TargetName="SpinnerRotation" Storyboard.TargetProperty="Angle" From="0" To="360" Duration="0:0:1" />
+                    </Storyboard>
+                  </BeginStoryboard>
+                </TriggerBase.EnterActions>
+                <TriggerBase.ExitActions>
+                  <StopStoryboard BeginStoryboardName="SpinBegin" />
+                </TriggerBase.ExitActions>
+              </DataTrigger>
+            </DataTemplate.Triggers>
+          </DataTemplate>
+        </ItemsControl.ItemTemplate>
+      </ItemsControl>
+    </ScrollViewer>
+    <StackPanel Grid.Row="0" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+      <Controls:EmptyState x:Name="StateView" Title="No Connected Clients" HorizontalAlignment="Center" Icon="{StaticResource Icon.Monitor}" Message="Connected clients will appear here when they join." />
+      <Controls:Button x:Name="RetryButton" Click="Retry_Click" Height="26" Margin="0,12,0,0" HorizontalAlignment="Center" AutomationProperties.Name="Try again" Content="Try Again" Style="{StaticResource ActionBarButton}" Visibility="Collapsed" />
+      <FrameworkElement.Style>
+        <Style TargetType="{x:Type StackPanel}">
+          <Setter Property="UIElement.Opacity" Value="0" />
+          <Setter Property="UIElement.IsHitTestVisible" Value="False" />
+          <Style.Triggers>
+            <DataTrigger Value="False" Binding="{Binding HasItems, ElementName=Clients}">
+              <Setter Property="UIElement.IsHitTestVisible" Value="True" />
+              <TriggerBase.EnterActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.15" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.EnterActions>
+              <TriggerBase.ExitActions>
+                <BeginStoryboard>
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.15" />
+                  </Storyboard>
+                </BeginStoryboard>
+              </TriggerBase.ExitActions>
+            </DataTrigger>
+          </Style.Triggers>
+        </Style>
+      </FrameworkElement.Style>
+    </StackPanel>
+  </Grid>
+</UserControl>

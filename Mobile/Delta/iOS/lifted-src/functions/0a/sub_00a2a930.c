@@ -1,0 +1,16 @@
+/*
+ * Machine-reconstructed pseudocode; not original vendor source.
+ * Mach-O extent: 0xa2a930..0xa2a950 (32 bytes).
+ * Function and variable names are synthetic unless documented elsewhere.
+ */
+
+
+long long sub_a2a930(unsigned long a0)
+{
+    do
+    {
+        /* unsupported instruction */;
+        /* unsupported instruction */;
+    } while (/* unsupported instruction */ ^ 1);
+    return (int)/* unsupported instruction */ > 0;
+}

@@ -1,0 +1,56 @@
+/*
+ * Machine-reconstructed pseudocode; not original vendor source.
+ * Mach-O extent: 0x264758..0x2647e4 (140 bytes).
+ * Function and variable names are synthetic unless documented elsewhere.
+ */
+
+typedef struct st_264758_5 {
+    char padding_0[8];
+    struct st_264758_4 *field_8;
+} st_264758_5;
+
+typedef struct st_264758_4 {
+    char padding_0[24];
+    struct st_264758_3 *field_18;
+} st_264758_4;
+
+typedef struct st_264758_3 {
+    char padding_0[48];
+    unsigned long long field_30;
+} st_264758_3;
+
+typedef struct st_264758_0 {
+    char field_0;
+} st_264758_0;
+
+typedef struct st_264758_1 {
+    char padding_0[259];
+    char field_103;
+    char padding_104[1148];
+    unsigned long long field_580;
+} st_264758_1;
+
+typedef struct st_264758_2 {
+    char padding_0[96];
+    struct st_264758_1 *field_60;
+} st_264758_2;
+
+extern st_264758_2 *g_f0d198;
+
+unsigned int sub_264758(st_264758_5 *a0)
+{
+    st_264758_0 **v0;  // [bp-0x20], Other Possible Types: char
+    st_264758_0 *v1;  // [bp-0x18]
+    char *v2;  // [bp-0x10]
+    char v3;  // [bp+0x0]
+
+    v2 = &v3;
+    v1 = &v0;
+    v0 = &v1;
+    if (g_f0d198->field_60->field_103 >> 4 & 1)
+        return 0xffffffff;
+    if (a0->field_8->field_18->field_30 != g_f0d198->field_60->field_580 || (char)a0->padding_0[2] >= 0)
+        return 0;
+    sub_d5c30();
+    return 0;
+}

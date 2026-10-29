@@ -1,0 +1,67 @@
+/*
+ * Machine-reconstructed pseudocode; not original vendor source.
+ * Mach-O extent: 0x5459c..0x54644 (168 bytes).
+ * Function and variable names are synthetic unless documented elsewhere.
+ */
+
+typedef struct st_5459c_3 {
+    char padding_0[32];
+    struct st_5459c_2 *field_20;
+    unsigned long long field_28;
+} st_5459c_3;
+
+typedef struct st_5459c_4 {
+    char padding_0[32];
+    struct st_5459c_2 *field_20;
+    struct st_5459c_3 *field_28;
+} st_5459c_4;
+
+typedef struct st_5459c_1 {
+    unsigned long long field_0;
+} st_5459c_1;
+
+typedef struct st_5459c_2 {
+    struct st_5459c_1 *field_0;
+} st_5459c_2;
+
+typedef struct st_5459c_0 {
+    char field_0;
+} st_5459c_0;
+
+
+void sub_5459c(unsigned long a0, st_5459c_4 *a1)
+{
+    unsigned long long v11;  // x24
+    unsigned long long v12;  // x23
+    unsigned long long v13;  // x22
+    unsigned long long v14;  // x21
+    unsigned long long v15;  // x20
+    unsigned long long v16;  // x19
+    unsigned long long v17;  // x30
+    st_5459c_0 **v0;  // [bp-0x50], Other Possible Types: char
+    st_5459c_0 *v1;  // [bp-0x48]
+    unsigned long long v2;  // [bp-0x40]
+    unsigned long long v3;  // [bp-0x38]
+    unsigned long long v4;  // [bp-0x30]
+    unsigned long long v5;  // [bp-0x28]
+    unsigned long long v6;  // [bp-0x20]
+    unsigned long long v7;  // [bp-0x18]
+    char *v8;  // [bp-0x10]
+    unsigned long long v9;  // [bp-0x8]
+    char v10;  // [bp+0x0]
+
+    v2 = v11;
+    v3 = v12;
+    v4 = v13;
+    v5 = v14;
+    v6 = v15;
+    v7 = v16;
+    v8 = &v10;
+    v9 = v17;
+    v1 = &v0;
+    v0 = &v1;
+    sub_52940();
+    if (!a1->field_28->field_28)
+        (*(long long *)*(long long *)a1->field_20)();
+    (*(long long *)*(long long *)*(long long *)a1->field_28->field_20)();
+}

@@ -1,0 +1,9 @@
+/*
+ * Machine-reconstructed pseudocode; not original vendor source.
+ * Mach-O extent: 0x9e5ce8..0x9e5cfc (20 bytes).
+ * Function and variable names are synthetic unless documented elsewhere.
+ */
+
+void sub_9e5ce8(void)
+{
+}

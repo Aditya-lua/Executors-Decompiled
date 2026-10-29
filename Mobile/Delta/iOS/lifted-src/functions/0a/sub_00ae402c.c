@@ -1,0 +1,12 @@
+/*
+ * Machine-reconstructed pseudocode; not original vendor source.
+ * Mach-O extent: 0xae402c..0xae4038 (12 bytes).
+ * Function and variable names are synthetic unless documented elsewhere.
+ */
+
+extern char g_eb5d98;
+
+int sub_ae402c(void)
+{
+    return &g_eb5d98;
+}

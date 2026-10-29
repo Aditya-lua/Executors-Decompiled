@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/experience_item" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingHorizontal="6.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/experience_img" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@color/black" android:scaleType="fitCenter" android:adjustViewBounds="true" />
+    <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/widget_primary_text" android:ellipsize="end" android:gravity="start" android:id="@id/experience_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:maxLines="1" android:fontFamily="sans-serif" />
+    <TextView android:textSize="12.0sp" android:textColor="@color/widget_secondary_text" android:ellipsize="end" android:gravity="start" android:id="@id/experience_rating" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" android:fontFamily="sans-serif-medium" />
+</LinearLayout>

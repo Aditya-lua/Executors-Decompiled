@@ -1,0 +1,12 @@
+/*
+ * Machine-reconstructed pseudocode; not original vendor source.
+ * Mach-O extent: 0x1ac520..0x1ac524 (4 bytes).
+ * Function and variable names are synthetic unless documented elsewhere.
+ */
+
+long long sub_1ac520(void)
+{
+    unsigned long v0;  // x0
+
+    return v0;
+}

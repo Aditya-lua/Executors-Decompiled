@@ -1,0 +1,45 @@
+/*
+ * Machine-reconstructed pseudocode; not original vendor source.
+ * Mach-O extent: 0xb237d4..0xb238c4 (240 bytes).
+ * Function and variable names are synthetic unless documented elsewhere.
+ */
+
+
+unsigned long long * sub_b237d4(long long a0, long long a1, long long a2, unsigned long a3, unsigned long long *a4, unsigned long a5, unsigned long a6)
+{
+    unsigned long long *v4;  // x20
+    unsigned long long *v5;  // x0
+    unsigned int v0;  // [bp-0x4c]
+    unsigned long long *v1;  // [bp-0x48]
+    char *v2;  // [bp-0x10]
+    char v3;  // [bp+0x0]
+
+    v2 = &v3;
+    v1 = 0;
+    v0 = 0xffffffff;
+    if (a4)
+        a4();
+    v4 = sub_b236dc(a1, a2);
+    if (v4)
+    {
+        v5 = sub_a9b8d4(a0, v4);
+    }
+    else
+    {
+        switch (v0)
+        {
+        case 16:
+            sub_9c7940(v1);
+            break;
+        case 6:
+            sub_9c3580();
+            break;
+        default:
+            goto LABEL_b2389c;
+        }
+LABEL_b2389c:
+        v5 = 0;
+    }
+    sub_afb050(v4);
+    return v5;
+}

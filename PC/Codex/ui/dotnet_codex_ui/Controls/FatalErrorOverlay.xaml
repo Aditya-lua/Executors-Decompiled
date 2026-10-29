@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="dotnet_codex_ui.Controls.FatalErrorOverlay" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:Controls="clr-namespace:dotnet_codex_ui.Controls" KeyboardNavigation.ControlTabNavigation="Cycle" KeyboardNavigation.TabNavigation="Cycle" TextElement.FontFamily="{StaticResource Inter}" Visibility="Collapsed">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <BooleanToVisibilityConverter x:Key="B2V" />
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Border Name="Scrim" Background="#EE090A0F" CornerRadius="10">
+    <Border Name="Card" MaxWidth="480" Margin="24" Padding="18" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#13141A" BorderBrush="#4A2A2E" BorderThickness="1" CornerRadius="10">
+      <UIElement.Effect>
+        <DropShadowEffect BlurRadius="24" Opacity="0.6" ShadowDepth="0" Color="Black" />
+      </UIElement.Effect>
+      <StackPanel>
+        <StackPanel Orientation="Horizontal">
+          <Path Width="26" Height="26" Margin="0,0,12,0" VerticalAlignment="Center" Data="{StaticResource Icon.Octagon}" Stretch="Uniform" Stroke="{StaticResource Toast.Error}" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeThickness="1.4" />
+          <StackPanel VerticalAlignment="Center">
+            <TextBlock FontSize="14" FontWeight="Bold" Foreground="{StaticResource Page.Foreground}" Text="A Fatal Error Occurred" />
+            <TextBlock Margin="0,2,0,0" FontSize="10" Foreground="{StaticResource Page.Muted}" Text="The application cannot safely continue." />
+          </StackPanel>
+        </StackPanel>
+        <TextBlock Name="SummaryText" Margin="0,14,0,0" FontSize="11" Foreground="{StaticResource Page.Foreground}" TextWrapping="Wrap" />
+        <TextBlock Name="MetaText" Margin="0,6,0,0" FontSize="9" Foreground="{StaticResource Page.Dim}" />
+        <ToggleButton Name="DiagToggle" Margin="-3,10,0,0" AutomationProperties.Name="Toggle diagnostics" Style="{StaticResource ToastLink}" />
+        <TextBox Name="DiagBox" MaxHeight="130" Margin="0,4,0,0" Padding="6,4" Background="#0E0F14" BorderBrush="{StaticResource Page.ControlBorder}" BorderThickness="1" FontFamily="Consolas" FontSize="9" Foreground="{StaticResource Page.Muted}" HorizontalScrollBarVisibility="Auto" IsReadOnly="True" TextWrapping="NoWrap" VerticalScrollBarVisibility="Auto" Visibility="{Binding IsChecked, ElementName=DiagToggle, Converter={StaticResource B2V}}" />
+        <StackPanel Margin="0,16,0,0" HorizontalAlignment="Right" Orientation="Horizontal">
+          <Controls:Button x:Name="CopyButton" Click="Copy_Click" Margin="0,0,6,0" AutomationProperties.Name="Copy Diagnostics" Content="Copy Diagnostics" Style="{StaticResource ActionBarButton}" />
+          <Controls:Button x:Name="OpenLogButton" Click="OpenLog_Click" Margin="0,0,6,0" AutomationProperties.Name="Open log file location" Content="Open Log" Style="{StaticResource ActionBarButton}" Visibility="Collapsed" />
+          <Controls:Button x:Name="ExitButton" Click="Exit_Click" AutomationProperties.Name="Exit application" Content="Exit" Style="{StaticResource ActionBarDanger}" />
+        </StackPanel>
+      </StackPanel>
+    </Border>
+  </Border>
+</UserControl>

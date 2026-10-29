@@ -1,0 +1,505 @@
+{
+  "target": "0x5852c",
+  "stopped_reason": "returned",
+  "unicorn_error": null,
+  "instruction_count": 237,
+  "heap_used": 6464,
+  "function_entries": [
+    {
+      "at_instruction": 1,
+      "address": "0x5852c",
+      "arguments": [
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {}
+    },
+    {
+      "at_instruction": 33,
+      "address": "0x137d0",
+      "arguments": [
+        "0xf0d672",
+        "0xc7ecd3",
+        "0x2",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {
+        "x1": "LuauGcTraceUdata"
+      }
+    }
+  ],
+  "import_calls": [
+    {
+      "at_instruction": 51,
+      "target": "0xc7b138",
+      "symbol": "_strcmp",
+      "arguments": [
+        "0xc7ecd3",
+        "0xc7ecd3",
+        "0x2",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {
+        "x0": "LuauGcTraceUdata",
+        "x1": "LuauGcTraceUdata"
+      }
+    },
+    {
+      "at_instruction": 58,
+      "target": "0xc7b138",
+      "symbol": "_strcmp",
+      "arguments": [
+        "0xc7ecc0",
+        "0xc7ecd3",
+        "0x2",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {
+        "x0": "LuauGcTableStepFix",
+        "x1": "LuauGcTraceUdata"
+      }
+    },
+    {
+      "at_instruction": 65,
+      "target": "0xc7b138",
+      "symbol": "_strcmp",
+      "arguments": [
+        "0xc7eca7",
+        "0xc7ecd3",
+        "0x2",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {
+        "x0": "LuauUdataMetatablePinned",
+        "x1": "LuauGcTraceUdata"
+      }
+    },
+    {
+      "at_instruction": 72,
+      "target": "0xc7b138",
+      "symbol": "_strcmp",
+      "arguments": [
+        "0xc7ee34",
+        "0xc7ecd3",
+        "0x2",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {
+        "x0": "LuauCostModel",
+        "x1": "LuauGcTraceUdata"
+      }
+    },
+    {
+      "at_instruction": 79,
+      "target": "0xc7b138",
+      "symbol": "_strcmp",
+      "arguments": [
+        "0xc7ee1d",
+        "0xc7ecd3",
+        "0x2",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {
+        "x0": "LuauUdataDirectAccess6",
+        "x1": "LuauGcTraceUdata"
+      }
+    },
+    {
+      "at_instruction": 86,
+      "target": "0xc7b138",
+      "symbol": "_strcmp",
+      "arguments": [
+        "0xc7ed67",
+        "0xc7ecd3",
+        "0x2",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {
+        "x0": "LuauTableMoveTimeoutFix",
+        "x1": "LuauGcTraceUdata"
+      }
+    },
+    {
+      "at_instruction": 93,
+      "target": "0xc7b138",
+      "symbol": "_strcmp",
+      "arguments": [
+        "0xc7ed2f",
+        "0xc7ecd3",
+        "0x2",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {
+        "x0": "FixMathNoisePrecision",
+        "x1": "LuauGcTraceUdata"
+      }
+    },
+    {
+      "at_instruction": 100,
+      "target": "0xc7b138",
+      "symbol": "_strcmp",
+      "arguments": [
+        "0xc7ed0b",
+        "0xc7ecd3",
+        "0x2",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {
+        "x0": "LuauIntegerLibrary",
+        "x1": "LuauGcTraceUdata"
+      }
+    },
+    {
+      "at_instruction": 107,
+      "target": "0xc7b138",
+      "symbol": "_strcmp",
+      "arguments": [
+        "0xc7ec71",
+        "0xc7ecd3",
+        "0x2",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {
+        "x0": "LuauXpcallFixMessageYieldPath",
+        "x1": "LuauGcTraceUdata"
+      }
+    },
+    {
+      "at_instruction": 114,
+      "target": "0xc7b138",
+      "symbol": "_strcmp",
+      "arguments": [
+        "0xc7ec39",
+        "0xc7ecd3",
+        "0x2",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {
+        "x0": "LuauMathRoundNegZero",
+        "x1": "LuauGcTraceUdata"
+      }
+    },
+    {
+      "at_instruction": 121,
+      "target": "0xc7b138",
+      "symbol": "_strcmp",
+      "arguments": [
+        "0xc7ec07",
+        "0xc7ecd3",
+        "0x2",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {
+        "x0": "LuauManagedDebugNames",
+        "x1": "LuauGcTraceUdata"
+      }
+    },
+    {
+      "at_instruction": 128,
+      "target": "0xc7b138",
+      "symbol": "_strcmp",
+      "arguments": [
+        "0xc7e50f",
+        "0xc7ecd3",
+        "0x2",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {
+        "x0": "LuauOptimizeExportTable",
+        "x1": "LuauGcTraceUdata"
+      }
+    },
+    {
+      "at_instruction": 135,
+      "target": "0xc7b138",
+      "symbol": "_strcmp",
+      "arguments": [
+        "0xc7e4f4",
+        "0xc7ecd3",
+        "0x2",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {
+        "x0": "LuauCompileConcatTargetTop",
+        "x1": "LuauGcTraceUdata"
+      }
+    },
+    {
+      "at_instruction": 142,
+      "target": "0xc7b138",
+      "symbol": "_strcmp",
+      "arguments": [
+        "0xc7e4d3",
+        "0xc7ecd3",
+        "0x2",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {
+        "x0": "LuauCompileStringInterpTargetTop",
+        "x1": "LuauGcTraceUdata"
+      }
+    },
+    {
+      "at_instruction": 149,
+      "target": "0xc7b138",
+      "symbol": "_strcmp",
+      "arguments": [
+        "0xc7e4bd",
+        "0xc7ecd3",
+        "0x2",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {
+        "x0": "LuauCompileIifeInline",
+        "x1": "LuauGcTraceUdata"
+      }
+    },
+    {
+      "at_instruction": 156,
+      "target": "0xc7b138",
+      "symbol": "_strcmp",
+      "arguments": [
+        "0xc7e16a",
+        "0xc7ecd3",
+        "0x2",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {
+        "x0": "LuauIntegerBufferFastcalls",
+        "x1": "LuauGcTraceUdata"
+      }
+    },
+    {
+      "at_instruction": 163,
+      "target": "0xc7b138",
+      "symbol": "_strcmp",
+      "arguments": [
+        "0xc7e155",
+        "0xc7ecd3",
+        "0x2",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {
+        "x0": "LuauIntegerFastcalls",
+        "x1": "LuauGcTraceUdata"
+      }
+    },
+    {
+      "at_instruction": 170,
+      "target": "0xc7b138",
+      "symbol": "_strcmp",
+      "arguments": [
+        "0xc7e124",
+        "0xc7ecd3",
+        "0x2",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {
+        "x0": "DebugLuauTimeTracing",
+        "x1": "LuauGcTraceUdata"
+      }
+    },
+    {
+      "at_instruction": 180,
+      "target": "0xc7b138",
+      "symbol": "_strcmp",
+      "arguments": [
+        "0xc7ec8f",
+        "0xc7ecd3",
+        "0x2",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {
+        "x0": "LuauInlineHitsThreshold",
+        "x1": "LuauGcTraceUdata"
+      }
+    },
+    {
+      "at_instruction": 187,
+      "target": "0xc7b138",
+      "symbol": "_strcmp",
+      "arguments": [
+        "0xc7e4a6",
+        "0xc7ecd3",
+        "0x2",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {
+        "x0": "LuauCompileInlineDepth",
+        "x1": "LuauGcTraceUdata"
+      }
+    },
+    {
+      "at_instruction": 194,
+      "target": "0xc7b138",
+      "symbol": "_strcmp",
+      "arguments": [
+        "0xc7e483",
+        "0xc7ecd3",
+        "0x2",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {
+        "x0": "LuauCompileInlineThresholdMaxBoost",
+        "x1": "LuauGcTraceUdata"
+      }
+    },
+    {
+      "at_instruction": 201,
+      "target": "0xc7b138",
+      "symbol": "_strcmp",
+      "arguments": [
+        "0xc7e468",
+        "0xc7ecd3",
+        "0x2",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {
+        "x0": "LuauCompileInlineThreshold",
+        "x1": "LuauGcTraceUdata"
+      }
+    },
+    {
+      "at_instruction": 208,
+      "target": "0xc7b138",
+      "symbol": "_strcmp",
+      "arguments": [
+        "0xc7e441",
+        "0xc7ecd3",
+        "0x2",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {
+        "x0": "LuauCompileLoopUnrollThresholdMaxBoost",
+        "x1": "LuauGcTraceUdata"
+      }
+    },
+    {
+      "at_instruction": 215,
+      "target": "0xc7b138",
+      "symbol": "_strcmp",
+      "arguments": [
+        "0xc7e422",
+        "0xc7ecd3",
+        "0x2",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {
+        "x0": "LuauCompileLoopUnrollThreshold",
+        "x1": "LuauGcTraceUdata"
+      }
+    }
+  ],
+  "import_counts": {
+    "_strcmp": 24
+  },
+  "invalid_accesses": [],
+  "data_dump": "delta-ios-decompiled/analysis/protected-init-traces/init-5852c-data.bin",
+  "heap_dump": "delta-ios-decompiled/analysis/protected-init-traces/init-5852c-heap.bin"
+}

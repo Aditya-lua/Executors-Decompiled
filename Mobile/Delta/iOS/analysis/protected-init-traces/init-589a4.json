@@ -1,0 +1,63 @@
+{
+  "target": "0x589a4",
+  "stopped_reason": "returned",
+  "unicorn_error": null,
+  "instruction_count": 8518,
+  "heap_used": 306,
+  "function_entries": [
+    {
+      "at_instruction": 1,
+      "address": "0x589a4",
+      "arguments": [
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {}
+    },
+    {
+      "at_instruction": 6,
+      "address": "0x58634",
+      "arguments": [
+        "0xf0d674",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {}
+    }
+  ],
+  "import_calls": [
+    {
+      "at_instruction": 22,
+      "target": "0xc7ad84",
+      "symbol": "_memset",
+      "arguments": [
+        "0xf0d714",
+        "0xff",
+        "0x401",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0",
+        "0x0"
+      ],
+      "cstring_arguments": {}
+    }
+  ],
+  "import_counts": {
+    "_memset": 1
+  },
+  "invalid_accesses": [],
+  "data_dump": "delta-ios-decompiled/analysis/protected-init-traces/init-589a4-data.bin",
+  "heap_dump": "delta-ios-decompiled/analysis/protected-init-traces/init-589a4-heap.bin"
+}

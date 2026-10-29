@@ -1,0 +1,87 @@
+/* Instruction-faithful low-level lift; not original vendor source.
+ * Mach-O extent: 0xabcbe0..0xabcd20 (320 bytes). */
+#include "../lift_runtime.hpp"
+
+void sub_00abcbe0(Arm64Context& cpu) {
+    /* 0x00abcbe0: mov      x9, #0x18 */ ARM64("mov x9, #0x18");
+    /* 0x00abcbe4: adrp     x10, #0xdf8000 */ ARM64("adrp x10, #0xdf8000");
+    /* 0x00abcbe8: add      x10, x10, #0x40 */ ARM64("add x10, x10, #0x40");
+    /* 0x00abcbec: b        #0xabcbf0 */ goto loc_00abcbf0;
+loc_00abcbf0:
+    /* 0x00abcbf0: eor3     v25.16b, v20.16b, v15.16b, v10.16b */ ARM64("eor3 v25.16b, v20.16b, v15.16b, v10.16b");
+    /* 0x00abcbf4: eor3     v26.16b, v21.16b, v16.16b, v11.16b */ ARM64("eor3 v26.16b, v21.16b, v16.16b, v11.16b");
+    /* 0x00abcbf8: eor3     v27.16b, v22.16b, v17.16b, v12.16b */ ARM64("eor3 v27.16b, v22.16b, v17.16b, v12.16b");
+    /* 0x00abcbfc: eor3     v28.16b, v23.16b, v18.16b, v13.16b */ ARM64("eor3 v28.16b, v23.16b, v18.16b, v13.16b");
+    /* 0x00abcc00: eor3     v29.16b, v24.16b, v19.16b, v14.16b */ ARM64("eor3 v29.16b, v24.16b, v19.16b, v14.16b");
+    /* 0x00abcc04: eor3     v25.16b, v25.16b, v5.16b, v0.16b */ ARM64("eor3 v25.16b, v25.16b, v5.16b, v0.16b");
+    /* 0x00abcc08: eor3     v26.16b, v26.16b, v6.16b, v1.16b */ ARM64("eor3 v26.16b, v26.16b, v6.16b, v1.16b");
+    /* 0x00abcc0c: eor3     v27.16b, v27.16b, v7.16b, v2.16b */ ARM64("eor3 v27.16b, v27.16b, v7.16b, v2.16b");
+    /* 0x00abcc10: eor3     v28.16b, v28.16b, v8.16b, v3.16b */ ARM64("eor3 v28.16b, v28.16b, v8.16b, v3.16b");
+    /* 0x00abcc14: eor3     v29.16b, v29.16b, v9.16b, v4.16b */ ARM64("eor3 v29.16b, v29.16b, v9.16b, v4.16b");
+    /* 0x00abcc18: rax1     v30.2d, v25.2d, v27.2d */ ARM64("rax1 v30.2d, v25.2d, v27.2d");
+    /* 0x00abcc1c: rax1     v31.2d, v26.2d, v28.2d */ ARM64("rax1 v31.2d, v26.2d, v28.2d");
+    /* 0x00abcc20: rax1     v27.2d, v27.2d, v29.2d */ ARM64("rax1 v27.2d, v27.2d, v29.2d");
+    /* 0x00abcc24: rax1     v28.2d, v28.2d, v25.2d */ ARM64("rax1 v28.2d, v28.2d, v25.2d");
+    /* 0x00abcc28: rax1     v29.2d, v29.2d, v26.2d */ ARM64("rax1 v29.2d, v29.2d, v26.2d");
+    /* 0x00abcc2c: xar      v25.2d, v1.2d, v30.2d, #0x3f */ ARM64("xar v25.2d, v1.2d, v30.2d, #0x3f");
+    /* 0x00abcc30: xar      v1.2d, v6.2d, v30.2d, #0x14 */ ARM64("xar v1.2d, v6.2d, v30.2d, #0x14");
+    /* 0x00abcc34: xar      v6.2d, v9.2d, v28.2d, #0x2c */ ARM64("xar v6.2d, v9.2d, v28.2d, #0x2c");
+    /* 0x00abcc38: xar      v9.2d, v22.2d, v31.2d, #3 */ ARM64("xar v9.2d, v22.2d, v31.2d, #3");
+    /* 0x00abcc3c: xar      v22.2d, v14.2d, v28.2d, #0x19 */ ARM64("xar v22.2d, v14.2d, v28.2d, #0x19");
+    /* 0x00abcc40: xar      v14.2d, v20.2d, v29.2d, #0x2e */ ARM64("xar v14.2d, v20.2d, v29.2d, #0x2e");
+    /* 0x00abcc44: xar      v26.2d, v2.2d, v31.2d, #2 */ ARM64("xar v26.2d, v2.2d, v31.2d, #2");
+    /* 0x00abcc48: xar      v2.2d, v12.2d, v31.2d, #0x15 */ ARM64("xar v2.2d, v12.2d, v31.2d, #0x15");
+    /* 0x00abcc4c: xar      v12.2d, v13.2d, v27.2d, #0x27 */ ARM64("xar v12.2d, v13.2d, v27.2d, #0x27");
+    /* 0x00abcc50: xar      v13.2d, v19.2d, v28.2d, #0x38 */ ARM64("xar v13.2d, v19.2d, v28.2d, #0x38");
+    /* 0x00abcc54: xar      v19.2d, v23.2d, v27.2d, #8 */ ARM64("xar v19.2d, v23.2d, v27.2d, #8");
+    /* 0x00abcc58: xar      v23.2d, v15.2d, v29.2d, #0x17 */ ARM64("xar v23.2d, v15.2d, v29.2d, #0x17");
+    /* 0x00abcc5c: xar      v15.2d, v4.2d, v28.2d, #0x25 */ ARM64("xar v15.2d, v4.2d, v28.2d, #0x25");
+    /* 0x00abcc60: xar      v28.2d, v24.2d, v28.2d, #0x32 */ ARM64("xar v28.2d, v24.2d, v28.2d, #0x32");
+    /* 0x00abcc64: xar      v24.2d, v21.2d, v30.2d, #0x3e */ ARM64("xar v24.2d, v21.2d, v30.2d, #0x3e");
+    /* 0x00abcc68: xar      v8.2d, v8.2d, v27.2d, #9 */ ARM64("xar v8.2d, v8.2d, v27.2d, #9");
+    /* 0x00abcc6c: xar      v4.2d, v16.2d, v30.2d, #0x13 */ ARM64("xar v4.2d, v16.2d, v30.2d, #0x13");
+    /* 0x00abcc70: xar      v16.2d, v5.2d, v29.2d, #0x1c */ ARM64("xar v16.2d, v5.2d, v29.2d, #0x1c");
+    /* 0x00abcc74: xar      v5.2d, v3.2d, v27.2d, #0x24 */ ARM64("xar v5.2d, v3.2d, v27.2d, #0x24");
+    /* 0x00abcc78: eor      v0.16b, v0.16b, v29.16b */ ARM64("eor v0.16b, v0.16b, v29.16b");
+    /* 0x00abcc7c: xar      v27.2d, v18.2d, v27.2d, #0x2b */ ARM64("xar v27.2d, v18.2d, v27.2d, #0x2b");
+    /* 0x00abcc80: xar      v3.2d, v17.2d, v31.2d, #0x31 */ ARM64("xar v3.2d, v17.2d, v31.2d, #0x31");
+    /* 0x00abcc84: xar      v30.2d, v11.2d, v30.2d, #0x36 */ ARM64("xar v30.2d, v11.2d, v30.2d, #0x36");
+    /* 0x00abcc88: xar      v31.2d, v7.2d, v31.2d, #0x3a */ ARM64("xar v31.2d, v7.2d, v31.2d, #0x3a");
+    /* 0x00abcc8c: xar      v29.2d, v10.2d, v29.2d, #0x3d */ ARM64("xar v29.2d, v10.2d, v29.2d, #0x3d");
+    /* 0x00abcc90: bcax     v20.16b, v26.16b, v22.16b, v8.16b */ ARM64("bcax v20.16b, v26.16b, v22.16b, v8.16b");
+    /* 0x00abcc94: bcax     v21.16b, v8.16b, v23.16b, v22.16b */ ARM64("bcax v21.16b, v8.16b, v23.16b, v22.16b");
+    /* 0x00abcc98: bcax     v22.16b, v22.16b, v24.16b, v23.16b */ ARM64("bcax v22.16b, v22.16b, v24.16b, v23.16b");
+    /* 0x00abcc9c: bcax     v23.16b, v23.16b, v26.16b, v24.16b */ ARM64("bcax v23.16b, v23.16b, v26.16b, v24.16b");
+    /* 0x00abcca0: bcax     v24.16b, v24.16b, v8.16b, v26.16b */ ARM64("bcax v24.16b, v24.16b, v8.16b, v26.16b");
+    /* 0x00abcca4: ld1r     {v26.2d}, [x10], #8 */ ARM64("ld1r {v26.2d}, [x10], #8");
+    /* 0x00abcca8: bcax     v17.16b, v30.16b, v19.16b, v3.16b */ ARM64("bcax v17.16b, v30.16b, v19.16b, v3.16b");
+    /* 0x00abccac: bcax     v18.16b, v3.16b, v15.16b, v19.16b */ ARM64("bcax v18.16b, v3.16b, v15.16b, v19.16b");
+    /* 0x00abccb0: bcax     v19.16b, v19.16b, v16.16b, v15.16b */ ARM64("bcax v19.16b, v19.16b, v16.16b, v15.16b");
+    /* 0x00abccb4: bcax     v15.16b, v15.16b, v30.16b, v16.16b */ ARM64("bcax v15.16b, v15.16b, v30.16b, v16.16b");
+    /* 0x00abccb8: bcax     v16.16b, v16.16b, v3.16b, v30.16b */ ARM64("bcax v16.16b, v16.16b, v3.16b, v30.16b");
+    /* 0x00abccbc: bcax     v10.16b, v25.16b, v12.16b, v31.16b */ ARM64("bcax v10.16b, v25.16b, v12.16b, v31.16b");
+    /* 0x00abccc0: bcax     v11.16b, v31.16b, v13.16b, v12.16b */ ARM64("bcax v11.16b, v31.16b, v13.16b, v12.16b");
+    /* 0x00abccc4: bcax     v12.16b, v12.16b, v14.16b, v13.16b */ ARM64("bcax v12.16b, v12.16b, v14.16b, v13.16b");
+    /* 0x00abccc8: bcax     v13.16b, v13.16b, v25.16b, v14.16b */ ARM64("bcax v13.16b, v13.16b, v25.16b, v14.16b");
+    /* 0x00abcccc: bcax     v14.16b, v14.16b, v31.16b, v25.16b */ ARM64("bcax v14.16b, v14.16b, v31.16b, v25.16b");
+    /* 0x00abccd0: bcax     v7.16b, v29.16b, v9.16b, v4.16b */ ARM64("bcax v7.16b, v29.16b, v9.16b, v4.16b");
+    /* 0x00abccd4: bcax     v8.16b, v4.16b, v5.16b, v9.16b */ ARM64("bcax v8.16b, v4.16b, v5.16b, v9.16b");
+    /* 0x00abccd8: bcax     v9.16b, v9.16b, v6.16b, v5.16b */ ARM64("bcax v9.16b, v9.16b, v6.16b, v5.16b");
+    /* 0x00abccdc: bcax     v5.16b, v5.16b, v29.16b, v6.16b */ ARM64("bcax v5.16b, v5.16b, v29.16b, v6.16b");
+    /* 0x00abcce0: bcax     v6.16b, v6.16b, v4.16b, v29.16b */ ARM64("bcax v6.16b, v6.16b, v4.16b, v29.16b");
+    /* 0x00abcce4: bcax     v3.16b, v27.16b, v0.16b, v28.16b */ ARM64("bcax v3.16b, v27.16b, v0.16b, v28.16b");
+    /* 0x00abcce8: bcax     v4.16b, v28.16b, v1.16b, v0.16b */ ARM64("bcax v4.16b, v28.16b, v1.16b, v0.16b");
+    /* 0x00abccec: bcax     v0.16b, v0.16b, v2.16b, v1.16b */ ARM64("bcax v0.16b, v0.16b, v2.16b, v1.16b");
+    /* 0x00abccf0: bcax     v1.16b, v1.16b, v27.16b, v2.16b */ ARM64("bcax v1.16b, v1.16b, v27.16b, v2.16b");
+    /* 0x00abccf4: bcax     v2.16b, v2.16b, v28.16b, v27.16b */ ARM64("bcax v2.16b, v2.16b, v28.16b, v27.16b");
+    /* 0x00abccf8: eor      v0.16b, v0.16b, v26.16b */ ARM64("eor v0.16b, v0.16b, v26.16b");
+    /* 0x00abccfc: subs     x9, x9, #1 */ ARM64("subs x9, x9, #1");
+    /* 0x00abcd00: b.ne     #0xabcbf0 */ if (COND_NE) goto loc_00abcbf0;
+    /* 0x00abcd04: ret       */ return;
+    /* 0x00abcd08: nop       */ ARM64("nop");
+    /* 0x00abcd0c: nop       */ ARM64("nop");
+    /* 0x00abcd10: nop       */ ARM64("nop");
+    /* 0x00abcd14: nop       */ ARM64("nop");
+    /* 0x00abcd18: nop       */ ARM64("nop");
+    /* 0x00abcd1c: nop       */ ARM64("nop");
+}

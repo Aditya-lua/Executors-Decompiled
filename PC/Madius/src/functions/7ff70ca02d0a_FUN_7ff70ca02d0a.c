@@ -1,0 +1,16 @@
+/* 7ff70ca02d0a FUN_7ff70ca02d0a */
+
+void FUN_7ff70ca02d0a(longlong param_1)
+
+{
+  func_0x7ff70d664a32();
+  func_0x7ff70da6101e();
+  func_0x7ff70d96d7d4();
+  LOCK();
+  UNLOCK();
+  func_0x7ff70d9ed553();
+  func_0x7ff70d799861(param_1 + 0xd93d8b6);
+  return;
+}
+
+

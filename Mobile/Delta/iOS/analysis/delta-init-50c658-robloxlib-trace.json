@@ -1,0 +1,123 @@
+{
+  "target": "0x50c658",
+  "stopped_reason": "returned",
+  "unicorn_error": null,
+  "instruction_count": 2624710,
+  "heap_used": 4320,
+  "function_entries": [
+    {
+      "at_instruction": 1,
+      "address": "0x50c658",
+      "x0": "0x0",
+      "x1": "0x0",
+      "x2": "0x0"
+    },
+    {
+      "at_instruction": 23,
+      "address": "0x2b21ec",
+      "x0": "0x0",
+      "x1": "0x0",
+      "x2": "0x0"
+    },
+    {
+      "at_instruction": 2621764,
+      "address": "0x3a8258",
+      "x0": "0x21fef60",
+      "x1": "0x0",
+      "x2": "0x28",
+      "x0_cstring": "RobloxLib"
+    }
+  ],
+  "import_calls": [
+    {
+      "at_instruction": 1221,
+      "target": "0xc7ada8",
+      "symbol": "_mmap",
+      "x0": "0x0",
+      "x1": "0xe0",
+      "x2": "0x3"
+    },
+    {
+      "at_instruction": 2621637,
+      "target": "0x23001a0",
+      "symbol": "___chkstk_darwin",
+      "x0": "0xfffffffc",
+      "x1": "0x0",
+      "x2": "0x28"
+    },
+    {
+      "at_instruction": 2621645,
+      "target": "0x23001a0",
+      "symbol": "___chkstk_darwin",
+      "x0": "0xfffffffc",
+      "x1": "0x0",
+      "x2": "0x28"
+    },
+    {
+      "at_instruction": 2621652,
+      "target": "0x23001a0",
+      "symbol": "___chkstk_darwin",
+      "x0": "0xfffffffc",
+      "x1": "0x0",
+      "x2": "0x28"
+    },
+    {
+      "at_instruction": 2621806,
+      "target": "0x2300c80",
+      "symbol": "__dyld_image_count",
+      "x0": "0x21fef60",
+      "x1": "0x0",
+      "x2": "0x28"
+    },
+    {
+      "at_instruction": 2621828,
+      "target": "0x2300c60",
+      "symbol": "__dyld_get_image_name",
+      "x0": "0x0",
+      "x1": "0x0",
+      "x2": "0x28"
+    },
+    {
+      "at_instruction": 2622322,
+      "target": "0x2300c60",
+      "symbol": "__dyld_get_image_name",
+      "x0": "0x1",
+      "x1": "0x0",
+      "x2": "0x28"
+    },
+    {
+      "at_instruction": 2622738,
+      "target": "0x2300c60",
+      "symbol": "__dyld_get_image_name",
+      "x0": "0x2",
+      "x1": "0x0",
+      "x2": "0x28"
+    },
+    {
+      "at_instruction": 2623232,
+      "target": "0x2300c60",
+      "symbol": "__dyld_get_image_name",
+      "x0": "0x3",
+      "x1": "0x0",
+      "x2": "0x28"
+    },
+    {
+      "at_instruction": 2623787,
+      "target": "0x2300c70",
+      "symbol": "__dyld_get_image_vmaddr_slide",
+      "x0": "0x3",
+      "x1": "0x0",
+      "x2": "0x28"
+    }
+  ],
+  "import_counts": {
+    "_mmap": 1,
+    "___chkstk_darwin": 3,
+    "__dyld_image_count": 1,
+    "__dyld_get_image_name": 4,
+    "__dyld_get_image_vmaddr_slide": 1
+  },
+  "invalid_accesses": [],
+  "data_dump": "delta-init-50c658-robloxlib-trace-data.bin",
+  "heap_dump": "delta-init-50c658-robloxlib-trace-heap.bin"
+}
