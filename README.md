@@ -12,7 +12,7 @@ repositories. No executor binaries are redistributed here, only derived text.
 | Platform | Executor | Start here | Contents |
 | --- | --- | --- | --- |
 | macOS | [`Hydrogen`](macOS/Hydrogen/) | [analysis.md](macOS/Hydrogen/analysis.md) | Mach-O launcher and arm64/x86_64 payload dylibs, Luau runtime and `medal` decompiler, 13.5k pseudocode functions |
-| Mobile | [`Arceus X`](Mobile/Arceus-X/) | [README.md](Mobile/Arceus-X/README.md) | Android V5/NEO Java, smali, resources, and protected native-payload reconstruction |
+| Mobile | [`Arceus X`](Mobile/Arceus-X/) | [README.md](Mobile/Arceus-X/README.md) | Android V5/NEO Java, smali, resources, and protected native-payload reconstruction; 2026-11 pass on V5 1.6.5 / NEO 2.3.9 with the packer architecture identified |
 | Mobile | [`Delta`](Mobile/Delta/) | [README.md](Mobile/Delta/README.md) | Android and iOS decompilation/reconstruction workspaces |
 | PC | [`Codex`](PC/Codex/) | [RECOVERY_REPORT.md](PC/Codex/RECOVERY_REPORT.md) | Recovered Windows managed projects, web runtime, and native pseudocode |
 | PC | [`Madius`](PC/Madius/) | [README.md](PC/Madius/README.md) | Windows updater analysis and recovered native pseudocode |
@@ -45,6 +45,7 @@ Executors-Decompiled/
 │   └── Hydrogen/
 ├── Mobile/
 │   ├── Arceus-X/
+│   │   ├── 2026-11-01-V5-1.6.5-NEO-2.3.9/
 │   │   ├── NEO/
 │   │   ├── V5/
 │   │   └── Shared/

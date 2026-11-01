@@ -4,6 +4,13 @@ Best-effort source recovery for the current Arceus X V5 and Arceus X NEO
 Android packages obtained from SPDM Team's official Android download page on
 2026-10-29.
 
+A follow-up static pass (2026-11-01) covers the **next** build pair,
+V5 1.6.5 / NEO 2.3.9, in
+[`2026-11-01-V5-1.6.5-NEO-2.3.9/`](2026-11-01-V5-1.6.5-NEO-2.3.9/):
+the DEX layer and `libroblox.so` are byte-identical to this baseline, and the
+drift is concentrated in a rebuilt native payload whose `.text` is packed by
+a runtime unpacker living in the `.dyncall`/`.stack` sections.
+
 ## Result
 
 The two APKs contain the same application code and data. Across 2,378 ZIP

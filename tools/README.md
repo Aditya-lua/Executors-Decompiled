@@ -64,7 +64,13 @@ python tools/apk-meta.py target.apk --json target.meta.json
 ./tools/apk-diff.py v5.apk neo.apk            # names every differing member
 ./tools/apk-diff.py v5.apk neo.apk --json d.json
 
-# 5. REA: provider status and the CLI surface
+# 5. native-payload helpers (static, arm64 .so; need the venv python, so
+#    source tools/env.sh first):
+python3 tools/jni-table-scan.py payload.so       # hunt static JNINativeMethod[] tables
+python3 tools/jni-onload-disasm.py payload.so    # carve + characterise JNI_OnLoad
+python3 tools/so-coverage-map.py payload.so 4096 # code-vs-opaque block map of .text
+
+# 6. REA: provider status and the CLI surface
 rea doctor --json
 rea providers --json
 ```
@@ -73,6 +79,21 @@ rea providers --json
 length it locates the exact differing offsets and maps each one to its ELF
 section — the check that established the V5/NEO pair differ only in two
 `.gnu.plt` bytes.
+
+The native-payload helpers exist for disguised/protected executor libraries:
+
+- `jni-table-scan.py` scans all `R_AARCH64_RELATIVE` relocations for
+  `{name, JNI descriptor, function}` pointer triples — a statically
+  initialised `JNINativeMethod[]`. Zero hits means registration data is built
+  or decrypted at runtime.
+- `jni-onload-disasm.py` carves the `JNI_OnLoad` symbol (address/size from
+  `.dynsym`) and disassembles it with Capstone, reporting vtable-slot
+  matches, XOR density, call targets and adrp+add string references. A
+  zero-instruction result at the entry means the region is packed, not code.
+- `so-coverage-map.py` classifies `.text` in fixed blocks by Shannon entropy
+  and Capstone decodability, and decode-checks every exported FUNC's entry
+  bytes — the check that identified the Arceus X payload's `.text` as 100 %
+  packed while `.dyncall`/`.plt` stayed plaintext.
 
 Manual work uses the wrappers directly: `apktool d -f -o out app.apk`,
 `jadx -d out --no-res app.apk`, `apkid app.apk`, `quark -a app.apk -o q.json`.

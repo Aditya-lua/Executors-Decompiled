@@ -187,11 +187,14 @@ def main() -> None:
         print(f"  + {name}")
     if record["manifest_diff"]:
         print("manifest differences")
-        for key in record["manifest_diff"]:
-            print(f"  {key}: {fa.get(key)!r} -> {fb.get(key)!r}"
-                  if not isinstance(record["manifest_diff"][key], dict)
-                  else f"  {key}: {len(record['manifest_diff'][key]['set']['only_a'])} only in A, "
-                       f"{len(record['manifest_diff'][key]['set']['only_b'])} only in B")
+        for key, value in record["manifest_diff"].items():
+            if isinstance(value, dict) and "set" in value:
+                print(f"  {key}: {len(value['set']['only_a'])} only in A, "
+                      f"{len(value['set']['only_b'])} only in B")
+            elif isinstance(value, dict):
+                print(f"  {key}: {value.get('a')!r} -> {value.get('b')!r}")
+            else:
+                print(f"  {key}: {fa.get(key)!r} -> {fb.get(key)!r}")
     print(f"JSON               {out}")
 
 
