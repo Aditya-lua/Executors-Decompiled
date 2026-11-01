@@ -55,10 +55,19 @@ python tools/apk-meta.py target.apk --json target.meta.json
 ./tools/jadx-query.py target.apk xrefs --method 'com.example.Main#start'
 ./tools/jadx-query.py target.apk export --out work/jadx-modern
 
-# 4. REA: provider status and the CLI surface
+# 4. compare two builds member by member (V5 vs NEO style delta)
+./tools/apk-diff.py v5.apk neo.apk            # names every differing member
+./tools/apk-diff.py v5.apk neo.apk --json d.json
+
+# 5. REA: provider status and the CLI surface
 rea doctor --json
 rea providers --json
 ```
+
+`apk-diff.py` compares ZIP members by content, then for a changed `.so` of equal
+length it locates the exact differing offsets and maps each one to its ELF
+section — the check that established the V5/NEO pair differ only in two
+`.gnu.plt` bytes.
 
 Manual work uses the wrappers directly: `apktool d -f -o out app.apk`,
 `jadx -d out --no-res app.apk`, `apkid app.apk`, `quark -a app.apk -o q.json`.
