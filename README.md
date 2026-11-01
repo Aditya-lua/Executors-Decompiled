@@ -17,6 +17,7 @@ repositories. No executor binaries are redistributed here, only derived text.
 | PC | [`Codex`](PC/Codex/) | [RECOVERY_REPORT.md](PC/Codex/RECOVERY_REPORT.md) | Recovered Windows managed projects, web runtime, and native pseudocode |
 | PC | [`Madius`](PC/Madius/) | [README.md](PC/Madius/README.md) | Windows updater analysis and recovered native pseudocode |
 | PC | [`Solara`](PC/Solara/) | [README.md](PC/Solara/README.md) | Rust/Tauri host and 18 MB Luau DLL, HTTP bridge, memory-patching cluster |
+| PC | [`Velocity`](PC/Velocity/) | [README.md](PC/Velocity/README.md) | Recovered .NET/WPF client and API wrapper, Rust decompiler source, and protected injector boundary |
 
 ## Folder conventions
 
@@ -55,7 +56,8 @@ Executors-Decompiled/
 └── PC/
     ├── Codex/
     ├── Madius/
-    └── Solara/
+    ├── Solara/
+    └── Velocity/
 ```
 
 ## Provenance

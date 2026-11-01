@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>Velocity</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ScriptEditor.App</StartupObject>
+    <UseWPF>True</UseWPF>
+    <TargetFramework>net10.0-windows10.0.19041.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>14.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="assets.zip" />
+    <EmbeddedResource Include="assets.zip" LogicalName="assets.zip" />
+    <ApplicationDefinition Remove="ScriptEditor/App.xaml" />
+    <Page Remove="ScriptEditor/**/*.xaml" />
+    <Page Remove="themes/theme.xaml" />
+    <None Include="ScriptEditor/**/*.xaml" />
+    <None Include="themes/theme.xaml" />
+    <Resource Remove="assets/*.png" />
+    <None Include="assets/*.png" />
+    <EmbeddedResource Include="RecoveredResources/Velocity.g.resources" LogicalName="Velocity.g.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../VelocityApi/VelocityApi.csproj" />
+    <Reference Include="Microsoft.Web.WebView2.Wpf">
+      <HintPath>../../bundle_dump/Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Core">
+      <HintPath>../../bundle_dump/Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.ProtectedData" />
+  </ItemGroup>
+</Project>

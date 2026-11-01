@@ -1,0 +1,50 @@
+{
+    "detects": [
+        {
+            "filetype": "PE64",
+            "info": "",
+            "offset": "0",
+            "parentfilepart": "Header",
+            "size": "9900032",
+            "values": [
+                {
+                    "info": "",
+                    "name": "Microsoft Linker",
+                    "string": "Linker: Microsoft Linker(14.41.34435)",
+                    "type": "linker",
+                    "version": "14.41.34435"
+                },
+                {
+                    "info": "C++",
+                    "name": "Microsoft Visual C/C++",
+                    "string": "Compiler: Microsoft Visual C/C++(19.41.34321)[C++]",
+                    "type": "compiler",
+                    "version": "19.41.34321"
+                },
+                {
+                    "info": "dynamic",
+                    "name": "Microsoft C/C++ Runtime",
+                    "string": "Library: Microsoft C/C++ Runtime[dynamic]",
+                    "type": "library",
+                    "version": ""
+                },
+                {
+                    "info": "",
+                    "name": "Microsoft Visual Studio",
+                    "string": "Tool: Microsoft Visual Studio(2022, 17.11)",
+                    "type": "tool",
+                    "version": "2022, 17.11"
+                },
+                {
+                    "info": "codeview, vc_feature, pogo",
+                    "name": "Records",
+                    "string": "Debug data: Records[codeview, vc_feature, pogo]",
+                    "type": "debug data",
+                    "version": ""
+                }
+            ]
+        }
+    ]
+}
+
+

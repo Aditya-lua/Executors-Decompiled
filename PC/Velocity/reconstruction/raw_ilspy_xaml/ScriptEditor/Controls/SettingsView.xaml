@@ -1,0 +1,810 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="ScriptEditor.Controls.SettingsView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Control.Background="{StaticResource BackgroundPrimaryBrush}" xmlns:controls="clr-namespace:ScriptEditor.Controls;assembly=Velocity">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <Style x:Key="RowStyle">
+        <Style.TargetType>
+          <x:TypeExtension>
+            <Ctor xmlns="https://github.com/icsharpcode/ILSpy">Grid</Ctor>
+          </x:TypeExtension>
+        </Style.TargetType>
+        <Setter Property="FrameworkElement.Margin" Value="0,0,0,20" />
+      </Style>
+      <Style x:Key="PageStyle">
+        <Style.TargetType>
+          <x:TypeExtension>
+            <Ctor xmlns="https://github.com/icsharpcode/ILSpy">StackPanel</Ctor>
+          </x:TypeExtension>
+        </Style.TargetType>
+        <Setter Property="FrameworkElement.Margin" Value="30,26,26,40" />
+        <Setter Property="FrameworkElement.MaxWidth" Value="900" />
+        <Setter Property="FrameworkElement.HorizontalAlignment" Value="Stretch" />
+      </Style>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <StackPanel Grid.Row="0" FrameworkElement.Margin="30,24,30,18">
+      <TextBlock Text="Settings" FontFamily="{StaticResource BodyFont}" FontSize="20" Foreground="{StaticResource TabForegroundActiveBrush}" />
+      <TextBlock Text="Changes apply immediately and are saved automatically." FrameworkElement.Style="{StaticResource SettingsHintStyle}" />
+    </StackPanel>
+    <TabControl Grid.Row="1" FrameworkElement.Style="{StaticResource SettingsTabControlStyle}">
+      <TabItem HeaderedContentControl.Header="General">
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+          <StackPanel FrameworkElement.Style="{StaticResource PageStyle}">
+            <Grid FrameworkElement.Style="{StaticResource RowStyle}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <StackPanel Grid.Column="0" FrameworkElement.Margin="0,0,20,0">
+                <TextBlock Text="Auto Inject" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" />
+                <TextBlock Text="Automatically injects when instances are detected." FrameworkElement.Style="{StaticResource SettingsHintStyle}" />
+              </StackPanel>
+              <ToggleButton Grid.Column="1" FrameworkElement.VerticalAlignment="Center" FrameworkElement.Style="{StaticResource ToggleSwitchStyle}">
+                <ToggleButton.IsChecked>
+                  <Binding Mode="TwoWay">
+                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">AutoInject</Ctor>
+                  </Binding>
+                </ToggleButton.IsChecked>
+              </ToggleButton>
+            </Grid>
+            <Grid FrameworkElement.Style="{StaticResource RowStyle}">
+              <UIElement.IsEnabled>
+                <Binding>
+                  <Ctor xmlns="https://github.com/icsharpcode/ILSpy">AutoInject</Ctor>
+                </Binding>
+              </UIElement.IsEnabled>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <StackPanel Grid.Column="0" FrameworkElement.Margin="0,0,20,0">
+                <TextBlock Text="Auto Inject delay" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" />
+                <TextBlock Text="Seconds to let a client finish loading first. Injecting too early crashes it." FrameworkElement.Style="{StaticResource SettingsHintStyle}" />
+              </StackPanel>
+              <StackPanel Grid.Column="1" Orientation="Horizontal" FrameworkElement.VerticalAlignment="Center">
+                <Button FrameworkElement.Style="{StaticResource StepperButtonStyle}" FrameworkElement.ToolTip="Shorter">
+                  <Path Data="{StaticResource IconMinus}" Shape.Stroke="{StaticResource TabForegroundActiveBrush}" Shape.StrokeThickness="1.2" Shape.StrokeStartLineCap="Round" Shape.StrokeEndLineCap="Round" FrameworkElement.Width="12" FrameworkElement.Height="12" Shape.Stretch="None" />
+                  <!--Unknown connection ID: 1-->
+                </Button>
+                <TextBlock FrameworkElement.Width="30" TextAlignment="Center" FontFamily="{StaticResource BodyFont}" FontSize="12" Foreground="{StaticResource TabForegroundActiveBrush}" FrameworkElement.VerticalAlignment="Center">
+                  <TextBlock.Text>
+                    <Binding>
+                      <Ctor xmlns="https://github.com/icsharpcode/ILSpy">AutoInjectDelaySeconds</Ctor>
+                    </Binding>
+                  </TextBlock.Text>
+                </TextBlock>
+                <Button FrameworkElement.Style="{StaticResource StepperButtonStyle}" FrameworkElement.ToolTip="Longer">
+                  <Path Data="{StaticResource IconPlus}" Shape.Stroke="{StaticResource TabForegroundActiveBrush}" Shape.StrokeThickness="1.2" Shape.StrokeStartLineCap="Round" Shape.StrokeEndLineCap="Round" FrameworkElement.Width="12" FrameworkElement.Height="12" Shape.Stretch="None" />
+                  <!--Unknown connection ID: 2-->
+                </Button>
+              </StackPanel>
+            </Grid>
+            <Grid FrameworkElement.Style="{StaticResource RowStyle}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <StackPanel Grid.Column="0" FrameworkElement.Margin="0,0,20,0">
+                <TextBlock Text="Save Scripts" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" />
+                <TextBlock Text="Saves and re-loads your script tabs, including unsaved changes." FrameworkElement.Style="{StaticResource SettingsHintStyle}" />
+              </StackPanel>
+              <ToggleButton Grid.Column="1" FrameworkElement.VerticalAlignment="Center" FrameworkElement.Style="{StaticResource ToggleSwitchStyle}">
+                <ToggleButton.IsChecked>
+                  <Binding Mode="TwoWay">
+                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">SaveScripts</Ctor>
+                  </Binding>
+                </ToggleButton.IsChecked>
+              </ToggleButton>
+            </Grid>
+            <Grid FrameworkElement.Style="{StaticResource RowStyle}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <StackPanel Grid.Column="0" FrameworkElement.Margin="0,0,20,0">
+                <TextBlock Text="Auto-pick clients" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" />
+                <TextBlock Text="Automatically picks all clients to be injected." FrameworkElement.Style="{StaticResource SettingsHintStyle}" />
+              </StackPanel>
+              <ToggleButton Grid.Column="1" FrameworkElement.VerticalAlignment="Center" FrameworkElement.Style="{StaticResource ToggleSwitchStyle}">
+                <ToggleButton.IsChecked>
+                  <Binding Mode="TwoWay">
+                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">AutoPickClients</Ctor>
+                  </Binding>
+                </ToggleButton.IsChecked>
+              </ToggleButton>
+            </Grid>
+            <Grid FrameworkElement.Style="{StaticResource RowStyle}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <StackPanel Grid.Column="0" FrameworkElement.Margin="0,0,20,0">
+                <TextBlock Text="Execute on all clients" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" />
+                <TextBlock Text="Run scripts on every client that has Execute enabled. When off, only the first one. Clients with Execute switched off are always skipped." FrameworkElement.Style="{StaticResource SettingsHintStyle}" />
+              </StackPanel>
+              <ToggleButton Grid.Column="1" FrameworkElement.VerticalAlignment="Center" FrameworkElement.Style="{StaticResource ToggleSwitchStyle}">
+                <ToggleButton.IsChecked>
+                  <Binding Mode="TwoWay">
+                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">ExecuteOnAllClients</Ctor>
+                  </Binding>
+                </ToggleButton.IsChecked>
+              </ToggleButton>
+            </Grid>
+          </StackPanel>
+        </ScrollViewer>
+      </TabItem>
+      <TabItem HeaderedContentControl.Header="Editor">
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+          <StackPanel FrameworkElement.Style="{StaticResource PageStyle}">
+            <Grid FrameworkElement.Style="{StaticResource RowStyle}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <StackPanel Grid.Column="0" FrameworkElement.Margin="0,0,20,0">
+                <TextBlock Text="Font" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" />
+                <TextBlock Text="Monospace families installed on this machine." FrameworkElement.Style="{StaticResource SettingsHintStyle}" />
+              </StackPanel>
+              <ComboBox Grid.Column="1" FrameworkElement.VerticalAlignment="Center" FrameworkElement.Style="{StaticResource SettingsComboBoxStyle}">
+                <ItemsControl.ItemsSource>
+                  <Binding>
+                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">AvailableFonts</Ctor>
+                  </Binding>
+                </ItemsControl.ItemsSource>
+                <Selector.SelectedItem>
+                  <Binding Mode="TwoWay">
+                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">FontFamily</Ctor>
+                  </Binding>
+                </Selector.SelectedItem>
+              </ComboBox>
+            </Grid>
+            <Grid FrameworkElement.Style="{StaticResource RowStyle}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <StackPanel Grid.Column="0" FrameworkElement.Margin="0,0,20,0">
+                <TextBlock Text="Font size" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" />
+                <TextBlock Text="Between 8 and 32 pixels." FrameworkElement.Style="{StaticResource SettingsHintStyle}" />
+              </StackPanel>
+              <StackPanel Grid.Column="1" Orientation="Horizontal" FrameworkElement.VerticalAlignment="Center">
+                <Button FrameworkElement.Style="{StaticResource StepperButtonStyle}" FrameworkElement.ToolTip="Smaller">
+                  <Path Data="{StaticResource IconMinus}" Shape.Stroke="{StaticResource TabForegroundActiveBrush}" Shape.StrokeThickness="1.2" Shape.StrokeStartLineCap="Round" Shape.StrokeEndLineCap="Round" FrameworkElement.Width="12" FrameworkElement.Height="12" Shape.Stretch="None" />
+                  <!--Unknown connection ID: 3-->
+                </Button>
+                <TextBlock FrameworkElement.Width="30" TextAlignment="Center" FontFamily="{StaticResource BodyFont}" FontSize="12" Foreground="{StaticResource TabForegroundActiveBrush}" FrameworkElement.VerticalAlignment="Center">
+                  <TextBlock.Text>
+                    <Binding>
+                      <Ctor xmlns="https://github.com/icsharpcode/ILSpy">FontSize</Ctor>
+                    </Binding>
+                  </TextBlock.Text>
+                </TextBlock>
+                <Button FrameworkElement.Style="{StaticResource StepperButtonStyle}" FrameworkElement.ToolTip="Larger">
+                  <Path Data="{StaticResource IconPlus}" Shape.Stroke="{StaticResource TabForegroundActiveBrush}" Shape.StrokeThickness="1.2" Shape.StrokeStartLineCap="Round" Shape.StrokeEndLineCap="Round" FrameworkElement.Width="12" FrameworkElement.Height="12" Shape.Stretch="None" />
+                  <!--Unknown connection ID: 4-->
+                </Button>
+              </StackPanel>
+            </Grid>
+            <Grid FrameworkElement.Style="{StaticResource RowStyle}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <StackPanel Grid.Column="0" FrameworkElement.Margin="0,0,20,0">
+                <TextBlock Text="Ligatures" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" />
+                <TextBlock Text="Join sequences like ~= and .. where the font supports it." FrameworkElement.Style="{StaticResource SettingsHintStyle}" />
+              </StackPanel>
+              <ToggleButton Grid.Column="1" FrameworkElement.VerticalAlignment="Center" FrameworkElement.Style="{StaticResource ToggleSwitchStyle}">
+                <ToggleButton.IsChecked>
+                  <Binding Mode="TwoWay">
+                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">FontLigatures</Ctor>
+                  </Binding>
+                </ToggleButton.IsChecked>
+              </ToggleButton>
+            </Grid>
+            <Grid FrameworkElement.Style="{StaticResource RowStyle}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <StackPanel Grid.Column="0" FrameworkElement.Margin="0,0,20,0">
+                <TextBlock Text="Tab width" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" />
+                <TextBlock Text="Spaces inserted per indent level." FrameworkElement.Style="{StaticResource SettingsHintStyle}" />
+              </StackPanel>
+              <StackPanel Grid.Column="1" Orientation="Horizontal" FrameworkElement.VerticalAlignment="Center">
+                <RadioButton FrameworkElement.Style="{StaticResource SegmentButtonStyle}" ContentControl.Content="2">
+                  <ToggleButton.IsChecked>
+                    <Binding Mode="TwoWay" Converter="{StaticResource IntEquals}" ConverterParameter="2">
+                      <Ctor xmlns="https://github.com/icsharpcode/ILSpy">TabSize</Ctor>
+                    </Binding>
+                  </ToggleButton.IsChecked>
+                </RadioButton>
+                <RadioButton FrameworkElement.Style="{StaticResource SegmentButtonStyle}" ContentControl.Content="4">
+                  <ToggleButton.IsChecked>
+                    <Binding Mode="TwoWay" Converter="{StaticResource IntEquals}" ConverterParameter="4">
+                      <Ctor xmlns="https://github.com/icsharpcode/ILSpy">TabSize</Ctor>
+                    </Binding>
+                  </ToggleButton.IsChecked>
+                </RadioButton>
+                <RadioButton FrameworkElement.Style="{StaticResource SegmentButtonStyle}" ContentControl.Content="8">
+                  <ToggleButton.IsChecked>
+                    <Binding Mode="TwoWay" Converter="{StaticResource IntEquals}" ConverterParameter="8">
+                      <Ctor xmlns="https://github.com/icsharpcode/ILSpy">TabSize</Ctor>
+                    </Binding>
+                  </ToggleButton.IsChecked>
+                </RadioButton>
+              </StackPanel>
+            </Grid>
+            <Grid FrameworkElement.Style="{StaticResource RowStyle}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <StackPanel Grid.Column="0" FrameworkElement.Margin="0,0,20,0">
+                <TextBlock Text="Word wrap" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" />
+                <TextBlock Text="Wrap long lines instead of scrolling sideways." FrameworkElement.Style="{StaticResource SettingsHintStyle}" />
+              </StackPanel>
+              <ToggleButton Grid.Column="1" FrameworkElement.VerticalAlignment="Center" FrameworkElement.Style="{StaticResource ToggleSwitchStyle}">
+                <ToggleButton.IsChecked>
+                  <Binding Mode="TwoWay">
+                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">WordWrap</Ctor>
+                  </Binding>
+                </ToggleButton.IsChecked>
+              </ToggleButton>
+            </Grid>
+            <Grid FrameworkElement.Style="{StaticResource RowStyle}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <StackPanel Grid.Column="0" FrameworkElement.Margin="0,0,20,0">
+                <TextBlock Text="Auto-close brackets" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" />
+                <TextBlock Text="Insert the closing bracket or quote as you type." FrameworkElement.Style="{StaticResource SettingsHintStyle}" />
+              </StackPanel>
+              <ToggleButton Grid.Column="1" FrameworkElement.VerticalAlignment="Center" FrameworkElement.Style="{StaticResource ToggleSwitchStyle}">
+                <ToggleButton.IsChecked>
+                  <Binding Mode="TwoWay">
+                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">AutoClosingBrackets</Ctor>
+                  </Binding>
+                </ToggleButton.IsChecked>
+              </ToggleButton>
+            </Grid>
+            <Grid FrameworkElement.Style="{StaticResource RowStyle}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <StackPanel Grid.Column="0" FrameworkElement.Margin="0,0,20,0">
+                <TextBlock Text="Colour bracket pairs" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" />
+                <TextBlock Text="Tint matching brackets by nesting depth." FrameworkElement.Style="{StaticResource SettingsHintStyle}" />
+              </StackPanel>
+              <ToggleButton Grid.Column="1" FrameworkElement.VerticalAlignment="Center" FrameworkElement.Style="{StaticResource ToggleSwitchStyle}">
+                <ToggleButton.IsChecked>
+                  <Binding Mode="TwoWay">
+                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">BracketColorization</Ctor>
+                  </Binding>
+                </ToggleButton.IsChecked>
+              </ToggleButton>
+            </Grid>
+            <Grid FrameworkElement.Style="{StaticResource RowStyle}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <StackPanel Grid.Column="0" FrameworkElement.Margin="0,0,20,0">
+                <TextBlock Text="Show whitespace" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" />
+                <TextBlock Text="Render spaces and tabs as dots and arrows." FrameworkElement.Style="{StaticResource SettingsHintStyle}" />
+              </StackPanel>
+              <ToggleButton Grid.Column="1" FrameworkElement.VerticalAlignment="Center" FrameworkElement.Style="{StaticResource ToggleSwitchStyle}">
+                <ToggleButton.IsChecked>
+                  <Binding Mode="TwoWay">
+                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">ShowWhitespace</Ctor>
+                  </Binding>
+                </ToggleButton.IsChecked>
+              </ToggleButton>
+            </Grid>
+            <Border FrameworkElement.Height="1" Background="{StaticResource BorderStrokeBrush}" FrameworkElement.Margin="0,4,0,18" />
+            <Button FrameworkElement.Style="{StaticResource SettingsTextButtonStyle}" ContentControl.Content="Reset editor settings to defaults" FrameworkElement.HorizontalAlignment="Left">
+              <!--Unknown connection ID: 5-->
+            </Button>
+          </StackPanel>
+        </ScrollViewer>
+      </TabItem>
+      <TabItem HeaderedContentControl.Header="Appearance">
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+          <StackPanel FrameworkElement.Style="{StaticResource PageStyle}">
+            <StackPanel FrameworkElement.Margin="0,0,0,22">
+              <TextBlock Text="Accent colour" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" />
+              <TextBlock Text="Used for the active tab marker, unsaved dots and switches." FrameworkElement.Style="{StaticResource SettingsHintStyle}" />
+              <StackPanel Orientation="Horizontal" FrameworkElement.Margin="0,12,0,0">
+                <RadioButton FrameworkElement.Style="{StaticResource AccentSwatchStyle}" Control.Background="#C4785C" FrameworkElement.ToolTip="Ember">
+                  <ToggleButton.IsChecked>
+                    <Binding Mode="TwoWay" Converter="{StaticResource StringEquals}" ConverterParameter="#C4785C">
+                      <Ctor xmlns="https://github.com/icsharpcode/ILSpy">AccentColor</Ctor>
+                    </Binding>
+                  </ToggleButton.IsChecked>
+                </RadioButton>
+                <RadioButton FrameworkElement.Style="{StaticResource AccentSwatchStyle}" Control.Background="#C9A26D" FrameworkElement.ToolTip="Amber">
+                  <ToggleButton.IsChecked>
+                    <Binding Mode="TwoWay" Converter="{StaticResource StringEquals}" ConverterParameter="#C9A26D">
+                      <Ctor xmlns="https://github.com/icsharpcode/ILSpy">AccentColor</Ctor>
+                    </Binding>
+                  </ToggleButton.IsChecked>
+                </RadioButton>
+                <RadioButton FrameworkElement.Style="{StaticResource AccentSwatchStyle}" Control.Background="#8AA872" FrameworkElement.ToolTip="Sage">
+                  <ToggleButton.IsChecked>
+                    <Binding Mode="TwoWay" Converter="{StaticResource StringEquals}" ConverterParameter="#8AA872">
+                      <Ctor xmlns="https://github.com/icsharpcode/ILSpy">AccentColor</Ctor>
+                    </Binding>
+                  </ToggleButton.IsChecked>
+                </RadioButton>
+                <RadioButton FrameworkElement.Style="{StaticResource AccentSwatchStyle}" Control.Background="#6E9CB8" FrameworkElement.ToolTip="Steel">
+                  <ToggleButton.IsChecked>
+                    <Binding Mode="TwoWay" Converter="{StaticResource StringEquals}" ConverterParameter="#6E9CB8">
+                      <Ctor xmlns="https://github.com/icsharpcode/ILSpy">AccentColor</Ctor>
+                    </Binding>
+                  </ToggleButton.IsChecked>
+                </RadioButton>
+                <RadioButton FrameworkElement.Style="{StaticResource AccentSwatchStyle}" Control.Background="#B0A0D0" FrameworkElement.ToolTip="Orchid">
+                  <ToggleButton.IsChecked>
+                    <Binding Mode="TwoWay" Converter="{StaticResource StringEquals}" ConverterParameter="#B0A0D0">
+                      <Ctor xmlns="https://github.com/icsharpcode/ILSpy">AccentColor</Ctor>
+                    </Binding>
+                  </ToggleButton.IsChecked>
+                </RadioButton>
+              </StackPanel>
+            </StackPanel>
+            <Grid FrameworkElement.Style="{StaticResource RowStyle}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <StackPanel Grid.Column="0" FrameworkElement.Margin="0,0,20,0">
+                <TextBlock Text="Minimap" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" />
+                <TextBlock Text="Overview of the file down the right edge." FrameworkElement.Style="{StaticResource SettingsHintStyle}" />
+              </StackPanel>
+              <ToggleButton Grid.Column="1" FrameworkElement.VerticalAlignment="Center" FrameworkElement.Style="{StaticResource ToggleSwitchStyle}">
+                <ToggleButton.IsChecked>
+                  <Binding Mode="TwoWay">
+                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">ShowMinimap</Ctor>
+                  </Binding>
+                </ToggleButton.IsChecked>
+              </ToggleButton>
+            </Grid>
+            <Grid FrameworkElement.Style="{StaticResource RowStyle}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <StackPanel Grid.Column="0" FrameworkElement.Margin="0,0,20,0">
+                <TextBlock Text="Line numbers" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" />
+              </StackPanel>
+              <ToggleButton Grid.Column="1" FrameworkElement.VerticalAlignment="Center" FrameworkElement.Style="{StaticResource ToggleSwitchStyle}">
+                <ToggleButton.IsChecked>
+                  <Binding Mode="TwoWay">
+                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">ShowLineNumbers</Ctor>
+                  </Binding>
+                </ToggleButton.IsChecked>
+              </ToggleButton>
+            </Grid>
+            <Grid FrameworkElement.Style="{StaticResource RowStyle}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <StackPanel Grid.Column="0" FrameworkElement.Margin="0,0,20,0">
+                <TextBlock Text="Smooth scrolling" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" />
+                <TextBlock Text="Animate the editor when scrolling or jumping." FrameworkElement.Style="{StaticResource SettingsHintStyle}" />
+              </StackPanel>
+              <ToggleButton Grid.Column="1" FrameworkElement.VerticalAlignment="Center" FrameworkElement.Style="{StaticResource ToggleSwitchStyle}">
+                <ToggleButton.IsChecked>
+                  <Binding Mode="TwoWay">
+                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">SmoothScrolling</Ctor>
+                  </Binding>
+                </ToggleButton.IsChecked>
+              </ToggleButton>
+            </Grid>
+            <Grid FrameworkElement.Style="{StaticResource RowStyle}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <StackPanel Grid.Column="0" FrameworkElement.Margin="0,0,20,0">
+                <TextBlock Text="Splash screen" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" />
+                <TextBlock Text="Show the logo while the editor loads. Takes effect next launch." FrameworkElement.Style="{StaticResource SettingsHintStyle}" />
+              </StackPanel>
+              <ToggleButton Grid.Column="1" FrameworkElement.VerticalAlignment="Center" FrameworkElement.Style="{StaticResource ToggleSwitchStyle}">
+                <ToggleButton.IsChecked>
+                  <Binding Mode="TwoWay">
+                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">ShowSplash</Ctor>
+                  </Binding>
+                </ToggleButton.IsChecked>
+              </ToggleButton>
+            </Grid>
+          </StackPanel>
+        </ScrollViewer>
+      </TabItem>
+      <TabItem HeaderedContentControl.Header="Files">
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+          <StackPanel FrameworkElement.Style="{StaticResource PageStyle}">
+            <StackPanel FrameworkElement.Margin="0,0,0,24">
+              <TextBlock Text="Scripts folder" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" />
+              <TextBlock Text="The folder the explorer reads. Avoid putting scripts inside the app's build output — a rebuild can wipe it." FrameworkElement.Style="{StaticResource SettingsHintStyle}" />
+              <Border FrameworkElement.Margin="0,10,0,0" Background="#1C1C24" BorderBrush="{StaticResource BorderStrokeBrush}" BorderThickness="1" CornerRadius="3" Padding="9,6">
+                <TextBlock FontFamily="{StaticResource BodyFont}" FontSize="11" Foreground="{StaticResource TabForegroundBrush}" TextTrimming="CharacterEllipsis">
+                  <TextBlock.Text>
+                    <Binding>
+                      <Ctor xmlns="https://github.com/icsharpcode/ILSpy">ScriptsFolder</Ctor>
+                    </Binding>
+                  </TextBlock.Text>
+                </TextBlock>
+              </Border>
+              <StackPanel Orientation="Horizontal" FrameworkElement.Margin="0,8,0,0">
+                <Button FrameworkElement.Style="{StaticResource SettingsTextButtonStyle}" ContentControl.Content="Change folder…">
+                  <!--Unknown connection ID: 6-->
+                </Button>
+                <TextBlock Text="·" FrameworkElement.Margin="8,0" Foreground="{StaticResource TabForegroundBrush}" FrameworkElement.VerticalAlignment="Center" />
+                <Button FrameworkElement.Style="{StaticResource SettingsTextButtonStyle}" ContentControl.Content="Use default">
+                  <!--Unknown connection ID: 7-->
+                </Button>
+                <TextBlock Text="·" FrameworkElement.Margin="8,0" Foreground="{StaticResource TabForegroundBrush}" FrameworkElement.VerticalAlignment="Center" />
+                <Button FrameworkElement.Style="{StaticResource SettingsTextButtonStyle}" ContentControl.Content="Open in File Explorer">
+                  <!--Unknown connection ID: 8-->
+                </Button>
+              </StackPanel>
+            </StackPanel>
+            <Grid FrameworkElement.Style="{StaticResource RowStyle}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <StackPanel Grid.Column="0" FrameworkElement.Margin="0,0,20,0">
+                <TextBlock Text="Auto save" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" />
+                <TextBlock Text="Save files that already have a path shortly after you stop typing. Untitled tabs still need Ctrl+S." FrameworkElement.Style="{StaticResource SettingsHintStyle}" />
+              </StackPanel>
+              <ToggleButton Grid.Column="1" FrameworkElement.VerticalAlignment="Center" FrameworkElement.Style="{StaticResource ToggleSwitchStyle}">
+                <ToggleButton.IsChecked>
+                  <Binding Mode="TwoWay">
+                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">AutoSave</Ctor>
+                  </Binding>
+                </ToggleButton.IsChecked>
+              </ToggleButton>
+            </Grid>
+            <Grid FrameworkElement.Style="{StaticResource RowStyle}">
+              <UIElement.IsEnabled>
+                <Binding>
+                  <Ctor xmlns="https://github.com/icsharpcode/ILSpy">AutoSave</Ctor>
+                </Binding>
+              </UIElement.IsEnabled>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <StackPanel Grid.Column="0" FrameworkElement.Margin="0,0,20,0">
+                <TextBlock Text="Auto save delay" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" />
+                <TextBlock Text="Seconds of inactivity before saving." FrameworkElement.Style="{StaticResource SettingsHintStyle}" />
+              </StackPanel>
+              <StackPanel Grid.Column="1" Orientation="Horizontal" FrameworkElement.VerticalAlignment="Center">
+                <Button FrameworkElement.Style="{StaticResource StepperButtonStyle}" FrameworkElement.ToolTip="Shorter">
+                  <Path Data="{StaticResource IconMinus}" Shape.Stroke="{StaticResource TabForegroundActiveBrush}" Shape.StrokeThickness="1.2" Shape.StrokeStartLineCap="Round" Shape.StrokeEndLineCap="Round" FrameworkElement.Width="12" FrameworkElement.Height="12" Shape.Stretch="None" />
+                  <!--Unknown connection ID: 9-->
+                </Button>
+                <TextBlock FrameworkElement.Width="30" TextAlignment="Center" FontFamily="{StaticResource BodyFont}" FontSize="12" Foreground="{StaticResource TabForegroundActiveBrush}" FrameworkElement.VerticalAlignment="Center">
+                  <TextBlock.Text>
+                    <Binding>
+                      <Ctor xmlns="https://github.com/icsharpcode/ILSpy">AutoSaveDelaySeconds</Ctor>
+                    </Binding>
+                  </TextBlock.Text>
+                </TextBlock>
+                <Button FrameworkElement.Style="{StaticResource StepperButtonStyle}" FrameworkElement.ToolTip="Longer">
+                  <Path Data="{StaticResource IconPlus}" Shape.Stroke="{StaticResource TabForegroundActiveBrush}" Shape.StrokeThickness="1.2" Shape.StrokeStartLineCap="Round" Shape.StrokeEndLineCap="Round" FrameworkElement.Width="12" FrameworkElement.Height="12" Shape.Stretch="None" />
+                  <!--Unknown connection ID: 10-->
+                </Button>
+              </StackPanel>
+            </Grid>
+          </StackPanel>
+        </ScrollViewer>
+      </TabItem>
+      <TabItem HeaderedContentControl.Header="Script Hub">
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+          <StackPanel FrameworkElement.Style="{StaticResource PageStyle}">
+            <TextBlock Text="rscripts.net API key" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" />
+            <TextBlock FrameworkElement.Style="{StaticResource SettingsHintStyle}" TextWrapping="Wrap">
+              <Run Text="The hub uses the rscripts.net public API, which needs a key. Create one from your dashboard, then paste it here. It is stored encrypted for your Windows account, not in plain text." />
+            </TextBlock>
+            <Border FrameworkElement.Margin="0,10,0,0" Background="#1C1C24" BorderBrush="{StaticResource BorderStrokeBrush}" BorderThickness="1" CornerRadius="3">
+              <PasswordBox Name="ApiKeyBox" Control.Padding="9,6" Control.Background="#00FFFFFF" Control.BorderThickness="0" Control.Foreground="{StaticResource TabForegroundActiveBrush}" CaretBrush="{StaticResource TabForegroundActiveBrush}" Control.FontFamily="{StaticResource BodyFont}" Control.FontSize="11">
+                <!--Unknown connection ID: 11-->
+              </PasswordBox>
+            </Border>
+            <StackPanel Orientation="Horizontal" FrameworkElement.Margin="0,8,0,0">
+              <Button FrameworkElement.Style="{StaticResource SettingsTextButtonStyle}" ContentControl.Content="Get an API key">
+                <!--Unknown connection ID: 12-->
+              </Button>
+              <TextBlock Text="·" FrameworkElement.Margin="8,0" Foreground="{StaticResource TabForegroundBrush}" FrameworkElement.VerticalAlignment="Center" />
+              <Button FrameworkElement.Style="{StaticResource SettingsTextButtonStyle}" ContentControl.Content="Clear key">
+                <!--Unknown connection ID: 13-->
+              </Button>
+            </StackPanel>
+            <TextBlock FrameworkElement.Margin="0,10,0,0" FrameworkElement.Style="{StaticResource SettingsHintStyle}" Foreground="{StaticResource OutputSuccessBrush}" Text="Key saved.">
+              <UIElement.Visibility>
+                <Binding Converter="{StaticResource BoolToVisibility}">
+                  <Ctor xmlns="https://github.com/icsharpcode/ILSpy">HasScriptHubApiKey</Ctor>
+                </Binding>
+              </UIElement.Visibility>
+            </TextBlock>
+            <Border FrameworkElement.Height="1" Background="{StaticResource BorderStrokeBrush}" FrameworkElement.Margin="0,20,0,18" />
+            <TextBlock Text="SAFETY" FrameworkElement.Style="{StaticResource SettingsSectionStyle}" />
+            <TextBlock FrameworkElement.Style="{StaticResource SettingsHintStyle}" TextWrapping="Wrap" Text="rscripts.net screens uploads and hides high-risk scripts from the API, and each result carries a risk score. A script with no score has not been scanned — that is not the same as safe. Read anything before you run it." />
+          </StackPanel>
+        </ScrollViewer>
+      </TabItem>
+      <TabItem HeaderedContentControl.Header="AI">
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+          <StackPanel FrameworkElement.Style="{StaticResource PageStyle}">
+            <Grid FrameworkElement.Style="{StaticResource RowStyle}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <StackPanel Grid.Column="0" FrameworkElement.Margin="0,0,20,0">
+                <TextBlock Text="Inline suggestions" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" />
+                <TextBlock FrameworkElement.Style="{StaticResource SettingsHintStyle}" Text="Suggests the rest of a line or block as grey text. Press Tab to accept." />
+              </StackPanel>
+              <ToggleButton Grid.Column="1" FrameworkElement.VerticalAlignment="Center" FrameworkElement.Style="{StaticResource ToggleSwitchStyle}">
+                <ToggleButton.IsChecked>
+                  <Binding Mode="TwoWay">
+                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">AiCompletionEnabled</Ctor>
+                  </Binding>
+                </ToggleButton.IsChecked>
+              </ToggleButton>
+            </Grid>
+            <Border FrameworkElement.Height="1" Background="{StaticResource BorderStrokeBrush}" FrameworkElement.Margin="0,10,0,18" />
+            <TextBlock Text="PROVIDER" FrameworkElement.Style="{StaticResource SettingsSectionStyle}" />
+            <TextBlock FrameworkElement.Style="{StaticResource SettingsHintStyle}" TextWrapping="Wrap" Text="GitHub Copilot needs a Copilot subscription — Copilot Free covers casual use. Velocity's own server runs against any OpenAI-compatible endpoint with your own key." />
+            <StackPanel Orientation="Horizontal" FrameworkElement.Margin="0,12,0,0">
+              <RadioButton ContentControl.Content="GitHub Copilot" GroupName="AiProvider" Control.Foreground="{StaticResource TabForegroundActiveBrush}" Control.FontFamily="{StaticResource BodyFont}" Control.FontSize="12" Control.VerticalContentAlignment="Center">
+                <ToggleButton.IsChecked>
+                  <Binding Mode="TwoWay" Converter="{StaticResource StringEquals}" ConverterParameter="copilot">
+                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">AiProvider</Ctor>
+                  </Binding>
+                </ToggleButton.IsChecked>
+              </RadioButton>
+              <RadioButton ContentControl.Content="Velocity AI" GroupName="AiProvider" FrameworkElement.Margin="22,0,0,0" Control.Foreground="{StaticResource TabForegroundActiveBrush}" Control.FontFamily="{StaticResource BodyFont}" Control.FontSize="12" Control.VerticalContentAlignment="Center">
+                <ToggleButton.IsChecked>
+                  <Binding Mode="TwoWay" Converter="{StaticResource StringEquals}" ConverterParameter="velocity">
+                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">AiProvider</Ctor>
+                  </Binding>
+                </ToggleButton.IsChecked>
+              </RadioButton>
+            </StackPanel>
+            <StackPanel FrameworkElement.Margin="0,18,0,0">
+              <UIElement.Visibility>
+                <Binding Converter="{StaticResource BoolToVisibility}">
+                  <Ctor xmlns="https://github.com/icsharpcode/ILSpy">UsesCopilot</Ctor>
+                </Binding>
+              </UIElement.Visibility>
+              <TextBlock Text="GitHub account" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" />
+              <TextBlock FrameworkElement.Style="{StaticResource SettingsHintStyle}" TextWrapping="Wrap" Text="Signing in shows a code and opens GitHub in your browser. The first sign-in downloads GitHub's Copilot language server (about 111 MB), which is why it is not bundled." />
+              <StackPanel Orientation="Horizontal" FrameworkElement.Margin="0,10,0,0">
+                <Button FrameworkElement.Style="{StaticResource SettingsTextButtonStyle}" ContentControl.Content="Sign in to GitHub Copilot">
+                  <!--Unknown connection ID: 14-->
+                </Button>
+                <TextBlock Text="·" FrameworkElement.Margin="8,0" Foreground="{StaticResource TabForegroundBrush}" FrameworkElement.VerticalAlignment="Center" />
+                <Button FrameworkElement.Style="{StaticResource SettingsTextButtonStyle}" ContentControl.Content="Sign out">
+                  <!--Unknown connection ID: 15-->
+                </Button>
+              </StackPanel>
+            </StackPanel>
+            <StackPanel FrameworkElement.Margin="0,18,0,0">
+              <UIElement.Visibility>
+                <Binding Converter="{StaticResource InverseBoolToVisibility}">
+                  <Ctor xmlns="https://github.com/icsharpcode/ILSpy">UsesCopilot</Ctor>
+                </Binding>
+              </UIElement.Visibility>
+              <TextBlock Text="API key" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" />
+              <TextBlock FrameworkElement.Style="{StaticResource SettingsHintStyle}" TextWrapping="Wrap">
+                <Run Text="Suggestions run against your own account, so you control the model and the spend — Velocity never sees the key or the traffic. It is stored encrypted for your Windows account, not in plain text." />
+              </TextBlock>
+              <Border FrameworkElement.Margin="0,10,0,0" Background="#1C1C24" BorderBrush="{StaticResource BorderStrokeBrush}" BorderThickness="1" CornerRadius="3">
+                <PasswordBox Name="AiKeyBox" Control.Padding="9,6" Control.Background="#00FFFFFF" Control.BorderThickness="0" Control.Foreground="{StaticResource TabForegroundActiveBrush}" CaretBrush="{StaticResource TabForegroundActiveBrush}" Control.FontFamily="{StaticResource BodyFont}" Control.FontSize="11">
+                  <!--Unknown connection ID: 16-->
+                </PasswordBox>
+              </Border>
+              <StackPanel Orientation="Horizontal" FrameworkElement.Margin="0,8,0,0">
+                <Button FrameworkElement.Style="{StaticResource SettingsTextButtonStyle}" ContentControl.Content="Clear key">
+                  <!--Unknown connection ID: 17-->
+                </Button>
+              </StackPanel>
+              <TextBlock FrameworkElement.Margin="0,10,0,0" FrameworkElement.Style="{StaticResource SettingsHintStyle}" Foreground="{StaticResource OutputSuccessBrush}" Text="Key saved.">
+                <UIElement.Visibility>
+                  <Binding Converter="{StaticResource BoolToVisibility}">
+                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">HasAiApiKey</Ctor>
+                  </Binding>
+                </UIElement.Visibility>
+              </TextBlock>
+              <TextBlock FrameworkElement.Style="{StaticResource SettingsHintStyle}" TextWrapping="Wrap" FrameworkElement.Margin="0,18,0,0" Text="Any OpenAI-compatible endpoint works. Leave as-is for OpenAI, or point it at OpenRouter, or at a local Ollama server (http://localhost:11434/v1) to run offline for free." />
+              <TextBlock Text="Endpoint" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" FrameworkElement.Margin="0,14,0,0" />
+              <Border FrameworkElement.Margin="0,6,0,0" Background="#1C1C24" BorderBrush="{StaticResource BorderStrokeBrush}" BorderThickness="1" CornerRadius="3">
+                <TextBox Control.Padding="9,6" Control.Background="#00FFFFFF" Control.BorderThickness="0" Control.Foreground="{StaticResource TabForegroundActiveBrush}" TextBoxBase.CaretBrush="{StaticResource TabForegroundActiveBrush}" Control.FontFamily="{StaticResource BodyFont}" Control.FontSize="11">
+                  <TextBox.Text>
+                    <Binding Mode="TwoWay" UpdateSourceTrigger="LostFocus">
+                      <Ctor xmlns="https://github.com/icsharpcode/ILSpy">AiBaseUrl</Ctor>
+                    </Binding>
+                  </TextBox.Text>
+                </TextBox>
+              </Border>
+              <TextBlock Text="Model" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" FrameworkElement.Margin="0,14,0,0" />
+              <Border FrameworkElement.Margin="0,6,0,0" Background="#1C1C24" BorderBrush="{StaticResource BorderStrokeBrush}" BorderThickness="1" CornerRadius="3">
+                <TextBox Control.Padding="9,6" Control.Background="#00FFFFFF" Control.BorderThickness="0" Control.Foreground="{StaticResource TabForegroundActiveBrush}" TextBoxBase.CaretBrush="{StaticResource TabForegroundActiveBrush}" Control.FontFamily="{StaticResource BodyFont}" Control.FontSize="11">
+                  <TextBox.Text>
+                    <Binding Mode="TwoWay" UpdateSourceTrigger="LostFocus">
+                      <Ctor xmlns="https://github.com/icsharpcode/ILSpy">AiModel</Ctor>
+                    </Binding>
+                  </TextBox.Text>
+                </TextBox>
+              </Border>
+              <Grid FrameworkElement.Style="{StaticResource RowStyle}" FrameworkElement.Margin="0,20,0,0">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*" />
+                  <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" FrameworkElement.Margin="0,0,20,0">
+                  <TextBlock Text="Typing pause" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" />
+                  <TextBlock FrameworkElement.Style="{StaticResource SettingsHintStyle}" Text="Milliseconds of stillness before a suggestion is requested. Higher costs less." />
+                </StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" FrameworkElement.VerticalAlignment="Center">
+                  <Button FrameworkElement.Style="{StaticResource StepperButtonStyle}" FrameworkElement.ToolTip="Shorter">
+                    <Path Data="{StaticResource IconMinus}" Shape.Stroke="{StaticResource TabForegroundActiveBrush}" Shape.StrokeThickness="1.2" Shape.StrokeStartLineCap="Round" Shape.StrokeEndLineCap="Round" FrameworkElement.Width="12" FrameworkElement.Height="12" Shape.Stretch="None" />
+                    <!--Unknown connection ID: 18-->
+                  </Button>
+                  <TextBlock FrameworkElement.Width="44" TextAlignment="Center" FontFamily="{StaticResource BodyFont}" FontSize="12" Foreground="{StaticResource TabForegroundActiveBrush}" FrameworkElement.VerticalAlignment="Center">
+                    <TextBlock.Text>
+                      <Binding>
+                        <Ctor xmlns="https://github.com/icsharpcode/ILSpy">AiDebounceMs</Ctor>
+                      </Binding>
+                    </TextBlock.Text>
+                  </TextBlock>
+                  <Button FrameworkElement.Style="{StaticResource StepperButtonStyle}" FrameworkElement.ToolTip="Longer">
+                    <Path Data="{StaticResource IconPlus}" Shape.Stroke="{StaticResource TabForegroundActiveBrush}" Shape.StrokeThickness="1.2" Shape.StrokeStartLineCap="Round" Shape.StrokeEndLineCap="Round" FrameworkElement.Width="12" FrameworkElement.Height="12" Shape.Stretch="None" />
+                    <!--Unknown connection ID: 19-->
+                  </Button>
+                </StackPanel>
+              </Grid>
+            </StackPanel>
+            <Border FrameworkElement.Height="1" Background="{StaticResource BorderStrokeBrush}" FrameworkElement.Margin="0,20,0,18" />
+            <TextBlock Text="CLAUDE ACCOUNT" FrameworkElement.Style="{StaticResource SettingsSectionStyle}" />
+            <TextBlock FrameworkElement.Style="{StaticResource SettingsHintStyle}" TextWrapping="Wrap" Text="The Claude panel runs on your Anthropic account — your subscription, no API key and nothing billed per message. Sign-in opens in your browser." />
+            <Border FrameworkElement.Margin="0,12,0,0" Padding="11,9" Background="#1C1C24" BorderBrush="{StaticResource BorderStrokeBrush}" BorderThickness="1" CornerRadius="4">
+              <Grid>
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*" />
+                  <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" FrameworkElement.Margin="0,0,14,0">
+                  <TextBlock Name="ClaudeAccountLine" Text="Checking…" TextWrapping="Wrap" FontFamily="{StaticResource BodyFont}" FontSize="12" Foreground="{StaticResource TabForegroundActiveBrush}">
+                    <!--Unknown connection ID: 20-->
+                  </TextBlock>
+                  <TextBlock Name="ClaudeAccountDetail" FrameworkElement.Margin="0,3,0,0" TextWrapping="Wrap" FrameworkElement.Style="{StaticResource SettingsHintStyle}">
+                    <!--Unknown connection ID: 21-->
+                  </TextBlock>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" FrameworkElement.VerticalAlignment="Center">
+                  <Button Name="ClaudeConnectButton" FrameworkElement.Style="{StaticResource SettingsTextButtonStyle}" ContentControl.Content="Connect">
+                    <!--Unknown connection ID: 22-->
+                  </Button>
+                  <TextBlock Text="·" FrameworkElement.Margin="8,0" Foreground="{StaticResource TabForegroundBrush}" FrameworkElement.VerticalAlignment="Center" />
+                  <Button FrameworkElement.Style="{StaticResource SettingsTextButtonStyle}" ContentControl.Content="Refresh">
+                    <!--Unknown connection ID: 23-->
+                  </Button>
+                </StackPanel>
+              </Grid>
+            </Border>
+            <Border FrameworkElement.Height="1" Background="{StaticResource BorderStrokeBrush}" FrameworkElement.Margin="0,20,0,18" />
+            <TextBlock Text="CLAUDE PANEL" FrameworkElement.Style="{StaticResource SettingsSectionStyle}" />
+            <TextBlock FrameworkElement.Style="{StaticResource SettingsHintStyle}" TextWrapping="Wrap" Text="What the assistant may do inside Velocity." />
+            <Grid FrameworkElement.Style="{StaticResource RowStyle}" FrameworkElement.Margin="0,14,0,0">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <StackPanel Grid.Column="0" FrameworkElement.Margin="0,0,20,0">
+                <TextBlock Text="Let Claude use Velocity's tools" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" />
+                <TextBlock FrameworkElement.Style="{StaticResource SettingsHintStyle}" TextWrapping="Wrap" Text="Read and rewrite the open script, read the console, list clients. With this off it can still talk, but cannot see your editor." />
+              </StackPanel>
+              <ToggleButton Grid.Column="1" FrameworkElement.VerticalAlignment="Center" FrameworkElement.Style="{StaticResource ToggleSwitchStyle}">
+                <ToggleButton.IsChecked>
+                  <Binding Mode="TwoWay">
+                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">ClaudeToolsEnabled</Ctor>
+                  </Binding>
+                </ToggleButton.IsChecked>
+              </ToggleButton>
+            </Grid>
+            <Grid FrameworkElement.Style="{StaticResource RowStyle}">
+              <UIElement.IsEnabled>
+                <Binding>
+                  <Ctor xmlns="https://github.com/icsharpcode/ILSpy">ClaudeToolsEnabled</Ctor>
+                </Binding>
+              </UIElement.IsEnabled>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <StackPanel Grid.Column="0" FrameworkElement.Margin="0,0,20,0">
+                <TextBlock Text="Let Claude execute scripts" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" />
+                <TextBlock FrameworkElement.Style="{StaticResource SettingsHintStyle}" TextWrapping="Wrap" Text="Off by default. The other tools act on the editor; this one runs code in a live game, and the panel cannot prompt you first." />
+              </StackPanel>
+              <ToggleButton Grid.Column="1" FrameworkElement.VerticalAlignment="Center" FrameworkElement.Style="{StaticResource ToggleSwitchStyle}">
+                <ToggleButton.IsChecked>
+                  <Binding Mode="TwoWay">
+                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">ClaudeMayExecute</Ctor>
+                  </Binding>
+                </ToggleButton.IsChecked>
+              </ToggleButton>
+            </Grid>
+            <Border FrameworkElement.Height="1" Background="{StaticResource BorderStrokeBrush}" FrameworkElement.Margin="0,20,0,18" />
+            <TextBlock Text="WHAT GETS SENT" FrameworkElement.Style="{StaticResource SettingsSectionStyle}" />
+            <TextBlock FrameworkElement.Style="{StaticResource SettingsHintStyle}" TextWrapping="Wrap" Text="Each request sends the code around your cursor — up to roughly 4000 characters before it and 1500 after — to the endpoint above. Nothing is sent while this is switched off." />
+          </StackPanel>
+        </ScrollViewer>
+      </TabItem>
+      <TabItem HeaderedContentControl.Header="About">
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+          <StackPanel FrameworkElement.Style="{StaticResource PageStyle}">
+            <StackPanel Orientation="Horizontal" FrameworkElement.Margin="0,0,0,26">
+              <Image Source="/Assets/Logo.png" FrameworkElement.Width="44" FrameworkElement.Height="44" RenderOptions.BitmapScalingMode="HighQuality" FrameworkElement.VerticalAlignment="Center" />
+              <StackPanel FrameworkElement.Margin="14,0,0,0" FrameworkElement.VerticalAlignment="Center">
+                <FrameworkElement.DataContext>
+                  <Binding>
+                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">DataContext.Product</Ctor>
+                    <Binding.RelativeSource>
+                      <RelativeSource AncestorType="Window" />
+                    </Binding.RelativeSource>
+                  </Binding>
+                </FrameworkElement.DataContext>
+                <TextBlock Text="Velocity" FontFamily="{StaticResource BodyFont}" FontSize="16" Foreground="{StaticResource TabForegroundActiveBrush}" />
+                <TextBlock FrameworkElement.Style="{StaticResource SettingsHintStyle}" FrameworkElement.Margin="0,1,0,0">
+                  <Run Text="Version" /> <Run><Run.Text><Binding Mode="OneWay"><Ctor xmlns="https://github.com/icsharpcode/ILSpy">Version</Ctor></Binding></Run.Text></Run></TextBlock>
+                <TextBlock FrameworkElement.Style="{StaticResource SettingsHintStyle}" FrameworkElement.Margin="0,1,0,0">
+                  <Run Text="Supported" /> <Run><Run.Text><Binding Mode="OneWay"><Ctor xmlns="https://github.com/icsharpcode/ILSpy">Name</Ctor></Binding></Run.Text></Run> <Run Text="client:" /> <Run><Run.Text><Binding Mode="OneWay"><Ctor xmlns="https://github.com/icsharpcode/ILSpy">SupportedVersion</Ctor></Binding></Run.Text></Run></TextBlock>
+                <TextBlock FrameworkElement.Style="{StaticResource SettingsHintStyle}" FrameworkElement.Margin="0,3,0,0" Foreground="{StaticResource OutputWarningBrush}">
+                  <TextBlock.Text>
+                    <Binding Mode="OneWay" BindingBase.StringFormat="Offline — showing local version ({0})">
+                      <Ctor xmlns="https://github.com/icsharpcode/ILSpy">Error</Ctor>
+                    </Binding>
+                  </TextBlock.Text>
+                  <UIElement.Visibility>
+                    <Binding Mode="OneWay" Converter="{StaticResource NotEmptyToVisibility}">
+                      <Ctor xmlns="https://github.com/icsharpcode/ILSpy">Error</Ctor>
+                    </Binding>
+                  </UIElement.Visibility>
+                </TextBlock>
+              </StackPanel>
+            </StackPanel>
+            <TextBlock Text="EDITOR" FrameworkElement.Style="{StaticResource SettingsSectionStyle}" />
+            <TextBlock Text="Monaco 0.56.0, trimmed to Lua, hosted in WebView2 and served from disk — no network access required." FrameworkElement.Style="{StaticResource SettingsHintStyle}" FrameworkElement.Margin="0,0,0,24" />
+            <TextBlock Text="PATHS" FrameworkElement.Style="{StaticResource SettingsSectionStyle}" />
+            <TextBlock Text="Settings file" FrameworkElement.Style="{StaticResource SettingsLabelStyle}" />
+            <Border FrameworkElement.Margin="0,6,0,6" Background="#1C1C24" BorderBrush="{StaticResource BorderStrokeBrush}" BorderThickness="1" CornerRadius="3" Padding="9,6">
+              <TextBlock FontFamily="{StaticResource BodyFont}" FontSize="11" Foreground="{StaticResource TabForegroundBrush}" TextTrimming="CharacterEllipsis">
+                <TextBlock.Text>
+                  <Binding Mode="OneWay">
+                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">SettingsFilePath</Ctor>
+                  </Binding>
+                </TextBlock.Text>
+              </TextBlock>
+            </Border>
+            <Button FrameworkElement.Style="{StaticResource SettingsTextButtonStyle}" ContentControl.Content="Show in File Explorer" FrameworkElement.HorizontalAlignment="Left">
+              <!--Unknown connection ID: 24-->
+            </Button>
+          </StackPanel>
+        </ScrollViewer>
+      </TabItem>
+    </TabControl>
+  </Grid>
+</UserControl>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Editor</title>
+<link rel="stylesheet" href="https://scripteditor.assets/monaco/vs/editor/editor.main.css" />
+<style>
+    html, body, #container {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: #141419;
+    }
+    /* Hidden until a model is attached, so the WPF empty state shows through. */
+    #container.idle { visibility: hidden; }
+</style>
+</head>
+<body>
+<div id="container" class="idle"></div>
+
+<script src="https://scripteditor.assets/monaco/vs/loader.js"></script>
+<!-- lsp.js first: editor.js references Lsp while wiring the editor up. -->
+<script src="lsp.js"></script>
+<script src="editor.js"></script>
+</body>
+</html>

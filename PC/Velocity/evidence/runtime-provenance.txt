@@ -1,0 +1,23 @@
+Collection date: 2026-11-01 UTC
+
+Payload repository:
+  https://gitlab.com/absolutetanker/donottouchplease
+  commit: 6a42c9fd08dc611a978604bffe18215f95c2f695
+  authored: 2026-04-06T02:03:13Z
+
+Decompiler.exe:
+  raw URL: https://gitlab.com/absolutetanker/donottouchplease/-/raw/main/Decompiler.exe
+  Git blob: 11099c8b5a4efeb0b2f1f92c979b65671299417d
+  latest path commit: c56b7817e8eedfba7702289a42f481c7bfa4f057
+
+erto3e4rortoergn.exe:
+  raw URL: https://gitlab.com/absolutetanker/donottouchplease/-/raw/main/erto3e4rortoergn.exe
+  Git blob: bd1c1e4ec62d828f3b414bcc6f286f41f9040c82
+  latest path commit: 6a42c9fd08dc611a978604bffe18215f95c2f695
+
+Correlated decompiler source:
+  https://github.com/xeonise/medal2
+  analyzed source snapshot commit: 7e80ce9f21b8268b995b09d48d58be3f1e89ae8c
+
+The two executable files were downloaded for static inspection only and were not
+launched. Runnable samples are intentionally omitted from the recovery archive.

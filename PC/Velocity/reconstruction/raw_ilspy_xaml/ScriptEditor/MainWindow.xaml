@@ -1,0 +1,736 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window x:Class="ScriptEditor.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:shell="clr-namespace:System.Windows.Shell;assembly=PresentationFramework" xmlns:controls="clr-namespace:ScriptEditor.Controls" Window.Title="Velocity" FrameworkElement.Width="993" FrameworkElement.Height="608" FrameworkElement.MinWidth="630" FrameworkElement.MinHeight="420" Window.WindowStyle="None" Window.ResizeMode="CanResize" Control.Background="#00FFFFFF" FrameworkElement.UseLayoutRounding="True" UIElement.SnapsToDevicePixels="True" xmlns:media="clr-namespace:System.Windows.Media;assembly=PresentationFramework" media:TextOptions.TextFormattingMode="Ideal" media:TextOptions.TextRenderingMode="ClearType" xmlns:scripteditor="clr-namespace:ScriptEditor">
+  <shell:WindowChrome.WindowChrome>
+    <shell:WindowChrome CaptionHeight="36" ResizeBorderThickness="5" GlassFrameThickness="0,0,0,1" CornerRadius="0" UseAeroCaptionButtons="False" />
+  </shell:WindowChrome.WindowChrome>
+  <Border Name="RootBorder" Background="{StaticResource BackgroundPrimaryBrush}" BorderBrush="{StaticResource BorderStrokeBrush}" BorderThickness="1">
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="36" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="22" />
+      </Grid.RowDefinitions>
+      <Border Grid.Row="0" Background="{StaticResource ChromeBackgroundBrush}" BorderBrush="{StaticResource BorderStrokeBrush}" BorderThickness="0,0,0,1">
+        <Grid>
+          <Image Source="Assets/Logo.png" FrameworkElement.Width="22" FrameworkElement.Height="22" FrameworkElement.HorizontalAlignment="Left" FrameworkElement.VerticalAlignment="Center" FrameworkElement.Margin="12,0,0,0" RenderOptions.BitmapScalingMode="HighQuality" />
+          <StackPanel Orientation="Horizontal" FrameworkElement.HorizontalAlignment="Right" FrameworkElement.VerticalAlignment="Center" FrameworkElement.Margin="0,0,6,0">
+            <Button FrameworkElement.Style="{StaticResource CaptionButtonStyle}" ContentControl.Content="">
+              <!--Unknown connection ID: 3-->
+            </Button>
+            <Button Name="MaximizeButton" FrameworkElement.Style="{StaticResource CaptionButtonStyle}" ContentControl.Content="">
+              <!--Unknown connection ID: 4-->
+            </Button>
+            <Button FrameworkElement.Style="{StaticResource CaptionCloseButtonStyle}" ContentControl.Content="">
+              <!--Unknown connection ID: 5-->
+            </Button>
+          </StackPanel>
+        </Grid>
+      </Border>
+      <Grid Row="1">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="51" />
+          <ColumnDefinition Width="Auto" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" Background="{StaticResource ChromeBackgroundBrush}" BorderBrush="{StaticResource BorderStrokeBrush}" BorderThickness="0,0,1,0">
+          <Grid>
+            <StackPanel FrameworkElement.HorizontalAlignment="Center" FrameworkElement.VerticalAlignment="Top" FrameworkElement.Margin="0,9,0,0">
+              <ToggleButton Name="ExplorerToggle" FrameworkElement.Style="{StaticResource SidebarToggleButtonStyle}" FrameworkElement.ToolTip="Explorer">
+                <Viewbox FrameworkElement.Width="30" FrameworkElement.Height="30">
+                  <Canvas FrameworkElement.Width="20" FrameworkElement.Height="20">
+                    <Path Data="{StaticResource IconFileCopy}" Shape.Fill="{StaticResource IconFillBrush}" />
+                  </Canvas>
+                </Viewbox>
+                <!--Unknown connection ID: 6-->
+              </ToggleButton>
+              <ToggleButton Name="HubToggle" FrameworkElement.Style="{StaticResource SidebarToggleButtonStyle}" FrameworkElement.Margin="0,12,0,0" FrameworkElement.ToolTip="Script Hub">
+                <Viewbox FrameworkElement.Width="30" FrameworkElement.Height="30">
+                  <Canvas FrameworkElement.Width="20" FrameworkElement.Height="20">
+                    <Path Data="{StaticResource IconHub}" Shape.Stroke="{StaticResource IconFillBrush}" Shape.StrokeThickness="1.4" Shape.StrokeStartLineCap="Round" Shape.StrokeEndLineCap="Round" Shape.StrokeLineJoin="Round" />
+                  </Canvas>
+                </Viewbox>
+                <!--Unknown connection ID: 7-->
+              </ToggleButton>
+              <ToggleButton Name="ClaudeToggle" FrameworkElement.Style="{StaticResource SidebarToggleButtonStyle}" FrameworkElement.Margin="0,12,0,0" FrameworkElement.ToolTip="Ask Claude">
+                <Viewbox FrameworkElement.Width="30" FrameworkElement.Height="30">
+                  <Canvas FrameworkElement.Width="20" FrameworkElement.Height="20">
+                    <Path Data="{StaticResource IconChat}" Shape.Stroke="{StaticResource IconFillBrush}" Shape.StrokeThickness="1.4" Shape.StrokeStartLineCap="Round" Shape.StrokeEndLineCap="Round" Shape.StrokeLineJoin="Round" />
+                  </Canvas>
+                </Viewbox>
+                <!--Unknown connection ID: 8-->
+              </ToggleButton>
+              <ToggleButton Name="ClientsToggle" FrameworkElement.Style="{StaticResource SidebarToggleButtonStyle}" FrameworkElement.Margin="0,12,0,0" FrameworkElement.ToolTip="Clients">
+                <Rectangle FrameworkElement.Width="30" FrameworkElement.Height="30" Shape.Fill="{StaticResource IconFillBrush}" RenderOptions.BitmapScalingMode="HighQuality">
+                  <UIElement.OpacityMask>
+                    <ImageBrush ImageSource="{StaticResource IconClientsImage}" TileBrush.Stretch="Uniform" />
+                  </UIElement.OpacityMask>
+                </Rectangle>
+                <!--Unknown connection ID: 9-->
+              </ToggleButton>
+            </StackPanel>
+            <StackPanel FrameworkElement.HorizontalAlignment="Center" FrameworkElement.VerticalAlignment="Bottom" FrameworkElement.Margin="0,0,0,15">
+              <ToggleButton Name="SettingsToggle" FrameworkElement.Style="{StaticResource SidebarToggleButtonStyle}" FrameworkElement.ToolTip="Settings">
+                <Viewbox FrameworkElement.Width="30" FrameworkElement.Height="30">
+                  <Canvas FrameworkElement.Width="20" FrameworkElement.Height="20">
+                    <Path Data="{StaticResource IconSettings}" Shape.Fill="{StaticResource IconFillBrush}" />
+                  </Canvas>
+                </Viewbox>
+                <!--Unknown connection ID: 10-->
+              </ToggleButton>
+            </StackPanel>
+          </Grid>
+        </Border>
+        <Border Name="SidePanel" Grid.Column="1" FrameworkElement.Width="0" UIElement.Visibility="Collapsed" UIElement.ClipToBounds="True" Background="#00FFFFFF">
+          <Border Name="SidePanelContent" Background="{StaticResource ExplorerBackgroundBrush}" BorderBrush="{StaticResource BorderStrokeBrush}" BorderThickness="0,0,1,0">
+            <UIElement.RenderTransform>
+              <TranslateTransform x:Name="SidePanelSlide">
+                <!--Unknown connection ID: 13-->
+              </TranslateTransform>
+            </UIElement.RenderTransform>
+            <Grid>
+              <Grid Name="ExplorerContent" FrameworkElement.Width="196">
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="Auto" />
+                  <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid Row="0" FrameworkElement.Margin="12,13,8,8">
+                  <TextBlock Text="SCRIPTS" FontFamily="{StaticResource BodyFont}" FontSize="10" Foreground="{StaticResource TabForegroundBrush}" FrameworkElement.VerticalAlignment="Center" />
+                  <StackPanel Orientation="Horizontal" FrameworkElement.HorizontalAlignment="Right">
+                    <Button FrameworkElement.Style="{StaticResource ExplorerActionButtonStyle}" FrameworkElement.ToolTip="Show folder in File Explorer">
+                      <Path Data="{StaticResource IconFolder}" Shape.Stroke="{StaticResource TabForegroundActiveBrush}" Shape.StrokeThickness="1.1" FrameworkElement.Width="12" FrameworkElement.Height="12" Shape.Stretch="None" />
+                      <!--Unknown connection ID: 15-->
+                    </Button>
+                    <Button FrameworkElement.Style="{StaticResource ExplorerActionButtonStyle}" FrameworkElement.ToolTip="Refresh">
+                      <Path Data="{StaticResource IconRefresh}" Shape.Stroke="{StaticResource TabForegroundActiveBrush}" Shape.StrokeThickness="1.1" Shape.StrokeStartLineCap="Round" Shape.StrokeEndLineCap="Round" FrameworkElement.Width="12" FrameworkElement.Height="12" Shape.Stretch="None" />
+                      <!--Unknown connection ID: 16-->
+                    </Button>
+                  </StackPanel>
+                </Grid>
+                <Grid Row="1">
+                  <TreeView Name="ScriptsTree" FrameworkElement.Style="{StaticResource ScriptTreeStyle}" FrameworkElement.Margin="6,0,4,8">
+                    <ItemsControl.ItemsSource>
+                      <Binding>
+                        <Ctor xmlns="https://github.com/icsharpcode/ILSpy">Scripts.Nodes</Ctor>
+                      </Binding>
+                    </ItemsControl.ItemsSource>
+                    <ItemsControl.ItemTemplate>
+                      <HierarchicalDataTemplate>
+                        <HierarchicalDataTemplate.ItemsSource>
+                          <Binding>
+                            <Ctor xmlns="https://github.com/icsharpcode/ILSpy">Children</Ctor>
+                          </Binding>
+                        </HierarchicalDataTemplate.ItemsSource>
+                        <StackPanel Orientation="Horizontal" FrameworkElement.Margin="0,0,0,0">
+                          <Path Shape.StrokeThickness="1.1" FrameworkElement.Width="12" FrameworkElement.Height="12" Shape.Stretch="None" FrameworkElement.VerticalAlignment="Center">
+                            <Path.Data>
+                              <Binding Converter="{StaticResource NodeIcon}">
+                                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">IsDirectory</Ctor>
+                              </Binding>
+                            </Path.Data>
+                            <Shape.Stroke>
+                              <Binding>
+                                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">Foreground</Ctor>
+                                <Binding.RelativeSource>
+                                  <RelativeSource AncestorType="TreeViewItem" />
+                                </Binding.RelativeSource>
+                              </Binding>
+                            </Shape.Stroke>
+                          </Path>
+                          <TextBlock FrameworkElement.Margin="6,0,0,0" FontFamily="{StaticResource BodyFont}" FontSize="11" TextTrimming="CharacterEllipsis" FrameworkElement.VerticalAlignment="Center">
+                            <TextBlock.Text>
+                              <Binding>
+                                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">Name</Ctor>
+                              </Binding>
+                            </TextBlock.Text>
+                            <TextBlock.Foreground>
+                              <Binding>
+                                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">Foreground</Ctor>
+                                <Binding.RelativeSource>
+                                  <RelativeSource AncestorType="TreeViewItem" />
+                                </Binding.RelativeSource>
+                              </Binding>
+                            </TextBlock.Foreground>
+                          </TextBlock>
+                        </StackPanel>
+                      </HierarchicalDataTemplate>
+                    </ItemsControl.ItemTemplate>
+                    <!--Unknown connection ID: 17-->
+                  </TreeView>
+                  <TextBlock FrameworkElement.Margin="12,0,12,0" FrameworkElement.VerticalAlignment="Top" FontFamily="{StaticResource BodyFont}" FontSize="11" Foreground="{StaticResource TabForegroundBrush}" TextWrapping="Wrap">
+                    <UIElement.Visibility>
+                      <Binding Converter="{StaticResource BoolToVisibility}">
+                        <Ctor xmlns="https://github.com/icsharpcode/ILSpy">Scripts.IsEmpty</Ctor>
+                      </Binding>
+                    </UIElement.Visibility>
+                    <Run Text="No scripts yet." />
+                    <LineBreak />
+                    <Hyperlink TextElement.Foreground="{StaticResource TabForegroundActiveBrush}" Inline.TextDecorations="None">New script<!--Unknown connection ID: 18--></Hyperlink>
+                  </TextBlock>
+                </Grid>
+                <!--Unknown connection ID: 14-->
+              </Grid>
+              <Grid Name="ClaudeContent" FrameworkElement.Width="340" UIElement.Visibility="Collapsed">
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="Auto" />
+                  <RowDefinition Height="*" />
+                  <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid Row="0" FrameworkElement.Margin="12,10,8,8">
+                  <TextBlock Text="CLAUDE" FontFamily="{StaticResource BodyFont}" FontSize="10" Foreground="{StaticResource TabForegroundBrush}" FrameworkElement.VerticalAlignment="Center" />
+                  <StackPanel Orientation="Horizontal" FrameworkElement.HorizontalAlignment="Right" FrameworkElement.VerticalAlignment="Center">
+                    <ComboBox Name="ClaudeModelPicker" FrameworkElement.Style="{StaticResource EditableComboBoxStyle}" FrameworkElement.Width="132" FrameworkElement.Height="24" FrameworkElement.Margin="0,0,6,0" FrameworkElement.ToolTip="Model for this panel — pick an alias or type a full model ID">
+                      <!--Unknown connection ID: 20-->
+                    </ComboBox>
+                    <Button FrameworkElement.Style="{StaticResource ExplorerActionButtonStyle}" FrameworkElement.Margin="0,0,2,0" FrameworkElement.ToolTip="Look for model versions">
+                      <Path Data="{StaticResource IconRefresh}" Shape.Stroke="{StaticResource TabForegroundActiveBrush}" Shape.StrokeThickness="1.2" Shape.StrokeStartLineCap="Round" Shape.StrokeEndLineCap="Round" FrameworkElement.Width="12" FrameworkElement.Height="12" Shape.Stretch="None" />
+                      <!--Unknown connection ID: 21-->
+                    </Button>
+                    <Button FrameworkElement.Style="{StaticResource ExplorerActionButtonStyle}" FrameworkElement.Margin="0,0,2,0" FrameworkElement.ToolTip="Saved conversations">
+                      <Path Data="{StaticResource IconHistory}" Shape.Stroke="{StaticResource TabForegroundActiveBrush}" Shape.StrokeThickness="1.2" Shape.StrokeStartLineCap="Round" Shape.StrokeEndLineCap="Round" FrameworkElement.Width="12" FrameworkElement.Height="12" Shape.Stretch="None" />
+                      <!--Unknown connection ID: 22-->
+                    </Button>
+                    <Button FrameworkElement.Style="{StaticResource ExplorerActionButtonStyle}" FrameworkElement.ToolTip="Start a new conversation">
+                      <Path Data="{StaticResource IconPlus}" Shape.Stroke="{StaticResource TabForegroundActiveBrush}" Shape.StrokeThickness="1.2" Shape.StrokeStartLineCap="Round" Shape.StrokeEndLineCap="Round" FrameworkElement.Width="12" FrameworkElement.Height="12" Shape.Stretch="None" />
+                      <!--Unknown connection ID: 23-->
+                    </Button>
+                  </StackPanel>
+                </Grid>
+                <ScrollViewer Name="ClaudeScroller" Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Control.Padding="12,0,10,8">
+                  <StackPanel Name="ClaudeMessages">
+                    <StackPanel Name="ClaudeIntro">
+                      <TextBlock TextWrapping="Wrap" FontFamily="{StaticResource BodyFont}" FontSize="11" Foreground="{StaticResource TabForegroundBrush}" Text="Ask about the script you have open. Runs on your Anthropic account — no API key." />
+                      <TextBlock FrameworkElement.Margin="0,10,0,0" TextWrapping="Wrap" FontFamily="{StaticResource BodyFont}" FontSize="11" Foreground="{StaticResource TabForegroundBrush}" Text="Slash commands work too — /mcp, /config, /model, /effort, or any skill you have installed. Ctrl+/ lists them." />
+                      <!--Unknown connection ID: 26-->
+                    </StackPanel>
+                    <!--Unknown connection ID: 25-->
+                  </StackPanel>
+                  <!--Unknown connection ID: 24-->
+                </ScrollViewer>
+                <Grid Row="2" FrameworkElement.Margin="10,0,10,10">
+                  <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                  </Grid.RowDefinitions>
+                  <Border Grid.Row="0" Background="#1C1C24" BorderBrush="{StaticResource BorderStrokeBrush}" BorderThickness="1" CornerRadius="4">
+                    <TextBox Name="ClaudePrompt" Control.Padding="8,7" FrameworkElement.MinHeight="54" FrameworkElement.MaxHeight="130" Control.Background="#00FFFFFF" Control.BorderThickness="0" Control.Foreground="{StaticResource TabForegroundActiveBrush}" TextBoxBase.CaretBrush="{StaticResource TabForegroundActiveBrush}" Control.FontFamily="{StaticResource BodyFont}" Control.FontSize="11" TextWrapping="Wrap" TextBoxBase.AcceptsReturn="True" TextBoxBase.VerticalScrollBarVisibility="Auto">
+                      <!--Unknown connection ID: 27-->
+                    </TextBox>
+                  </Border>
+                  <Grid Row="1" FrameworkElement.Margin="0,7,0,0">
+                    <TextBlock Name="ClaudeStatus" FrameworkElement.VerticalAlignment="Center" FontFamily="{StaticResource BodyFont}" FontSize="10" TextTrimming="CharacterEllipsis" Foreground="{StaticResource TabForegroundBrush}">
+                      <!--Unknown connection ID: 28-->
+                    </TextBlock>
+                    <Button Name="ClaudeSend" FrameworkElement.HorizontalAlignment="Right" FrameworkElement.Style="{StaticResource SettingsTextButtonStyle}" ContentControl.Content="Send">
+                      <!--Unknown connection ID: 29-->
+                    </Button>
+                  </Grid>
+                </Grid>
+                <!--Unknown connection ID: 19-->
+              </Grid>
+              <Grid Name="ClientsContent" FrameworkElement.Width="196" UIElement.Visibility="Collapsed">
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="Auto" />
+                  <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid Row="0" FrameworkElement.Margin="12,13,8,8">
+                  <TextBlock Text="CLIENTS" FontFamily="{StaticResource BodyFont}" FontSize="10" Foreground="{StaticResource TabForegroundBrush}" FrameworkElement.VerticalAlignment="Center" />
+                  <TextBlock FrameworkElement.HorizontalAlignment="Right" FrameworkElement.VerticalAlignment="Center" FrameworkElement.Margin="0,0,8,0" FontFamily="{StaticResource BodyFont}" FontSize="10" Foreground="{StaticResource TabForegroundBrush}">
+                    <TextBlock.Text>
+                      <Binding>
+                        <Ctor xmlns="https://github.com/icsharpcode/ILSpy">Velocity.ClientCount</Ctor>
+                      </Binding>
+                    </TextBlock.Text>
+                  </TextBlock>
+                </Grid>
+                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Control.Padding="0,0,4,8">
+                  <ItemsControl>
+                    <ItemsControl.ItemsSource>
+                      <Binding>
+                        <Ctor xmlns="https://github.com/icsharpcode/ILSpy">Velocity.Clients</Ctor>
+                      </Binding>
+                    </ItemsControl.ItemsSource>
+                    <ItemsControl.ItemTemplate>
+                      <DataTemplate>
+                        <Border FrameworkElement.Margin="10,0,6,8" Background="#14FFFFFF" CornerRadius="4" Padding="9,8">
+                          <StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                              <Rectangle FrameworkElement.Width="18" FrameworkElement.Height="18" Shape.Fill="{StaticResource TabForegroundActiveBrush}" FrameworkElement.VerticalAlignment="Center" RenderOptions.BitmapScalingMode="HighQuality">
+                                <UIElement.OpacityMask>
+                                  <ImageBrush ImageSource="{StaticResource IconRobloxImage}" TileBrush.Stretch="Uniform" />
+                                </UIElement.OpacityMask>
+                              </Rectangle>
+                              <TextBlock FrameworkElement.Margin="8,0,0,0" FrameworkElement.VerticalAlignment="Center" FontFamily="{StaticResource BodyFont}" FontSize="12" Foreground="{StaticResource TabForegroundActiveBrush}">
+                                <TextBlock.Text>
+                                  <Binding>
+                                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">Title</Ctor>
+                                  </Binding>
+                                </TextBlock.Text>
+                              </TextBlock>
+                            </StackPanel>
+                            <Grid FrameworkElement.Margin="0,7,0,0">
+                              <TextBlock FontFamily="{StaticResource BodyFont}" FontSize="10.5" Foreground="{StaticResource TabForegroundBrush}">
+                                <TextBlock.Text>
+                                  <Binding>
+                                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">MemoryText</Ctor>
+                                  </Binding>
+                                </TextBlock.Text>
+                              </TextBlock>
+                              <TextBlock FrameworkElement.HorizontalAlignment="Right" FontFamily="{StaticResource BodyFont}" FontSize="10.5" Foreground="{StaticResource TabForegroundBrush}">
+                                <TextBlock.Text>
+                                  <Binding>
+                                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">UptimeText</Ctor>
+                                  </Binding>
+                                </TextBlock.Text>
+                              </TextBlock>
+                            </Grid>
+                            <TextBlock FrameworkElement.Margin="0,2,0,0" FontFamily="{StaticResource BodyFont}" FontSize="10.5">
+                              <TextBlock.Text>
+                                <Binding>
+                                  <Ctor xmlns="https://github.com/icsharpcode/ILSpy">StatusText</Ctor>
+                                </Binding>
+                              </TextBlock.Text>
+                              <FrameworkElement.Style>
+                                <Style>
+                                  <Style.TargetType>
+                                    <x:TypeExtension>
+                                      <Ctor xmlns="https://github.com/icsharpcode/ILSpy">TextBlock</Ctor>
+                                    </x:TypeExtension>
+                                  </Style.TargetType>
+                                  <Setter Property="TextBlock.Foreground" Value="{StaticResource TabForegroundBrush}" />
+                                  <Style.Triggers>
+                                    <DataTrigger Value="True">
+                                      <DataTrigger.Binding>
+                                        <Binding>
+                                          <Ctor xmlns="https://github.com/icsharpcode/ILSpy">IsAttached</Ctor>
+                                        </Binding>
+                                      </DataTrigger.Binding>
+                                      <Setter Property="TextBlock.Foreground" Value="{StaticResource OutputSuccessBrush}" />
+                                    </DataTrigger>
+                                  </Style.Triggers>
+                                </Style>
+                              </FrameworkElement.Style>
+                            </TextBlock>
+                            <Border FrameworkElement.Height="1" FrameworkElement.Margin="0,8,0,7" Background="{StaticResource BorderStrokeBrush}" />
+                            <Grid FrameworkElement.Margin="0,0,0,5">
+                              <TextBlock Text="Inject" FrameworkElement.VerticalAlignment="Center" FontFamily="{StaticResource BodyFont}" FontSize="11" Foreground="{StaticResource TabForegroundBrush}" />
+                              <ToggleButton FrameworkElement.HorizontalAlignment="Right" FrameworkElement.Style="{StaticResource ToggleSwitchStyle}" FrameworkElement.ToolTip="Allow injecting into this client">
+                                <ToggleButton.IsChecked>
+                                  <Binding Mode="TwoWay">
+                                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">InjectEnabled</Ctor>
+                                  </Binding>
+                                </ToggleButton.IsChecked>
+                              </ToggleButton>
+                            </Grid>
+                            <Grid>
+                              <TextBlock Text="Execute" FrameworkElement.VerticalAlignment="Center" FontFamily="{StaticResource BodyFont}" FontSize="11" Foreground="{StaticResource TabForegroundBrush}" />
+                              <ToggleButton FrameworkElement.HorizontalAlignment="Right" FrameworkElement.Style="{StaticResource ToggleSwitchStyle}" FrameworkElement.ToolTip="Run scripts on this client">
+                                <ToggleButton.IsChecked>
+                                  <Binding Mode="TwoWay">
+                                    <Ctor xmlns="https://github.com/icsharpcode/ILSpy">ExecuteEnabled</Ctor>
+                                  </Binding>
+                                </ToggleButton.IsChecked>
+                              </ToggleButton>
+                            </Grid>
+                            <Button FrameworkElement.Margin="0,9,0,0" FrameworkElement.Style="{StaticResource ClientTerminateButtonStyle}" ContentControl.Content="Terminate" FrameworkElement.ToolTip="Force-close this Roblox client">
+                              <!--Unknown connection ID: 31-->
+                            </Button>
+                          </StackPanel>
+                        </Border>
+                      </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                  </ItemsControl>
+                </ScrollViewer>
+                <TextBlock Grid.Row="1" FrameworkElement.Margin="12,2,12,0" FrameworkElement.VerticalAlignment="Top" FontFamily="{StaticResource BodyFont}" FontSize="11" Foreground="{StaticResource TabForegroundBrush}" TextWrapping="Wrap" Text="No Roblox clients running.">
+                  <UIElement.Visibility>
+                    <Binding Converter="{StaticResource ZeroToVisibility}">
+                      <Ctor xmlns="https://github.com/icsharpcode/ILSpy">Velocity.ClientCount</Ctor>
+                    </Binding>
+                  </UIElement.Visibility>
+                </TextBlock>
+                <!--Unknown connection ID: 30-->
+              </Grid>
+            </Grid>
+            <!--Unknown connection ID: 12-->
+          </Border>
+          <!--Unknown connection ID: 11-->
+        </Border>
+        <Thumb Name="SidePanelResizer" Grid.Column="1" FrameworkElement.Width="6" FrameworkElement.HorizontalAlignment="Right" FrameworkElement.Cursor="SizeWE">
+          <UIElement.Visibility>
+            <Binding ElementName="SidePanel">
+              <Ctor xmlns="https://github.com/icsharpcode/ILSpy">Visibility</Ctor>
+            </Binding>
+          </UIElement.Visibility>
+          <Control.Template>
+            <ControlTemplate>
+              <ControlTemplate.TargetType>
+                <x:TypeExtension>
+                  <Ctor xmlns="https://github.com/icsharpcode/ILSpy">Thumb</Ctor>
+                </x:TypeExtension>
+              </ControlTemplate.TargetType>
+              <Border Background="#00FFFFFF" />
+            </ControlTemplate>
+          </Control.Template>
+          <!--Unknown connection ID: 32-->
+        </Thumb>
+        <Grid Column="2">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="32" />
+            <RowDefinition Height="*" MinHeight="120" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Name="OutputRow" Height="210" MinHeight="110">
+              <!--Unknown connection ID: 33-->
+            </RowDefinition>
+          </Grid.RowDefinitions>
+          <Border Grid.Row="0" Background="{StaticResource ChromeBackgroundBrush}" BorderBrush="{StaticResource BorderStrokeBrush}" BorderThickness="0,0,0,1">
+            <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Disabled" PanningMode="HorizontalOnly">
+              <StackPanel Orientation="Horizontal">
+                <ItemsControl>
+                  <ItemsControl.ItemsSource>
+                    <Binding>
+                      <Ctor xmlns="https://github.com/icsharpcode/ILSpy">Tabs</Ctor>
+                    </Binding>
+                  </ItemsControl.ItemsSource>
+                  <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                      <StackPanel Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                  </ItemsControl.ItemsPanel>
+                  <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                      <ToggleButton FrameworkElement.Style="{StaticResource EditorTabStyle}">
+                        <ToggleButton.IsChecked>
+                          <Binding Mode="OneWay">
+                            <Ctor xmlns="https://github.com/icsharpcode/ILSpy">IsActive</Ctor>
+                          </Binding>
+                        </ToggleButton.IsChecked>
+                        <FrameworkElement.ToolTip>
+                          <Binding>
+                            <Ctor xmlns="https://github.com/icsharpcode/ILSpy">FilePath</Ctor>
+                          </Binding>
+                        </FrameworkElement.ToolTip>
+                        <Grid>
+                          <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                          </Grid.ColumnDefinitions>
+                          <TextBlock Grid.Column="0" FontFamily="{StaticResource BodyFont}" FontSize="12" TextTrimming="CharacterEllipsis" FrameworkElement.VerticalAlignment="Center">
+                            <TextBlock.Text>
+                              <Binding>
+                                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">Title</Ctor>
+                              </Binding>
+                            </TextBlock.Text>
+                          </TextBlock>
+                          <Grid Column="1" FrameworkElement.Margin="8,0,0,0" FrameworkElement.Width="16">
+                            <Ellipse FrameworkElement.Width="6" FrameworkElement.Height="6" Shape.Fill="{DynamicResource AccentBrush}" FrameworkElement.HorizontalAlignment="Center" FrameworkElement.VerticalAlignment="Center">
+                              <FrameworkElement.Style>
+                                <Style>
+                                  <Style.TargetType>
+                                    <x:TypeExtension>
+                                      <Ctor xmlns="https://github.com/icsharpcode/ILSpy">Ellipse</Ctor>
+                                    </x:TypeExtension>
+                                  </Style.TargetType>
+                                  <Setter Property="UIElement.Visibility" Value="Collapsed" />
+                                  <Style.Triggers>
+                                    <MultiDataTrigger>
+                                      <MultiDataTrigger.Conditions>
+                                        <Condition Value="True">
+                                          <Condition.Binding>
+                                            <Binding>
+                                              <Ctor xmlns="https://github.com/icsharpcode/ILSpy">IsDirty</Ctor>
+                                            </Binding>
+                                          </Condition.Binding>
+                                        </Condition>
+                                        <Condition Value="False">
+                                          <Condition.Binding>
+                                            <Binding>
+                                              <Ctor xmlns="https://github.com/icsharpcode/ILSpy">IsMouseOver</Ctor>
+                                              <Binding.RelativeSource>
+                                                <RelativeSource AncestorType="ToggleButton" />
+                                              </Binding.RelativeSource>
+                                            </Binding>
+                                          </Condition.Binding>
+                                        </Condition>
+                                      </MultiDataTrigger.Conditions>
+                                      <Setter Property="UIElement.Visibility" Value="Visible" />
+                                    </MultiDataTrigger>
+                                  </Style.Triggers>
+                                </Style>
+                              </FrameworkElement.Style>
+                            </Ellipse>
+                            <Button FrameworkElement.Style="{StaticResource TabCloseButtonStyle}" FrameworkElement.ToolTip="Close">
+                              <UIElement.Visibility>
+                                <MultiBinding Converter="{StaticResource CloseAffordance}">
+                                  <Binding Path="IsMouseOver">
+                                    <Binding.RelativeSource>
+                                      <RelativeSource AncestorType="ToggleButton" />
+                                    </Binding.RelativeSource>
+                                  </Binding>
+                                  <Binding Path="IsActive" />
+                                  <Binding Path="IsDirty" />
+                                </MultiBinding>
+                              </UIElement.Visibility>
+                              <!--Unknown connection ID: 35-->
+                            </Button>
+                          </Grid>
+                        </Grid>
+                        <!--Unknown connection ID: 34-->
+                      </ToggleButton>
+                    </DataTemplate>
+                  </ItemsControl.ItemTemplate>
+                </ItemsControl>
+                <Button FrameworkElement.Style="{StaticResource NewTabButtonStyle}" FrameworkElement.ToolTip="New tab (Ctrl+N)">
+                  <!--Unknown connection ID: 36-->
+                </Button>
+              </StackPanel>
+            </ScrollViewer>
+          </Border>
+          <Grid Name="EditorHost" Row="1">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="9*" />
+              <ColumnDefinition Width="82*" />
+              <ColumnDefinition Width="9*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="8*" />
+              <RowDefinition Height="84*" />
+              <RowDefinition Height="8*" />
+            </Grid.RowDefinitions>
+            <controls:MonacoEditor Name="Editor" Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="3">
+              <UIElement.Visibility>
+                <Binding Converter="{StaticResource NonZeroToVisibility}">
+                  <Ctor xmlns="https://github.com/icsharpcode/ILSpy">Tabs.Count</Ctor>
+                </Binding>
+              </UIElement.Visibility>
+              <!--Unknown connection ID: 38-->
+            </controls:MonacoEditor>
+            <Viewbox Grid.Row="1" Grid.Column="1" Stretch="Uniform">
+              <UIElement.Visibility>
+                <Binding Converter="{StaticResource ZeroToVisibility}">
+                  <Ctor xmlns="https://github.com/icsharpcode/ILSpy">Tabs.Count</Ctor>
+                </Binding>
+              </UIElement.Visibility>
+              <FrameworkElement.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                  <BeginStoryboard>
+                    <Storyboard>
+                      <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Timeline.BeginTime="0:0:0.1" Timeline.Duration="0:0:0.5">
+                        <DoubleAnimation.EasingFunction>
+                          <QuadraticEase EasingFunctionBase.EasingMode="EaseOut" />
+                        </DoubleAnimation.EasingFunction>
+                      </DoubleAnimation>
+                    </Storyboard>
+                  </BeginStoryboard>
+                </EventTrigger>
+              </FrameworkElement.Triggers>
+              <StackPanel>
+                <Image Source="Assets/Watermark.png" FrameworkElement.Width="180" FrameworkElement.Height="180" FrameworkElement.HorizontalAlignment="Center" RenderOptions.BitmapScalingMode="HighQuality" />
+                <TextBlock Text="Create a tab or open a file to begin making your script" FontFamily="{StaticResource BodyFont}" FontSize="18" Foreground="{StaticResource TextMutedBrush}" FrameworkElement.HorizontalAlignment="Center" FrameworkElement.Margin="0,30,0,0" />
+                <UniformGrid Columns="2" FrameworkElement.HorizontalAlignment="Center" FrameworkElement.Margin="0,30,0,0">
+                  <StackPanel Orientation="Horizontal" FrameworkElement.Margin="0,0,30,11">
+                    <Border FrameworkElement.Style="{StaticResource KeyCapStyle}">
+                      <TextBlock Text="Ctrl+N" FrameworkElement.Style="{StaticResource KeyCapTextStyle}" />
+                    </Border>
+                    <TextBlock Text="New tab" FrameworkElement.Style="{StaticResource ShortcutLabelStyle}" />
+                  </StackPanel>
+                  <StackPanel Orientation="Horizontal" FrameworkElement.Margin="0,0,0,11">
+                    <Border FrameworkElement.Style="{StaticResource KeyCapStyle}">
+                      <TextBlock Text="Ctrl+O" FrameworkElement.Style="{StaticResource KeyCapTextStyle}" />
+                    </Border>
+                    <TextBlock Text="Open a file" FrameworkElement.Style="{StaticResource ShortcutLabelStyle}" />
+                  </StackPanel>
+                  <StackPanel Orientation="Horizontal" FrameworkElement.Margin="0,0,30,11">
+                    <Border FrameworkElement.Style="{StaticResource KeyCapStyle}">
+                      <TextBlock Text="Ctrl+S" FrameworkElement.Style="{StaticResource KeyCapTextStyle}" />
+                    </Border>
+                    <TextBlock Text="Save" FrameworkElement.Style="{StaticResource ShortcutLabelStyle}" />
+                  </StackPanel>
+                  <StackPanel Orientation="Horizontal" FrameworkElement.Margin="0,0,0,11">
+                    <Border FrameworkElement.Style="{StaticResource KeyCapStyle}">
+                      <TextBlock Text="Ctrl+Shift+S" FrameworkElement.Style="{StaticResource KeyCapTextStyle}" />
+                    </Border>
+                    <TextBlock Text="Save as" FrameworkElement.Style="{StaticResource ShortcutLabelStyle}" />
+                  </StackPanel>
+                  <StackPanel Orientation="Horizontal" FrameworkElement.Margin="0,0,30,11">
+                    <Border FrameworkElement.Style="{StaticResource KeyCapStyle}">
+                      <TextBlock Text="Ctrl+W" FrameworkElement.Style="{StaticResource KeyCapTextStyle}" />
+                    </Border>
+                    <TextBlock Text="Close tab" FrameworkElement.Style="{StaticResource ShortcutLabelStyle}" />
+                  </StackPanel>
+                  <StackPanel Orientation="Horizontal" FrameworkElement.Margin="0,0,0,11">
+                    <Border FrameworkElement.Style="{StaticResource KeyCapStyle}">
+                      <TextBlock Text="Ctrl+Tab" FrameworkElement.Style="{StaticResource KeyCapTextStyle}" />
+                    </Border>
+                    <TextBlock Text="Next tab" FrameworkElement.Style="{StaticResource ShortcutLabelStyle}" />
+                  </StackPanel>
+                  <StackPanel Orientation="Horizontal" FrameworkElement.Margin="0,0,30,0">
+                    <Border FrameworkElement.Style="{StaticResource KeyCapStyle}">
+                      <TextBlock Text="Ctrl+`" FrameworkElement.Style="{StaticResource KeyCapTextStyle}" />
+                    </Border>
+                    <TextBlock Text="Toggle console" FrameworkElement.Style="{StaticResource ShortcutLabelStyle}" />
+                  </StackPanel>
+                  <StackPanel Orientation="Horizontal">
+                    <Border FrameworkElement.Style="{StaticResource KeyCapStyle}">
+                      <TextBlock Text="Middle-click" FrameworkElement.Style="{StaticResource KeyCapTextStyle}" />
+                    </Border>
+                    <TextBlock Text="Close a tab" FrameworkElement.Style="{StaticResource ShortcutLabelStyle}" />
+                  </StackPanel>
+                </UniformGrid>
+              </StackPanel>
+            </Viewbox>
+            <controls:SettingsView Name="SettingsPage" Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="3">
+              <UIElement.Visibility>
+                <Binding ElementName="SettingsToggle" Converter="{StaticResource BoolToVisibility}">
+                  <Ctor xmlns="https://github.com/icsharpcode/ILSpy">IsChecked</Ctor>
+                </Binding>
+              </UIElement.Visibility>
+              <!--Unknown connection ID: 39-->
+            </controls:SettingsView>
+            <controls:ScriptHubView Name="HubPage" Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="3">
+              <UIElement.Visibility>
+                <Binding ElementName="HubToggle" Converter="{StaticResource BoolToVisibility}">
+                  <Ctor xmlns="https://github.com/icsharpcode/ILSpy">IsChecked</Ctor>
+                </Binding>
+              </UIElement.Visibility>
+              <!--Unknown connection ID: 40-->
+            </controls:ScriptHubView>
+            <!--Unknown connection ID: 37-->
+          </Grid>
+          <GridSplitter Name="OutputSplitter" Grid.Row="2" FrameworkElement.Style="{StaticResource OutputSplitterStyle}">
+            <!--Unknown connection ID: 41-->
+          </GridSplitter>
+          <Grid Row="3">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Border Name="ActionBar" Grid.Row="0" FrameworkElement.Height="40" Background="{StaticResource ChromeBackgroundBrush}" BorderBrush="{StaticResource BorderStrokeBrush}" BorderThickness="0,0,0,1">
+              <Grid>
+                <StackPanel Orientation="Horizontal" FrameworkElement.HorizontalAlignment="Left" FrameworkElement.Margin="4,0,0,0">
+                  <Button FrameworkElement.Style="{StaticResource ActionBarButtonStyle}" ContentControl.Content="Execute" FrameworkElement.Tag="{StaticResource IconExecuteImage}" FrameworkElement.ToolTip="Execute the current script">
+                    <!--Unknown connection ID: 43-->
+                  </Button>
+                  <Button FrameworkElement.Style="{StaticResource ActionBarButtonStyle}" ContentControl.Content="Clear" FrameworkElement.Tag="{StaticResource IconClearImage}" FrameworkElement.ToolTip="Clear the editor">
+                    <!--Unknown connection ID: 44-->
+                  </Button>
+                  <Button FrameworkElement.Style="{StaticResource ActionBarButtonStyle}" ContentControl.Content="Open" FrameworkElement.Tag="{StaticResource IconOpenImage}" FrameworkElement.ToolTip="Open a script (Ctrl+O)">
+                    <!--Unknown connection ID: 45-->
+                  </Button>
+                  <Button FrameworkElement.Style="{StaticResource ActionBarButtonStyle}" ContentControl.Content="Save" FrameworkElement.Tag="{StaticResource IconSaveImage}" FrameworkElement.ToolTip="Save this script (Ctrl+S)">
+                    <!--Unknown connection ID: 46-->
+                  </Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" FrameworkElement.HorizontalAlignment="Right" FrameworkElement.Margin="0,0,6,0">
+                  <Button FrameworkElement.Style="{StaticResource ActionBarButtonStyle}" ContentControl.Content="Inject" FrameworkElement.Tag="{StaticResource IconInjectImage}" FrameworkElement.ToolTip="Attach to Roblox">
+                    <!--Unknown connection ID: 47-->
+                  </Button>
+                  <Button Name="ConsoleToggleButton" FrameworkElement.Style="{StaticResource OutputGlyphButtonStyle}" FrameworkElement.Margin="6,0,0,0" FrameworkElement.ToolTip="Hide console (Ctrl+`)">
+                    <Path Name="ConsoleChevron" Data="{StaticResource IconChevronDown}" Shape.Stroke="{StaticResource TabForegroundActiveBrush}" Shape.StrokeThickness="1.2" Shape.StrokeStartLineCap="Round" Shape.StrokeEndLineCap="Round" FrameworkElement.Width="12" FrameworkElement.Height="12" Shape.Stretch="None" UIElement.RenderTransformOrigin="0.5,0.5">
+                      <UIElement.RenderTransform>
+                        <RotateTransform Angle="0" />
+                      </UIElement.RenderTransform>
+                      <!--Unknown connection ID: 49-->
+                    </Path>
+                    <!--Unknown connection ID: 48-->
+                  </Button>
+                </StackPanel>
+              </Grid>
+              <!--Unknown connection ID: 42-->
+            </Border>
+            <Grid Name="ConsolePanel" Row="1" UIElement.ClipToBounds="True" Panel.Background="{StaticResource BackgroundPrimaryBrush}">
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+              </Grid.RowDefinitions>
+              <Grid Row="0" FrameworkElement.Margin="14,8,6,4">
+                <TextBlock Text="Output" FontFamily="{StaticResource BodyFont}" FontSize="13" Foreground="{StaticResource TabForegroundActiveBrush}" FrameworkElement.VerticalAlignment="Center" />
+                <StackPanel Orientation="Horizontal" FrameworkElement.HorizontalAlignment="Right">
+                  <Button FrameworkElement.Style="{StaticResource OutputActionButtonStyle}" FrameworkElement.Tag="{StaticResource IconClearImage}" FrameworkElement.ToolTip="Clear output">
+                    <!--Unknown connection ID: 51-->
+                  </Button>
+                  <Button FrameworkElement.Style="{StaticResource OutputActionButtonStyle}" FrameworkElement.Tag="{StaticResource IconCopyImage}" FrameworkElement.ToolTip="Copy output">
+                    <!--Unknown connection ID: 52-->
+                  </Button>
+                  <Button FrameworkElement.Style="{StaticResource OutputActionButtonStyle}" FrameworkElement.Tag="{StaticResource IconExportImage}" FrameworkElement.ToolTip="Save output to a file">
+                    <!--Unknown connection ID: 53-->
+                  </Button>
+                </StackPanel>
+              </Grid>
+              <Grid Name="ConsoleBody" Row="1">
+                <ScrollViewer Name="OutputScroller" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Control.Padding="14,0,6,8">
+                  <ItemsControl>
+                    <ItemsControl.ItemsSource>
+                      <Binding>
+                        <Ctor xmlns="https://github.com/icsharpcode/ILSpy">Output.Lines</Ctor>
+                      </Binding>
+                    </ItemsControl.ItemsSource>
+                    <ItemsControl.ItemTemplate>
+                      <DataTemplate>
+                        <Grid FrameworkElement.Margin="0,0,0,1">
+                          <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                          </Grid.ColumnDefinitions>
+                          <TextBlock Grid.Column="0" FrameworkElement.Margin="0,0,10,0" FontFamily="Cascadia Mono, Consolas, monospace" FontSize="11" Foreground="{StaticResource TextMutedBrush}">
+                            <TextBlock.Text>
+                              <Binding>
+                                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">Time</Ctor>
+                              </Binding>
+                            </TextBlock.Text>
+                          </TextBlock>
+                          <TextBlock Grid.Column="1" FontFamily="Cascadia Mono, Consolas, monospace" FontSize="11.5" TextWrapping="Wrap">
+                            <TextBlock.Text>
+                              <Binding>
+                                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">Text</Ctor>
+                              </Binding>
+                            </TextBlock.Text>
+                            <TextBlock.Foreground>
+                              <Binding Converter="{StaticResource OutputKindToBrush}">
+                                <Ctor xmlns="https://github.com/icsharpcode/ILSpy">Kind</Ctor>
+                              </Binding>
+                            </TextBlock.Foreground>
+                          </TextBlock>
+                        </Grid>
+                      </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                  </ItemsControl>
+                  <!--Unknown connection ID: 55-->
+                </ScrollViewer>
+                <TextBlock FrameworkElement.Margin="14,2,0,0" FrameworkElement.VerticalAlignment="Top" FontFamily="{StaticResource BodyFont}" FontSize="11" Foreground="{StaticResource TextMutedBrush}" Text="Nothing here yet.">
+                  <UIElement.Visibility>
+                    <Binding Converter="{StaticResource BoolToVisibility}">
+                      <Ctor xmlns="https://github.com/icsharpcode/ILSpy">Output.IsEmpty</Ctor>
+                    </Binding>
+                  </UIElement.Visibility>
+                </TextBlock>
+                <!--Unknown connection ID: 54-->
+              </Grid>
+              <!--Unknown connection ID: 50-->
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
+      <Border Grid.Row="2" Background="{StaticResource ChromeBackgroundBrush}" BorderBrush="{StaticResource BorderStrokeBrush}" BorderThickness="0,1,0,0">
+        <Grid>
+          <StackPanel Orientation="Horizontal" FrameworkElement.HorizontalAlignment="Left" FrameworkElement.VerticalAlignment="Center" FrameworkElement.Margin="10,0,0,0">
+            <TextBlock Name="StatusLanguage" FontFamily="{StaticResource BodyFont}" FontSize="10" Foreground="{StaticResource TabForegroundBrush}">
+              <!--Unknown connection ID: 56-->
+            </TextBlock>
+            <TextBlock Name="StatusCursor" FrameworkElement.Margin="14,0,0,0" FontFamily="{StaticResource BodyFont}" FontSize="10" Foreground="{StaticResource TabForegroundBrush}">
+              <!--Unknown connection ID: 57-->
+            </TextBlock>
+            <TextBlock Name="StatusAttached" FrameworkElement.Margin="14,0,0,0" Text="Not attached" FontFamily="{StaticResource BodyFont}" FontSize="10" Foreground="{StaticResource TabForegroundBrush}">
+              <!--Unknown connection ID: 58-->
+            </TextBlock>
+          </StackPanel>
+          <Viewbox FrameworkElement.Width="15" FrameworkElement.Height="15" FrameworkElement.HorizontalAlignment="Right" FrameworkElement.VerticalAlignment="Center" FrameworkElement.Margin="0,0,5,0">
+            <Canvas FrameworkElement.Width="10" FrameworkElement.Height="10">
+              <Path Data="{StaticResource IconNotifications}" Shape.Fill="{StaticResource IconFillBrush}" />
+            </Canvas>
+          </Viewbox>
+        </Grid>
+      </Border>
+    </Grid>
+    <!--Unknown connection ID: 2-->
+  </Border>
+  <!--Unknown connection ID: 1-->
+</Window>

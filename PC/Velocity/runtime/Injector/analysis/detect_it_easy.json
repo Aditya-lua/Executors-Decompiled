@@ -1,0 +1,29 @@
+{
+    "detects": [
+        {
+            "filetype": "PE64",
+            "info": "",
+            "offset": "0",
+            "parentfilepart": "Header",
+            "size": "32926720",
+            "values": [
+                {
+                    "info": "dynamic",
+                    "name": "Microsoft C/C++ Runtime",
+                    "string": "Library: Microsoft C/C++ Runtime[dynamic]",
+                    "type": "library",
+                    "version": ""
+                },
+                {
+                    "info": "packed",
+                    "name": "VMProtect",
+                    "string": "Protector: VMProtect[packed]",
+                    "type": "protector",
+                    "version": ""
+                }
+            ]
+        }
+    ]
+}
+
+

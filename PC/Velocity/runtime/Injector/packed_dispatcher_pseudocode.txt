@@ -1,0 +1,35 @@
+        ╎   ; CALL XREF from entry0 @ 0x142baf083
+┌ 23: fcn.1418beaad ();
+│       ╎   0x1418beaad  ~   e82cfdffff     call fcn.1418be7de
+│       ╎   0x1418beaae      2cfd           sub al, 0xfd               ; 253
+..
+│       ╎   0x1418beab2      6907b13f7414   imul eax, dword [rdi], 0x14743fb1
+│       └─< 0x1418beab8      7df2           jge 0x1418beaac
+│           0x1418beaba      6be718         imul esp, edi, 0x18
+..
+int fcn.1418beaad (int esi, int edx) {
+    loc_0x1418bea96:
+        al &= 0xf7   // 247
+         // (break)
+    loc_0x1418beaac: // orphan
+         ~   loopne 0x1418bea96       // likely
+               // CALL XREF from entry0 @ 0x142baf083
+             invali
+
+    loc_0x1418beaad: // orphan
+       ~   // CALL XREF from entry0 @ 0x142baf083
+     ~   fcn.1418be7de  ()
+         al -= 0xfd               // 253
+         invali
+         ljmp [rcx + 7]           // 7
+         cl = 0x3f                // '?' // 63
+         if  (!var) goto loc_0x1418beacc // unlikely
+         if  (var >= 0) goto loc_0x1418beaac // likely
+
+    loc_0x1418beaae: // orphan
+         al -= 0xfd               // 253
+
+    loc_0x1418beaba: // orphan
+         esp = edi * 0x18
+
+}

@@ -1,0 +1,25 @@
+┌ 30: entry0 ();
+│           0x142baf083      e825fad0fe     call fcn.1418beaad
+│       ┌─< 0x142baf088      e240           loop 0x142baf0ca
+│       │   0x142baf08a      b58f           mov ch, 0x8f               ; 143
+│       │   0x142baf08c      55             push rbp
+│       │   0x142baf08d      b2f6           mov dl, 0xf6               ; 246
+│       │   0x142baf08f      6835c543ce     push 0xffffffffce43c535
+│       │   0x142baf094      4a3035c54392.  xor byte [0x13d4d3460], sil ; [0x13d4d3460:1]=255
+│       │   0x142baf09b      90             nop
+└       │   0x142baf09c      35c5435a62     xor eax, 0x625a43c5
+int entry0 (int esi, int edx) {
+    loc_0x142baf083:
+        fcn.1418beaad  ()
+        loop 0x142baf0ca // likely
+         // (break)
+    loc_0x142baf08a: // orphan
+             ch = 0x8f                // 143
+             push  (rbp)
+             dl = 0xf6                // 246
+             push  (0xffffffffce43c535)
+             byte [0x13d4d3460] ^= sil // [0x13d4d3460:1]=255
+             no
+             eax ^= 0x625a43c5
+
+}

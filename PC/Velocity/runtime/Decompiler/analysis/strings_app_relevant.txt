@@ -1,0 +1,42 @@
+159171:7466720 Failed building the Runtimedecomp-server\src\main.rs
+159186:7468472 Failed to decode base64 bytecode: 
+159187:7468528 decomp-server\src\main.rs
+159188:7468656 Listening on http://
+159189:7468736 Server error: 
+161270:7698176 luau-lifter\src\lib.rs
+161272:7698568 luau-lifter\src\deserializer\mod.rs
+161277:7699008 luau-lifter\src\lifter.rs
+161279:7702691     { op_code: OpCode::LOP_NOP, .. })@
+161285:7710490     Instruction::AD { op_code: OpCode::LOP_FORGLOOP, .. })
+161300:7715352 LEB128 integer is too big to fit in usizeluau-lifter\src\deserializer\bytecode.rs
+161301:7715464 Unsupported bytecode version: 
+161331:7719640 LOP_NOPLOP_BREAKLOP_LOADNILLOP_LOADBLOP_LOADNLOP_LOADKLOP_MOVELOP_GETGLOBALLOP_SETGLOBALLOP_GETUPVALLOP_SETUPVALLOP_CLOSEUPVALSLOP_GETIMPORTLOP_GETTABLELOP_SETTABLELOP_GETTABLEKSLOP_SETTABLEKSLOP_GETTABLENLOP_SETTABLENLOP_NEWCLOSURELOP_NAMECALLLOP_CALLLOP_RETURNLOP_JUMPLOP_JUMPBACKLOP_JUMPIFLOP_JUMPIFNOTLOP_JUMPIFEQLOP_JUMPIFLELOP_JUMPIFLTLOP_JUMPIFNOTEQLOP_JUMPIFNOTLELOP_JUMPIFNOTLTLOP_ADDLOP_SUBLOP_MULLOP_DIVLOP_MODLOP_POWLOP_ADDKLOP_SUBKLOP_MULKLOP_DIVKLOP_MODKLOP_POWKLOP_ANDLOP_ORLOP_ANDKLOP_ORKLOP_CONCATLOP_NOTLOP_MINUSLOP_LENGTHLOP_NEWTABLELOP_DUPTABLELOP_SETLISTLOP_FORNPREPLOP_FORNLOOPLOP_FORGLOOPLOP_FORGPREP_INEXTLOP_FASTCALL3LOP_FORGPREP_NEXTLOP_NATIVECALLLOP_GETVARARGSLOP_DUPCLOSURELOP_PREPVARARGSLOP_LOADKXLOP_JUMPXLOP_FASTCALLLOP_COVERAGELOP_CAPTURELOP_SUBRKLOP_DIVRKLOP_FASTCALL1LOP_FASTCALL2LOP_FASTCALL2KLOP_FORGPREPLOP_JUMPXEQKNILLOP_JUMPXEQKBLOP_JUMPXEQKNLOP_JUMPXEQKSLOP_IDIVLOP_IDIVKLOP__COUNT
+161340:7722168 D:\roblox\medal2\ast\src\literal.rs
+161341:7722272 D:\roblox\medal2\ast\src\lib.rs
+161356:7723936 luau-lifter\src\deserializer\constant.rs
+161362:7725200 luau-lifter\src\lib.rs
+161363:7725248 Unknown Source of Errorfailed to decompile
+161364:7725464 D:\roblox\medal2\cfg\src\function.rs
+161365:7725528 luau-lifter\src\lifter.rs
+161369:7726240 UnconditionalThenElseD:\roblox\medal2\cfg\src\block.rs
+161375:7726776 luau-lifter\src\deserializer\chunk.rs
+161384:7728160 called `Result::unwrap()` on an `Err` valueluau-lifter\src\instruction.rs
+161389:7729040 luau-lifter\src\deserializer\list.rs
+161403:7731088 called `Result::unwrap()` on an `Err` valueluau-lifter\src\deserializer\function.rs
+161461:7738856 D:\roblox\medal2\ast\src\lib.rs
+161541:7745368 D:\roblox\medal2\ast\src\global.rs
+161543:7745432 D:\roblox\medal2\ast\src\call.rs
+161544:7745512 D:\roblox\medal2\ast\src\table.rs
+161545:7745576 D:\roblox\medal2\ast\src\literal.rs
+161547:7745660 D:\roblox\medal2\ast\src\closure.rs
+161549:7745720 D:\roblox\medal2\ast\src\assign.rs
+161550:7745784 D:\roblox\medal2\ast\src\for.rs
+161551:7745864 D:\roblox\medal2\ast\src\return.rs
+161553:7745928 D:\roblox\medal2\ast\src\close.rs
+161554:7745992 D:\roblox\medal2\ast\src\set_list.rs
+162160:7816840 D:\roblox\medal2\ast\src\call.rs
+162212:7820944 D:\roblox\medal2\ast\src\global.rs
+162214:7821056 D:\roblox\medal2\ast\src\table.rs
+162219:7821320 D:\roblox\medal2\ast\src\literal.rs
+162232:7822088 D:\roblox\medal2\ast\src\closure.rs
+165282:8273496 <unknown status code>InvalidStatusCodeinvalid status codeContinueSwitching ProtocolsProcessingOKCreatedAcceptedNon Authoritative InformationNo ContentReset ContentPartial ContentMulti-StatusAlready ReportedIM UsedMultiple ChoicesMoved PermanentlyFoundSee OtherNot ModifiedUse ProxyTemporary RedirectPermanent RedirectBad RequestUnauthorizedPayment RequiredForbiddenNot FoundMethod Not AllowedNot AcceptableProxy Authentication RequiredRequest TimeoutConflictGoneLength RequiredPrecondition FailedPayload Too LargeURI Too LongUnsupported Media TypeRange Not SatisfiableExpectation FailedI'm a teapotMisdirected RequestUnprocessable EntityLockedFailed DependencyUpgrade RequiredPrecondition RequiredToo Many RequestsRequest Header Fields Too LargeUnavailable For Legal ReasonsInternal Server ErrorNot ImplementedBad GatewayService UnavailableGateway TimeoutHTTP Version Not SupportedVariant Also NegotiatesInsufficient StorageLoop DetectedNot ExtendedNetwork Authentication Required5

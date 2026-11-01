@@ -1,0 +1,25 @@
+[Imports]
+nth vaddr       bind type lib                                  name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+1   0x141872000 NONE FUNC KERNEL32.dll                         CloseHandle
+1   0x141872010 NONE FUNC USER32.dll                           FindWindowA
+1   0x141872020 NONE FUNC ADVAPI32.dll                         GetTokenInformation
+1   0x141872030 NONE FUNC MSVCP140.dll                         sym.imp.public virtual: void __cdecl std::basic_streambuf<char, struct std::char_traits<char>>::~destructor(void) __ptr64
+1   0x141872040 NONE FUNC VCRUNTIME140_1.dll                   __CxxFrameHandler4
+1   0x141872050 NONE FUNC VCRUNTIME140.dll                     memcmp
+1   0x141872060 NONE FUNC api-ms-win-crt-runtime-l1-1-0.dll    _register_onexit_function
+1   0x141872070 NONE FUNC api-ms-win-crt-heap-l1-1-0.dll       malloc
+1   0x141872080 NONE FUNC api-ms-win-crt-string-l1-1-0.dll     strncmp
+1   0x141872090 NONE FUNC api-ms-win-crt-stdio-l1-1-0.dll      fgetpos
+1   0x1418720a0 NONE FUNC api-ms-win-crt-convert-l1-1-0.dll    wcstombs_s
+1   0x1418720b0 NONE FUNC api-ms-win-crt-filesystem-l1-1-0.dll _lock_file
+1   0x1418720c0 NONE FUNC api-ms-win-crt-locale-l1-1-0.dll     _configthreadlocale
+1   0x1418720d0 NONE FUNC api-ms-win-crt-math-l1-1-0.dll       __setusermatherr
+1   0x1418720e0 NONE FUNC KERNEL32.dll                         GetSystemTimeAsFileTime
+1   0x1418720f0 NONE FUNC KERNEL32.dll                         HeapAlloc
+2   0x1418720f8 NONE FUNC KERNEL32.dll                         HeapFree
+3   0x141872100 NONE FUNC KERNEL32.dll                         ExitProcess
+4   0x141872108 NONE FUNC KERNEL32.dll                         LoadLibraryA
+5   0x141872110 NONE FUNC KERNEL32.dll                         GetModuleHandleA
+6   0x141872118 NONE FUNC KERNEL32.dll                         GetProcAddress
+

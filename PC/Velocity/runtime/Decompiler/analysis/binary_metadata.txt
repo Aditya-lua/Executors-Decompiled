@@ -1,0 +1,43 @@
+arch     x86
+baddr    0x140000000
+binsz    9900032
+bintype  pe
+bits     64
+canary   false
+retguard false
+class    PE32+
+cmp.csum 0x0097acb1
+compiled Fri Feb 21 10:48:28 2025
+crypto   false
+dbg_file decomp_server.pdb
+endian   little
+havecode true
+hdr.csum 0x00000000
+guid     8FC96CADCA6C4D15ABA3FD9E113CB3DF1
+laddr    0x0
+lang     c
+linenum  false
+lsyms    false
+machine  AMD 64
+nx       true
+os       windows
+overlay  false
+cc       ms
+pic      true
+relocs   false
+signed   false
+sanitize false
+static   false
+stripped false
+subsys   Windows CUI
+va       true
+[Sections]
+
+nth paddr           size vaddr           vsize perm name
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000400  0x71c000 0x140001000  0x71c000 -r-x .text
+1   0x0071c400  0x1cba00 0x14071d000  0x1cc000 -r-- .rdata
+2   0x008e7e00    0x2e00 0x1408e9000    0x3000 -rw- .data
+3   0x008eac00   0x7d600 0x1408ec000   0x7e000 -r-- .pdata
+4   0x00968200    0x8e00 0x14096a000    0x9000 -r-- .reloc
+
