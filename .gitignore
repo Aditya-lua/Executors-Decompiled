@@ -18,3 +18,8 @@ __pycache__/
 *.pem
 *.key
 
+# Local analysis output (tools/apk-triage.sh)
+work/
+
+# Quark run log
+*.quark.log
