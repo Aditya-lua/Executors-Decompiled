@@ -1,0 +1,15 @@
+func_rva	func_size	rva_in_func	referenced_string	asm_file
+0x1a6a60	3855	-	User-Agent	001a6a60.asm.txt
+0x298f00	85459	-	User-Agent	00298f00.asm.txt
+0xe834d0	713	-	User-Agent	00e834d0.asm.txt
+0xe946d0	2384	-	User-Agent	00e946d0.asm.txt
+0x1b3050	211	-	Roblox	001b3050.asm.txt
+0x215e90	4800	-	/execute_script	00215e90.asm.txt
+0xc173e0	186	-	\ws2_32	00c173e0.asm.txt
+0xda9c90	8097	-	User-Agent: 	00da9c90.asm.txt
+0xe72963	686	-	# Your alt-svc cache. https://curl.se/docs/alt-svc.html	00e72963.asm.txt
+0xe7385e	725	-	# Your HSTS cache. https://curl.se/docs/hsts.html	00e7385e.asm.txt
+0xe7f4d0	190	-	LoadLibraryExW	00e7f4d0.asm.txt
+0xe7f712	43	-	LoadLibraryExW	00e7f712.asm.txt
+0xe7f871	57	-	ws2_32	00e7f871.asm.txt
+0xe9fdb3	195	-	User-Agent: %s	00e9fdb3.asm.txt

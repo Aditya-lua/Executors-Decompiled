@@ -1,0 +1,32 @@
+
+undefined8 FUN_00095f5c(void)
+
+{
+  undefined8 *unaff_x19;
+  long unaff_x20;
+  long unaff_x21;
+  undefined8 unaff_x22;
+  long unaff_x28;
+  
+  if (**(long **)(unaff_x20 + 8) != 0) {
+    _free(**(long **)(unaff_x20 + 8));
+    if (*(long *)(unaff_x20 + 8) == 0) goto code_r0x00095eac;
+  }
+  _free();
+code_r0x00095eac:
+  if ((int)unaff_x22 == 0) {
+    *(long *)(unaff_x21 + 0x30) = unaff_x20;
+    unaff_x22 = 0;
+    if (unaff_x19 != (undefined8 *)0x0) {
+      *unaff_x19 = *(undefined8 *)(unaff_x21 + 0x20);
+    }
+  }
+  else {
+    _free();
+    if (*(long *)(unaff_x28 + 0x10) != unaff_x28) {
+      func_0x00095fb8();
+    }
+  }
+  return unaff_x22;
+}
+

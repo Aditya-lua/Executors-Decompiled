@@ -1,0 +1,4 @@
+func_rva	size	note
+0x83160	338065	larger than 300000 bytes; not disassembled in this pass
+0xd5a00	338061	larger than 300000 bytes; not disassembled in this pass
+0x2b8560	8602970	larger than 300000 bytes; not disassembled in this pass

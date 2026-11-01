@@ -1,0 +1,187 @@
+function	addr	keywords	string
+1efbf8	8206b8	SSLKEYLOGFILE,sha384	KeyLogFileInnerfileSSLKEYLOGFILE/Users/x0rch/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustls-0.23.25/src/key_log_file.rsKeyLogFile { <locked> }HashA
+1efbf8	8206c7	SSLKEYLOGFILE,sha384	fileSSLKEYLOGFILE/Users/x0rch/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustls-0.23.25/src/key_log_file.rsKeyLogFile { <locked> }HashAlgorithmMD5SHA2
+1efbf8	8206cb	SSLKEYLOGFILE,sha384	SSLKEYLOGFILE/Users/x0rch/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustls-0.23.25/src/key_log_file.rsKeyLogFile { <locked> }HashAlgorithmMD5SHA224SH
+202cf4	8206b8	SSLKEYLOGFILE,sha384	KeyLogFileInnerfileSSLKEYLOGFILE/Users/x0rch/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustls-0.23.25/src/key_log_file.rsKeyLogFile { <locked> }HashA
+202cf4	8206c7	SSLKEYLOGFILE,sha384	fileSSLKEYLOGFILE/Users/x0rch/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustls-0.23.25/src/key_log_file.rsKeyLogFile { <locked> }HashAlgorithmMD5SHA2
+49cdc4	89f6d8	Luau,luau-lifter	out of range integral type conversion attempted/Users/x0rch/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/alloc/src/slice.rssrc/m
+4a83ac	8a0713	Luau,luau-lifter	GenericForInitGenericForNextgeneratorstateno entry found for keysrc/medal/luau-lifter/src/lib.rs
+4a8634	8a0721	Luau,luau-lifter	GenericForNextgeneratorstateno entry found for keysrc/medal/luau-lifter/src/lib.rs
+4a8634	8a072f	Luau,luau-lifter	generatorstateno entry found for keysrc/medal/luau-lifter/src/lib.rs
+4a8634	8a0738	Luau,luau-lifter	stateno entry found for keysrc/medal/luau-lifter/src/lib.rs
+4aa464	8a073d	Luau,luau-lifter	no entry found for keysrc/medal/luau-lifter/src/lib.rs
+4ad654	8a0af5	Luau,luau-lifter	no entry found for keysrc/medal/luau-lifter/src/lib.rs
+4b00e4	8a1122	Luau,luau-lifter	no entry found for keysrc/medal/luau-lifter/src/lib.rs&
+4b0f80	8a150b	Luau,luau-lifter	valueargumentsLabelMethodCallmethodClosureRefparametersis_variadicno entry found for keysrc/medal/luau-lifter/src/lib.rs
+4b0f80	8a1510	Luau,luau-lifter	argumentsLabelMethodCallmethodClosureRefparametersis_variadicno entry found for keysrc/medal/luau-lifter/src/lib.rs
+4b1148	8a150b	Luau,luau-lifter	valueargumentsLabelMethodCallmethodClosureRefparametersis_variadicno entry found for keysrc/medal/luau-lifter/src/lib.rs
+4b1148	8a1510	Luau,luau-lifter	argumentsLabelMethodCallmethodClosureRefparametersis_variadicno entry found for keysrc/medal/luau-lifter/src/lib.rs
+4b1148	8a1519	Luau,luau-lifter	LabelMethodCallmethodClosureRefparametersis_variadicno entry found for keysrc/medal/luau-lifter/src/lib.rs
+4b1148	8a151e	Luau,luau-lifter	MethodCallmethodClosureRefparametersis_variadicno entry found for keysrc/medal/luau-lifter/src/lib.rs
+4b1148	8a1528	Luau,luau-lifter	methodClosureRefparametersis_variadicno entry found for keysrc/medal/luau-lifter/src/lib.rs
+4b1148	8a1535	Luau,luau-lifter	Refparametersis_variadicno entry found for keysrc/medal/luau-lifter/src/lib.rs
+4b1310	8a152e	Luau,luau-lifter	ClosureRefparametersis_variadicno entry found for keysrc/medal/luau-lifter/src/lib.rs
+4b1310	8a1538	Luau,luau-lifter	parametersis_variadicno entry found for keysrc/medal/luau-lifter/src/lib.rs
+4b1310	8a1542	Luau,luau-lifter	is_variadicno entry found for keysrc/medal/luau-lifter/src/lib.rs
+4b297c	8a154d	Luau,luau-lifter	no entry found for keysrc/medal/luau-lifter/src/lib.rs
+4b4e20	8a18d5	Luau,luau-lifter	no entry found for keysrc/medal/luau-lifter/src/lib.rs
+1239ac	8d81b4	request	LastRequest = time: %.2f, frame: %d
+13a04	8cf55e	messagebox	messagebox_handler
+16f74	8cf55e	messagebox	messagebox_handler
+18108	8cf083	key.txt	key.txt
+1893c	8cf08b	decompile_internal	decompile_internal
+1893c	8cf09e	getfflag	getfflag
+1893c	8cf0a7	setfflag	setfflag
+1893c	8cf0b0	getscriptbytecode	getscriptbytecode_internal
+1893c	8cf0e5	sha384	sha384
+1893c	8cf0ec	LOP_SKID	LOP_SKID
+1893c	8cf0f5	_QWWSZSADJASUDOPI	_QWWSZSADJASUDOPI
+1893c	8cf107	get_hwid	get_hwid
+1893c	8cf110	gethwid	gethwid
+1893c	8cf118	store_globals	store_globals
+1893c	8cf135	http_get	http_get
+1893c	8cf13e	request	request
+1893c	8cf195	loadstring	loadstring
+1893c	8cf1b0	setclipboard	setclipboard
+1893c	8cf1ed	messagebox	messagebox
+1893c	8cf290	getgenv	getgenv
+1893c	8cf2a1	getinstances	getinstances
+1893c	8cf2bf	getrawmetatable	getrawmetatable
+1893c	8cf384	queue_on_teleport	queue_on_teleport
+1893c	8cf4fe	getconnections	getconnections
+1893c	8cf50d	firetouchinterest	firetouchinterest
+1893c	8cf9a4	hookfunction	hookfunction
+1893c	8d126f	writefile	writefile
+1893c	8d129f	isfile	isfile
+1f0184	82073c	sha384	KeyLogFile { <locked> }HashAlgorithmMD5SHA224SHA256SHA384SHA512)
+1f0184	820753	sha384	HashAlgorithmMD5SHA224SHA256SHA384SHA512)
+1f0184	820769	sha384	SHA256SHA384SHA512)
+1f04a0	820760	sha384	MD5SHA224SHA256SHA384SHA512)
+1f04a0	820763	sha384	SHA224SHA256SHA384SHA512)
+1f04a0	82076f	sha384	SHA384SHA512)
+22348	8cf4fe	getconnections	getconnections
+22348	8cf50d	firetouchinterest	firetouchinterest
+22348	8cf55e	messagebox	messagebox_handler
+22348	8cf805	getconnections	Getconnections failed to make temp connection
+2762c4	82d729	sha384	PrivateDecryptingKeyPublicEncryptingKeySHA224SHA256SHA384SHA512SHA512_256/Users/x0rch/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-lc-rs-1.12.0/src/
+2762c4	82d73d	sha384	PublicEncryptingKeySHA224SHA256SHA384SHA512SHA512_256/Users/x0rch/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-lc-rs-1.12.0/src/tls_prf.rsSecretalgo
+2889c	8cf9a4	hookfunction	hookfunction
+29558	8cfa58	hookfunction	hookfunction: not supported
+3e50c	8d118e	request	Invalid byte size requested (must be positive and reasonable, e.g., < 16MB)
+419a0	8d0d83	request	AllocatorBase: requested size would cause integer overflow
+461478	8937f3	request	Request..AnyTypeId(
+4657d8	8937f2	request	)Request..AnyTypeId(
+4690e4	8937f2	request	)Request..AnyTypeId(
+469c10	8937f2	request	)Request..AnyTypeId(
+46a4dc	8937f2	request	)Request..AnyTypeId(
+46cb64	8937f2	request	)Request..AnyTypeId(
+4a4a4c	8a0250	Luau	internal error: entered unreachable codeparse_instructionsluau_lifter::deserializer::functionvecwe have debug info
+4b5f0	8d126f	writefile	writefile
+4c9dc	8d129f	isfile	isfile
+517dc	8cf08b	decompile_internal	decompile_internal
+523f4	8cf09e	getfflag	getfflag
+52ac4	8cf0a7	setfflag	setfflag
+53124	8cf0b0	getscriptbytecode	getscriptbytecode_internal
+53e38	8cf0e5	sha384	sha384
+54c28	8d1846	Hydrogen-Fingerprint	Hydrogen-Fingerprint
+55410	8d187d	request	request: URL scheme must be http:// or https://
+56bb4	8067dd	request	Z9l_requestP9lua_StateEUlvE_
+570a8	8067b3	request	ZZ9l_requestP9lua_StateENKUlvE_clEvEUlvE_
+5e838	806e4d	request	N7httplib7Request20is_connection_closedMUlvE_E
+5f9c4	807020	request	ZNK7httplib6Server18parse_request_lineEPKcRNS_7RequestEEUlS2_S2_E_
+5fff0	807453	request	ZNK7httplib6Server18parse_request_lineEPKcRNS_7RequestEEUlS2_mS2_mE_
+610804	8d0d83	request	AllocatorBase: requested size would cause integer overflow
+619d60	8d0d83	request	AllocatorBase: requested size would cause integer overflow
+61a2b0	8d0d83	request	AllocatorBase: requested size would cause integer overflow
+67b70	80936a	request	ZN7httplib6Server15process_requestERNS_6StreamERKNSt3__112basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEEiSB_ibRbRKNS3_8functionIFvRNS_7RequestEEEEEUlvE
+67b70	8d1ccd	request	Bad Request
+67b70	8d1d4b	request	Request Timeout
+67b70	8d1df9	request	Misdirected Request
+67b70	8d1e6d	request	Too Many Requests
+67b70	8d1e7f	request	Request Header Fields Too Large
+69268	8094d8	request	ZN7httplib6Server19handle_file_requestERKNS_7RequestERNS_8ResponseEbEUlmmRNS_8DataSinkEE_
+6982c	809df7	request	ZN7httplib6Server7routingERNS_7RequestERNS_8ResponseERNS_6StreamEEUlNSt3__18functionIFbPKcmEEEE_
+6ad40	809a58	request	ZNK7httplib6Server17read_content_coreERNS_6StreamERNS_7RequestERNS_8ResponseENSt3__18functionIFbPKcmEEENS8_IFbRKNS_17MultipartFormDataEEEESC_EUlSA_myyE_
+6bbf20	8e9af8	Luau	LuauCompileUnusedUdataFix
+6d1ac4	8ea2b6	Luau	LuauCompileLoopUnrollThreshold
+6d1ac4	8ea2d5	Luau	LuauCompileLoopUnrollThresholdMaxBoost
+6d1ac4	8ea2fc	Luau	LuauCompileInlineThreshold
+6d1ac4	8ea317	Luau	LuauCompileInlineThresholdMaxBoost
+6d1ac4	8ea33a	Luau	LuauCompileInlineDepth
+6d1ac4	8ea351	Luau	LuauCompileCallCostModel
+6d4524	8ea992	Luau	LuauCompileVectorLerp
+6d4524	8ea9a8	Luau	LuauCompileMathIsNanInfFinite
+6d6020	8eaa6d	Luau	LuauCompileTypeofFold
+6d6020	8eaa83	Luau	LuauCompileStringCharSubFold
+6d8e14	8eaaa0	Luau	LuauStringConstFolding2
+6d8e14	8eaab8	Luau	LuauInterpStringConstFolding
+6df7c	809bc4	request	ZNK7httplib6Server17read_content_coreERNS_6StreamERNS_7RequestERNS_8ResponseENSt3__18functionIFbPKcmEEENS8_IFbRKNS_17MultipartFormDataEEEESC_EUlSA_myyE0_
+6e7c68	8ead5d	Luau	Luau
+6ef4e4	8eb218	Luau	LuauStacklessPcall
+6f3304	8eb3bf	Luau	LuauMathIsNanInfFinite
+6f4a0	809d43	request	ZN7httplib6detail24prepare_content_receiverINS_7RequestEZNS0_12read_contentIS2_EEbRNS_6StreamERT_mRiNSt3__18functionIFbyyEEENSA_IFbPKcmyyEEEbEUlRKSG_E_EEbS7_S8_
+6f4a0	809f75	request	ZN7httplib6Server7routingERNS_7RequestERNS_8ResponseERNS_6StreamEEUlNSt3__18functionIFbRKNS_17MultipartFormDataEEEENS8_IFbPKcmEEEE_
+6fdb4	80a084	request	ZN7httplib6Server12read_contentERNS_6StreamERNS_7RequestERNS_8ResponseEEUlPKcmE_
+6fe2c	80a1b5	request	ZN7httplib6Server12read_contentERNS_6StreamERNS_7RequestERNS_8ResponseEEUlRKNS_17MultipartFormDataEE_
+7004a0	8ebcf6	Luau	LuauVectorLerp
+7040c	80a2a7	request	ZN7httplib6Server12read_contentERNS_6StreamERNS_7RequestERNS_8ResponseEEUlPKcmE0_
+70938c	8ebecb	Luau	LuauStandaloneParseType
+70bf8	80a41f	request	ZN7httplib6Server15process_requestERNS_6StreamERKNSt3__112basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEEiSB_ibRbRKNS3_8functionIFvRNS_7RequestEEEEEUlmm
+725100	8ccac2	Luau	PFNSt3__16vectorINS_4pairIN4Luau8LocationENS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEENS7_ISA_EEEES3_RKNS2_8AstArrayIPNS2_7AstExprEEEE
+726c0c	8ec078	Luau	LuauRecursionLimit
+726c0c	8ec08b	Luau	LuauTypeLengthLimit
+726c0c	8ec09f	Luau	LuauParseErrorLimit
+726c0c	8ec0b3	Luau	LuauSolverV2
+727568	8ec0c0	Luau	DebugLuauReportReturnTypeVariadicWithTypeSuffix
+727568	8ec0f0	Luau	DebugLuauStringSingletonBasedOnQuotes
+727568	8ec116	Luau	LuauExplicitTypeExpressionInstantiation
+727568	8ec13e	Luau	LuauAutocompleteAttributes
+727568	8ec159	Luau	LuauCstStatDoWithStatsStart
+737820	8ee7a9	request	decoder not requested, ignored: %.*s
+7399c8	8eea12	request	Included max number of cookies (%zu) in request!
+73e498	8eedcf	request	cw_out, PAUSE requested by client
+73e7c8	8eeebb	request	Failed sending DICT request
+73e9a8	8eeebb	request	Failed sending DICT request
+7402d0	8eefd2	request	a DoH request is completed, %u to go
+7402d0	8eeff7	request	DoH request %s
+74719c	8ef5c1	request	ACCT requested but none available
+747db8	8ef9fa	request	The requested document is not old enough
+747f04	8ef9d1	request	The requested document is not new enough
+74ba00	8efffa	request	Request has same path as previous transfer
+74d4a4	8f016e	request	Failed sending Gopher request
+751430	8f07f4	request	HTTP request too large
+752420	8f0644	request	Issue another request to this URL: '%s'
+752c7c	8f0515	request	The requested URL returned error: %d
+752c7c	8f0871	request	Need to rewind upload for next request
+755be8	8f0515	request	The requested URL returned error: %d
+758ad8	8f127f	request	%.*s4_request
+766b90	8f21ff	request	Error %d sending MQTT CONNECT request
+769a34	8f25f0	request	operation aborted by pre-request callback
+771a80	8f2bac	request	Request completely sent off
+771c14	8f2ce6	request	Got invalid RTSP request
+771ec0	8f2d6f	request	Refusing to issue an RTSP request [%s] without a session ID.
+772040	8f2d48	request	Got invalid RTSP request: RTSPREQ_LAST
+7723a4	8f2f05	request	Failed sending RTSP request
+7725a8	8f2c55	request	The CSeq of this request %ld did not match the response %ld
+77487c	8f30b3	request	client reader needs rewind before next request
+77ce64	8f3e06	request	connect request ack
+77cedc	8f3e4f	request	SOCKS4%s request granted.
+77d0c8	8f3c4b	request	SOCKS5 request granted.
+77d37c	8f3def	request	SOCKS4 connect request
+77d4e0	8f3c2c	request	SOCKS5 connect request address
+77d690	8f3e69	request	cannot complete SOCKS4 connection to %d.%d.%d.%d:%d. (%d), request rejected or failed.
+77d690	8f3ec0	request	cannot complete SOCKS4 connection to %d.%d.%d.%d:%d. (%d), request rejected because SOCKS server cannot connect to identd on the client.
+77d690	8f3f49	request	cannot complete SOCKS4 connection to %d.%d.%d.%d:%d. (%d), request rejected because the client program and identd report different user-ids.
+77dc38	8f3b72	request	SOCKS5 connect request
+77dc64	8f3b89	request	SOCKS5 connect request ack
+77dc84	8f38bf	request	initial SOCKS5 request
+77df34	8f3a12	request	SOCKS5 sub-negotiation request
+77fd54	8f57c2	request	server requested blksize larger than allocated
+77fd54	8f581a	request	requested
+782268	8ef9d1	request	The requested document is not new enough
+782268	8ef9fa	request	The requested document is not old enough
+79cfe8	8db2a8	request	out_len == requested_len
+79e7b4	8de230	sha384	aws_lc_0_24_0_SHA384_Final
+79e7b4	8de254	sha384	sha->md_len == SHA384_DIGEST_LENGTH
+79f538	8dec39	sha384	sha384_final
+79f538	8dec46	sha384	aws_lc_0_24_0_SHA384_Final(md, ctx->md_data)

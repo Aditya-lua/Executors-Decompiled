@@ -1,0 +1,10 @@
+
+void FUN_00704cf0(long param_1)
+
+{
+  *(undefined1 *)(param_1 + 0xa30) = 1;
+  iRam0000000000a33700 = iRam0000000000a33700 + 1;
+  iRam0000000000a27a28 = iRam0000000000a33700;
+  return;
+}
+

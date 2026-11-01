@@ -1,0 +1,25 @@
+
+void FUN_00198334(undefined8 param_1,undefined8 *param_2)
+
+{
+  undefined1 uStack0000000000000008;
+  undefined1 uStack0000000000000010;
+  undefined8 uStack0000000000000018;
+  undefined1 *puStack0000000000000020;
+  undefined8 uStack0000000000000028;
+  undefined8 uStack0000000000000030;
+  undefined1 uStack0000000000000040;
+  undefined *puStack0000000000000048;
+  
+  _uStack0000000000000040 = &uStack0000000000000008;
+  puStack0000000000000048 = &DAT_00196cc8;
+  _uStack0000000000000010 = &UNK_0081c248;
+  uStack0000000000000028 = 1;
+  uStack0000000000000030 = 0;
+  puStack0000000000000020 = &uStack0000000000000040;
+  uStack0000000000000018 = 1;
+  _uStack0000000000000008 = param_1;
+  func_0x0046849c(*param_2,param_2[1],&uStack0000000000000010);
+  return;
+}
+

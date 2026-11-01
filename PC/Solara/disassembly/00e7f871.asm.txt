@@ -1,0 +1,12 @@
+00e7f871  lea     rdx, [rip + 0x1c9320]
+00e7f878  mov     rcx, rbx
+00e7f87b  call    qword ptr [rip + 0xc59e7]
+00e7f881  test    rax, rax
+00e7f884  je      0xe7f88d
+00e7f886  mov     qword ptr [rip + 0x255a8b], rax
+00e7f88d  lea     rcx, [rip + 0x1c9314]
+00e7f894  call    qword ptr [rip + 0xc5b0e]
+00e7f89a  mov     rdi, qword ptr [rsp + 0x1e0]
+00e7f8a2  mov     rbx, rax
+00e7f8a5  test    rax, rax
+00e7f8a8  je      0xe7f8ef

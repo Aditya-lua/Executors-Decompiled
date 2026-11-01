@@ -1,0 +1,44 @@
+0022fa40  push     rbx
+0022fa42  sub      rsp, 0x40
+0022fa46  mov      rax, qword ptr [rip + 0xe91cb3]
+0022fa4d  xor      rax, rsp
+0022fa50  mov      qword ptr [rsp + 0x30], rax
+0022fa55  mov      rax, qword ptr [rcx + 0x10]
+0022fa59  lea      rdx, [rsp + 0x20]
+0022fa5e  mov      qword ptr [rsp + 0x20], rax
+0022fa63  mov      rbx, rcx
+0022fa66  mov      rax, qword ptr [rcx + 8]
+0022fa6a  mov      r9d, 0xffffffff
+0022fa70  mov      ecx, 2
+0022fa75  mov      qword ptr [rsp + 0x28], rax
+0022fa7a  xor      r8d, r8d
+0022fa7d  call     qword ptr [rip + 0xd1578d]
+0022fa83  mov      rcx, qword ptr [rbx + 0x10]
+0022fa87  call     qword ptr [rip + 0xd15743]
+0022fa8d  xor      eax, eax
+0022fa8f  lock xadddword ptr [rip + 0xe9ef89], eax
+0022fa97  test     eax, eax
+0022fa99  mov      rax, qword ptr [rbx + 8]
+0022fa9d  je       0x22fabd
+0022fa9f  xor      edx, edx
+0022faa1  mov      rcx, rax
+0022faa4  call     qword ptr [rip + 0xd1577e]
+0022faaa  mov      rcx, qword ptr [rsp + 0x30]
+0022faaf  xor      rcx, rsp
+0022fab2  call     0xe155e0
+0022fab7  add      rsp, 0x40
+0022fabb  pop      rbx
+0022fabc  ret      
+0022fabd  xor      r8d, r8d
+0022fac0  lea      rcx, [rip - 0x9a407]
+0022fac7  mov      rdx, rax
+0022faca  call     qword ptr [rip + 0xd15748]
+0022fad0  mov      rcx, qword ptr [rbx + 8]
+0022fad4  mov      edx, 0xffffffff
+0022fad9  call     qword ptr [rip + 0xd15729]
+0022fadf  mov      rcx, qword ptr [rsp + 0x30]
+0022fae4  xor      rcx, rsp
+0022fae7  call     0xe155e0
+0022faec  add      rsp, 0x40
+0022faf0  pop      rbx
+0022faf1  ret      

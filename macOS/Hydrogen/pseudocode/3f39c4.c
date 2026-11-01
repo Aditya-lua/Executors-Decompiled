@@ -1,0 +1,14 @@
+
+void FUN_003f39c4(void)
+
+{
+  undefined1 uStack0000000000000008;
+  
+  func_0x00465960(&uStack0000000000000008,(long)register0x00000008 + 0x18,&UNK_009d9198);
+  func_0x00465960(&uStack0000000000000008,(long)register0x00000008 + 0x18,&UNK_009d9198);
+  func_0x00465960(&uStack0000000000000008,(long)register0x00000008 + 0x18,&UNK_009d9198);
+  func_0x00465960(&uStack0000000000000008,(long)register0x00000008 + 0x18,&UNK_009d9198);
+  func_0x00465c80(&uStack0000000000000008);
+  return;
+}
+

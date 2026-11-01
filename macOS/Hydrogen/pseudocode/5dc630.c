@@ -1,0 +1,24 @@
+
+void FUN_005dc630(long param_1,long param_2)
+
+{
+  bool in_ZR;
+  long in_x9;
+  undefined8 *unaff_x19;
+  long unaff_x20;
+  undefined8 unaff_x21;
+  long unaff_x22;
+  
+  if (!in_ZR) {
+    do {
+      *(long *)(param_2 + param_1 * 8) = in_x9;
+      in_x9 = in_x9 + 8;
+      param_1 = param_1 + 1;
+    } while (in_x9 != unaff_x22 + unaff_x20);
+  }
+  *unaff_x19 = unaff_x21;
+  unaff_x19[1] = param_2;
+  unaff_x19[2] = param_1;
+  return;
+}
+

@@ -1,0 +1,114 @@
+00e3b430  mov      qword ptr [rsp + 8], rbx
+00e3b435  mov      qword ptr [rsp + 0x10], rbp
+00e3b43a  mov      qword ptr [rsp + 0x20], rsi
+00e3b43f  push     rdi
+00e3b440  push     r12
+00e3b442  push     r13
+00e3b444  push     r14
+00e3b446  push     r15
+00e3b448  sub      rsp, 0x20
+00e3b44c  or       rax, 0xffffffffffffffff
+00e3b450  mov      r12d, ecx
+00e3b453  mov      r14, r9
+00e3b456  mov      rsi, r8
+00e3b459  mov      r15, rdx
+00e3b45c  cmp      r8, r9
+00e3b45f  je       0xe3b520
+00e3b465  lea      r13, [rip - 0xe3b46c]
+00e3b46c  mov      edi, dword ptr [rsi]
+00e3b46e  mov      rbx, qword ptr [r13 + rdi*8 + 0x10d4930]
+00e3b476  nop      
+00e3b477  test     rbx, rbx
+00e3b47a  je       0xe3b48a
+00e3b47c  cmp      rbx, rax
+00e3b47f  jne      0xe3b5c8
+00e3b485  jmp      0xe3b513
+00e3b48a  mov      rbp, qword ptr [r13 + rdi*8 + 0x1037fd0]
+00e3b492  xor      edx, edx
+00e3b494  mov      rcx, rbp
+00e3b497  mov      r8d, 0x800
+00e3b49d  call     qword ptr [rip + 0x10a1a5]
+00e3b4a3  mov      rbx, rax
+00e3b4a6  test     rax, rax
+00e3b4a9  jne      0xe3b5af
+00e3b4af  call     qword ptr [rip + 0x109d23]
+00e3b4b5  cmp      eax, 0x57
+00e3b4b8  jne      0xe3b503
+00e3b4ba  lea      ebx, [rax - 0x50]
+00e3b4bd  mov      rcx, rbp
+00e3b4c0  mov      r8d, ebx
+00e3b4c3  lea      rdx, [rip + 0x1fd146]
+00e3b4ca  call     0xe49360
+00e3b4cf  test     eax, eax
+00e3b4d1  je       0xe3b503
+00e3b4d3  mov      r8d, ebx
+00e3b4d6  lea      rdx, [rip + 0x1fd143]
+00e3b4dd  mov      rcx, rbp
+00e3b4e0  call     0xe49360
+00e3b4e5  test     eax, eax
+00e3b4e7  je       0xe3b503
+00e3b4e9  xor      r8d, r8d
+00e3b4ec  xor      edx, edx
+00e3b4ee  mov      rcx, rbp
+00e3b4f1  call     qword ptr [rip + 0x10a151]
+00e3b4f7  mov      rbx, rax
+00e3b4fa  test     rax, rax
+00e3b4fd  jne      0xe3b5af
+00e3b503  or       rax, 0xffffffffffffffff
+00e3b507  xchg     qword ptr [r13 + rdi*8 + 0x10d4930], rax
+00e3b50f  or       rax, 0xffffffffffffffff
+00e3b513  add      rsi, 4
+00e3b517  cmp      rsi, r14
+00e3b51a  jne      0xe3b46c
+00e3b520  xor      ebx, ebx
+00e3b522  mov      edi, 0xe
+00e3b527  mov      ecx, edi
+00e3b529  call     0xe35d14
+00e3b52e  and      dword ptr [rsp + 0x60], 0
+00e3b533  lea      rsi, [rip + 0x2d4ac6]
+00e3b53a  mov      ebp, 0x100
+00e3b53f  lea      r9, [rsp + 0x60]
+00e3b544  mov      edx, ebp
+00e3b546  lea      r8d, [rdi - 0xa]
+00e3b54a  mov      rcx, rsi
+00e3b54d  call     qword ptr [rip + 0x109f7d]
+00e3b553  test     eax, eax
+00e3b555  je       0xe3b5dc
+00e3b55b  test     rbx, rbx
+00e3b55e  mov      rax, rbx
+00e3b561  mov      rcx, 0xffffffffffffffff
+00e3b568  cmove    rax, rcx
+00e3b56c  xchg     qword ptr [rsi + r12*8], rax
+00e3b570  lea      r9, [rsp + 0x60]
+00e3b575  mov      edx, ebp
+00e3b577  lea      r8d, [rdi - 0xc]
+00e3b57b  mov      rcx, rsi
+00e3b57e  call     qword ptr [rip + 0x109f4c]
+00e3b584  test     eax, eax
+00e3b586  je       0xe3b5dc
+00e3b588  mov      ecx, edi
+00e3b58a  call     0xe35d68
+00e3b58f  mov      rbp, qword ptr [rsp + 0x58]
+00e3b594  mov      rax, rbx
+00e3b597  mov      rbx, qword ptr [rsp + 0x50]
+00e3b59c  mov      rsi, qword ptr [rsp + 0x68]
+00e3b5a1  add      rsp, 0x20
+00e3b5a5  pop      r15
+00e3b5a7  pop      r14
+00e3b5a9  pop      r13
+00e3b5ab  pop      r12
+00e3b5ad  pop      rdi
+00e3b5ae  ret      
+00e3b5af  mov      rax, rbx
+00e3b5b2  xchg     qword ptr [r13 + rdi*8 + 0x10d4930], rax
+00e3b5ba  test     rax, rax
+00e3b5bd  je       0xe3b5c8
+00e3b5bf  mov      rcx, rbx
+00e3b5c2  call     qword ptr [rip + 0x109eb0]
+00e3b5c8  mov      rdx, r15
+00e3b5cb  mov      rcx, rbx
+00e3b5ce  call     qword ptr [rip + 0x109c94]
+00e3b5d4  mov      rbx, rax
+00e3b5d7  jmp      0xe3b522
+00e3b5dc  call     0xe36488
+00e3b5e1  int3     

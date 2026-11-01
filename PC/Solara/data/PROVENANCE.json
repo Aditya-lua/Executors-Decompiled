@@ -1,0 +1,18 @@
+{
+ "source_endpoint": "https://getsolara.dev/api/endpoint.json",
+ "software_version": "3.287",
+ "supported_client": "version-9ac8595712b447a7",
+ "files": {
+  "BootstrapperNew.exe": "82e8904fd500c596b04786124a0515f1ecb9b9fc8b2187e449c30eeba1ba2316",
+  "SolaraV3.exe": "f07e7c06d1a66307bc38a5b50c3b2a2308ebdbfbb2edcc8132678e0735b6ba99",
+  "Solara.Dir.zip": "eab91d68adaf134b173cdd1a7db0fdde3b9ea3e9ed4fae147b6bb1183dcc52ae",
+  "Solara.exe": "sha256 recorded in analysis run",
+  "SolaraV3.dll": "native x64, 18174464 bytes"
+ },
+ "tools": {
+  "ilspycmd": "9.1.0.7988",
+  "capstone": "5.x",
+  "pefile": "x64 PE"
+ },
+ "nothing_executed": true
+}

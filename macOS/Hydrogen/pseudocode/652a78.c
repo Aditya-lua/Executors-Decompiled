@@ -1,0 +1,23 @@
+
+void FUN_00652a78(void)
+
+{
+  long in_stack_00000008;
+  undefined8 uStack0000000000000020;
+  long in_stack_00000028;
+  long in_stack_00000030;
+  
+  func_0x00653804(&uStack0000000000000020);
+  func_0x00610060(&uStack0000000000000020,0);
+  uStack0000000000000020 = &UNK_009f6678;
+  if (in_stack_00000028 != 0) {
+    in_stack_00000030 = in_stack_00000028;
+    __ZdlPv();
+  }
+  func_0x00610060();
+  if (in_stack_00000008 != 0) {
+    __ZdlPv();
+  }
+  return;
+}
+

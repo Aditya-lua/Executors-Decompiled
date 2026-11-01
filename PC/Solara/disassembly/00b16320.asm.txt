@@ -1,0 +1,27 @@
+00b16320  sub      rsp, 0x58
+00b16324  mov      rax, qword ptr [rip + 0x5ab3d5]
+00b1632b  xor      rax, rsp
+00b1632e  mov      qword ptr [rsp + 0x40], rax
+00b16333  lea      rax, [rsp + 0x30]
+00b16338  mov      qword ptr [rsp + 0x38], 0
+00b16341  mov      r9d, 8
+00b16347  mov      qword ptr [rsp + 0x20], rax
+00b1634c  lea      r8, [rsp + 0x38]
+00b16351  mov      qword ptr [rsp + 0x30], 0
+00b1635a  call     qword ptr [rip + 0x42eef0]
+00b16360  test     eax, eax
+00b16362  je       0xb16383
+00b16364  cmp      qword ptr [rsp + 0x30], 8
+00b1636a  jne      0xb16383
+00b1636c  mov      rax, qword ptr [rsp + 0x38]
+00b16371  mov      rcx, qword ptr [rsp + 0x40]
+00b16376  xor      rcx, rsp
+00b16379  call     0xe155e0
+00b1637e  add      rsp, 0x58
+00b16382  ret      
+00b16383  xor      eax, eax
+00b16385  mov      rcx, qword ptr [rsp + 0x40]
+00b1638a  xor      rcx, rsp
+00b1638d  call     0xe155e0
+00b16392  add      rsp, 0x58
+00b16396  ret      

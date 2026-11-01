@@ -1,0 +1,27 @@
+{
+ "CryptAcquireContextW": [
+  "0x180c327ea",
+  "0x180c3287a",
+  "0x180c63902",
+  "0x180c646db",
+  "0x180c6542d",
+  "0x180c65755",
+  "0x180e87d1d"
+ ],
+ "CryptGenRandom": [
+  "0x180c327fe",
+  "0x180c3288e",
+  "0x180df399b"
+ ],
+ "CryptCreateHash": [
+  "0x180c63baa",
+  "0x180c6662c",
+  "0x180e87d45"
+ ],
+ "CryptDecrypt": [
+  "0x180c66335"
+ ],
+ "CryptHashData": [
+  "0x180e87d5d"
+ ]
+}

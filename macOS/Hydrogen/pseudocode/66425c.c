@@ -1,0 +1,41 @@
+
+undefined8 FUN_0066425c(long param_1,long param_2)
+
+{
+  ulong uVar1;
+  long unaff_x19;
+  long unaff_x29;
+  undefined1 uStack0000000000000028;
+  ulong in_stack_00000030;
+  ulong in_stack_00000038;
+  long in_stack_00000040;
+  
+  if (param_2 != 0) {
+    if (param_1 != 0) {
+      do {
+        *(undefined8 *)(param_2 + -8 + param_1 * 8) = 0;
+        param_1 = param_1 + -1;
+      } while (param_1 != 0);
+    }
+    func_0x00611644();
+  }
+  func_0x00675e78(&uStack0000000000000028,0,*(byte *)(unaff_x29 + -0x21) & 1);
+  (**(code **)(**(long **)(unaff_x19 + 0x10) + 0x80))
+            (*(long **)(unaff_x19 + 0x10),&uStack0000000000000028);
+  func_0x00677180();
+  uVar1 = in_stack_00000030;
+  if (in_stack_00000038 <= in_stack_00000030) {
+    uVar1 = in_stack_00000038;
+  }
+  if (in_stack_00000040 != 0) {
+    if (uVar1 != 0) {
+      do {
+        *(undefined8 *)(in_stack_00000040 + -8 + uVar1 * 8) = 0;
+        uVar1 = uVar1 - 1;
+      } while (uVar1 != 0);
+    }
+    func_0x00611644();
+  }
+  return 1;
+}
+

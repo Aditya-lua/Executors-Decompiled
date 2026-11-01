@@ -1,0 +1,95 @@
+
+void FUN_0063aaec(void)
+
+{
+  undefined8 *unaff_x20;
+  long unaff_x29;
+  undefined8 *in_stack_00000028;
+  undefined *puStack0000000000000030;
+  long in_stack_00000038;
+  long in_stack_00000058;
+  long in_stack_00000078;
+  long in_stack_00000098;
+  long in_stack_000000b8;
+  long in_stack_000000d8;
+  long in_stack_000000f8;
+  long in_stack_00000118;
+  long in_stack_00000138;
+  long in_stack_00000158;
+  long in_stack_00000178;
+  long in_stack_00000198;
+  
+  puStack0000000000000030 = &UNK_009f6678;
+  if (in_stack_00000038 != 0) {
+    __ZdlPv();
+  }
+  if (in_stack_00000058 != 0) {
+    __ZdlPv();
+  }
+  if (in_stack_00000078 != 0) {
+    __ZdlPv();
+  }
+  if (in_stack_00000098 != 0) {
+    __ZdlPv();
+  }
+  if (in_stack_000000b8 != 0) {
+    __ZdlPv();
+  }
+  if (in_stack_000000d8 != 0) {
+    __ZdlPv();
+  }
+  if (in_stack_000000f8 != 0) {
+    __ZdlPv();
+  }
+  if (in_stack_00000118 != 0) {
+    __ZdlPv();
+  }
+  if (in_stack_00000138 != 0) {
+    __ZdlPv();
+  }
+  if (in_stack_00000158 != 0) {
+    __ZdlPv();
+  }
+  if (in_stack_00000178 != 0) {
+    __ZdlPv();
+  }
+  if (in_stack_00000198 != 0) {
+    __ZdlPv();
+  }
+  *(undefined **)(unaff_x29 + -0xf0) = &UNK_009f6678;
+  if (*(long *)(unaff_x29 + -0xe8) != 0) {
+    *(long *)(unaff_x29 + -0xe0) = *(long *)(unaff_x29 + -0xe8);
+    __ZdlPv();
+  }
+  *(undefined **)(unaff_x29 + -0xd0) = &UNK_009f6678;
+  if (*(long *)(unaff_x29 + -200) != 0) {
+    *(long *)(unaff_x29 + -0xc0) = *(long *)(unaff_x29 + -200);
+    __ZdlPv();
+  }
+  *(undefined **)(unaff_x29 + -0xb0) = &UNK_009f6678;
+  if (*(long *)(unaff_x29 + -0xa8) != 0) {
+    *(long *)(unaff_x29 + -0xa0) = *(long *)(unaff_x29 + -0xa8);
+    __ZdlPv();
+  }
+  *(undefined **)(unaff_x29 + -0x90) = &UNK_009f6678;
+  if (*(long *)(unaff_x29 + -0x88) != 0) {
+    *(long *)(unaff_x29 + -0x80) = *(long *)(unaff_x29 + -0x88);
+    __ZdlPv();
+  }
+  *(undefined **)(unaff_x29 + -0x70) = &UNK_009f6678;
+  if (*(long *)(unaff_x29 + -0x68) != 0) {
+    *(long *)(unaff_x29 + -0x60) = *(long *)(unaff_x29 + -0x68);
+    __ZdlPv();
+  }
+  *(undefined **)(unaff_x29 + -0x50) = &UNK_009f6678;
+  if (*(long *)(unaff_x29 + -0x48) != 0) {
+    *(long *)(unaff_x29 + -0x40) = *(long *)(unaff_x29 + -0x48);
+    __ZdlPv();
+  }
+  ___cxa_atexit(&DAT_006638ec,0,0);
+  ___cxa_guard_release(0xa3c200);
+  *unaff_x20 = 0xa3c208;
+  *in_stack_00000028 = 0xa3c838;
+  return;
+}
+

@@ -1,0 +1,124 @@
+
+void FUN_0021d8d0(void)
+
+{
+  undefined8 uVar1;
+  char cVar2;
+  uint uVar3;
+  uint uVar4;
+  uint uVar5;
+  uint uVar6;
+  uint uVar7;
+  uint uVar8;
+  uint uVar9;
+  uint uVar10;
+  undefined8 uVar11;
+  undefined8 *unaff_x19;
+  long unaff_x20;
+  long unaff_x21;
+  undefined8 unaff_x23;
+  long *unaff_x24;
+  long unaff_x25;
+  byte *pbVar12;
+  undefined1 uStack0000000000000020;
+  undefined8 in_stack_00000048;
+  long in_stack_00000050;
+  undefined1 uStack0000000000000058;
+  undefined8 uStack0000000000000060;
+  undefined8 uStack0000000000000068;
+  undefined8 uStack0000000000000070;
+  undefined8 uStack0000000000000078;
+  undefined8 uStack0000000000000080;
+  undefined8 uStack0000000000000088;
+  undefined8 uStack0000000000000090;
+  undefined8 uStack0000000000000098;
+  undefined1 uStack00000000000000f0;
+  undefined1 uStack0000000000000138;
+  undefined8 uStack0000000000000140;
+  undefined8 uStack0000000000000148;
+  undefined8 in_stack_00000150;
+  undefined8 in_stack_00000158;
+  undefined8 in_stack_00000160;
+  undefined8 in_stack_00000168;
+  undefined8 in_stack_00000170;
+  undefined8 in_stack_00000178;
+  undefined8 in_stack_00000180;
+  undefined8 in_stack_00000188;
+  undefined8 in_stack_00000190;
+  undefined8 in_stack_00000198;
+  undefined8 in_stack_000001a0;
+  undefined8 in_stack_000001a8;
+  undefined8 in_stack_000001b0;
+  undefined8 in_stack_000001b8;
+  undefined8 in_stack_000001c0;
+  undefined8 in_stack_000001c8;
+  undefined8 in_stack_000001d0;
+  undefined8 in_stack_000001d8;
+  undefined8 in_stack_000001e0;
+  undefined8 in_stack_000001e8;
+  undefined1 auStack_7ffffffe [2147483646];
+  
+  uStack0000000000000068 = *(undefined8 *)(unaff_x25 + 0xa8);
+  uStack0000000000000060 = *(undefined8 *)(unaff_x25 + 0xa0);
+  uStack0000000000000078 = *(undefined8 *)(unaff_x25 + 0xb8);
+  uStack0000000000000070 = *(undefined8 *)(unaff_x25 + 0xb0);
+  uStack0000000000000088 = *(undefined8 *)(unaff_x25 + 200);
+  uStack0000000000000080 = *(undefined8 *)(unaff_x25 + 0xc0);
+  uStack0000000000000098 = *(undefined8 *)(unaff_x25 + 0xd8);
+  uStack0000000000000090 = *(undefined8 *)(unaff_x25 + 0xd0);
+  uStack00000000000000f0 = 6;
+  _uStack0000000000000058 = 0x8000000000000003;
+  _uStack0000000000000138 = 0;
+  uStack0000000000000140 = 1;
+  uStack0000000000000148 = 0;
+  func_0x001bb074(&uStack0000000000000058,&uStack0000000000000138,auStack_7ffffffe + 0x8000020e);
+  in_stack_00000158 = *(undefined8 *)(unaff_x25 + 0xe8);
+  in_stack_00000150 = *(undefined8 *)(unaff_x25 + 0xe0);
+  in_stack_000001c0 = *(undefined8 *)(unaff_x25 + 0x58);
+  in_stack_000001b8 = *(undefined8 *)(unaff_x25 + 0x50);
+  in_stack_000001d0 = *(undefined8 *)(unaff_x25 + 0x68);
+  in_stack_000001c8 = *(undefined8 *)(unaff_x25 + 0x60);
+  in_stack_000001e0 = *(undefined8 *)(unaff_x25 + 0x78);
+  in_stack_000001d8 = *(undefined8 *)(unaff_x25 + 0x70);
+  in_stack_000001e8 = *(undefined8 *)(unaff_x25 + 0x80);
+  in_stack_00000190 = uStack0000000000000080;
+  in_stack_00000188 = uStack0000000000000078;
+  in_stack_00000160 = uStack0000000000000148;
+  in_stack_000001a0 = uStack0000000000000090;
+  in_stack_00000198 = uStack0000000000000088;
+  in_stack_000001a8 = uStack0000000000000098;
+  in_stack_00000170 = uStack0000000000000060;
+  in_stack_00000168 = _uStack0000000000000058;
+  in_stack_00000180 = uStack0000000000000070;
+  in_stack_00000178 = uStack0000000000000068;
+  func_0x001d9854(&uStack0000000000000020,auStack_7ffffffe + 0x8000020e);
+  func_0x0021739c(auStack_7ffffffe + 0x8000020e);
+  uVar11 = *(undefined8 *)(unaff_x21 + 0x10);
+  uVar1 = *(undefined8 *)(unaff_x21 + 0x18);
+  (**(code **)(in_stack_00000050 + 0x18))(auStack_7ffffffe + 0x8000020e,in_stack_00000048);
+  uVar11 = func_0x00237a98(uVar11,uVar1,unaff_x20 + 200,0x20,auStack_7ffffffe + 0x8000020e);
+  if (*unaff_x24 == 8) {
+    pbVar12 = (byte *)unaff_x24[-1];
+    uVar6 = (uint)uVar11;
+    uVar3 = func_0x00231d40((uint)*pbVar12 == (uVar6 & 0xff));
+    uVar4 = func_0x00231d40((uint)pbVar12[1] == (uVar6 >> 8 & 0xff));
+    uVar5 = func_0x00231d40((uint)pbVar12[2] == (uVar6 >> 0x10 & 0xff));
+    uVar6 = func_0x00231d40((uint)pbVar12[3] == uVar6 >> 0x18);
+    uVar8 = (uint)((ulong)uVar11 >> 0x20);
+    uVar7 = func_0x00231d40((uint)pbVar12[4] == (uVar8 & 0xff));
+    uVar8 = func_0x00231d40((uint)pbVar12[5] == (uVar8 >> 8 & 0xff));
+    uVar9 = func_0x00231d40((ushort)pbVar12[6] == ((ushort)((ulong)uVar11 >> 0x30) & 0xff));
+    uVar10 = func_0x00231d40(pbVar12[7] == (byte)((ulong)uVar11 >> 0x38));
+    uVar3 = uVar3 & uVar4 & uVar5 & uVar6 & uVar7 & uVar8 & uVar9 & uVar10 & 1;
+    unaff_x23 = 0x8000000000000027;
+  }
+  else {
+    uVar3 = 0;
+  }
+  cVar2 = func_0x00231d40(uVar3);
+  *(bool *)(unaff_x19 + 1) = cVar2 != '\0';
+  *unaff_x19 = unaff_x23;
+  func_0x002172c4(&uStack0000000000000020);
+  return;
+}
+

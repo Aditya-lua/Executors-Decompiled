@@ -1,0 +1,58 @@
+
+void FUN_005d2ec4(long param_1)
+
+{
+  code *pcVar1;
+  int iVar2;
+  ulong unaff_x20;
+  long *unaff_x22;
+  long unaff_x24;
+  long unaff_x25;
+  long unaff_x27;
+  undefined8 unaff_x28;
+  long unaff_x29;
+  long *in_stack_00000000;
+  long in_stack_00000020;
+  undefined8 in_stack_00000028;
+  undefined8 uStack0000000000000038;
+  long in_stack_00000040;
+  long in_stack_00000048;
+  undefined8 uStack0000000000000050;
+  undefined8 in_stack_00000058;
+  undefined8 uStack0000000000000068;
+  
+  while( true ) {
+    _memcpy(param_1);
+    in_stack_00000048 = unaff_x24 + unaff_x20;
+    *(undefined8 *)(unaff_x29 + -0x68) = unaff_x28;
+    *(undefined **)(unaff_x29 + -0x60) = &DAT_005d2910;
+    uStack0000000000000068 = &UNK_007fc120;
+    iVar2 = func_0x0046849c(&uStack0000000000000038);
+    if (iVar2 != 0) {
+      func_0x007a2810(&UNK_008b5cbe,0x2b,&uStack0000000000000068,&UNK_009f2cd8,&UNK_009f2db8);
+                    /* WARNING: Does not return */
+      pcVar1 = (code *)SoftwareBreakpoint(1,0x5d2ff0);
+      (*pcVar1)();
+    }
+    if (uStack0000000000000050 != 0) {
+      func_0x00187bd4(in_stack_00000058,uStack0000000000000050,1);
+    }
+    if (unaff_x27 == unaff_x25) break;
+    unaff_x27 = unaff_x27 + 0x108;
+    *unaff_x22 = unaff_x27;
+    func_0x005d35c4(&uStack0000000000000050);
+    if ((ulong)(uStack0000000000000038 - in_stack_00000048) < unaff_x20) {
+      func_0x007af5a0(&uStack0000000000000038,in_stack_00000048);
+    }
+    param_1 = in_stack_00000040 + in_stack_00000048;
+    unaff_x24 = in_stack_00000048;
+  }
+  in_stack_00000000[1] = in_stack_00000040;
+  *in_stack_00000000 = uStack0000000000000038;
+  in_stack_00000000[2] = in_stack_00000048;
+  if (in_stack_00000020 != 0) {
+    func_0x00187bd4(in_stack_00000028,in_stack_00000020,1);
+  }
+  return;
+}
+

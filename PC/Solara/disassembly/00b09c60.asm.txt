@@ -1,0 +1,16 @@
+00b09c60  sub      rsp, 0x48
+00b09c64  mov      rax, qword ptr [rip + 0x5b7a95]
+00b09c6b  xor      rax, rsp
+00b09c6e  mov      qword ptr [rsp + 0x38], rax
+00b09c73  mov      dword ptr [rsp + 0x30], r8d
+00b09c78  mov      r9d, 4
+00b09c7e  lea      r8, [rsp + 0x30]
+00b09c83  mov      qword ptr [rsp + 0x20], 0
+00b09c8c  call     qword ptr [rip + 0x43b5c6]
+00b09c92  test     eax, eax
+00b09c94  setne    al
+00b09c97  mov      rcx, qword ptr [rsp + 0x38]
+00b09c9c  xor      rcx, rsp
+00b09c9f  call     0xe155e0
+00b09ca4  add      rsp, 0x48
+00b09ca8  ret      

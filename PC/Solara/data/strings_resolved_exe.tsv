@@ -1,0 +1,80 @@
+file	ghidra_addr	string
+00005400_FUN_140005400.c	140c9d080	SolaraV3_loaded_
+00005400_FUN_140005400.c	140c9d081	olaraV3_loaded_
+00005400_FUN_140005400.c	140c9d082	laraV3_loaded_
+00005400_FUN_140005400.c	140c9d083	araV3_loaded_
+00005400_FUN_140005400.c	140c9d084	raV3_loaded_
+00005400_FUN_140005400.c	140c9d085	aV3_loaded_
+00005400_FUN_140005400.c	140c9d086	V3_loaded_
+00005400_FUN_140005400.c	140c9d087	3_loaded_
+00005400_FUN_140005400.c	140c9d088	_loaded_
+00005400_FUN_140005400.c	140c9d089	loaded_
+00005400_FUN_140005400.c	140c9d08a	oaded_
+00005400_FUN_140005400.c	140c9d08b	aded_
+00005400_FUN_140005400.c	140c9d08c	ded_
+00005400_FUN_140005400.c	140c9d08d	ed_
+00005400_FUN_140005400.c	140c9daf3	dll load: preparing SolaraV3.dlldll load: Start() returned 2 
+00005400_FUN_140005400.c	140c9db13	dll load: Start() returned 2 
+00005400_FUN_140005400.c	140c9db90	solara:banned/dll load: Start() returned invalid bridge port 
+00005400_FUN_140005400.c	140c9db9d	/dll load: Start() returned invalid bridge port 
+00005400_FUN_140005400.c	140c9dbe3	Solara V3 
+00005400_FUN_140005400.c	140c9dbff	Solara failed to load. Please restart Solara and try again.'dll load: Start() returned bridge port 
+00005400_FUN_140005400.c	140c9dc3a	'dll load: Start() returned bridge port 
+00005400_FUN_140005400.c	140c9dcc8	solara:ready
+00005400_FUN_140005400.c	140c9dd15	#SolaraV3.dll could not be loaded:
+00005400_FUN_140005400.c	140c9ddd9	Solara V3 
+00005400_FUN_140005400.c	140c9de37	 SolaraV3.dll is not available:
+00005400_FUN_140005400.c	140c9df3d	Solara V3 
+00005400_FUN_140005400.c	140c9e0a0	dll load: already started, skipping
+00005400_FUN_140005400.c	140cb94ad	SolaraV3.dllSLaunch.exemanifest.json
+00005400_FUN_140005400.c	140cb95e8	copy_dll: canonical DLL missing, seeding from bundled resourcecopy_dll: no bundled DLL eitherSolaraV3.dll not found
+00005400_FUN_140005400.c	140cb9626	copy_dll: no bundled DLL eitherSolaraV3.dll not found
+00005400_FUN_140005400.c	140cb9645	SolaraV3.dll not found
+00005400_FUN_140005400.c	140cb964d	.dll not found
+00005400_FUN_140005400.c	140cdb100	a Display implementation returned an error unexpectedly/rustc/ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96/library\alloc\src\string.rs
+00005400_FUN_140005400.c	140cdb358	called `Result::unwrap()` on an `Err` value
+00005400_FUN_140005400.c	140cdbc50	solara_v3_lib::AppState
+00005400_FUN_140005400.c	140cdc0ec	#state() called before manage() for 
+00005400_FUN_140005400.c	140cdc130	tauri::path::desktop::PathResolver<tauri_runtime_wry::Wry<tauri::EventLoopMessage>>tauri_plugin_http::Httptauri::menu::plugin::MenuChannelst
+00005400_FUN_140005400.c	140cdc308	poisoned webview managerC:\Users\quivi\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tauri-2.11.2\src\manager\webview.rs
+00010010_FUN_140010010.c	140c9d5d0	mainmain window not foundcould not open process
+00010010_FUN_140010010.c	140c9d739	bin%Y-%m-%d %H:%M:%S%.3f
+00010010_FUN_140010010.c	140c9d90e	settings.bin
+00010010_FUN_140010010.c	140c9df5b	workspaceautoexecscripts
+00010010_FUN_140010010.c	140c9df64	autoexecscripts
+00010010_FUN_140010010.c	140c9df6c	scripts
+00010010_FUN_140010010.c	140c9e2ce	%webview2 hooks: with_webview failed: 
+00010010_FUN_140010010.c	140c9e2f6	webview2 hooks: main window not foundwindowSizewindowScalewindow fit: user already has a saved size/scale, leaving it alone
+00010010_FUN_140010010.c	140c9e31b	windowSizewindowScalewindow fit: user already has a saved size/scale, leaving it alone
+00010010_FUN_140010010.c	140c9e325	windowScalewindow fit: user already has a saved size/scale, leaving it alone
+00010010_FUN_140010010.c	140c9e330	window fit: user already has a saved size/scale, leaving it alone
+00010010_FUN_140010010.c	140cb8df9	setup: enteredsetup: startup args handledsetup: data dirs createdtopmostsetup: always-on-top restoredsetup: update check starting (blocking)
+00010010_FUN_140010010.c	140cb8e07	setup: startup args handledsetup: data dirs createdtopmostsetup: always-on-top restoredsetup: update check starting (blocking)
+00010010_FUN_140010010.c	140cb8e22	setup: data dirs createdtopmostsetup: always-on-top restoredsetup: update check starting (blocking)
+00010010_FUN_140010010.c	140cb8e3a	topmostsetup: always-on-top restoredsetup: update check starting (blocking)
+00010010_FUN_140010010.c	140cb8e41	setup: always-on-top restoredsetup: update check starting (blocking)
+00010010_FUN_140010010.c	140cb8e5e	setup: update check starting (blocking)
+00010010_FUN_140010010.c	140cb8ea0	setup: update check finishedsetup: writing startup assetsetup: startup asset ready#setup: startup asset write failed: 
+00010010_FUN_140010010.c	140cb8ebc	setup: writing startup assetsetup: startup asset ready#setup: startup asset write failed: 
+00010010_FUN_140010010.c	140cb8ed8	setup: startup asset ready#setup: startup asset write failed: 
+00010010_FUN_140010010.c	140cb8ef2	#setup: startup asset write failed: 
+00010010_FUN_140010010.c	140cb8f18	setup: no migration pending, loading DLL
+00010010_FUN_140010010.c	140cb8fb8	setup: spawn_periodic_check returnedsetup: spawn_search_blacklist_fetch returnedsetup: discord rpc initialized, setup returning Ok
+00010010_FUN_140010010.c	140cb8fdc	setup: spawn_search_blacklist_fetch returnedsetup: discord rpc initialized, setup returning Ok
+00010010_FUN_140010010.c	140cb9008	setup: discord rpc initialized, setup returning Ok
+00010010_FUN_140010010.c	140cb96de	failed to spawn thread/rustc/ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96/library\std\src\thread\functions.rs
+00010010_FUN_140010010.c	140cb9760	 startup args: removing orphaned 
+00010010_FUN_140010010.c	140cb97cf	DLCTBL_FRTStmpOsGb/YRB2D8WyB5B/NJJSHvI/51WH5YXxZMWpusFBY+MgX61qsZEfs6vPgFmDuCxNssYMIt4byflvfDW00Z/bnQQ/D8Dgg77smENDRaQuISUVxfW1altm1LcMtzpD2
+00010010_FUN_140010010.c	140cb97da	tmpOsGb/YRB2D8WyB5B/NJJSHvI/51WH5YXxZMWpusFBY+MgX61qsZEfs6vPgFmDuCxNssYMIt4byflvfDW00Z/bnQQ/D8Dgg77smENDRaQuISUVxfW1altm1LcMtzpD2GBZJuCAg4U3
+00010010_FUN_140010010.c	140cb97dd	OsGb/YRB2D8WyB5B/NJJSHvI/51WH5YXxZMWpusFBY+MgX61qsZEfs6vPgFmDuCxNssYMIt4byflvfDW00Z/bnQQ/D8Dgg77smENDRaQuISUVxfW1altm1LcMtzpD2GBZJuCAg4U3blg
+00010010_FUN_140010010.c	140cda700	periodic check: spawning
+00010010_FUN_140010010.c	140cda730	periodic check: spawn returned
+00010010_FUN_140010010.c	140cda950	SOLARA_BOOTSTRAPPEREnvironmentmigration: removed SOLARA_BOOTSTRAPPER from user environment+migration: could not open Environment key: 
+00010010_FUN_140010010.c	140cdaa74	migration: source has no files to pull; marking done
+00010010_FUN_140010010.c	140cdab00	migration: SOLARA_BOOTSTRAPPER not set; marking donelegacyBootstrapMigrationDonedata did not match any variant of untagged enum EntryRawProx
+00010010_FUN_140010010.c	140cdab34	legacyBootstrapMigrationDonedata did not match any variant of untagged enum EntryRawProxyConfigbasicAuthnoProxy
+00010010_FUN_140010010.c	140cdb100	a Display implementation returned an error unexpectedly/rustc/ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96/library\alloc\src\string.rs
+00010010_FUN_140010010.c	140cdb358	called `Result::unwrap()` on an `Err` value
+00010010_FUN_140010010.c	140cdbc50	solara_v3_lib::AppState
+00010010_FUN_140010010.c	140cdc0ec	#state() called before manage() for 
+00010010_FUN_140010010.c	140cdc130	tauri::path::desktop::PathResolver<tauri_runtime_wry::Wry<tauri::EventLoopMessage>>tauri_plugin_http::Httptauri::menu::plugin::MenuChannelst

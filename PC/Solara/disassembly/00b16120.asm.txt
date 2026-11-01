@@ -1,0 +1,126 @@
+00b16120  mov      qword ptr [rsp + 0x18], rbx
+00b16125  push     rbp
+00b16126  push     rsi
+00b16127  push     rdi
+00b16128  push     r12
+00b1612a  push     r13
+00b1612c  push     r14
+00b1612e  push     r15
+00b16130  sub      rsp, 0x80
+00b16137  mov      rax, qword ptr [rip + 0x5ab5c2]
+00b1613e  xor      rax, rsp
+00b16141  mov      qword ptr [rsp + 0x78], rax
+00b16146  mov      r14, r8
+00b16149  mov      qword ptr [rsp + 0x38], r8
+00b1614e  lea      r8, [rsp + 0x48]
+00b16153  mov      qword ptr [rsp + 0x20], 0
+00b1615c  mov      r9d, 8
+00b16162  mov      rbx, rdx
+00b16165  mov      r12, rcx
+00b16168  call     qword ptr [rip + 0x42f0e2]
+00b1616e  mov      rdi, qword ptr [rsp + 0x48]
+00b16173  lea      rdx, [rbx + 8]
+00b16177  mov      r9d, 4
+00b1617d  mov      qword ptr [rsp + 0x30], rdi
+00b16182  lea      r8, [rsp + 0x40]
+00b16187  mov      qword ptr [rsp + 0x20], 0
+00b16190  mov      rcx, r12
+00b16193  call     qword ptr [rip + 0x42f0b7]
+00b16199  mov      r13d, dword ptr [rsp + 0x40]
+00b1619e  xor      esi, esi
+00b161a0  cmp      esi, r13d
+00b161a3  jae      0xb162a9
+00b161a9  mov      r15d, 0x28
+00b161af  nop      
+00b161b0  mov      edx, esi
+00b161b2  mov      qword ptr [rsp + 0x20], 0
+00b161bb  shl      edx, 4
+00b161be  lea      r8, [rsp + 0x40]
+00b161c3  add      rdx, rdi
+00b161c6  mov      r9d, 8
+00b161cc  mov      rcx, r12
+00b161cf  call     qword ptr [rip + 0x42f07b]
+00b161d5  mov      rbp, qword ptr [rsp + 0x40]
+00b161da  test     rbp, rbp
+00b161dd  je       0xb1629e
+00b161e3  lea      rdx, [rbp + 8]
+00b161e7  mov      qword ptr [rsp + 0x20], 0
+00b161f0  mov      r9d, 8
+00b161f6  lea      r8, [rsp + 0x50]
+00b161fb  mov      rcx, r12
+00b161fe  call     qword ptr [rip + 0x42f04c]
+00b16204  mov      r8, qword ptr [rsp + 0x50]
+00b16209  lea      rcx, [rsp + 0x58]
+00b1620e  mov      rdx, r12
+00b16211  call     0xaf2cc0
+00b16216  mov      r14, qword ptr [r14]
+00b16219  mov      rcx, r14
+00b1621c  call     0xf29c00
+00b16221  mov      rdi, qword ptr [rsp + 0x70]
+00b16226  lea      rcx, [rsp + 0x58]
+00b1622b  mov      rbx, qword ptr [rsp + 0x58]
+00b16230  cmp      rdi, 0xf
+00b16234  mov      r8, qword ptr [rsp + 0x68]
+00b16239  cmova    rcx, rbx
+00b1623d  cmp      r8, rax
+00b16240  jne      0xb16257
+00b16242  test     r8, r8
+00b16245  je       0xb162d3
+00b1624b  mov      rdx, r14
+00b1624e  call     0xf29010
+00b16253  test     eax, eax
+00b16255  je       0xb162d3
+00b16257  cmp      rdi, 0xf
+00b1625b  jbe      0xb16294
+00b1625d  lea      rax, [rdi + 1]
+00b16261  cmp      rax, 0x1000
+00b16267  jb       0xb16283
+00b16269  mov      rcx, qword ptr [rbx - 8]
+00b1626d  sub      rbx, rcx
+00b16270  add      rbx, -8
+00b16274  cmp      rbx, 0x1f
+00b16278  ja       0xb1630f
+00b1627e  mov      rax, r15
+00b16281  jmp      0xb1628b
+00b16283  mov      rcx, rbx
+00b16286  mov      eax, 1
+00b1628b  lea      rdx, [rax + rdi]
+00b1628f  call     0xe15340
+00b16294  mov      r14, qword ptr [rsp + 0x38]
+00b16299  mov      rdi, qword ptr [rsp + 0x30]
+00b1629e  inc      esi
+00b162a0  cmp      esi, r13d
+00b162a3  jb       0xb161b0
+00b162a9  xor      eax, eax
+00b162ab  mov      rcx, qword ptr [rsp + 0x78]
+00b162b0  xor      rcx, rsp
+00b162b3  call     0xe155e0
+00b162b8  mov      rbx, qword ptr [rsp + 0xd0]
+00b162c0  add      rsp, 0x80
+00b162c7  pop      r15
+00b162c9  pop      r14
+00b162cb  pop      r13
+00b162cd  pop      r12
+00b162cf  pop      rdi
+00b162d0  pop      rsi
+00b162d1  pop      rbp
+00b162d2  ret      
+00b162d3  cmp      rdi, 0xf
+00b162d7  jbe      0xb1630a
+00b162d9  lea      rax, [rdi + 1]
+00b162dd  cmp      rax, 0x1000
+00b162e3  jb       0xb162f8
+00b162e5  mov      rcx, qword ptr [rbx - 8]
+00b162e9  sub      rbx, rcx
+00b162ec  add      rbx, -8
+00b162f0  cmp      rbx, 0x1f
+00b162f4  ja       0xb1630f
+00b162f6  jmp      0xb16301
+00b162f8  mov      rcx, rbx
+00b162fb  mov      r15d, 1
+00b16301  lea      rdx, [r15 + rdi]
+00b16305  call     0xe15340
+00b1630a  mov      rax, rbp
+00b1630d  jmp      0xb162ab
+00b1630f  mov      ecx, 5
+00b16314  int      0x29

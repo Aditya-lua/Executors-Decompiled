@@ -1,0 +1,61 @@
+
+void FUN_006bca74(void)
+
+{
+  long unaff_x21;
+  long unaff_x26;
+  long unaff_x29;
+  undefined1 *puStack0000000000000000;
+  undefined8 uStack0000000000000010;
+  undefined1 *puStack0000000000000018;
+  undefined8 uStack0000000000000020;
+  undefined8 uStack0000000000000028;
+  undefined1 *puStack0000000000000030;
+  undefined1 uStack0000000000000054;
+  undefined1 uStack0000000000000064;
+  undefined1 uStack0000000000000068;
+  undefined1 uStack0000000000000070;
+  undefined8 uStack0000000000000078;
+  undefined1 uStack0000000000000080;
+  undefined8 uStack0000000000000088;
+  undefined1 uStack0000000000000090;
+  undefined8 uStack0000000000000098;
+  undefined1 uStack00000000000000a0;
+  undefined8 uStack00000000000000a8;
+  undefined1 uStack00000000000000b0;
+  undefined8 uStack00000000000000b8;
+  undefined1 uStack00000000000000c0;
+  undefined1 uStack0000000000000180;
+  
+  _uStack00000000000000b0 = 0;
+  uStack00000000000000b8 = 0;
+  _uStack00000000000000a0 = 0;
+  uStack00000000000000a8 = 0;
+  _uStack0000000000000090 = 0;
+  uStack0000000000000098 = 0;
+  _uStack0000000000000080 = 0;
+  uStack0000000000000088 = 0;
+  _uStack0000000000000070 = 0;
+  uStack0000000000000078 = 0;
+  _uStack0000000000000068 = 0;
+  uStack0000000000000054 = 0;
+  uStack0000000000000064 = 0;
+  uStack0000000000000020 = 0;
+  uStack0000000000000028 = 0;
+  puStack0000000000000030 = &uStack0000000000000054;
+  puStack0000000000000018 = &uStack0000000000000068;
+  puStack0000000000000000 = &uStack0000000000000070;
+  uStack0000000000000010 = 0;
+  func_0x00706378(&uStack00000000000000c0,unaff_x21 + 0xc,&uStack00000000000000b0,
+                  &uStack00000000000000a0,&uStack0000000000000090,0,&uStack0000000000000080,1);
+  func_0x006bcbc0(&uStack0000000000000180,&uStack00000000000000c0,unaff_x29 + -0xc1);
+  func_0x006b0e28();
+  func_0x006b33ec();
+  func_0x006d03d8(&uStack0000000000000180);
+  if (*(long *)(unaff_x26 + 0x560) != 0) {
+    *(long *)(unaff_x26 + 0x568) = *(long *)(unaff_x26 + 0x560);
+    __ZdlPv();
+  }
+  return;
+}
+

@@ -1,0 +1,133 @@
+
+void FUN_00583d68(void)
+
+{
+  undefined8 *puVar1;
+  long lVar2;
+  long lVar3;
+  long lVar4;
+  undefined8 uVar5;
+  long unaff_x19;
+  long unaff_x20;
+  undefined8 *unaff_x21;
+  long unaff_x22;
+  long unaff_x23;
+  long unaff_x24;
+  undefined8 uVar6;
+  undefined1 uStack0000000000000010;
+  undefined8 *in_stack_00000018;
+  undefined8 in_stack_00000030;
+  undefined8 in_stack_00000038;
+  undefined8 in_stack_00000040;
+  undefined8 in_stack_00000048;
+  undefined8 in_stack_00000050;
+  undefined8 in_stack_00000058;
+  undefined8 in_stack_00000060;
+  undefined8 in_stack_00000068;
+  undefined8 in_stack_00000070;
+  undefined8 in_stack_00000078;
+  undefined8 in_stack_00000080;
+  undefined8 in_stack_00000088;
+  undefined8 in_stack_00000090;
+  undefined8 in_stack_00000098;
+  undefined8 in_stack_000000a0;
+  undefined8 in_stack_000000a8;
+  undefined8 in_stack_000000b0;
+  undefined8 in_stack_000000b8;
+  undefined8 in_stack_000000c0;
+  undefined8 in_stack_000000c8;
+  undefined8 in_stack_000000d0;
+  undefined8 in_stack_000000d8;
+  undefined8 in_stack_000000e0;
+  undefined8 in_stack_000000e8;
+  undefined8 in_stack_000000f0;
+  undefined8 in_stack_000000f8;
+  undefined8 in_stack_00000100;
+  undefined8 in_stack_00000108;
+  undefined8 in_stack_00000110;
+  
+  _memmove();
+  *(long *)(unaff_x19 + 0x18) = unaff_x24;
+  if (*(long *)(unaff_x20 + 0x10) != unaff_x24) {
+    lVar2 = *(long *)(unaff_x20 + 8);
+    puVar1 = (undefined8 *)(lVar2 + *(long *)(unaff_x20 + 0x10) * 0x108);
+    lVar3 = unaff_x22 * 0x108;
+    while( true ) {
+      lVar3 = lVar3 + -0x108;
+      in_stack_00000018 = unaff_x21 + 0x21;
+      lVar4 = unaff_x21[3];
+      if (lVar4 == 0x21) break;
+      in_stack_000000e8 = unaff_x21[0x1b];
+      in_stack_000000e0 = unaff_x21[0x1a];
+      in_stack_000000f8 = unaff_x21[0x1d];
+      in_stack_000000f0 = unaff_x21[0x1c];
+      in_stack_00000108 = unaff_x21[0x1f];
+      in_stack_00000100 = unaff_x21[0x1e];
+      in_stack_00000110 = unaff_x21[0x20];
+      in_stack_000000a8 = unaff_x21[0x13];
+      in_stack_000000a0 = unaff_x21[0x12];
+      in_stack_000000b8 = unaff_x21[0x15];
+      in_stack_000000b0 = unaff_x21[0x14];
+      in_stack_000000c8 = unaff_x21[0x17];
+      in_stack_000000c0 = unaff_x21[0x16];
+      in_stack_000000d8 = unaff_x21[0x19];
+      in_stack_000000d0 = unaff_x21[0x18];
+      in_stack_00000068 = unaff_x21[0xb];
+      in_stack_00000060 = unaff_x21[10];
+      in_stack_00000078 = unaff_x21[0xd];
+      in_stack_00000070 = unaff_x21[0xc];
+      in_stack_00000088 = unaff_x21[0xf];
+      in_stack_00000080 = unaff_x21[0xe];
+      in_stack_00000098 = unaff_x21[0x11];
+      in_stack_00000090 = unaff_x21[0x10];
+      in_stack_00000038 = unaff_x21[5];
+      in_stack_00000030 = unaff_x21[4];
+      in_stack_00000048 = unaff_x21[7];
+      in_stack_00000040 = unaff_x21[6];
+      in_stack_00000058 = unaff_x21[9];
+      in_stack_00000050 = unaff_x21[8];
+      uVar6 = *unaff_x21;
+      uVar5 = unaff_x21[2];
+      puVar1[1] = unaff_x21[1];
+      *puVar1 = uVar6;
+      puVar1[2] = uVar5;
+      puVar1[3] = lVar4;
+      puVar1[0x1b] = in_stack_000000e8;
+      puVar1[0x1a] = in_stack_000000e0;
+      puVar1[0x1d] = in_stack_000000f8;
+      puVar1[0x1c] = in_stack_000000f0;
+      puVar1[0x1f] = in_stack_00000108;
+      puVar1[0x1e] = in_stack_00000100;
+      puVar1[0x20] = in_stack_00000110;
+      puVar1[0x13] = in_stack_000000a8;
+      puVar1[0x12] = in_stack_000000a0;
+      puVar1[0x15] = in_stack_000000b8;
+      puVar1[0x14] = in_stack_000000b0;
+      puVar1[0x17] = in_stack_000000c8;
+      puVar1[0x16] = in_stack_000000c0;
+      puVar1[0x19] = in_stack_000000d8;
+      puVar1[0x18] = in_stack_000000d0;
+      puVar1[0xb] = in_stack_00000068;
+      puVar1[10] = in_stack_00000060;
+      puVar1[0xd] = in_stack_00000078;
+      puVar1[0xc] = in_stack_00000070;
+      puVar1[0xf] = in_stack_00000088;
+      puVar1[0xe] = in_stack_00000080;
+      puVar1[0x11] = in_stack_00000098;
+      puVar1[0x10] = in_stack_00000090;
+      puVar1[5] = in_stack_00000038;
+      puVar1[4] = in_stack_00000030;
+      puVar1[7] = in_stack_00000048;
+      puVar1[6] = in_stack_00000040;
+      puVar1[9] = in_stack_00000058;
+      puVar1[8] = in_stack_00000050;
+      *(long *)(unaff_x20 + 0x10) = *(long *)(unaff_x20 + 0x10) + 1;
+      puVar1 = puVar1 + 0x21;
+      if ((puVar1 == (undefined8 *)(lVar2 + unaff_x23)) ||
+         (unaff_x21 = in_stack_00000018, lVar3 == 0)) break;
+    }
+  }
+  func_0x00592e4c(&uStack0000000000000010);
+  return;
+}
+

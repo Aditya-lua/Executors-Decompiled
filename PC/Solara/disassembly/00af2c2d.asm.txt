@@ -1,0 +1,30 @@
+00af2c2d  mov      qword ptr [rsp + 0x90], rsi
+00af2c35  lea      r8, [rsp + 0x30]
+00af2c3a  mov      qword ptr [rsp + 0x48], rdi
+00af2c3f  mov      rdx, rdi
+00af2c42  mov      qword ptr [rsp + 0x20], 0
+00af2c4b  mov      rcx, rbp
+00af2c4e  call     qword ptr [rip + 0x452604]
+00af2c54  test     eax, eax
+00af2c56  je       0xaf2c8c
+00af2c58  mov      r9, qword ptr [rbx + 0x10]
+00af2c5c  inc      r9
+00af2c5f  cmp      qword ptr [rbx + 0x18], 0xf
+00af2c64  jbe      0xaf2c69
+00af2c66  mov      rbx, qword ptr [rbx]
+00af2c69  mov      r8, rbx
+00af2c6c  mov      qword ptr [rsp + 0x20], 0
+00af2c75  lea      rdx, [rdi + 0x20]
+00af2c79  mov      rcx, rbp
+00af2c7c  call     qword ptr [rip + 0x4525d6]
+00af2c82  test     eax, eax
+00af2c84  je       0xaf2c8c
+00af2c86  lea      rax, [rdi + 0x20]
+00af2c8a  jmp      0xaf2ca3
+00af2c8c  mov      r9d, 0x8000
+00af2c92  xor      r8d, r8d
+00af2c95  mov      rdx, rdi
+00af2c98  mov      rcx, rbp
+00af2c9b  call     qword ptr [rip + 0x45271f]
+00af2ca1  xor      eax, eax
+00af2ca3  mov      rsi, qword ptr [rsp + 0x90]

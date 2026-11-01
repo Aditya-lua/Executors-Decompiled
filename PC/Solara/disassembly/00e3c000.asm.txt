@@ -1,0 +1,11 @@
+00e3c000  sub      rsp, 0x28
+00e3c004  and      dword ptr [rsp + 0x30], 0
+00e3c009  lea      r9, [rsp + 0x30]
+00e3c00e  mov      edx, 0x100
+00e3c013  lea      rcx, [rip + 0x2d3fe6]
+00e3c01a  mov      r8d, 2
+00e3c020  call     qword ptr [rip + 0x1094aa]
+00e3c026  test     eax, eax
+00e3c028  setne    al
+00e3c02b  add      rsp, 0x28
+00e3c02f  ret      

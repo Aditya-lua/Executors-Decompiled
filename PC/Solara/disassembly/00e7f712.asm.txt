@@ -1,0 +1,9 @@
+00e7f712  mov     qword ptr [rsp + 0x1e0], rdi
+00e7f71a  xor     ebx, ebx
+00e7f71c  call    qword ptr [rip + 0xc5b3e]
+00e7f722  mov     rdi, rax
+00e7f725  test    rax, rax
+00e7f728  jne     0xe7f736
+00e7f72a  mov     qword ptr [rip + 0x255c07], rbx
+00e7f731  jmp     0xe7f88d
+00e7f736  lea     rdx, [rip + 0x1c94ab]

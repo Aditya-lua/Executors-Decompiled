@@ -1,0 +1,99 @@
+file	ghidra_addr	string
+001ad0f0_FUN_1801ad0f0.c	180f47d58	[CLIENT CONSTRUCTOR]: 
+001ad0f0_FUN_1801ad0f0.c	180f47d70	...
+00215e90_FUN_180215e90.c	180f49c68	 R!
+00215e90_FUN_180215e90.c	180f49d60	/state
+00215e90_FUN_180215e90.c	180f49d68	/execute_script
+00215e90_FUN_180215e90.c	180f49d78	/request
+00215e90_FUN_180215e90.c	180f49d88	/client_manager
+00215e90_FUN_180215e90.c	180f49d98	127.0.0.1
+00215e90_FUN_180215e90.c	180f4a5b8	p|!
+00215e90_FUN_180215e90.c	180f4a660	0}!
+002b8450_FUN_1802b8450.c	180f475bc	bin
+002b8450_FUN_1802b8450.c	180f4e3e0	bin/crash.dmp
+002b8450_FUN_1802b8450.c	180f4e3f0	Error
+002b8450_FUN_1802b8450.c	180f4e400	Solara encountered a fatal error.
+00aecac0_Start.c	180f46b58	bin/DEBUG.txt
+00aecac0_Start.c	180f475bc	bin
+00aecac0_Start.c	180f4d5a8	create_directories
+00aecac0_Start.c	180f4e398	--- log Started ---
+00aecac0_Start.c	180f4e3b0	--- solara 2026 ---
+00aecac0_Start.c	180f4e3c8	--- cmd softworks ---
+00c1b760_FUN_180c1b760.c	180f673b8	W:no stack?
+00c1b760_FUN_180c1b760.c	180f673d0	W:OpenSSL
+00c1b760_FUN_180c1b760.c	180f673e0	W:OpenSSL: FATAL
+00c32790_FUN_180c32790.c	180f85500	W:Intel Hardware Cryptographic Service Provider
+00c63820_FUN_180c63820.c	180f8c640	ERR_CAPI_error
+00c63820_FUN_180c63820.c	180f8c650	C:\Temp\vcpkg\buildtrees\openssl\x64-windows-static-rel\engines\e_capi_err.c
+00c63820_FUN_180c63820.c	180f8c6a0	engines\e_capi.c
+00c63a60_FUN_180c63a60.c	180f8c640	ERR_CAPI_error
+00c63a60_FUN_180c63a60.c	180f8c650	C:\Temp\vcpkg\buildtrees\openssl\x64-windows-static-rel\engines\e_capi_err.c
+00c63a60_FUN_180c63a60.c	180f8c6a0	engines\e_capi.c
+00c63a60_FUN_180c63a60.c	180f8c7f8	Called CAPI_dsa_do_sign()
+00c6461c_sub_c6461c.c	180f8c230	W:Microsoft Enhanced RSA and AES Cryptographic Provider
+00c6461c_sub_c6461c.c	180f8c640	ERR_CAPI_error
+00c6461c_sub_c6461c.c	180f8c650	C:\Temp\vcpkg\buildtrees\openssl\x64-windows-static-rel\engines\e_capi_err.c
+00c6461c_sub_c6461c.c	180f8c6a0	engines\e_capi.c
+00c650c0_FUN_180c650c0.c	180f8c230	W:Microsoft Enhanced RSA and AES Cryptographic Provider
+00c650c0_FUN_180c650c0.c	180f8c640	ERR_CAPI_error
+00c650c0_FUN_180c650c0.c	180f8c650	C:\Temp\vcpkg\buildtrees\openssl\x64-windows-static-rel\engines\e_capi_err.c
+00c650c0_FUN_180c650c0.c	180f8c6a0	engines\e_capi.c
+00c65600_FUN_180c65600.c	180f8c640	ERR_CAPI_error
+00c65600_FUN_180c65600.c	180f8c650	C:\Temp\vcpkg\buildtrees\openssl\x64-windows-static-rel\engines\e_capi_err.c
+00c65600_FUN_180c65600.c	180f8c6a0	engines\e_capi.c
+00c65600_FUN_180c65600.c	180f8c8f0	Got max container len %d
+00c65600_FUN_180c65600.c	180f8c910	Container name %s, len=%d, index=%d, flags=%d
+00c65600_FUN_180c65600.c	180f8c940	Enumerate bug: using workaround
+00c65600_FUN_180c65600.c	180f8c968	%lu. %s
+00c662d4_sub_c662d4.c	180f8c640	ERR_CAPI_error
+00c662d4_sub_c662d4.c	180f8c650	C:\Temp\vcpkg\buildtrees\openssl\x64-windows-static-rel\engines\e_capi_err.c
+00c662d4_sub_c662d4.c	180f8c6a0	engines\e_capi.c
+00c664a0_FUN_180c664a0.c	180f8c640	ERR_CAPI_error
+00c664a0_FUN_180c664a0.c	180f8c650	C:\Temp\vcpkg\buildtrees\openssl\x64-windows-static-rel\engines\e_capi_err.c
+00c664a0_FUN_180c664a0.c	180f8c6a0	engines\e_capi.c
+00c664a0_FUN_180c664a0.c	180f8c7a0	Called CAPI_rsa_sign()
+00c664a0_FUN_180c664a0.c	180f8c7bc	NID=0x
+00e51a48_FUN_180e51a48.c	181044f00	W:CONOUT$
+00e51ab8_FUN_180e51ab8.c	181044f00	W:CONOUT$
+00e88130_FUN_180e88130.c	180ffa938	(unknown)
+00e88130_FUN_180e88130.c	18104a920	schannel: TLS 1.3 not supported on Windows prior to 11
+00e88130_FUN_180e88130.c	18104a958	USE_STRONG_CRYPTO
+00e88130_FUN_180e88130.c	18104a970	SCH_USE_STRONG_CRYPTO
+00e88130_FUN_180e88130.c	18104a988	W:CurrentUser
+00e88130_FUN_180e88130.c	18104a9a0	W:LocalMachine
+00e88130_FUN_180e88130.c	18104a9c0	W:CurrentService
+00e88130_FUN_180e88130.c	18104a9e0	W:Services
+00e88130_FUN_180e88130.c	18104a9f8	W:Users
+00e88130_FUN_180e88130.c	18104aa08	W:CurrentUserGroupPolicy
+00e88130_FUN_180e88130.c	18104aa38	W:LocalMachineGroupPolicy
+00e88130_FUN_180e88130.c	18104aa68	W:LocalMachineEnterprise
+00e88130_FUN_180e88130.c	18104aa98	schannel: disabled automatic use of client certificate
+00e88130_FUN_180e88130.c	18104aad0	schannel: enabled automatic use of client certificate
+00e88130_FUN_180e88130.c	18104ab08	SSL versions not supported
+00e88130_FUN_180e88130.c	18104ab28	Unrecognized parameter passed via CURLOPT_SSLVERSION
+00e88130_FUN_180e88130.c	18104ab60	schannel: Failed to get certificate location or file for %s
+00e88130_FUN_180e88130.c	18104ab9c	P12
+00e88130_FUN_180e88130.c	18104aba0	(memory blob)
+00e88130_FUN_180e88130.c	18104abb0	schannel: certificate format compatibility error  for %s
+00e88130_FUN_180e88130.c	18104abf0	schannel: Failed to read cert file %s
+00e88130_FUN_180e88130.c	18104ac18	schannel: Failed to import cert file %s, password is bad
+00e88130_FUN_180e88130.c	18104ac58	schannel: Failed to import cert file %s, last error is 0x%lx
+00e88130_FUN_180e88130.c	18104aca0	schannel: Failed to get certificate from file %s, last error is 0x%lx
+00e88130_FUN_180e88130.c	18104acf0	schannel: Failed to open cert store %lx %s, last error is 0x%lx
+00e88130_FUN_180e88130.c	18104ad30	schannel: unable to allocate memory
+00e88130_FUN_180e88130.c	18104ad58	TLS_AES_256_GCM_SHA384
+00e88130_FUN_180e88130.c	18104ad70	TLS_AES_128_GCM_SHA256
+00e88130_FUN_180e88130.c	18104ad88	TLS_CHACHA20_POLY1305_SHA256
+00e88130_FUN_180e88130.c	18104ada8	TLS_AES_128_CCM_8_SHA256
+00e88130_FUN_180e88130.c	18104adc8	TLS_AES_128_CCM_SHA256
+00e88130_FUN_180e88130.c	18104ade0	schannel: Unknown TLS 1.3 cipher: %.*s
+00e88130_FUN_180e88130.c	18104ae08	schannel: All available TLS 1.3 ciphers were disabled
+00e88130_FUN_180e88130.c	18104ae60	W:AES
+00e88130_FUN_180e88130.c	18104ae88	W:SHA384
+00e88130_FUN_180e88130.c	18104ae98	W:SHA256
+00e88130_FUN_180e88130.c	18104aea8	W:CHACHA20_POLY1305
+00e88130_FUN_180e88130.c	18104aed0	W:Microsoft Unified Security Protocol Provider
+00e88130_FUN_180e88130.c	18104af30	schannel: WARNING: This version of Schannel may negotiate a less-secure TLS version than TLS 1.3 because the user set an algorithm cipher li
+00e88130_FUN_180e88130.c	18104afc0	schannel: This version of Schannel does not support setting an algorithm cipher list and TLS 1.3 cipher list at the same time
+00e88130_FUN_180e88130.c	18104b040	schannel: Failed setting algorithm cipher list
+00e88130_FUN_180e88130.c	18104b070	schannel: AcquireCredentialsHandle failed: %s

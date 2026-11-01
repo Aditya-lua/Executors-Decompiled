@@ -1,0 +1,142 @@
+{
+"image_base": "0x180000000",
+"functions": 19575,
+"strings": 58,
+"hits": [
+{
+"string": "User-Agent",
+"string_rva": 16018392,
+"xref_rva": 1733882,
+"func": [
+1731168,
+1735023
+]
+},
+{
+"string": "User-Agent",
+"string_rva": 16018392,
+"xref_rva": 2755397,
+"func": [
+2723584,
+2809043
+]
+},
+{
+"string": "User-Agent",
+"string_rva": 16018392,
+"xref_rva": 15218338,
+"func": [
+15217872,
+15218585
+]
+},
+{
+"string": "User-Agent",
+"string_rva": 16018392,
+"xref_rva": 15218389,
+"func": [
+15217872,
+15218585
+]
+},
+{
+"string": "User-Agent",
+"string_rva": 16018392,
+"xref_rva": 15288173,
+"func": [
+15288016,
+15290400
+]
+},
+{
+"string": "Roblox",
+"string_rva": 16022864,
+"xref_rva": 1781952,
+"func": [
+1781840,
+1782051
+]
+},
+{
+"string": "/execute_script",
+"string_rva": 16031080,
+"xref_rva": 2188571,
+"func": [
+2186896,
+2191696
+]
+},
+{
+"string": "\\ws2_32",
+"string_rva": 16151048,
+"xref_rva": 12678135,
+"func": [
+12678112,
+12678298
+]
+},
+{
+"string": "User-Agent: ",
+"string_rva": 16805048,
+"xref_rva": 14328156,
+"func": [
+14326928,
+14335025
+]
+},
+{
+"string": "# Your alt-svc cache. https://curl.se/docs/alt-svc.html",
+"string_rva": 17072288,
+"xref_rva": 15149501,
+"func": [
+15149411,
+15150097
+]
+},
+{
+"string": "# Your HSTS cache. https://curl.se/docs/hsts.html",
+"string_rva": 17072768,
+"xref_rva": 15153354,
+"func": [
+15153246,
+15153971
+]
+},
+{
+"string": "LoadLibraryExW",
+"string_rva": 17075176,
+"xref_rva": 15201545,
+"func": [
+15201488,
+15201678
+]
+},
+{
+"string": "LoadLibraryExW",
+"string_rva": 17075176,
+"xref_rva": 15202102,
+"func": [
+15202066,
+15202109
+]
+},
+{
+"string": "ws2_32",
+"string_rva": 17075112,
+"xref_rva": 15202445,
+"func": [
+15202417,
+15202474
+]
+},
+{
+"string": "User-Agent: %s",
+"string_rva": 17109840,
+"xref_rva": 15334855,
+"func": [
+15334835,
+15335030
+]
+}
+]
+}

@@ -1,0 +1,14 @@
+00b163a0  sub      rsp, 0x48
+00b163a4  mov      rax, qword ptr [rip + 0x5ab355]
+00b163ab  xor      rax, rsp
+00b163ae  mov      qword ptr [rsp + 0x38], rax
+00b163b3  mov      r9d, 8
+00b163b9  mov      qword ptr [rsp + 0x20], 0
+00b163c2  lea      r8, [rsp + 0x30]
+00b163c7  call     qword ptr [rip + 0x42ee83]
+00b163cd  movsd    xmm0, qword ptr [rsp + 0x30]
+00b163d3  mov      rcx, qword ptr [rsp + 0x38]
+00b163d8  xor      rcx, rsp
+00b163db  call     0xe155e0
+00b163e0  add      rsp, 0x48
+00b163e4  ret      

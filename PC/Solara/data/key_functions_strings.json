@@ -1,0 +1,426 @@
+{
+ "0x1a6a60": {
+  "size": 3855,
+  "strings": [
+   {
+    "site": "0x1a74fa",
+    "sec": ".rdata",
+    "s": "User-Agent"
+   }
+  ]
+ },
+ "0x1b3050": {
+  "size": 211,
+  "strings": [
+   {
+    "site": "0x1b30a4",
+    "sec": ".rdata",
+    "s": "WINDOWSCLIENT"
+   },
+   {
+    "site": "0x1b30c0",
+    "sec": ".rdata",
+    "s": "Roblox"
+   }
+  ]
+ },
+ "0x215e90": {
+  "size": 4800,
+  "strings": [
+   {
+    "site": "0x216347",
+    "sec": ".rdata",
+    "s": "/state"
+   },
+   {
+    "site": "0x21651b",
+    "sec": ".rdata",
+    "s": "/execute_script"
+   },
+   {
+    "site": "0x2166d0",
+    "sec": ".rdata",
+    "s": "/request"
+   },
+   {
+    "site": "0x2168d8",
+    "sec": ".rdata",
+    "s": "/client_manager"
+   },
+   {
+    "site": "0x216a5b",
+    "sec": ".rdata",
+    "s": "127.0.0.1"
+   }
+  ]
+ },
+ "0xc173e0": {
+  "size": 186,
+  "strings": [
+   {
+    "site": "0xc173f7",
+    "sec": ".rdata",
+    "s": "\\ws2_32"
+   },
+   {
+    "site": "0xc17451",
+    "sec": ".rdata",
+    "s": "\\wship6"
+   }
+  ]
+ },
+ "0xe7f4d0": {
+  "size": 190,
+  "strings": [
+   {
+    "site": "0xe7f4e4",
+    "sec": ".rdata(utf16)",
+    "s": "kernel32"
+   },
+   {
+    "site": "0xe7f509",
+    "sec": ".rdata",
+    "s": "LoadLibraryExW"
+   },
+   {
+    "site": "0xe7f562",
+    "sec": ".rdata",
+    "s": "AddDllDirectory"
+   }
+  ]
+ },
+ "0xe7f712": {
+  "size": 43,
+  "strings": []
+ },
+ "0xe834d0": {
+  "size": 713,
+  "strings": [
+   {
+    "site": "0xe83599",
+    "sec": ".rdata",
+    "s": "%s%s%s:%d"
+   },
+   {
+    "site": "0xe835c4",
+    "sec": ".rdata",
+    "s": "CONNECT"
+   },
+   {
+    "site": "0xe83638",
+    "sec": ".rdata",
+    "s": "Host"
+   },
+   {
+    "site": "0xe836a2",
+    "sec": ".rdata",
+    "s": "User-Agent"
+   },
+   {
+    "site": "0xe836f5",
+    "sec": ".rdata",
+    "s": "Proxy-Connection"
+   },
+   {
+    "site": "0xe83717",
+    "sec": ".rdata",
+    "s": "Keep-Alive"
+   }
+  ]
+ },
+ "0xe946d0": {
+  "size": 2384,
+  "strings": [
+   {
+    "site": "0xe9476d",
+    "sec": ".rdata",
+    "s": "User-Agent"
+   },
+   {
+    "site": "0xe947d9",
+    "sec": ".rdata",
+    "s": "HEAD"
+   },
+   {
+    "site": "0xe947f7",
+    "sec": ".rdata",
+    "s": "POST"
+   },
+   {
+    "site": "0xe94826",
+    "sec": ".rdata",
+    "s": "%s?%s"
+   },
+   {
+    "site": "0xe94892",
+    "sec": ".rdata",
+    "s": "Referer"
+   },
+   {
+    "site": "0xe948ad",
+    "sec": ".rdata",
+    "s": "Referer: %s"
+   },
+   {
+    "site": "0xe948cb",
+    "sec": ".rdata",
+    "s": "Accept-Encoding"
+   },
+   {
+    "site": "0xe948fc",
+    "sec": ".rdata",
+    "s": "Accept-Encoding: %s"
+   },
+   {
+    "site": "0xe9496a",
+    "sec": ".rdata",
+    "s": "Connection"
+   },
+   {
+    "site": "0xe949c1",
+    "sec": ".rdata",
+    "s": "Connection: %s%sTE"
+   },
+   {
+    "site": "0xe94a0c",
+    "sec": ".rdata",
+    "s": "Accept"
+   },
+   {
+    "site": "0xe94a1e",
+    "sec": ".rdata",
+    "s": "Accept: */*"
+   },
+   {
+    "site": "0xe94a51",
+    "sec": ".rdata",
+    "s": "Range"
+   },
+   {
+    "site": "0xe94a79",
+    "sec": ".rdata",
+    "s": "Range: bytes=%s"
+   },
+   {
+    "site": "0xe94aa4",
+    "sec": ".rdata",
+    "s": "Content-Range"
+   },
+   {
+    "site": "0xe94ae2",
+    "sec": ".rdata",
+    "s": "Content-Range: bytes 0-%lld/%lld"
+   },
+   {
+    "site": "0xe94b18",
+    "sec": ".rdata",
+    "s": "Content-Range: bytes %s%lld/%lld"
+   },
+   {
+    "site": "0xe94b2d",
+    "sec": ".rdata",
+    "s": "Content-Range: bytes %s/%lld"
+   },
+   {
+    "site": "0xe94be5",
+    "sec": ".rdata",
+    "s": "Alt-Used"
+   },
+   {
+    "site": "0xe94c00",
+    "sec": ".rdata",
+    "s": "Alt-Used: %s:%d"
+   },
+   {
+    "site": "0xe94c47",
+    "sec": ".rdata",
+    "s": "Proxy-Connection"
+   },
+   {
+    "site": "0xe94c78",
+    "sec": ".rdata",
+    "s": "Proxy-Connection: Keep-Alive"
+   },
+   {
+    "site": "0xe94d93",
+    "sec": ".rdata",
+    "s": " HTTP/%s"
+   },
+   {
+    "site": "0xe94e51",
+    "sec": ".rdata",
+    "s": "Invalid TIMEVALUE"
+   },
+   {
+    "site": "0xe94e6e",
+    "sec": ".rdata",
+    "s": "HTTP request too large"
+   },
+   {
+    "site": "0xe94ecc",
+    "sec": ".rdata",
+    "s": "Last-Modified"
+   },
+   {
+    "site": "0xe94ed5",
+    "sec": ".rdata",
+    "s": "If-Unmodified-Since"
+   },
+   {
+    "site": "0xe94ee4",
+    "sec": ".rdata",
+    "s": "If-Modified-Since"
+   },
+   {
+    "site": "0xe94f70",
+    "sec": ".rdata",
+    "s": "%s: %s, %02d %s %4d %02d:%02d:%02d GMT"
+   }
+  ]
+ },
+ "0xda9c90": {
+  "size": 8097,
+  "strings": [
+   {
+    "site": "0xda9d75",
+    "sec": ".rdata",
+    "s": "Unable to connect to "
+   },
+   {
+    "site": "0xda9da1",
+    "sec": ".rdata",
+    "s": " on port "
+   },
+   {
+    "site": "0xda9dbd",
+    "sec": ".rdata",
+    "s": ", error: "
+   },
+   {
+    "site": "0xda9fa2",
+    "sec": ".rdata",
+    "s": "GET "
+   },
+   {
+    "site": "0xda9fd2",
+    "sec": ".rdata",
+    "s": " HTTP/1.1"
+   },
+   {
+    "site": "0xda9fde",
+    "sec": ".rdata",
+    "s": "Host: "
+   },
+   {
+    "site": "0xdaa02f",
+    "sec": ".rdata",
+    "s": "Upgrade: websocket"
+   },
+   {
+    "site": "0xdaa03f",
+    "sec": ".rdata",
+    "s": "Connection: Upgrade"
+   },
+   {
+    "site": "0xdaa04f",
+    "sec": ".rdata",
+    "s": "Sec-WebSocket-Version: 13"
+   },
+   {
+    "site": "0xdaa05f",
+    "sec": ".rdata",
+    "s": "Sec-WebSocket-Key: "
+   },
+   {
+    "site": "0xdaa15c",
+    "sec": ".rdata",
+    "s": "User-Agent: "
+   },
+   {
+    "site": "0xdaa247",
+    "sec": ".rdata",
+    "s": "Origin: "
+   },
+   {
+    "site": "0xdaabea",
+    "sec": ".rdata",
+    "s": "HTTP/1.1"
+   },
+   {
+    "site": "0xdaac16",
+    "sec": ".rdata",
+    "s": "Expecting HTTP/1.1, got "
+   },
+   {
+    "site": "0xdaac61",
+    "sec": ".rdata",
+    "s": "Rejecting connection to "
+   },
+   {
+    "site": "0xdaac86",
+    "sec": ".rdata",
+    "s": ", status: "
+   },
+   {
+    "site": "0xdaaca2",
+    "sec": ".rdata",
+    "s": ", HTTP Status line: "
+   },
+   {
+    "site": "0xdaaf8b",
+    "sec": ".rdata",
+    "s": "Error parsing HTTP headers"
+   },
+   {
+    "site": "0xdab1db",
+    "sec": ".rdata",
+    "s": "Expecting status 101 (Switching Protocol), got "
+   },
+   {
+    "site": "0xdab1fb",
+    "sec": ".rdata",
+    "s": " status connecting to "
+   },
+   {
+    "site": "0xdab3d8",
+    "sec": ".rdata",
+    "s": "Missing connection value"
+   },
+   {
+    "site": "0xdab4a2",
+    "sec": ".rdata",
+    "s": "Upgrade"
+   },
+   {
+    "site": "0xdab4d1",
+    "sec": ".rdata",
+    "s": "connection"
+   },
+   {
+    "site": "0xdab5bc",
+    "sec": ".rdata",
+    "s": "Invalid connection value: "
+   },
+   {
+    "site": "0xdab6fd",
+    "sec": ".rdata",
+    "s": "sec-websocket-accept"
+   },
+   {
+    "site": "0xdab808",
+    "sec": ".rdata",
+    "s": "Invalid Sec-WebSocket-Accept value"
+   },
+   {
+    "site": "0xdab8cd",
+    "sec": ".rdata",
+    "s": "sec-websocket-extensions"
+   },
+   {
+    "site": "0xdabaa8",
+    "sec": ".rdata",
+    "s": "Failed to initialize per message deflate engine"
+   }
+  ]
+ }
+}

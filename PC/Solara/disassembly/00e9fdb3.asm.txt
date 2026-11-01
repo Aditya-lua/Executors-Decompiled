@@ -1,0 +1,45 @@
+00e9fdb3  mov     rcx, qword ptr [rdi + 0x1180]
+00e9fdba  call    qword ptr [rip + 0x222740]
+00e9fdc0  mov     qword ptr [rdi + 0x1180], rbp
+00e9fdc7  lea     rcx, [rip + 0x1b1582]
+00e9fdce  mov     rdx, qword ptr [rdi + 0x850]
+00e9fdd5  call    0xe63220
+00e9fdda  mov     qword ptr [rdi + 0x1180], rax
+00e9fde1  test    rax, rax
+00e9fde4  jne     0xe9fded
+00e9fde6  mov     eax, 0x1b
+00e9fdeb  jmp     0xe9fe61
+00e9fded  test    ebx, ebx
+00e9fdef  jne     0xe9fe51
+00e9fdf1  mov     rdx, qword ptr [rdi + 0x860]
+00e9fdf8  lea     rcx, [rdi + 0x11c0]
+00e9fdff  call    0xe5e0d0
+00e9fe04  mov     ebx, eax
+00e9fe06  test    eax, eax
+00e9fe08  jne     0xe9fe51
+00e9fe0a  mov     rdx, qword ptr [rdi + 0x868]
+00e9fe11  lea     rcx, [rdi + 0x11c8]
+00e9fe18  call    0xe5e0d0
+00e9fe1d  mov     ebx, eax
+00e9fe1f  test    eax, eax
+00e9fe21  jne     0xe9fe51
+00e9fe23  mov     rdx, qword ptr [rdi + 0x878]
+00e9fe2a  lea     rcx, [rdi + 0x11d8]
+00e9fe31  call    0xe5e0d0
+00e9fe36  mov     ebx, eax
+00e9fe38  test    eax, eax
+00e9fe3a  jne     0xe9fe51
+00e9fe3c  mov     rdx, qword ptr [rdi + 0x880]
+00e9fe43  lea     rcx, [rdi + 0x11e0]
+00e9fe4a  call    0xe5e0d0
+00e9fe4f  mov     ebx, eax
+00e9fe51  mov     rcx, rdi
+00e9fe54  mov     dword ptr [rdi + 0x120], ebp
+00e9fe5a  call    0xe9de70
+00e9fe5f  mov     eax, ebx
+00e9fe61  mov     rbx, qword ptr [rsp + 0x38]
+00e9fe66  mov     rbp, qword ptr [rsp + 0x40]
+00e9fe6b  mov     rsi, qword ptr [rsp + 0x48]
+00e9fe70  add     rsp, 0x20
+00e9fe74  pop     rdi
+00e9fe75  ret     

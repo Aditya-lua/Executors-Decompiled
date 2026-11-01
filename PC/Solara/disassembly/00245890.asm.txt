@@ -1,0 +1,16 @@
+00245890  sub      rsp, 0x48
+00245894  mov      rax, qword ptr [rip + 0xe7be65]
+0024589b  xor      rax, rsp
+0024589e  mov      qword ptr [rsp + 0x38], rax
+002458a3  mov      qword ptr [rsp + 0x30], r8
+002458a8  mov      r9d, 8
+002458ae  lea      r8, [rsp + 0x30]
+002458b3  mov      qword ptr [rsp + 0x20], 0
+002458bc  call     qword ptr [rip + 0xcff996]
+002458c2  test     eax, eax
+002458c4  setne    al
+002458c7  mov      rcx, qword ptr [rsp + 0x38]
+002458cc  xor      rcx, rsp
+002458cf  call     0xe155e0
+002458d4  add      rsp, 0x48
+002458d8  ret      

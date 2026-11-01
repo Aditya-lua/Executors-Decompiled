@@ -1,0 +1,15 @@
+
+void FUN_00657d90(void)
+
+{
+  code *pcVar1;
+  undefined1 uStack0000000000000008;
+  
+  func_0x0000a968(&uStack0000000000000008);
+  func_0x0064d308();
+  ___cxa_throw();
+                    /* WARNING: Does not return */
+  pcVar1 = (code *)SoftwareBreakpoint(1,0x657dc8);
+  (*pcVar1)();
+}
+

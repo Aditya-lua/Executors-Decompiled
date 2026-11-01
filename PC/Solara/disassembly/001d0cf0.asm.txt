@@ -1,0 +1,105 @@
+001d0cf0  push     rbp
+001d0cf2  push     rbx
+001d0cf3  push     rsi
+001d0cf4  push     rdi
+001d0cf5  push     r12
+001d0cf7  push     r14
+001d0cf9  push     r15
+001d0cfb  lea      rbp, [rsp - 0x1320]
+001d0d03  mov      eax, 0x1420
+001d0d08  call     0xe15b20
+001d0d0d  sub      rsp, rax
+001d0d10  mov      rax, qword ptr [rip + 0xef09e9]
+001d0d17  xor      rax, rsp
+001d0d1a  mov      qword ptr [rbp + 0x1310], rax
+001d0d21  mov      r14, r8
+001d0d24  mov      rdi, rdx
+001d0d27  mov      rbx, rcx
+001d0d2a  mov      qword ptr [rsp + 0x30], rcx
+001d0d2f  mov      rcx, qword ptr [rcx]
+001d0d32  call     0x1d5120
+001d0d37  mov      r15, rax
+001d0d3a  mov      rcx, qword ptr [rbx]
+001d0d3d  call     0x1d4460
+001d0d42  mov      dword ptr [rsp + 0x20], 4
+001d0d4a  xor      edx, edx
+001d0d4c  mov      r9d, 0x3000
+001d0d52  mov      r8d, 0x40
+001d0d58  mov      rcx, r15
+001d0d5b  call     qword ptr [rip + 0xd744e7]
+001d0d61  mov      rsi, rax
+001d0d64  mov      rdx, rdi
+001d0d67  mov      rcx, r15
+001d0d6a  call     0xaf2be0
+001d0d6f  mov      r12, rax
+001d0d72  call     0xe13910
+001d0d77  mov      dword ptr [rbp + 0x1304], 0xffffffff
+001d0d81  mov      dword ptr [rbp - 0x7c], eax
+001d0d84  mov      edx, 1
+001d0d89  nop      dword ptr [rax]
+001d0d90  mov      ecx, eax
+001d0d92  shr      ecx, 0x1e
+001d0d95  xor      ecx, eax
+001d0d97  imul     eax, ecx, 0x6c078965
+001d0d9d  add      eax, edx
+001d0d9f  mov      dword ptr [rbp + rdx*4 - 0x7c], eax
+001d0da3  inc      rdx
+001d0da6  cmp      rdx, 0x270
+001d0dad  jb       0x1d0d90
+001d0daf  mov      dword ptr [rbp - 0x80], 0x270
+001d0db6  lea      rax, [rbp - 0x80]
+001d0dba  mov      qword ptr [rsp + 0x30], rax
+001d0dbf  lea      rcx, [rsp + 0x30]
+001d0dc4  call     0x1bfc00
+001d0dc9  mov      eax, eax
+001d0dcb  mov      qword ptr [rsp + 0x40], rax
+001d0dd0  lea      rax, [rbp - 0x80]
+001d0dd4  mov      qword ptr [rsp + 0x30], rax
+001d0dd9  lea      rcx, [rsp + 0x30]
+001d0dde  call     0x1bfc00
+001d0de3  mov      eax, eax
+001d0de5  mov      qword ptr [rsp + 0x48], rax
+001d0dea  mov      qword ptr [rsp + 0x50], r12
+001d0def  mov      qword ptr [rsp + 0x58], 0
+001d0df8  mov      eax, dword ptr [rdi + 0x10]
+001d0dfb  mov      dword ptr [rsp + 0x60], eax
+001d0dff  mov      dword ptr [rsp + 0x64], 0
+001d0e07  mov      eax, dword ptr [rdi + 0x18]
+001d0e0a  mov      dword ptr [rsp + 0x68], eax
+001d0e0e  mov      dword ptr [rsp + 0x6c], 0
+001d0e16  mov      qword ptr [rsp + 0x70], 3
+001d0e1f  mov      dword ptr [rsp + 0x78], r14d
+001d0e24  mov      dword ptr [rsp + 0x7c], r14d
+001d0e29  mov      qword ptr [rsp + 0x20], 0
+001d0e32  mov      r9d, 0x40
+001d0e38  lea      r8, [rsp + 0x40]
+001d0e3d  mov      rdx, rsi
+001d0e40  mov      rcx, r15
+001d0e43  call     qword ptr [rip + 0xd7440f]
+001d0e49  nop      
+001d0e4a  mov      rbx, qword ptr [rbx + 8]
+001d0e4e  test     rbx, rbx
+001d0e51  je       0x1d0e70
+001d0e53  lock dec dword ptr [rbx + 8]
+001d0e57  jne      0x1d0e70
+001d0e59  mov      rdx, qword ptr [rbx]
+001d0e5c  mov      rcx, rbx
+001d0e5f  call     qword ptr [rdx]
+001d0e61  lock dec dword ptr [rbx + 0xc]
+001d0e65  jne      0x1d0e70
+001d0e67  mov      rdx, qword ptr [rbx]
+001d0e6a  mov      rcx, rbx
+001d0e6d  call     qword ptr [rdx + 8]
+001d0e70  mov      rax, rsi
+001d0e73  mov      rcx, qword ptr [rbp + 0x1310]
+001d0e7a  xor      rcx, rsp
+001d0e7d  call     0xe155e0
+001d0e82  add      rsp, 0x1420
+001d0e89  pop      r15
+001d0e8b  pop      r14
+001d0e8d  pop      r12
+001d0e8f  pop      rdi
+001d0e90  pop      rsi
+001d0e91  pop      rbx
+001d0e92  pop      rbp
+001d0e93  ret      

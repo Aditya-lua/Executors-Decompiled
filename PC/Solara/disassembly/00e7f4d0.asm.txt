@@ -1,0 +1,51 @@
+00e7f4d0  mov     qword ptr [rsp + 0x18], rbx
+00e7f4d5  mov     qword ptr [rsp + 0x20], rbp
+00e7f4da  push    rdi
+00e7f4db  sub     rsp, 0x20
+00e7f4df  mov     rbp, rcx
+00e7f4e2  xor     edi, edi
+00e7f4e4  lea     rcx, [rip + 0x1b907d]
+00e7f4eb  call    qword ptr [rip + 0xc5d6f]
+00e7f4f1  mov     rbx, rax
+00e7f4f4  test    rax, rax
+00e7f4f7  jne     0xe7f509
+00e7f4f9  mov     rbx, qword ptr [rsp + 0x40]
+00e7f4fe  mov     rbp, qword ptr [rsp + 0x48]
+00e7f503  add     rsp, 0x20
+00e7f507  pop     rdi
+00e7f508  ret     
+00e7f509  lea     rdx, [rip + 0x1c96d8]
+00e7f510  mov     qword ptr [rsp + 0x30], rsi
+00e7f515  mov     rcx, rbx
+00e7f518  call    qword ptr [rip + 0xc5d4a]
+00e7f51e  lea     rdx, [rip + 0x1b90e3]
+00e7f525  mov     rcx, rbp
+00e7f528  mov     rsi, rax
+00e7f52b  call    0xe42c80
+00e7f530  test    rax, rax
+00e7f533  je      0xe7f55d
+00e7f535  mov     rcx, rbp
+00e7f538  test    rsi, rsi
+00e7f53b  je      0xe7f54f
+00e7f53d  xor     edx, edx
+00e7f53f  mov     r8d, 8
+00e7f545  call    rsi
+00e7f547  mov     rdi, rax
+00e7f54a  jmp     0xe7f620
+00e7f54f  call    qword ptr [rip + 0xc5fbb]
+00e7f555  mov     rdi, rax
+00e7f558  jmp     0xe7f620
+00e7f55d  test    rsi, rsi
+00e7f560  je      0xe7f58c
+00e7f562  lea     rdx, [rip + 0x1c968f]
+00e7f569  mov     rcx, rbx
+00e7f56c  call    qword ptr [rip + 0xc5cf6]
+00e7f572  test    rax, rax
+00e7f575  je      0xe7f58c
+00e7f577  xor     edx, edx
+00e7f579  mov     r8d, 0x800
+00e7f57f  mov     rcx, rbp
+00e7f582  call    rsi
+00e7f584  mov     rdi, rax
+00e7f587  jmp     0xe7f620
+00e7f58c  xor     edx, edx

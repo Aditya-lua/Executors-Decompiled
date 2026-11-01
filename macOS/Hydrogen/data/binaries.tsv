@@ -1,0 +1,5 @@
+file	bytes	sha256	role
+Hydrogen	31871264	a88eee320a8532e51933cc340292d98c54316b25c2715ffd7bbdb6f1a42357f6	launcher executable for Hydrogen-M.app
+Hydrogen-arm.dylib	11853136	ec5ff1029a21e2ce405dff4c7f7ade50309dec8dd2a0af314f4c3092457d8ad5	arm64 main payload with Luau and decompiler
+Hydrogen-intel.dylib	13584320	3f33750f4990f2d78ee9afebae77c7aac0bc088420867e21e4b0372ccb7383f5	x86_64 build of the same payload
+insert_dylib	85200	daf4fac857263e1190b21a1711e716b8936d65e33064272a0bc563e8d7f1f26c	bundled dylib injection helper

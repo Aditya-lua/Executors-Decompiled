@@ -1,0 +1,92 @@
+{
+ "owners": {
+  "CryptDecrypt": [
+   "0x180c662d4",
+   "0x180c66401"
+  ],
+  "CryptHashData": [
+   "0x180e87cc0",
+   "0x180e87ded"
+  ],
+  "CryptCreateHash#1": [
+   "0x180c63a60",
+   "0x180c63de9"
+  ],
+  "CryptCreateHash#2": [
+   "0x180c664a0",
+   "0x180c66797"
+  ],
+  "CryptCreateHash#3": [
+   "0x180e87cc0",
+   "0x180e87ded"
+  ],
+  "CryptStringToBinaryW": [
+   "0x180e88130",
+   "0x180e8914c"
+  ],
+  "CryptAcquireContext#1": [
+   "0x180c32790",
+   "0x180c328e2"
+  ],
+  "CryptAcquireContext#3": [
+   "0x180c63820",
+   "0x180c639e2"
+  ],
+  "CryptAcquireContext#5": [
+   "0x180c65600",
+   "0x180c659bf"
+  ]
+ },
+ "callers": {
+  "0x180c32790": [
+   [
+    "0x180c5a661",
+    "0x180c5a5e0"
+   ],
+   [
+    "0x180c5a835",
+    "0x180c5a770"
+   ],
+   [
+    "0x180cfb7fd",
+    "0x180cfb7f5"
+   ],
+   [
+    "0x180cfba18",
+    "0x180cfb990"
+   ]
+  ],
+  "0x180c65600": [
+   [
+    "0x180c635b9",
+    "0x180c634c9"
+   ]
+  ],
+  "0x180c63820": [
+   [
+    "0x180c636e5",
+    "0x180c634c9"
+   ],
+   [
+    "0x180c63752",
+    "0x180c634c9"
+   ]
+  ],
+  "0x180e87cc0": [
+   [
+    "0x180e87ed7",
+    "0x180e87e00"
+   ],
+   [
+    "0x180e88039",
+    "0x180e87f40"
+   ]
+  ],
+  "0x180e88130": [
+   [
+    "0x180e894aa",
+    "0x180e89340"
+   ]
+  ]
+ }
+}

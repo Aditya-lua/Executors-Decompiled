@@ -1,0 +1,67 @@
+func_rva	size	api	strings	asm_file
+f	u	n	c	_	r	v	a
+s	i	z	e
+a	p	i	s
+s	t	r	i	n	g	s	_	i	n	_	f	u	n	c
+a	s	m	_	f	i	l	e
+0x1ac540	68	ReadProcessMemory		001ac540.asm.txt
+0x1ad0f0	15076	OpenProcess	[CLIENT CONSTRUCTOR]: 	001ad0f0.asm.txt
+0x1b2000	3740	WriteProcessMemory		001b2000.asm.txt
+0x1b2ea0	426	ReadProcessMemory		001b2ea0.asm.txt
+0x1b5640	2030	OpenProcess		001b5640.asm.txt
+0x1d0cf0	420	VirtualAllocEx		001d0cf0.asm.txt
+0x1d0cf0	420	WriteProcessMemory		001d0cf0.asm.txt
+0x1d6280	18176	ReadProcessMemory	return 1	001d6280.asm.txt
+0x1d6280	18176	VirtualAllocEx	return 1	001d6280.asm.txt
+0x1d6280	18176	WriteProcessMemory	return 1	001d6280.asm.txt
+0x1dae50	8311	ReadProcessMemory		001dae50.asm.txt
+0x1dae50	8311	WriteProcessMemory		001dae50.asm.txt
+0x1dff80	2865	ReadProcessMemory		001dff80.asm.txt
+0x2267b0	6659	ReadProcessMemory		002267b0.asm.txt
+0x2267b0	6659	WriteProcessMemory		002267b0.asm.txt
+0x22fa40	178	QueueUserAPC		0022fa40.asm.txt
+0x245890	73	WriteProcessMemory		00245890.asm.txt
+0x253660	1715	ReadProcessMemory	Bindable; Event; invalid json object; invalid stoull argument; signal; stoull argument out of range; value is not string	00253660.asm.txt
+0x253660	1715	WriteProcessMemory	Bindable; Event; invalid json object; invalid stoull argument; signal; stoull argument out of range; value is not string	00253660.asm.txt
+0x254140	630	ReadProcessMemory	[getgenv] genv - ; address; invalid json object; invalid stoull argument; stoull argument out of range; value is not string	00254140.asm.txt
+0x254430	630	ReadProcessMemory	[getreg] reg - ; address; invalid json object; invalid stoull argument; stoull argument out of range; value is not string	00254430.asm.txt
+0x2546b0	6307	ReadProcessMemory	address; invalid json object; invalid stoull argument; stoull argument out of range; value is not string	002546b0.asm.txt
+0x255f60	5340	ReadProcessMemory	LuaSourceContainer; aSourceContainer; address; invalid json object; invalid stoull argument; stoull argument out of range; value is not string	00255f60.asm.txt
+0x257440	661	ReadProcessMemory	address; invalid json object; invalid stoull argument; stoull argument out of range; value is not string	00257440.asm.txt
+0x2654d0	977	ReadProcessMemory	Setting to not read only; Setting to read only; address; invalid json object; invalid stoull argument; read_only; stoull argument out of range; value is not string	002654d0.asm.txt
+0x2654d0	977	WriteProcessMemory	Setting to not read only; Setting to read only; address; invalid json object; invalid stoull argument; read_only; stoull argument out of range; value is not string	002654d0.asm.txt
+0x265d60	1706	ReadProcessMemory	L IN SETTHREAD: ; SETIDENTITY CAPS BEFORE: ; address; identity; invalid json object; invalid stoull argument; stoull argument out of range; value is not string	00265d60.asm.txt
+0x265d60	1706	WriteProcessMemory	L IN SETTHREAD: ; SETIDENTITY CAPS BEFORE: ; address; identity; invalid json object; invalid stoull argument; stoull argument out of range; value is not string	00265d60.asm.txt
+0xaf2be0	77	VirtualAllocEx		00af2be0.asm.txt
+0xaf2c2d	126	WriteProcessMemory		00af2c2d.asm.txt
+0xaf2cc0	1179	ReadProcessMemory		00af2cc0.asm.txt
+0xb09c10	67	ReadProcessMemory		00b09c10.asm.txt
+0xb09c60	73	WriteProcessMemory		00b09c60.asm.txt
+0xb09d60	340	ReadProcessMemory		00b09d60.asm.txt
+0xb0b190	4314	ReadProcessMemory	 children.; GetChildren: found ; Instance: Client pointer is NULL in call : ; [INSTANCE] excption thrown, client ptr is null in call : 	00b0b190.asm.txt
+0xb0c270	3157	ReadProcessMemory	Instance: Client pointer is NULL in call : ; [INSTANCE] excption thrown, client ptr is null in call : 	00b0c270.asm.txt
+0xb0f600	5327	ReadProcessMemory	Instance: Client pointer is NULL in call : ; [INSTANCE] excption thrown, client ptr is null in call : 	00b0f600.asm.txt
+0xb11f90	11843	WriteProcessMemory	Instance: Client pointer is NULL in call : ; Name; Setting scriptable to false; Setting scriptable to true; [INSTANCE] excption thrown, client ptr is null in call : ; [SetScriptable]; [SetScriptable] 	00b11f90.asm.txt
+0xb14de0	3368	ReadProcessMemory	Error; Instance: Client pointer is NULL in call : ; NULL; [INSTANCE] excption thrown, client ptr is null in call : 	00b14de0.asm.txt
+0xb16120	502	ReadProcessMemory		00b16120.asm.txt
+0xb16320	119	ReadProcessMemory		00b16320.asm.txt
+0xb163a0	69	ReadProcessMemory		00b163a0.asm.txt
+0xb164b0	8601	ReadProcessMemory		00b164b0.asm.txt
+0xb18700	10850	ReadProcessMemory		00b18700.asm.txt
+0xb18700	10850	VirtualAllocEx		00b18700.asm.txt
+0xb18700	10850	WriteProcessMemory		00b18700.asm.txt
+0xb1b170	11632	ReadProcessMemory		00b1b170.asm.txt
+0xb1b170	11632	VirtualAllocEx		00b1b170.asm.txt
+0xb1b170	11632	WriteProcessMemory		00b1b170.asm.txt
+0xb1df00	9261	ReadProcessMemory		00b1df00.asm.txt
+0xb21900	11496	ReadProcessMemory		00b21900.asm.txt
+0xb21900	11496	WriteProcessMemory		00b21900.asm.txt
+0xb245f0	4032	ReadProcessMemory		00b245f0.asm.txt
+0xb255b0	11443	OpenProcess		00b255b0.asm.txt
+0xb28270	2976	ReadProcessMemory		00b28270.asm.txt
+0xb2a800	222	ReadProcessMemory		00b2a800.asm.txt
+0xb2a8e0	222	ReadProcessMemory		00b2a8e0.asm.txt
+0xb2a9e0	492	ReadProcessMemory		00b2a9e0.asm.txt
+0xb2a9e0	492	WriteProcessMemory		00b2a9e0.asm.txt
+0xe3b430	434	VirtualProtect		00e3b430.asm.txt
+0xe3c000	48	VirtualProtect		00e3c000.asm.txt

@@ -1,0 +1,100 @@
+
+void FUN_0022bba8(void)
+
+{
+  undefined8 uVar1;
+  undefined8 uVar2;
+  undefined8 uVar3;
+  long unaff_x21;
+  long unaff_x29;
+  undefined8 uStack0000000000000008;
+  undefined8 in_stack_00000010;
+  undefined8 in_stack_00000018;
+  undefined8 uStack0000000000000020;
+  undefined8 in_stack_00000028;
+  undefined8 in_stack_00000030;
+  undefined8 in_stack_00000038;
+  undefined8 in_stack_00000040;
+  undefined8 in_stack_00000048;
+  undefined8 in_stack_00000050;
+  undefined8 in_stack_00000058;
+  undefined8 in_stack_00000060;
+  undefined8 in_stack_00000068;
+  undefined8 in_stack_00000070;
+  undefined8 in_stack_00000078;
+  undefined8 in_stack_00000080;
+  undefined8 in_stack_00000088;
+  undefined8 in_stack_00000090;
+  undefined8 in_stack_00000098;
+  undefined8 in_stack_000000a0;
+  undefined8 in_stack_000000a8;
+  undefined8 in_stack_000000b0;
+  undefined8 in_stack_000000b8;
+  undefined8 in_stack_000000c0;
+  undefined8 in_stack_000000c8;
+  undefined8 in_stack_000000d0;
+  undefined2 in_stack_000000d8;
+  undefined8 uStack00000000000000e0;
+  undefined8 in_stack_00000100;
+  undefined8 in_stack_00000108;
+  undefined8 in_stack_00000110;
+  undefined8 in_stack_00000118;
+  undefined8 in_stack_00000120;
+  undefined8 in_stack_00000128;
+  undefined8 in_stack_00000130;
+  undefined8 in_stack_00000138;
+  undefined8 in_stack_00000140;
+  undefined8 in_stack_00000148;
+  undefined8 in_stack_00000150;
+  undefined8 in_stack_00000158;
+  undefined8 in_stack_00000160;
+  undefined8 in_stack_00000168;
+  undefined8 in_stack_00000170;
+  undefined8 in_stack_00000178;
+  
+  _memcpy();
+  uStack00000000000000e0 = 1;
+  func_0x001b64c0(&uStack00000000000000e0,&uStack0000000000000008);
+  if (unaff_x21 != 0) {
+    func_0x00187bd4();
+  }
+  uVar3 = in_stack_00000018;
+  uVar2 = in_stack_00000010;
+  uVar1 = uStack0000000000000008;
+  in_stack_00000178 = CONCAT71(in_stack_00000178._1_7_,0xd);
+  uStack00000000000000e0 = 0x800000000000000d;
+  *(undefined8 *)(unaff_x29 + -0x58) = 0;
+  *(undefined8 *)(unaff_x29 + -0x50) = 1;
+  *(undefined8 *)(unaff_x29 + -0x48) = 0;
+  uStack0000000000000020 = 0x8000000000000000;
+  func_0x001bb074(&uStack00000000000000e0,unaff_x29 + -0x58,&uStack0000000000000020);
+  in_stack_00000028 = *(undefined8 *)(unaff_x29 + -0x50);
+  uStack0000000000000020 = *(undefined8 *)(unaff_x29 + -0x58);
+  in_stack_000000a0 = in_stack_00000148;
+  in_stack_00000098 = in_stack_00000140;
+  in_stack_000000b0 = in_stack_00000158;
+  in_stack_000000a8 = in_stack_00000150;
+  in_stack_000000c0 = in_stack_00000168;
+  in_stack_000000b8 = in_stack_00000160;
+  in_stack_000000d0 = in_stack_00000178;
+  in_stack_000000c8 = in_stack_00000170;
+  in_stack_00000060 = in_stack_00000108;
+  in_stack_00000058 = in_stack_00000100;
+  in_stack_00000070 = in_stack_00000118;
+  in_stack_00000068 = in_stack_00000110;
+  in_stack_00000080 = in_stack_00000128;
+  in_stack_00000078 = in_stack_00000120;
+  in_stack_00000090 = in_stack_00000138;
+  in_stack_00000088 = in_stack_00000130;
+  in_stack_00000040 = uVar1;
+  in_stack_00000038 = uStack00000000000000e0;
+  in_stack_00000030 = *(undefined8 *)(unaff_x29 + -0x48);
+  in_stack_00000050 = uVar3;
+  in_stack_00000048 = uVar2;
+  in_stack_000000d8 = 4;
+  func_0x001d9854();
+  uStack00000000000000e0 = uStack0000000000000020;
+  func_0x00248ae4();
+  return;
+}
+

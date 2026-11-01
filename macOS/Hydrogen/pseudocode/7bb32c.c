@@ -1,0 +1,11 @@
+
+void FUN_007bb32c(void)
+
+{
+  code *pcVar1;
+  
+                    /* WARNING: Does not return */
+  pcVar1 = (code *)UndefinedInstructionException(0,0x7bb32c);
+  (*pcVar1)();
+}
+

@@ -1,0 +1,20 @@
+
+void FUN_004ff534(void)
+
+{
+  long unaff_x29;
+  undefined1 uStack0000000000000020;
+  undefined8 uStack0000000000000028;
+  long lStack0000000000000030;
+  undefined8 uStack0000000000000038;
+  undefined8 uStack0000000000000040;
+  
+  _uStack0000000000000020 = &UNK_009e8b18;
+  uStack0000000000000028 = 3;
+  lStack0000000000000030 = unaff_x29 + -0x20;
+  uStack0000000000000038 = 2;
+  uStack0000000000000040 = 0;
+  func_0x00459f08(&uStack0000000000000020);
+  return;
+}
+

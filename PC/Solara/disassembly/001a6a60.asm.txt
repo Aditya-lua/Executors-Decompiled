@@ -1,0 +1,919 @@
+001a6a60  mov     qword ptr [rsp + 0x18], rbx
+001a6a65  push    rbp
+001a6a66  push    rsi
+001a6a67  push    rdi
+001a6a68  push    r12
+001a6a6a  push    r13
+001a6a6c  push    r14
+001a6a6e  push    r15
+001a6a70  lea     rbp, [rsp - 0x4e0]
+001a6a78  sub     rsp, 0x5e0
+001a6a7f  movaps  xmmword ptr [rsp + 0x5d0], xmm6
+001a6a87  mov     rax, qword ptr [rip + 0xf1ac72]
+001a6a8e  xor     rax, rsp
+001a6a91  mov     qword ptr [rbp + 0x4c0], rax
+001a6a98  mov     qword ptr [rsp + 0x70], rdx
+001a6a9d  mov     qword ptr [rbp - 0x80], rcx
+001a6aa1  mov     qword ptr [rbp + 0x20], rcx
+001a6aa5  mov     dword ptr [rsp + 0x34], 0
+001a6aad  mov     dword ptr [rcx], 0
+001a6ab3  lea     r13, [rcx + 8]
+001a6ab7  xorps   xmm0, xmm0
+001a6aba  movups  xmmword ptr [r13], xmm0
+001a6abf  mov     qword ptr [r13 + 0x10], 0
+001a6ac7  mov     qword ptr [r13 + 0x18], 0xf
+001a6acf  mov     byte ptr [r13], 0
+001a6ad4  mov     dword ptr [rsp + 0x34], 1
+001a6adc  xor     edx, edx
+001a6ade  mov     r8d, 0x138
+001a6ae4  lea     rcx, [rbp + 0x90]
+001a6aeb  call    0xf297c0
+001a6af0  mov     dword ptr [rsp + 0x40], 0x20e0e13
+001a6af8  mov     dword ptr [rsp + 0x44], 0x344904f6
+001a6b00  mov     word ptr [rsp + 0x48], 0x3946
+001a6b07  mov     byte ptr [rsp + 0x4a], 0x6a
+001a6b0c  xor     eax, eax
+001a6b0e  mov     qword ptr [rsp + 0x4b], rax
+001a6b13  movzx   edi, byte ptr [rsp + 0x30]
+001a6b18  movabs  r12, 0x39756bee6f373670
+001a6b22  movabs  r15, 0xbfd6c299848c21f0
+001a6b2c  movabs  r14, 0xb6a1da8f1f877730
+001a6b36  movabs  rsi, 0x32c19a7662fa8ed0
+001a6b40  call    0xb36780
+001a6b45  mov     rbx, qword ptr [rax]
+001a6b48  call    0xb36790
+001a6b4d  mov     rdx, qword ptr [rax]
+001a6b50  xor     r10d, r10d
+001a6b53  cmp     r10, 0x13
+001a6b57  jae     0x1a74d8
+001a6b5d  movzx   r8d, byte ptr [rsp + r10 + 0x40]
+001a6b63  lea     r11, [r10 + rsi]
+001a6b67  lea     rsi, [r10 + r14]
+001a6b6b  lea     r14, [r10 + r15]
+001a6b6f  lea     r15, [r10 + r12]
+001a6b73  movabs  r12, 0x4cebeabca61db510
+001a6b7d  add     r12, r10
+001a6b80  cmp     rbx, r10
+001a6b83  ja      0x1a74ca
+001a6b89  lea     rax, [rdx + 1]
+001a6b8d  cmp     rbx, rax
+001a6b90  jae     0x1a6bae
+001a6b92  movzx   eax, r8b
+001a6b96  and     al, r15b
+001a6b99  movzx   eax, al
+001a6b9c  imul    edi, eax, 0xfe
+001a6ba2  sub     dil, 0x10
+001a6ba6  add     dil, r8b
+001a6ba9  add     dil, r15b
+001a6bac  jmp     0x1a6bf0
+001a6bae  je      0x1a740a
+001a6bb4  lea     rax, [rdx + 2]
+001a6bb8  cmp     rbx, rax
+001a6bbb  je      0x1a73cc
+001a6bc1  lea     rax, [rdx + 3]
+001a6bc5  cmp     rbx, rax
+001a6bc8  je      0x1a7391
+001a6bce  lea     rax, [rdx + 5]
+001a6bd2  cmp     rbx, rax
+001a6bd5  je      0x1a736b
+001a6bdb  lea     rax, [rdx + 6]
+001a6bdf  cmp     rbx, rax
+001a6be2  je      0x1a7335
+001a6be8  nop     dword ptr [rax + rax]
+001a6bf0  cmp     rdx, r10
+001a6bf3  ja      0x1a74bc
+001a6bf9  lea     rax, [rdx + 8]
+001a6bfd  cmp     rbx, rax
+001a6c00  jae     0x1a6c1a
+001a6c02  movzx   ecx, sil
+001a6c06  and     cl, r8b
+001a6c09  add     cl, cl
+001a6c0b  lea     edi, [r8 + 0xb0]
+001a6c12  add     dil, sil
+001a6c15  sub     dil, cl
+001a6c18  jmp     0x1a6c50
+001a6c1a  lea     rax, [rdx + 1]
+001a6c1e  cmp     rbx, rax
+001a6c21  je      0x1a7328
+001a6c27  lea     rax, [rdx + 3]
+001a6c2b  cmp     rbx, rax
+001a6c2e  je      0x1a730c
+001a6c34  lea     rax, [rdx + 2]
+001a6c38  cmp     rbx, rax
+001a6c3b  je      0x1a72c9
+001a6c41  lea     rax, [rdx + 6]
+001a6c45  cmp     rbx, rax
+001a6c48  je      0x1a72b8
+001a6c4e  nop     
+001a6c50  lea     rax, [rdx + rbx]
+001a6c54  cmp     rax, r10
+001a6c57  jbe     0x1a70ae
+001a6c5d  nop     dword ptr [rax]
+001a6c60  lea     rax, [rdx + 1]
+001a6c64  cmp     rbx, rax
+001a6c67  je      0x1a70a1
+001a6c6d  lea     rax, [rdx + 3]
+001a6c71  cmp     rbx, rax
+001a6c74  je      0x1a7086
+001a6c7a  lea     rax, [rdx + 0x42]
+001a6c7e  cmp     rbx, rax
+001a6c81  je      0x1a706a
+001a6c87  lea     rax, [rdx + 0x80]
+001a6c8e  cmp     rbx, rax
+001a6c91  je      0x1a705a
+001a6c97  lea     rax, [rdx + 2]
+001a6c9b  cmp     rbx, rax
+001a6c9e  je      0x1a7046
+001a6ca4  lea     rax, [rdx + 4]
+001a6ca8  cmp     rbx, rax
+001a6cab  je      0x1a7024
+001a6cb1  lea     rax, [rdx + 0x64]
+001a6cb5  cmp     rbx, rax
+001a6cb8  je      0x1a7014
+001a6cbe  lea     rax, [rdx + 0x200]
+001a6cc5  cmp     rbx, rax
+001a6cc8  je      0x1a7004
+001a6cce  lea     rax, [rdx + 5]
+001a6cd2  cmp     rbx, rax
+001a6cd5  je      0x1a6c60
+001a6cd7  lea     rbx, [rdx + 6]
+001a6cdb  lea     rax, [rdx + 0x20e]
+001a6ce2  cmp     rbx, rax
+001a6ce5  jb      0x1a749f
+001a6ceb  mov     rcx, rdx
+001a6cee  add     rdx, 0xe
+001a6cf2  lea     rax, [rcx + 0x40e]
+001a6cf9  cmp     rbx, rax
+001a6cfc  jb      0x1a745a
+001a6d02  lea     rax, [rcx + 0x13]
+001a6d06  cmp     rbx, rax
+001a6d09  jb      0x1a6e45
+001a6d0f  lea     rax, [rcx + 0x16]
+001a6d13  cmp     rbx, rax
+001a6d16  jb      0x1a6e2d
+001a6d1c  lea     rax, [rcx + 0x18]
+001a6d20  cmp     rbx, rax
+001a6d23  jb      0x1a6e15
+001a6d29  lea     rax, [rcx + 0x100e]
+001a6d30  cmp     rbx, rax
+001a6d33  jb      0x1a6fbe
+001a6d39  lea     r9, [rcx + 0x88]
+001a6d40  cmp     rbx, r9
+001a6d43  jb      0x1a6f79
+001a6d49  lea     rax, [rcx + 0x17]
+001a6d4d  cmp     rbx, rax
+001a6d50  jb      0x1a6f43
+001a6d56  lea     rax, [rcx + 0x1e]
+001a6d5a  cmp     rbx, rax
+001a6d5d  jb      0x1a6f22
+001a6d63  lea     rax, [rcx + 0x6f]
+001a6d67  cmp     rbx, rax
+001a6d6a  jb      0x1a6c60
+001a6d70  mov     rbx, r9
+001a6d73  lea     rdx, [rcx + 0xc9]
+001a6d7a  lea     rax, [rcx + 0x123]
+001a6d81  cmp     r9, rax
+001a6d84  ja      0x1a6f07
+001a6d8a  lea     rax, [rcx + 0xd9]
+001a6d91  cmp     rbx, rax
+001a6d94  ja      0x1a6ef1
+001a6d9a  lea     rax, [rcx + 0xf1]
+001a6da1  cmp     rbx, rax
+001a6da4  ja      0x1a6ee1
+001a6daa  lea     rax, [rcx + 0x10a]
+001a6db1  cmp     rbx, rax
+001a6db4  ja      0x1a6ebb
+001a6dba  lea     rax, [rcx + 0xf3]
+001a6dc1  cmp     rbx, rax
+001a6dc4  ja      0x1a6eab
+001a6dca  lea     rax, [rcx + 0xe9]
+001a6dd1  cmp     rbx, rax
+001a6dd4  ja      0x1a6e95
+001a6dda  lea     r9, [rcx + 0x109]
+001a6de1  cmp     rbx, r9
+001a6de4  ja      0x1a6e76
+001a6dea  lea     rax, [rcx + 0xca]
+001a6df1  cmp     rbx, rax
+001a6df4  ja      0x1a6e60
+001a6df6  lea     rax, [rcx + 0xcc]
+001a6dfd  cmp     rbx, rax
+001a6e00  ja      0x1a6c60
+001a6e06  mov     rbx, r9
+001a6e09  lea     rdx, [rcx + 0x14b]
+001a6e10  jmp     0x1a6c60
+001a6e15  movzx   ecx, r8b
+001a6e19  and     cl, r11b
+001a6e1c  add     cl, cl
+001a6e1e  lea     edi, [r8 + 0x50]
+001a6e22  add     dil, r11b
+001a6e25  sub     dil, cl
+001a6e28  jmp     0x1a6c50
+001a6e2d  movzx   ecx, r14b
+001a6e31  and     cl, r8b
+001a6e34  add     cl, cl
+001a6e36  lea     edi, [r8 + 0x70]
+001a6e3a  add     dil, r14b
+001a6e3d  sub     dil, cl
+001a6e40  jmp     0x1a6bf0
+001a6e45  movzx   ecx, r12b
+001a6e49  and     cl, r8b
+001a6e4c  add     cl, cl
+001a6e4e  lea     edi, [r8 + 0x90]
+001a6e55  add     dil, r12b
+001a6e58  sub     dil, cl
+001a6e5b  jmp     0x1a6b80
+001a6e60  lea     eax, [r10 + 0x80]
+001a6e67  movzx   ecx, r8b
+001a6e6b  and     cl, al
+001a6e6d  lea     edi, [r10 + r8]
+001a6e71  jmp     0x1a7343
+001a6e76  lea     eax, [r10 - 0x40]
+001a6e7a  movzx   ecx, r8b
+001a6e7e  and     cl, al
+001a6e80  add     cl, cl
+001a6e82  lea     edi, [r10 + r8]
+001a6e86  add     dil, 0x80
+001a6e8a  sub     dil, cl
+001a6e8d  dec     r10
+001a6e90  jmp     0x1a742a
+001a6e95  lea     eax, [r10 - 0x20]
+001a6e99  movzx   ecx, r8b
+001a6e9d  and     cl, al
+001a6e9f  lea     edi, [r8 + 0xc0]
+001a6ea6  jmp     0x1a72d7
+001a6eab  movzx   eax, r8b
+001a6eaf  and     al, r10b
+001a6eb2  lea     edi, [r10 + r8]
+001a6eb6  jmp     0x1a737a
+001a6ebb  lea     eax, [r10 + 0x20]
+001a6ebf  movzx   ecx, r8b
+001a6ec3  and     cl, al
+001a6ec5  add     cl, cl
+001a6ec7  lea     edi, [r10 + r8]
+001a6ecb  add     dil, 0x40
+001a6ecf  sub     dil, cl
+001a6ed2  movzx   eax, dil
+001a6ed6  dec     r10
+001a6ed9  sub     r10, rax
+001a6edc  jmp     0x1a742a
+001a6ee1  lea     ecx, [r10 + 0x40]
+001a6ee5  lea     edi, [r8 + 0x80]
+001a6eec  jmp     0x1a739c
+001a6ef1  lea     eax, [r10 + 0x60]
+001a6ef5  movzx   ecx, r8b
+001a6ef9  and     cl, al
+001a6efb  lea     edi, [r8 + 0xc0]
+001a6f02  jmp     0x1a73da
+001a6f07  lea     eax, [r10 + 0x80]
+001a6f0e  movzx   ecx, r8b
+001a6f12  and     cl, al
+001a6f14  add     cl, cl
+001a6f16  lea     edi, [r10 + r8]
+001a6f1a  sub     dil, cl
+001a6f1d  jmp     0x1a741e
+001a6f22  lea     eax, [r10 + 0x50]
+001a6f26  movzx   ecx, r8b
+001a6f2a  and     cl, al
+001a6f2c  add     cl, cl
+001a6f2e  lea     edi, [r10 + r8]
+001a6f32  add     dil, 0x20
+001a6f36  sub     dil, cl
+001a6f39  mov     byte ptr [rsp + r10 + 0x40], dil
+001a6f3e  jmp     0x1a742a
+001a6f43  lea     ecx, [r10 + 0x70]
+001a6f47  and     cl, r8b
+001a6f4a  add     cl, cl
+001a6f4c  lea     edi, [r8 + 0x60]
+001a6f50  add     dil, r10b
+001a6f53  sub     dil, cl
+001a6f56  cmp     rdx, 0x2a
+001a6f5a  jb      0x1a6f39
+001a6f5c  lea     eax, [r10 - 0x60]
+001a6f60  movzx   ecx, r8b
+001a6f64  and     cl, al
+001a6f66  add     cl, cl
+001a6f68  lea     eax, [r8 + 0x40]
+001a6f6c  add     al, r10b
+001a6f6f  sub     al, cl
+001a6f71  lea     edi, [rax + rax]
+001a6f74  jmp     0x1a7348
+001a6f79  lea     ecx, [r10 - 0x70]
+001a6f7d  and     cl, r8b
+001a6f80  add     cl, cl
+001a6f82  lea     edi, [r8 + 0xa0]
+001a6f89  add     dil, r10b
+001a6f8c  sub     dil, cl
+001a6f8f  cmp     rbx, 0xa
+001a6f93  jae     0x1a728c
+001a6f99  lea     rax, [rdx + 0x400]
+001a6fa0  cmp     rbx, rax
+001a6fa3  jbe     0x1a7212
+001a6fa9  lea     eax, [r10 - 0x20]
+001a6fad  movzx   ecx, r8b
+001a6fb1  and     cl, al
+001a6fb3  add     cl, cl
+001a6fb5  lea     edi, [r8 + 0xc0]
+001a6fbc  jmp     0x1a6f50
+001a6fbe  lea     ecx, [r10 - 0x50]
+001a6fc2  and     cl, r8b
+001a6fc5  add     cl, cl
+001a6fc7  lea     edi, [r8 + 0xe0]
+001a6fce  add     dil, r10b
+001a6fd1  sub     dil, cl
+001a6fd4  lea     rax, [rdx + rbx]
+001a6fd8  cmp     rax, 2
+001a6fdc  je      0x1a72a2
+001a6fe2  lea     rcx, [rdx + 3]
+001a6fe6  cmp     rbx, rcx
+001a6fe9  jbe     0x1a7158
+001a6fef  lea     eax, [r10 - 0x50]
+001a6ff3  movzx   ecx, r8b
+001a6ff7  and     cl, al
+001a6ff9  add     cl, cl
+001a6ffb  lea     edi, [r8 + 0xe0]
+001a7002  jmp     0x1a6f89
+001a7004  lea     ecx, [r10 + 0x40]
+001a7008  lea     edi, [r8 + 0x80]
+001a700f  jmp     0x1a73d7
+001a7014  lea     ecx, [r10 + 0x60]
+001a7018  lea     edi, [r8 + 0xc0]
+001a701f  jmp     0x1a739c
+001a7024  lea     eax, [r10 + 0x80]
+001a702b  and     al, r8b
+001a702e  add     al, al
+001a7030  lea     edi, [r10 + r8]
+001a7034  sub     dil, al
+001a7037  movzx   eax, dil
+001a703b  dec     r10
+001a703e  sub     r10, rax
+001a7041  jmp     0x1a742a
+001a7046  lea     eax, [r10 - 0x60]
+001a704a  and     al, r8b
+001a704d  lea     edi, [r10 + r8]
+001a7051  add     dil, 0x40
+001a7055  jmp     0x1a737a
+001a705a  lea     ecx, [r10 - 0x40]
+001a705e  lea     edi, [r8 + 0x80]
+001a7065  jmp     0x1a72d4
+001a706a  lea     eax, [r10 - 0x20]
+001a706e  and     al, r8b
+001a7071  add     al, al
+001a7073  lea     edi, [r10 + r8]
+001a7077  add     dil, 0xc0
+001a707b  sub     dil, al
+001a707e  dec     r10
+001a7081  jmp     0x1a742a
+001a7086  movzx   eax, r10b
+001a708a  and     al, r8b
+001a708d  add     al, al
+001a708f  lea     edi, [r10 + r8]
+001a7093  sub     dil, al
+001a7096  inc     rdx
+001a7099  dec     r10
+001a709c  jmp     0x1a742a
+001a70a1  lea     ecx, [r10 + 0x20]
+001a70a5  lea     edi, [r8 + 0x40]
+001a70a9  jmp     0x1a733d
+001a70ae  lea     rax, [rdx + 0x40]
+001a70b2  cmp     rbx, rax
+001a70b5  jae     0x1a70cc
+001a70b7  lea     eax, [r10 + 0x70]
+001a70bb  movzx   ecx, r8b
+001a70bf  and     cl, al
+001a70c1  add     cl, cl
+001a70c3  lea     edi, [r8 + 0x60]
+001a70c7  jmp     0x1a6fce
+001a70cc  lea     rax, [rdx + 1]
+001a70d0  cmp     rbx, rax
+001a70d3  jne     0x1a70f1
+001a70d5  lea     eax, [r10 + 0x60]
+001a70d9  movzx   ecx, r8b
+001a70dd  and     cl, al
+001a70df  add     cl, cl
+001a70e1  lea     edi, [r10 + r8]
+001a70e5  add     dil, 0xc0
+001a70e9  sub     dil, cl
+001a70ec  jmp     0x1a741e
+001a70f1  lea     rax, [rdx + 3]
+001a70f5  cmp     rbx, rax
+001a70f8  jne     0x1a710d
+001a70fa  lea     eax, [r10 + 0x20]
+001a70fe  movzx   ecx, r8b
+001a7102  and     cl, al
+001a7104  lea     edi, [r8 + 0x40]
+001a7108  jmp     0x1a739f
+001a710d  lea     rax, [rdx + 2]
+001a7111  cmp     rbx, rax
+001a7114  jne     0x1a712c
+001a7116  lea     eax, [r10 - 0x40]
+001a711a  movzx   ecx, r8b
+001a711e  and     cl, al
+001a7120  lea     edi, [r8 + 0x80]
+001a7127  jmp     0x1a72d7
+001a712c  lea     rax, [rdx + 4]
+001a7130  cmp     rbx, rax
+001a7133  jne     0x1a6fd4
+001a7139  lea     eax, [r10 - 0x60]
+001a713d  movzx   ecx, r8b
+001a7141  and     cl, al
+001a7143  add     cl, cl
+001a7145  lea     edi, [r10 + r8]
+001a7149  add     dil, 0x40
+001a714d  sub     dil, cl
+001a7150  dec     r10
+001a7153  jmp     0x1a742a
+001a7158  lea     rax, [rdx + 1]
+001a715c  cmp     rbx, rax
+001a715f  jne     0x1a7177
+001a7161  lea     eax, [r10 - 0x70]
+001a7165  movzx   ecx, r8b
+001a7169  and     cl, al
+001a716b  lea     edi, [r8 + 0xa0]
+001a7172  jmp     0x1a7340
+001a7177  lea     rax, [rdx + 2]
+001a717b  cmp     rbx, rax
+001a717e  jne     0x1a719f
+001a7180  lea     eax, [r10 + 0x50]
+001a7184  movzx   ecx, r8b
+001a7188  and     cl, al
+001a718a  add     cl, cl
+001a718c  lea     edi, [r10 + r8]
+001a7190  add     dil, 0x20
+001a7194  sub     dil, cl
+001a7197  dec     r10
+001a719a  jmp     0x1a742a
+001a719f  cmp     rbx, rcx
+001a71a2  jne     0x1a71ca
+001a71a4  lea     eax, [r10 - 0x10]
+001a71a8  movzx   ecx, r8b
+001a71ac  and     cl, al
+001a71ae  add     cl, cl
+001a71b0  lea     edi, [r10 + r8]
+001a71b4  add     dil, 0x60
+001a71b8  sub     dil, cl
+001a71bb  movzx   eax, dil
+001a71bf  dec     r10
+001a71c2  sub     r10, rax
+001a71c5  jmp     0x1a742a
+001a71ca  lea     rax, [rdx + 6]
+001a71ce  cmp     rbx, rax
+001a71d1  jne     0x1a71e9
+001a71d3  lea     eax, [r10 - 0x50]
+001a71d7  movzx   ecx, r8b
+001a71db  and     cl, al
+001a71dd  lea     edi, [r8 + 0xe0]
+001a71e4  jmp     0x1a73da
+001a71e9  lea     rax, [rdx + 9]
+001a71ed  cmp     rbx, rax
+001a71f0  jne     0x1a6f8f
+001a71f6  lea     eax, [r10 - 0x70]
+001a71fa  movzx   ecx, r8b
+001a71fe  and     cl, al
+001a7200  add     cl, cl
+001a7202  lea     edi, [r10 + r8]
+001a7206  add     dil, 0xa0
+001a720a  sub     dil, cl
+001a720d  jmp     0x1a741e
+001a7212  lea     rax, [rdx + 1]
+001a7216  cmp     rbx, rax
+001a7219  jne     0x1a7237
+001a721b  lea     eax, [r10 - 0x40]
+001a721f  movzx   ecx, r8b
+001a7223  and     cl, al
+001a7225  add     cl, cl
+001a7227  lea     edi, [r10 + r8]
+001a722b  add     dil, 0x80
+001a722f  sub     dil, cl
+001a7232  jmp     0x1a741e
+001a7237  lea     rax, [rdx + 2]
+001a723b  cmp     rbx, rax
+001a723e  jne     0x1a7256
+001a7240  lea     eax, [r10 + 0x80]
+001a7247  movzx   ecx, r8b
+001a724b  and     cl, al
+001a724d  lea     edi, [r10 + r8]
+001a7251  jmp     0x1a73a2
+001a7256  lea     rax, [rdx + 3]
+001a725a  cmp     rbx, rax
+001a725d  jne     0x1a6f56
+001a7263  lea     eax, [r10 + 0x40]
+001a7267  movzx   ecx, r8b
+001a726b  and     cl, al
+001a726d  add     cl, cl
+001a726f  lea     edi, [r10 + r8]
+001a7273  add     dil, 0x80
+001a7277  sub     dil, cl
+001a727a  add     rbx, rdx
+001a727d  movzx   eax, dil
+001a7281  dec     r10
+001a7284  sub     r10, rax
+001a7287  jmp     0x1a742a
+001a728c  lea     eax, [r10 + 0x80]
+001a7293  movzx   ecx, r8b
+001a7297  and     cl, al
+001a7299  movzx   eax, r8b
+001a729d  lea     edi, [rax + rax]
+001a72a0  jmp     0x1a72d7
+001a72a2  lea     eax, [r10 + 0x60]
+001a72a6  movzx   ecx, r8b
+001a72aa  and     cl, al
+001a72ac  lea     edi, [r10 + 0xc0]
+001a72b3  jmp     0x1a73a2
+001a72b8  lea     eax, [r10 + 0x10]
+001a72bc  lea     edi, [r10 + r8]
+001a72c0  add     dil, 0xa0
+001a72c4  jmp     0x1a7416
+001a72c9  lea     ecx, [r10 - 0x50]
+001a72cd  lea     edi, [r8 + 0xe0]
+001a72d4  and     cl, r8b
+001a72d7  add     cl, cl
+001a72d9  add     dil, r10b
+001a72dc  sub     dil, cl
+001a72df  lea     eax, [r10 - 0x10]
+001a72e3  and     al, r8b
+001a72e6  add     al, al
+001a72e8  add     r8b, 0x60
+001a72ec  sub     r8b, al
+001a72ef  add     r8b, r10b
+001a72f2  add     r8b, dil
+001a72f5  mov     byte ptr [rsp + r10 + 0x40], r8b
+001a72fa  add     rbx, rdx
+001a72fd  movzx   eax, dil
+001a7301  dec     r10
+001a7304  sub     r10, rax
+001a7307  jmp     0x1a742a
+001a730c  lea     eax, [r10 - 0x30]
+001a7310  and     al, r8b
+001a7313  add     al, al
+001a7315  lea     edi, [r10 + r8]
+001a7319  add     dil, 0x20
+001a731d  sub     dil, al
+001a7320  dec     r10
+001a7323  jmp     0x1a742a
+001a7328  lea     ecx, [r10 + 0x10]
+001a732c  lea     edi, [r8 + 0xa0]
+001a7333  jmp     0x1a733d
+001a7335  lea     ecx, [r10 + 0x50]
+001a7339  lea     edi, [r8 + 0x20]
+001a733d  and     cl, r8b
+001a7340  add     dil, r10b
+001a7343  add     cl, cl
+001a7345  sub     dil, cl
+001a7348  lea     eax, [r10 + 0x10]
+001a734c  and     al, r8b
+001a734f  add     al, al
+001a7351  add     r8b, 0xa0
+001a7355  sub     r8b, al
+001a7358  add     r8b, r10b
+001a735b  mov     byte ptr [rsp + r10 + 0x40], r8b
+001a7360  inc     rdx
+001a7363  dec     r10
+001a7366  jmp     0x1a742a
+001a736b  lea     eax, [r10 - 0x30]
+001a736f  and     al, r8b
+001a7372  lea     edi, [r10 + r8]
+001a7376  add     dil, 0x20
+001a737a  add     al, al
+001a737c  sub     dil, al
+001a737f  add     rbx, rdx
+001a7382  movzx   eax, dil
+001a7386  dec     r10
+001a7389  sub     r10, rax
+001a738c  jmp     0x1a742a
+001a7391  lea     ecx, [r10 + 0x10]
+001a7395  lea     edi, [r8 + 0xa0]
+001a739c  and     cl, r8b
+001a739f  add     dil, r10b
+001a73a2  add     cl, cl
+001a73a4  sub     dil, cl
+001a73a7  lea     ecx, [r10 - 0x30]
+001a73ab  and     cl, r8b
+001a73ae  add     cl, cl
+001a73b0  lea     eax, [r8 + 0x20]
+001a73b4  sub     al, cl
+001a73b6  add     al, r10b
+001a73b9  movzx   ecx, al
+001a73bc  mov     byte ptr [rsp + r10 + 0x40], cl
+001a73c1  inc     rdx
+001a73c4  sub     r10, rdx
+001a73c7  sub     r10, rcx
+001a73ca  jmp     0x1a73e2
+001a73cc  lea     ecx, [r10 + 0x30]
+001a73d0  lea     edi, [r8 + 0xe0]
+001a73d7  and     cl, r8b
+001a73da  add     cl, cl
+001a73dc  add     dil, r10b
+001a73df  sub     dil, cl
+001a73e2  lea     ecx, [r10 + 0x40]
+001a73e6  and     cl, r8b
+001a73e9  add     cl, cl
+001a73eb  lea     eax, [r10 + 0x80]
+001a73f2  add     al, r8b
+001a73f5  sub     al, cl
+001a73f7  mov     byte ptr [rsp + r10 + 0x40], al
+001a73fc  inc     rbx
+001a73ff  mov     rax, rbx
+001a7402  not     rax
+001a7405  add     r10, rax
+001a7408  jmp     0x1a741e
+001a740a  lea     eax, [r10 + 0x50]
+001a740e  lea     edi, [r10 + r8]
+001a7412  add     dil, 0x20
+001a7416  and     al, r8b
+001a7419  add     al, al
+001a741b  sub     dil, al
+001a741e  movzx   eax, byte ptr [rsp + r10 + 0x40]
+001a7424  add     rax, rdx
+001a7427  add     r10, rax
+001a742a  inc     r10
+001a742d  movabs  rsi, 0x32c19a7662fa8ed0
+001a7437  movabs  r14, 0xb6a1da8f1f877730
+001a7441  movabs  r15, 0xbfd6c299848c21f0
+001a744b  movabs  r12, 0x39756bee6f373670
+001a7455  jmp     0x1a6b53
+001a745a  add     r10b, 0x30
+001a745e  movzx   eax, r10b
+001a7462  and     al, r8b
+001a7465  add     al, al
+001a7467  lea     edi, [r8 + r10]
+001a746b  add     dil, 0xb0
+001a746f  sub     dil, al
+001a7472  movabs  rsi, 0x32c19a7662fa8ed0
+001a747c  movabs  r14, 0xb6a1da8f1f877730
+001a7486  movabs  r15, 0xbfd6c299848c21f0
+001a7490  movabs  r12, 0x39756bee6f373670
+001a749a  jmp     0x1a6b50
+001a749f  add     r10b, 0x50
+001a74a3  movzx   eax, r10b
+001a74a7  and     al, r8b
+001a74aa  add     al, al
+001a74ac  lea     edi, [r8 + r10]
+001a74b0  add     dil, 0xd0
+001a74b4  sub     dil, al
+001a74b7  jmp     0x1a6b18
+001a74bc  lea     rsi, [rsp + 0x40]
+001a74c1  add     rsi, 0x1589340
+001a74c8  jmp     0x1a74dd
+001a74ca  lea     rsi, [rsp + 0x40]
+001a74cf  add     rsi, 0xcfc9b0
+001a74d6  jmp     0x1a74dd
+001a74d8  lea     rsi, [rsp + 0x40]
+001a74dd  xorps   xmm0, xmm0
+001a74e0  movups  xmmword ptr [rbp - 0x20], xmm0
+001a74e4  mov     qword ptr [rbp - 0x10], 0
+001a74ec  mov     qword ptr [rbp - 8], 0
+001a74f4  mov     r8d, 0xa
+001a74fa  lea     rdx, [rip + 0xd9f6d7]
+001a7501  lea     rcx, [rbp - 0x20]
+001a7505  call    0x191ab0
+001a750a  nop     
+001a750b  xorps   xmm0, xmm0
+001a750e  movups  xmmword ptr [rbp], xmm0
+001a7512  mov     qword ptr [rbp + 0x10], 0
+001a751a  mov     qword ptr [rbp + 0x18], 0
+001a7522  mov     rcx, rsi
+001a7525  call    0xf29c00
+001a752a  mov     r8, rax
+001a752d  mov     rdx, rsi
+001a7530  lea     rcx, [rbp]
+001a7534  call    0x191ab0
+001a7539  nop     
+001a753a  mov     qword ptr [rsp + 0x60], 0
+001a7543  mov     qword ptr [rsp + 0x68], 0
+001a754c  mov     ecx, 0x60
+001a7551  call    0xe152f0
+001a7556  mov     r14, rax
+001a7559  mov     qword ptr [rax], rax
+001a755c  mov     qword ptr [rax + 8], rax
+001a7560  mov     qword ptr [rax + 0x10], rax
+001a7564  mov     word ptr [rax + 0x18], 0x101
+001a756a  mov     qword ptr [rsp + 0x60], rax
+001a756f  lea     r15, [rbp + 0x20]
+001a7573  lea     rsi, [rbp - 0x20]
+001a7577  movabs  r12, 0x2aaaaaaaaaaaaaa
+001a7581  mov     r9, rsi
+001a7584  mov     r8, r14
+001a7587  lea     rdx, [rbp - 0x70]
+001a758b  lea     rcx, [rsp + 0x60]
+001a7590  call    0x19a7b0
+001a7595  movups  xmm6, xmmword ptr [rax]
+001a7598  cmp     byte ptr [rax + 0x10], 0
+001a759c  jne     0x1a7625
+001a75a2  cmp     qword ptr [rsp + 0x68], r12
+001a75a7  je      0x1a7969
+001a75ad  mov     rdi, qword ptr [rsp + 0x60]
+001a75b2  lea     rax, [rsp + 0x60]
+001a75b7  mov     qword ptr [rsp + 0x40], rax
+001a75bc  mov     qword ptr [rsp + 0x48], 0
+001a75c5  mov     ecx, 0x60
+001a75ca  call    0xe152f0
+001a75cf  mov     rbx, rax
+001a75d2  mov     qword ptr [rsp + 0x48], rax
+001a75d7  lea     rcx, [rax + 0x20]
+001a75db  mov     qword ptr [rbp - 0x70], rcx
+001a75df  mov     rdx, rsi
+001a75e2  call    0x193750
+001a75e7  nop     
+001a75e8  lea     rdx, [rsi + 0x20]
+001a75ec  lea     rcx, [rbx + 0x40]
+001a75f0  call    0x193750
+001a75f5  nop     
+001a75f6  mov     qword ptr [rbx], rdi
+001a75f9  mov     qword ptr [rbx + 8], rdi
+001a75fd  mov     qword ptr [rbx + 0x10], rdi
+001a7601  mov     word ptr [rbx + 0x18], 0
+001a7607  mov     qword ptr [rsp + 0x48], 0
+001a7610  movaps  xmmword ptr [rbp - 0x70], xmm6
+001a7614  mov     r8, rbx
+001a7617  lea     rdx, [rbp - 0x70]
+001a761b  lea     rcx, [rsp + 0x60]
+001a7620  call    0x19c230
+001a7625  add     rsi, 0x40
+001a7629  cmp     rsi, r15
+001a762c  jne     0x1a7581
+001a7632  mov     qword ptr [rsp + 0x78], 0x3a98
+001a763b  mov     rdx, qword ptr [rsp + 0x70]
+001a7640  lea     rcx, [rbp + 0x28]
+001a7644  call    0x193750
+001a7649  nop     
+001a764a  lea     rax, [rip + 0xd9f56f]
+001a7651  mov     qword ptr [rbp - 0x50], rax
+001a7655  xorps   xmm0, xmm0
+001a7658  movups  xmmword ptr [rbp - 0x48], xmm0
+001a765c  mov     qword ptr [rbp - 0x38], 0
+001a7664  mov     qword ptr [rbp - 0x30], 0xf
+001a766c  mov     byte ptr [rbp - 0x48], 0
+001a7670  lea     rdx, [rbp - 0x48]
+001a7674  lea     rcx, [rbp + 0x48]
+001a7678  call    0x193750
+001a767d  mov     rbx, rax
+001a7680  mov     qword ptr [rbp - 0x70], rax
+001a7684  lea     rdi, [rbp + 0x48]
+001a7688  lea     rsi, [rbp + 0x28]
+001a768c  mov     rdx, rax
+001a768f  lea     rcx, [rbp + 0x68]
+001a7693  call    0x193750
+001a7698  mov     r9, rax
+001a769b  mov     byte ptr [rsp + 0x20], 0
+001a76a0  mov     r8, rdi
+001a76a3  mov     rdx, rsi
+001a76a6  lea     rcx, [rsp + 0x40]
+001a76ab  call    0x19afc0
+001a76b0  mov     r15d, 1
+001a76b6  or      r15d, 2
+001a76ba  mov     dword ptr [rsp + 0x34], r15d
+001a76bf  mov     rcx, rbx
+001a76c2  call    0x195980
+001a76c7  lea     rdx, [rsp + 0x40]
+001a76cc  lea     rcx, [rbp - 0x48]
+001a76d0  call    0x19bca0
+001a76d5  mov     rdx, qword ptr [rsp + 0x58]
+001a76da  mov     esi, 0x28
+001a76df  cmp     rdx, 0xf
+001a76e3  jbe     0x1a7723
+001a76e5  mov     rcx, qword ptr [rsp + 0x40]
+001a76ea  lea     rax, [rdx + 1]
+001a76ee  cmp     rax, 0x1000
+001a76f4  jb      0x1a770f
+001a76f6  mov     r8, qword ptr [rcx - 8]
+001a76fa  sub     rcx, r8
+001a76fd  lea     rax, [rcx - 8]
+001a7701  cmp     rax, 0x1f
+001a7705  ja      0x1a795b
+001a770b  mov     eax, esi
+001a770d  jmp     0x1a7717
+001a770f  mov     r8, rcx
+001a7712  mov     eax, 1
+001a7717  add     rdx, rax
+001a771a  mov     rcx, r8
+001a771d  call    0xe15340
+001a7722  nop     
+001a7723  lea     rax, [rip + 0xd9f4a6]
+001a772a  mov     qword ptr [rbp - 0x50], rax
+001a772e  xor     edx, edx
+001a7730  mov     r8d, 0x2e8
+001a7736  lea     rcx, [rbp + 0x1d0]
+001a773d  call    0xf297c0
+001a7742  lea     rcx, [rbp + 0x1d0]
+001a7749  call    0xe01b20
+001a774e  nop     
+001a774f  lea     rdx, [rbp - 0x50]
+001a7753  lea     rcx, [rbp + 0x1d0]
+001a775a  call    0xe03100
+001a775f  lea     rdx, [rsp + 0x78]
+001a7764  lea     rcx, [rbp + 0x1d0]
+001a776b  call    0xe030d0
+001a7770  lea     rdx, [rsp + 0x60]
+001a7775  lea     rcx, [rbp + 0x1d0]
+001a777c  call    0xe02e90
+001a7781  lea     rdx, [rbp + 0x90]
+001a7788  lea     rcx, [rbp + 0x1d0]
+001a778f  call    0xe02570
+001a7794  or      r15d, 4
+001a7798  mov     dword ptr [rsp + 0x34], r15d
+001a779d  lea     rcx, [rbp + 0x1d0]
+001a77a4  call    0x19b820
+001a77a9  nop     
+001a77aa  lea     rcx, [rbp - 0x48]
+001a77ae  call    0x195980
+001a77b3  nop     
+001a77b4  lea     r9, [rip - 0x1344b]
+001a77bb  mov     edx, 0x20
+001a77c0  mov     r8d, 1
+001a77c6  lea     rcx, [rbp + 0x28]
+001a77ca  call    0xe15630
+001a77cf  nop     
+001a77d0  mov     rcx, qword ptr [rsp + 0x60]
+001a77d5  mov     rdi, qword ptr [rcx + 8]
+001a77d9  cmp     byte ptr [rdi + 0x19], 0
+001a77dd  jne     0x1a7826
+001a77df  nop     
+001a77e0  mov     r8, qword ptr [rdi + 0x10]
+001a77e4  lea     rdx, [rsp + 0x60]
+001a77e9  lea     rcx, [rsp + 0x60]
+001a77ee  call    0x19a660
+001a77f3  mov     rbx, rdi
+001a77f6  mov     rcx, rdi
+001a77f9  mov     rdi, qword ptr [rdi]
+001a77fc  add     rcx, 0x40
+001a7800  call    0x195980
+001a7805  lea     rcx, [rbx + 0x20]
+001a7809  call    0x195980
+001a780e  mov     edx, 0x60
+001a7813  mov     rcx, rbx
+001a7816  call    0xe15340
+001a781b  cmp     byte ptr [rdi + 0x19], 0
+001a781f  je      0x1a77e0
+001a7821  mov     rcx, qword ptr [rsp + 0x60]
+001a7826  mov     edx, 0x60
+001a782b  call    0xe15340
+001a7830  nop     
+001a7831  lea     r9, [rip - 0xc148]
+001a7838  mov     edx, 0x40
+001a783d  mov     r8d, 1
+001a7843  lea     rcx, [rbp - 0x20]
+001a7847  call    0xe15630
+001a784c  mov     eax, dword ptr [rbp + 0xa0]
+001a7852  mov     r15, qword ptr [rbp - 0x80]
+001a7856  mov     dword ptr [r15], eax
+001a7859  lea     rax, [rbp + 0xa8]
+001a7860  cmp     r13, rax
+001a7863  je      0x1a791a
+001a7869  mov     rdx, qword ptr [r13 + 0x18]
+001a786d  cmp     rdx, 0xf
+001a7871  jbe     0x1a78ad
+001a7873  mov     rcx, qword ptr [r13]
+001a7877  lea     rax, [rdx + 1]
+001a787b  cmp     rax, 0x1000
+001a7881  jb      0x1a789a
+001a7883  mov     r8, qword ptr [rcx - 8]
+001a7887  sub     rcx, r8
+001a788a  lea     rax, [rcx - 8]
+001a788e  cmp     rax, 0x1f
+001a7892  ja      0x1a7962
+001a7898  jmp     0x1a78a2
+001a789a  mov     r8, rcx
+001a789d  mov     esi, 1
+001a78a2  add     rdx, rsi
+001a78a5  mov     rcx, r8
+001a78a8  call    0xe15340
+001a78ad  movzx   eax, byte ptr [rbp + 0xa8]
+001a78b4  mov     byte ptr [r13], al
+001a78b8  movsd   xmm0, qword ptr [rbp + 0xa9]
+001a78c0  movsd   qword ptr [r13 + 1], xmm0
+001a78c6  mov     eax, dword ptr [rbp + 0xb1]
+001a78cc  mov     dword ptr [r13 + 9], eax
+001a78d0  movzx   eax, word ptr [rbp + 0xb5]
+001a78d7  mov     word ptr [r13 + 0xd], ax
+001a78dc  movzx   ecx, byte ptr [rbp + 0xb7]
+001a78e3  mov     byte ptr [r13 + 0xf], cl
+001a78e7  mov     rcx, qword ptr [rbp + 0xb8]
+001a78ee  mov     qword ptr [r13 + 0x10], rcx
+001a78f2  mov     rcx, qword ptr [rbp + 0xc0]
+001a78f9  mov     qword ptr [r13 + 0x18], rcx
+001a78fd  mov     qword ptr [rbp + 0xb8], 0
+001a7908  mov     qword ptr [rbp + 0xc0], 0xf
+001a7913  mov     byte ptr [rbp + 0xa8], 0
+001a791a  lea     rcx, [rbp + 0x90]
+001a7921  call    0x19b770
+001a7926  mov     rax, r15
+001a7929  mov     rcx, qword ptr [rbp + 0x4c0]
+001a7930  xor     rcx, rsp
+001a7933  call    0xe155e0
+001a7938  mov     rbx, qword ptr [rsp + 0x630]
+001a7940  movaps  xmm6, xmmword ptr [rsp + 0x5d0]
+001a7948  add     rsp, 0x5e0
+001a794f  pop     r15
+001a7951  pop     r14
+001a7953  pop     r13
+001a7955  pop     r12
+001a7957  pop     rdi
+001a7958  pop     rsi
+001a7959  pop     rbp
+001a795a  ret     
+001a795b  mov     ecx, 5
+001a7960  int     0x29
+001a7962  mov     ecx, 5
+001a7967  int     0x29
+001a7969  call    0x19c650
+001a796e  int3    

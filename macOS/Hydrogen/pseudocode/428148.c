@@ -1,0 +1,44 @@
+
+void FUN_00428148(void)
+
+{
+  undefined1 in_ZR;
+  ulong uVar1;
+  ulong unaff_x19;
+  long unaff_x20;
+  undefined8 *unaff_x22;
+  long unaff_x23;
+  long unaff_x24;
+  long unaff_x25;
+  undefined8 in_stack_00000000;
+  undefined8 in_stack_00000008;
+  undefined8 in_stack_00000010;
+  undefined8 in_stack_00000018;
+  undefined1 uStack0000000000000020;
+  undefined8 in_stack_00000028;
+  undefined8 in_stack_00000030;
+  undefined8 in_stack_00000038;
+  
+  while (!(bool)in_ZR) {
+    _uStack0000000000000020 = unaff_x20 + 0x20;
+    func_0x0043af4c(1,unaff_x20,&uStack0000000000000020);
+    unaff_x20 = unaff_x20 + 0x38;
+    unaff_x25 = unaff_x25 + -0x38;
+    in_ZR = unaff_x25 == 0;
+  }
+  in_stack_00000028 = in_stack_00000008;
+  _uStack0000000000000020 = in_stack_00000000;
+  in_stack_00000038 = in_stack_00000018;
+  in_stack_00000030 = in_stack_00000010;
+  if ((((unaff_x19 & 1) == 0) && ((*(ulong *)(unaff_x23 + 0x548) & 0x7fffffffffffffff) != 0)) &&
+     (uVar1 = func_0x007a1140(), (uVar1 & 1) == 0)) {
+    *(undefined1 *)(unaff_x24 + 0xfb0) = 1;
+  }
+  _pthread_mutex_unlock(uRam0000000000a3bfa8);
+  unaff_x22[1] = in_stack_00000028;
+  *unaff_x22 = _uStack0000000000000020;
+  unaff_x22[3] = in_stack_00000038;
+  unaff_x22[2] = in_stack_00000030;
+  return;
+}
+

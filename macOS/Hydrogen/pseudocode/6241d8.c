@@ -1,0 +1,15 @@
+
+void FUN_006241d8(int param_1)
+
+{
+  undefined8 *unaff_x19;
+  
+  if (param_1 == 0) {
+    func_0x0003eef0();
+    func_0x0064e79c(unaff_x19[3],*unaff_x19);
+    *(undefined1 *)(unaff_x19 + 4) = 1;
+    return;
+  }
+  return;
+}
+
