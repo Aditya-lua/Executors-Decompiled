@@ -64,3 +64,5 @@ imports alone does not establish that a function is unimportant.
 
 Analysis for interoperability, research and detection. The binaries are not
 redistributed here, only derived text.
+
+> Credits to Pengu on discord
