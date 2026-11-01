@@ -71,6 +71,36 @@ separate:
 - `Bunni-Decompiled`
 - `WUYX-decompiled`
 
+## Donate
+
+Donations are optional. If this research is useful to you, you can leave a tip.
+The live page is [adicodz.xyz/donations](https://adicodz.xyz/donations).
+
+**Send only the listed asset on the listed network. Transfers made on the wrong
+network may be lost.** Verify the asset, network and address before sending.
+Donations do not grant ownership of the original software.
+
+| Asset | Network | Address |
+| --- | --- | --- |
+| BTC | Bitcoin network | `bc1qqjjerhv95kszck6cwes4nauqes82kucku0yxur` |
+| LTC | Litecoin network | `ltc1q3dhajaunqkmcvtc0xvhxdjfnjsn8q9w3xtx5ld` |
+| ETH | Ethereum network | `0xfC3E2aE9F2470813B1fEfde9Eeb5E91928aed311` |
+| USDT | Ethereum (ERC20) only | `0xfC3E2aE9F2470813B1fEfde9Eeb5E91928aed311` |
+| BNB | BNB Smart Chain (BSC) | `0xfC3E2aE9F2470813B1fEfde9Eeb5E91928aed311` |
+| SOL | Solana network | `ARhAn44p6Kmrgece4dukx14quPYZ6g8iLLB6RbJtkkNB` |
+| USDT | Solana (SPL) only | `ARhAn44p6Kmrgece4dukx14quPYZ6g8iLLB6RbJtkkNB` |
+| TRX | Tron network | `TCoeQbbhKe9g6HwD1Lm9Re3TQ4s1dXLqRY` |
+
+ETH, USDT (ERC20) and BNB (BSC) share one EVM address, and SOL and USDT (SPL)
+share one Solana address. The network still decides what arrives, so pick the
+row that matches what you are sending.
+
+| BTC | LTC | ETH / USDT / BNB | SOL / USDT | TRX |
+| :-: | :-: | :-: | :-: | :-: |
+| <img src="donate/btc.png" alt="BTC address QR" width="150"> | <img src="donate/ltc.png" alt="LTC address QR" width="150"> | <img src="donate/eth.png" alt="EVM address QR" width="150"> | <img src="donate/sol.png" alt="Solana address QR" width="150"> | <img src="donate/trx.png" alt="TRX address QR" width="150"> |
+
+Each QR encodes the bare address from the row above it, nothing else.
+
 ## Disclaimer
 
 Published for security research and reverse-engineering education. Analysis is
