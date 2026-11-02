@@ -15,6 +15,8 @@ public sealed class CdnEndpoints
 
 	public static readonly string[] NuGetHosts = new string[2] { "api.nuget.org", "globalcdn.nuget.org" };
 
+	public static readonly string[] RobloxHosts = new string[3] { "clientsettingscdn.roblox.com", "clientsettings.roblox.com", "setup.rbxcdn.com" };
+
 	public static readonly string[] RuntimeHosts = new string[4] { "builds.dotnet.microsoft.com", "dotnetcli.azureedge.net", "download.visualstudio.microsoft.com", "dotnetcli.blob.core.windows.net" };
 
 	private readonly Uri Root;
@@ -109,6 +111,15 @@ public sealed class CdnEndpoints
 		if (Address.Scheme == Uri.UriSchemeHttps)
 		{
 			return NuGetHosts.Contains(Address.Host, StringComparer.OrdinalIgnoreCase);
+		}
+		return false;
+	}
+
+	public static bool IsAllowedRobloxUrl(Uri Address)
+	{
+		if (Address.Scheme == Uri.UriSchemeHttps)
+		{
+			return RobloxHosts.Contains(Address.Host, StringComparer.OrdinalIgnoreCase);
 		}
 		return false;
 	}

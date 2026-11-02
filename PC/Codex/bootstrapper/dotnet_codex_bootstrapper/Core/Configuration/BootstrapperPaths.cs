@@ -17,6 +17,8 @@ public sealed class BootstrapperPaths(string Root)
 
 	public string RollbackDirectory => Path.Combine(Root, "rollback");
 
+	public string RobloxDirectory => Path.Combine(Root, "roblox");
+
 	public string LogDirectory => Path.Combine(Root, "bootstrapper", "logs");
 
 	public string InstalledBootstrapper => Path.Combine(Root, "Codex Bootstrapper.exe");

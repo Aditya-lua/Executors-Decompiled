@@ -6,7 +6,7 @@ using dotnet_codex_bootstrapper.Infrastructure;
 
 namespace dotnet_codex_bootstrapper.Services;
 
-public sealed class AppLauncher(IProcessLauncher Launcher, int EarlyExitMilliseconds = 3000)
+public sealed class AppLauncher(IProcessLauncher Launcher, int EarlyExitMilliseconds = 3000, int HandoffMilliseconds = 30000)
 {
 	public int Launch(string AppDirectory, string ExecutableRelative)
 	{
@@ -23,10 +23,11 @@ public sealed class AppLauncher(IProcessLauncher Launcher, int EarlyExitMillisec
 		{
 			throw new UpdateException("E-LAUNCH", "The Codex executable is missing from the install folder.");
 		}
+		using LaunchHandoff launchHandoff = new LaunchHandoff();
 		IStartedProcess startedProcess;
 		try
 		{
-			startedProcess = Launcher.Start(text, string.Empty, AppDirectory, RequireElevation: true);
+			startedProcess = Launcher.Start(text, launchHandoff.Arguments, AppDirectory, RequireElevation: true);
 		}
 		catch (Win32Exception ex) when (ex.NativeErrorCode == 1223)
 		{
@@ -43,6 +44,10 @@ public sealed class AppLauncher(IProcessLauncher Launcher, int EarlyExitMillisec
 				int exitCode = startedProcess.ExitCode;
 				AppLog.Error("Codex exited immediately with code {Code}", exitCode);
 				throw new UpdateException("E-LAUNCH", $"Codex closed right after starting (exit code {exitCode}). See the Codex log for details.");
+			}
+			if (!launchHandoff.Wait(startedProcess, HandoffMilliseconds))
+			{
+				AppLog.Warning("Codex did not complete the launch handshake");
 			}
 			AppLog.Information("Codex started (process {Id})", startedProcess.Id);
 			return startedProcess.Id;

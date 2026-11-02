@@ -11,4 +11,6 @@ internal static class _003CRegexGenerator_g_003EF65865DE7B97CDDC52A42F7FDE7D76E6
 	internal static readonly bool s_hasTimeout = s_defaultTimeout != Regex.InfiniteMatchTimeout;
 
 	internal static readonly SearchValues<char> s_asciiHexDigits = SearchValues.Create("0123456789ABCDEFabcdef");
+
+	internal static readonly SearchValues<char> s_asciiHexDigitsLower = SearchValues.Create("0123456789abcdef");
 }

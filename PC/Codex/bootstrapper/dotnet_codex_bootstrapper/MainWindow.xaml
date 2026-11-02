@@ -30,7 +30,7 @@
           </Rectangle>
         </Grid>
         <StackPanel Margin="52.5,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
-          <TextBlock VerticalAlignment="Center" FontSize="9" FontWeight="Bold" Foreground="{StaticResource Page.Muted}" Text="Codex Bootstrapper" />
+          <TextBlock Name="HeaderText" VerticalAlignment="Center" FontSize="9" FontWeight="Bold" Foreground="{StaticResource Page.Muted}" Text="Codex Bootstrapper" />
           <Border Margin="7.5,0,0,0" Background="{DynamicResource Page.Accent}" CornerRadius="3.5">
             <TextBlock Margin="6,1.5,6,2.5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="7" FontWeight="SemiBold" Foreground="{StaticResource Page.OnAccent}" Text="{x:Static Versioning:BootstrapperVersion.Display}" />
           </Border>

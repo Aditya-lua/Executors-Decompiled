@@ -97,6 +97,20 @@ public static class InteractiveProfile
 		}
 	}
 
+	public static bool IsInteractiveUser()
+	{
+		try
+		{
+			string text = CurrentProcessSid();
+			string text2 = ActiveConsoleUserSid();
+			return string.IsNullOrEmpty(text) || string.IsNullOrEmpty(text2) || string.Equals(text, text2, StringComparison.OrdinalIgnoreCase);
+		}
+		catch (Exception)
+		{
+			return true;
+		}
+	}
+
 	private static string? CurrentProcessSid()
 	{
 		using WindowsIdentity windowsIdentity = WindowsIdentity.GetCurrent();

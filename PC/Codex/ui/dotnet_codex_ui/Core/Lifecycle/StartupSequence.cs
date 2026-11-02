@@ -29,6 +29,12 @@ internal static class StartupSequence
 		using LogOperation Operation = AppLog.Begin("Startup");
 		try
 		{
+			if (!LaunchGate.IsAllowed())
+			{
+				ShowGate("Open Codex From Its Launcher", "Codex can only be started by the Codex Bootstrapper. Start it from its shortcut.", "The launch handshake with the bootstrapper was missing or invalid.", arg4: false);
+				Operation.Complete("blocked: not launched by the bootstrapper");
+				return false;
+			}
 			if (!ElevationCheck.IsElevated())
 			{
 				ShowGate("Administrator Rights Required", "Codex must run as administrator. Start it again from its shortcut and accept the Windows prompt.", "Process account: " + Environment.UserName, arg4: false);

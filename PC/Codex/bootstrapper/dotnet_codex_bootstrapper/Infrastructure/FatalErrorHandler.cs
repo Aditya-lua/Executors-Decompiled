@@ -27,7 +27,7 @@ public static class FatalErrorHandler
 		E.Handled = true;
 		try
 		{
-			MessageBox.Show("The Codex bootstrapper hit an unexpected error and will close.\n\nDetails were written to the log.", "Codex Bootstrapper", MessageBoxButton.OK, MessageBoxImage.Hand);
+			PromptWindow.Show("Something went wrong", "The Codex bootstrapper hit an unexpected error and will close.\n\nDetails were written to the log.", PromptKind.Error);
 		}
 		catch (Exception)
 		{

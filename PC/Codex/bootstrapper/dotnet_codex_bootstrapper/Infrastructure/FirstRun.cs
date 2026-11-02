@@ -1,9 +1,8 @@
 using System;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.IO;
+using System.Security.Cryptography;
 using dotnet_codex_bootstrapper.Core.Configuration;
-using dotnet_codex_bootstrapper.Core.Versioning;
 
 namespace dotnet_codex_bootstrapper.Infrastructure;
 
@@ -16,18 +15,29 @@ public static class FirstRun
 		{
 			return FirstRunOutcome.RunInPlace;
 		}
+		string text = Path.Combine(Path.GetDirectoryName(Path.GetFullPath(CurrentExecutable)) ?? string.Empty, typeof(FirstRun).Assembly.GetName().Name + ".dll");
+		if (File.Exists(text))
+		{
+			AppLog.Warning("This bootstrapper is not a single file ({Path} sits next to it), so it was not installed; running in place", text);
+			return FirstRunOutcome.CouldNotInstall;
+		}
 		try
 		{
 			Directory.CreateDirectory(Paths.Root);
 			bool flag = File.Exists(fullPath);
-			if (!flag || IsOlder(fullPath, CurrentExecutable))
+			if (!flag || !SameContent(fullPath, CurrentExecutable))
 			{
-				string text = fullPath + "." + Guid.NewGuid().ToString("N").Substring(0, 8) + ".tmp";
-				File.Copy(CurrentExecutable, text, overwrite: false);
-				File.Move(text, fullPath, overwrite: true);
+				string text2 = fullPath + "." + Guid.NewGuid().ToString("N").Substring(0, 8) + ".tmp";
+				File.Copy(CurrentExecutable, text2, overwrite: false);
+				File.Move(text2, fullPath, overwrite: true);
 				AppLog.Information(flag ? "The outdated bootstrapper at {Path} was replaced" : "The bootstrapper was copied to {Path}", fullPath);
 			}
-			Launcher.Start(fullPath, Arguments, Paths.Root, RequireElevation: false).Dispose();
+			using IStartedProcess startedProcess = Launcher.Start(fullPath, Arguments, Paths.Root, RequireElevation: false);
+			if (startedProcess.WaitForExit(2000) && startedProcess.ExitCode != 0)
+			{
+				AppLog.Error("The installed bootstrapper at {Path} exited right away with code {Code}; running in place", fullPath, startedProcess.ExitCode);
+				return FirstRunOutcome.CouldNotInstall;
+			}
 			return FirstRunOutcome.HandedOver;
 		}
 		catch (Exception ex) when ((ex is IOException || ex is UnauthorizedAccessException || ex is Win32Exception || ex is InvalidOperationException) ? true : false)
@@ -37,40 +47,21 @@ public static class FirstRun
 		}
 	}
 
-	private static bool IsOlder(string InstalledPath, string CurrentPath)
+	private static bool SameContent(string First, string Second)
 	{
 		try
 		{
-			ReleaseVersion releaseVersion = Read(InstalledPath);
-			int result;
-			if (releaseVersion != null)
+			if (new FileInfo(First).Length != new FileInfo(Second).Length)
 			{
-				ReleaseVersion releaseVersion2 = Read(CurrentPath);
-				if (releaseVersion2 != null)
-				{
-					result = ((releaseVersion.CompareTo(releaseVersion2) < 0) ? 1 : 0);
-					goto IL_0021;
-				}
+				return false;
 			}
-			result = 0;
-			goto IL_0021;
-			IL_0021:
-			return (byte)result != 0;
+			using FileStream source = new FileStream(First, FileMode.Open, FileAccess.Read, FileShare.ReadWrite | FileShare.Delete);
+			using FileStream source2 = new FileStream(Second, FileMode.Open, FileAccess.Read, FileShare.ReadWrite | FileShare.Delete);
+			return ((ReadOnlySpan<byte>)SHA256.HashData(source).AsSpan()).SequenceEqual((ReadOnlySpan<byte>)SHA256.HashData(source2));
 		}
-		catch (IOException)
+		catch (Exception ex) when ((ex is IOException || ex is UnauthorizedAccessException) ? true : false)
 		{
 			return false;
 		}
-	}
-
-	private static ReleaseVersion? Read(string Path)
-	{
-		string productVersion = FileVersionInfo.GetVersionInfo(Path).ProductVersion;
-		int num = productVersion?.IndexOf('+') ?? (-1);
-		if (!ReleaseVersion.TryParse((num >= 0) ? productVersion.Substring(0, num) : productVersion, out ReleaseVersion Version))
-		{
-			return null;
-		}
-		return Version;
 	}
 }

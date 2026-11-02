@@ -23,6 +23,8 @@ public sealed class UpdateOrchestrator(OrchestratorOptions Options) : IBootstrap
 		}
 	}
 
+	public const int OutdatedNoticeSeconds = 3;
+
 	private IProgress<BootstrapperSnapshot> Output;
 
 	private BootstrapperSnapshot Last = BootstrapperSnapshot.Initial;
@@ -137,13 +139,32 @@ public sealed class UpdateOrchestrator(OrchestratorOptions Options) : IBootstrap
 		AppLog.Information("Manifest accepted: channel {Channel}, app {App}, bootstrapper {Bootstrapper}, {Count} files", ChannelName, Manifest.App.Version, Manifest.Bootstrapper.Version, Manifest.App.Files.Count);
 		InstallState State = Options.State.Load();
 		ReleaseVersion releaseVersion = (ReleaseVersion.TryParse(Options.CurrentVersionText, out ReleaseVersion Version) ? Version : null);
-		bool BootstrapperUpdate = Options.AllowSelfUpdate && (releaseVersion == null || ReleaseVersion.Parse(Manifest.Bootstrapper.Version) > releaseVersion);
+		bool flag = Options.AllowSelfUpdate && !string.Equals(Channels.OfVersion(Options.CurrentVersionText), ChannelName, StringComparison.OrdinalIgnoreCase) && !string.Equals(Manifest.Bootstrapper.Version, Options.CurrentVersionText, StringComparison.Ordinal);
+		bool BootstrapperUpdate = Options.AllowSelfUpdate && ((releaseVersion == null || ReleaseVersion.Parse(Manifest.Bootstrapper.Version) > releaseVersion) | flag);
 		UpdateOrchestrator updateOrchestrator = this;
 		UpdateOrchestrator updateOrchestrator2 = this;
-		string description = (BootstrapperUpdate ? "A bootstrapper update is available." : "The bootstrapper is up to date.");
+		object description;
+		if (flag)
+		{
+			description = "Switching to the " + ChannelName + " bootstrapper.";
+		}
+		else
+		{
+			description = (BootstrapperUpdate ? "A bootstrapper update is available." : "The bootstrapper is up to date.");
+		}
 		string footer = "Channel: " + ChannelName;
 		string target = (BootstrapperUpdate ? Manifest.Bootstrapper.Version : null);
-		updateOrchestrator.Publish(updateOrchestrator2.Snap(BootstrapperStage.Checking, "Checking for updates", description, null, "Comparing versions", footer, null, null, target));
+		updateOrchestrator.Publish(updateOrchestrator2.Snap(BootstrapperStage.Checking, "Checking for updates", (string)description, null, "Comparing versions", footer, null, null, target));
+		if (flag)
+		{
+			AppLog.Information("Channel switch: bootstrapper {Current} is replaced by the {Channel} bootstrapper {Target} before Codex is installed", Options.CurrentVersionText, ChannelName, Manifest.Bootstrapper.Version);
+			Options.State.SaveManifest(Fetched.Bytes);
+			if (await SwitchBootstrapperAsync(Manifest, Cancel))
+			{
+				return;
+			}
+			AppLog.Warning("The {Channel} bootstrapper could not be installed; this bootstrapper installs Codex instead", ChannelName);
+		}
 		string AppVersionNote;
 		if ((object)State == null)
 		{
@@ -328,12 +349,12 @@ public sealed class UpdateOrchestrator(OrchestratorOptions Options) : IBootstrap
 		Options.State.SaveManifest(Fetched.Bytes);
 		DeleteQuietly(StageRoot);
 		await EnsureLoaderAsync(Manifest, Cancel);
-		bool flag = BootstrapperReady;
-		if (flag)
+		bool flag2 = BootstrapperReady;
+		if (flag2)
 		{
-			flag = await TrySelfUpdateAsync(Manifest, StagedBootstrapper);
+			flag2 = await TrySelfUpdateAsync(Manifest, StagedBootstrapper);
 		}
-		if (!flag)
+		if (!flag2)
 		{
 			await LaunchAsync(Manifest.App.Executable, Manifest.App.Version, Offline: false);
 		}
@@ -347,7 +368,12 @@ public sealed class UpdateOrchestrator(OrchestratorOptions Options) : IBootstrap
 			{
 				return await Cdn.HeadAsync(UrlFor(fileEntry), Token);
 			}
-			catch (CdnException ex3) when (ex3.StatusCode is 403 or 404)
+			catch (CdnException ex3) when (((Func<bool>)delegate
+			{
+				// Could not convert BlockContainer to single expression
+				int? statusCode = ex3.StatusCode;
+				return (statusCode.HasValue && (uint)(statusCode.GetValueOrDefault() - 403) <= 1u) ? true : false;
+			}).Invoke())
 			{
 				AppLog.Error(ex3, "'{Path}' was refused with HTTP {Status} at {Url}", fileEntry.Path, ex3.StatusCode, UrlFor(fileEntry));
 				throw new UpdateException("E-MISSING", "'" + fileEntry.Path + "' is missing on the update server.", ex3);
@@ -365,31 +391,41 @@ public sealed class UpdateOrchestrator(OrchestratorOptions Options) : IBootstrap
 
 	private async Task EnsureLoaderAsync(UpdateManifest Manifest, CancellationToken Cancel)
 	{
-		LoaderUpdater Loaders = Options.Loaders;
-		if (Loaders == null)
+		LoaderUpdater loaders = Options.Loaders;
+		if (loaders != null)
 		{
-			return;
-		}
-		Func<TimeSpan, CancellationToken, Task> Delay = Options.Delay ?? ((Func<TimeSpan, CancellationToken, Task>)((TimeSpan Span, CancellationToken Token) => Task.Delay(Span, Token)));
-		UpdateManifest Current = Manifest;
-		while (true)
-		{
-			LoaderResult loaderResult = await Loaders.EnsureAsync(Current, DownloadProgress("Downloading updates", "Loader", () => 0L, 0L, 1, 1, null, null), Cancel);
-			if (loaderResult.Status != LoaderStatus.Outdated)
+			Func<TimeSpan, CancellationToken, Task> Delay = Options.Delay ?? ((Func<TimeSpan, CancellationToken, Task>)((TimeSpan Span, CancellationToken Token) => Task.Delay(Span, Token)));
+			LoaderResult loaderResult = await loaders.EnsureAsync(Manifest, DownloadProgress("Downloading updates", "Loader", () => 0L, 0L, 1, 1, null, null), Cancel);
+			if (loaderResult.Status == LoaderStatus.Outdated)
 			{
-				break;
-			}
-			Publish(Snap(BootstrapperStage.Checking, "Codex is outdated", "Codex doesn't support the current Roblox version (" + loaderResult.RobloxVersion + ") yet. Waiting for an update.", null, "Waiting for an update", "Checking again automatically"));
-			await Delay(TimeSpan.FromSeconds(30L), Cancel);
-			try
-			{
-				Current = (await Options.Fetcher.FetchAsync(Options.Channel, Cancel)).Manifest;
-			}
-			catch (Exception error) when (IsTransport(error, Cancel))
-			{
-				AppLog.Warning(error, "The manifest could not be refreshed while waiting for a loader");
+				AppLog.Information("Codex is outdated for Roblox {Version}; Codex opens anyway in {Seconds} s", loaderResult.RobloxVersion, 3);
+				Publish(Snap(BootstrapperStage.Checking, "Codex is outdated", "Codex doesn't support the current Roblox version (" + loaderResult.RobloxVersion + ") yet, so it can't attach to games until an update is published. Opening Codex anyway.", null, "Opening Codex", $"Opening in {3} seconds"));
+				await Delay(TimeSpan.FromSeconds(3L), Cancel);
 			}
 		}
+	}
+
+	private async Task<bool> SwitchBootstrapperAsync(UpdateManifest Manifest, CancellationToken Cancel)
+	{
+		CdnEndpoints endpoints = Options.Fetcher.Endpoints;
+		Uri Url = endpoints.BootstrapperUrl(Options.Channel, Manifest.Bootstrapper.Version);
+		string Staged = Path.Combine(Options.Paths.StagingDirectory, "bootstrapper", "dotnet-codex-bootstrapper.exe");
+		try
+		{
+			RemoteInfo remoteInfo = await Options.Fetcher.Cdn.HeadAsync(Url, Cancel);
+			if (remoteInfo.Md5 == null || remoteInfo.Length <= 0)
+			{
+				AppLog.Warning("The {Channel} bootstrapper has no usable MD5 on the server", Channels.NameOf(Options.Channel));
+				return false;
+			}
+			await Options.Downloader.DownloadAsync(Url, Staged, remoteInfo.Length, remoteInfo.Md5, null, DownloadProgress("Switching channel", "dotnet-codex-bootstrapper.exe", () => 0L, remoteInfo.Length, 1, 1, Manifest.Bootstrapper.Version, Options.CurrentVersionText), Cancel);
+		}
+		catch (UpdateException error)
+		{
+			AppLog.Warning(error, "The {Channel} bootstrapper could not be downloaded", Channels.NameOf(Options.Channel));
+			return false;
+		}
+		return await TrySelfUpdateAsync(Manifest, Staged);
 	}
 
 	private async Task<bool> TrySelfUpdateAsync(UpdateManifest Manifest, string Staged)
@@ -419,7 +455,7 @@ public sealed class UpdateOrchestrator(OrchestratorOptions Options) : IBootstrap
 		string message = selfUpdateResult.Message;
 		double? progress = 100.0;
 		version = Manifest.Bootstrapper.Version;
-		updateOrchestrator3.Publish(updateOrchestrator4.Snap(BootstrapperStage.Launching, "Restarting", message, progress, "Handing over", "Bootstrapper updated", null, null, version)with
+		updateOrchestrator3.Publish(updateOrchestrator4.Snap(BootstrapperStage.Launching, "Restarting", message, progress, "Handing over", "Bootstrapper updated", null, null, version) with
 		{
 			Outcome = BootstrapperOutcome.Completed,
 			ExitRequested = true
@@ -442,7 +478,7 @@ public sealed class UpdateOrchestrator(OrchestratorOptions Options) : IBootstrap
 			double? progress = 100.0;
 			string footer = "Version " + AppVersion;
 			current = AppVersion;
-			updateOrchestrator.Publish(updateOrchestrator2.Snap(BootstrapperStage.Launching, "Up to date", "Codex is installed and verified.", progress, "Finished", footer, null, null, null, current)with
+			updateOrchestrator.Publish(updateOrchestrator2.Snap(BootstrapperStage.Launching, "Up to date", "Codex is installed and verified.", progress, "Finished", footer, null, null, null, current) with
 			{
 				Outcome = BootstrapperOutcome.Completed
 			});
@@ -460,7 +496,7 @@ public sealed class UpdateOrchestrator(OrchestratorOptions Options) : IBootstrap
 		double? progress2 = 100.0;
 		string footer3 = (Offline ? ("Offline · using version " + AppVersion) : ("Version " + AppVersion));
 		current = AppVersion;
-		updateOrchestrator5.Publish(updateOrchestrator6.Snap(BootstrapperStage.Launching, "Launching", "Codex is running.", progress2, "Finished", footer3, null, null, null, current)with
+		updateOrchestrator5.Publish(updateOrchestrator6.Snap(BootstrapperStage.Launching, "Launching", "Codex is running.", progress2, "Finished", footer3, null, null, null, current) with
 		{
 			Outcome = BootstrapperOutcome.Completed,
 			ExitRequested = true

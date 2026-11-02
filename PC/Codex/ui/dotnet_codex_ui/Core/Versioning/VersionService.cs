@@ -6,6 +6,7 @@ using System.Windows;
 using System.Windows.Threading;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using dotnet_codex_ui.Configuration;
 using dotnet_codex_ui.Infrastructure.Logging;
 
 namespace dotnet_codex_ui.Core.Versioning;
@@ -13,8 +14,6 @@ namespace dotnet_codex_ui.Core.Versioning;
 internal static class VersionService
 {
 	internal const string RobloxUrl = "https://clientsettings.roblox.com/v2/client-version/WindowsPlayer";
-
-	internal const string ManifestUrl = "https://cdn.robloxscripts.gg/stable/version.json";
 
 	internal static TimeSpan Timeout = TimeSpan.FromSeconds(10L);
 
@@ -32,6 +31,10 @@ internal static class VersionService
 	internal static Func<string, CancellationToken, Task<string>> Fetch = async (string Url, CancellationToken Token) => await Http.GetStringAsync(Url, Token);
 
 	internal static Func<DateTime> Clock = () => DateTime.UtcNow;
+
+	private static string? LastDecisions;
+
+	internal static string ManifestUrl => "https://cdn.robloxscripts.gg/" + UpdateChannelConfiguration.Name + "/version.json";
 
 	public static VersionState State { get; private set; } = VersionState.Idle;
 
@@ -56,7 +59,7 @@ internal static class VersionService
 	internal static CodexManifest ParseManifest(string Json)
 	{
 		JObject root = JObject.Parse(Json);
-		return new CodexManifest(Text(root, "dotnet-codex-bootstrapper"), Text(root, "dotnet-codex-ui"), Text(root, "dotnet-codex-loader"), Text(root, "dotnet-codex-module"), Text(root, "roblox-version"), Text(root, "dotnet-codex-loader-md5"));
+		return new CodexManifest(Text(root, "dotnet-codex-bootstrapper"), Text(root, "dotnet-codex-ui"), Text(root, "dotnet-codex-loader"), Text(root, "dotnet-codex-module"));
 	}
 
 	private static string? Text(JObject Root, string Name)
@@ -109,7 +112,7 @@ internal static class VersionService
 			using CancellationTokenSource Timeout = CancellationTokenSource.CreateLinkedTokenSource(Cancel);
 			Timeout.CancelAfter(VersionService.Timeout);
 			Task<string> RobloxTask = Fetch("https://clientsettings.roblox.com/v2/client-version/WindowsPlayer", Timeout.Token);
-			CodexManifest manifest = ParseManifest(await Fetch("https://cdn.robloxscripts.gg/stable/version.json", Timeout.Token));
+			CodexManifest manifest = ParseManifest(await Fetch(ManifestUrl, Timeout.Token));
 			Snapshot = new VersionSnapshot(Snapshot?.Roblox, manifest, Clock());
 			Set(VersionState.Fresh, null);
 			ApplyRobloxAsync(RobloxTask);
@@ -156,6 +159,7 @@ internal static class VersionService
 		VersionService.State = State;
 		VersionService.Error = Error;
 		AppLog.Debug("Version service state {State} {Error}", State, Error);
+		LogDecisions();
 		Action changed = Changed;
 		if (changed != null)
 		{
@@ -171,6 +175,25 @@ internal static class VersionService
 		}
 	}
 
+	private static void LogDecisions()
+	{
+		try
+		{
+			VersionSnapshot snapshot = Snapshot;
+			UpdateResult update = Update;
+			string text = $"Codex version: installed '{AppVersions.UI}', published dotnet-codex-ui '{snapshot?.Manifest?.UI ?? "null"}', status {update.Status} | Loader: {LoaderCheck.Describe(snapshot?.Roblox, snapshot?.Manifest, State, Loader)}";
+			if (!(text == LastDecisions))
+			{
+				LastDecisions = text;
+				AppLog.Information("Version decisions: {Decisions}", text);
+			}
+		}
+		catch (Exception failure)
+		{
+			AppLog.Warning(failure, "The version decisions could not be logged");
+		}
+	}
+
 	internal static void Reset()
 	{
 		lock (Gate)
@@ -179,6 +202,7 @@ internal static class VersionService
 			State = VersionState.Idle;
 			Snapshot = null;
 			Error = null;
+			LastDecisions = null;
 		}
 	}
 }

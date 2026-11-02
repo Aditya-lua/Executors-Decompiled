@@ -28,6 +28,23 @@ public partial class MainWindow : Window, IComponentConnector
 
 	private DispatcherTimer? ExitTimer;
 
+	private bool Leaving;
+
+	private bool MayClose;
+
+	public string Heading
+	{
+		get
+		{
+			return HeaderText.Text;
+		}
+		set
+		{
+			HeaderText.Text = value;
+			Title = value;
+		}
+	}
+
 	public MainWindow()
 		: this(new BootstrapperViewModel(() => new DemoBootstrapperFlow(DemoScenarios.Default)))
 	{
@@ -54,6 +71,7 @@ public partial class MainWindow : Window, IComponentConnector
 		{
 			AccentTheme.Apply(AccentTheme.ReadStored());
 		};
+		Closing += OnClosing;
 		Closed += OnClosed;
 	}
 
@@ -161,6 +179,45 @@ public partial class MainWindow : Window, IComponentConnector
 					}
 				});
 			}
+		}
+	}
+
+	private void OnClosing(object? Sender, CancelEventArgs E)
+	{
+		if (MayClose || !IsVisible || !MotionPolicy.Enabled)
+		{
+			return;
+		}
+		E.Cancel = true;
+		if (!Leaving)
+		{
+			Leaving = true;
+			ScaleTransform scaleTransform = new ScaleTransform(1.0, 1.0);
+			WindowBackground.RenderTransformOrigin = new Point(0.5, 0.5);
+			WindowBackground.RenderTransform = scaleTransform;
+			Duration duration = new Duration(TimeSpan.FromMilliseconds(220L));
+			CubicEase easingFunction = new CubicEase
+			{
+				EasingMode = EasingMode.EaseIn
+			};
+			DoubleAnimation doubleAnimation = new DoubleAnimation(1.0, 0.0, duration)
+			{
+				EasingFunction = easingFunction
+			};
+			doubleAnimation.Completed += (object? _, EventArgs _) =>
+			{
+				MayClose = true;
+				Close();
+			};
+			scaleTransform.BeginAnimation(ScaleTransform.ScaleXProperty, new DoubleAnimation(1.0, 0.95, duration)
+			{
+				EasingFunction = easingFunction
+			});
+			scaleTransform.BeginAnimation(ScaleTransform.ScaleYProperty, new DoubleAnimation(1.0, 0.95, duration)
+			{
+				EasingFunction = easingFunction
+			});
+			BeginAnimation(UIElement.OpacityProperty, doubleAnimation);
 		}
 	}
 

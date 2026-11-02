@@ -7,8 +7,11 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Markup;
+using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Threading;
 using dotnet_codex_ui.Infrastructure.Logging;
+using dotnet_codex_ui.Services;
 
 namespace dotnet_codex_ui.Core.Lifecycle;
 
@@ -25,6 +28,7 @@ public partial class StartupGateWindow : Window, IComponentConnector
 
 	private DateTime RetryAt;
 
+	private bool Leaving;
 	internal GateChoice Choice { get; private set; }
 
 	internal StartupGateWindow(string Heading, string Summary, string Details, bool CanRetry)
@@ -37,6 +41,13 @@ public partial class StartupGateWindow : Window, IComponentConnector
 		DetailsField = $"{Heading}\r\n{Summary}\r\n\r\n{Details}";
 		LogButton.Visibility = ((!AppLog.IsActive) ? Visibility.Collapsed : Visibility.Visible);
 		RetryButton.Visibility = ((!CanRetry) ? Visibility.Collapsed : Visibility.Visible);
+		if (MotionPolicy.Enabled)
+		{
+			Loaded += (object _, RoutedEventArgs _) =>
+			{
+				Animate(0.0, 1.0, EasingMode.EaseOut);
+			};
+		}
 		if (CanRetry)
 		{
 			RetryAt = DateTime.UtcNow + RetryCooldown;
@@ -65,16 +76,87 @@ public partial class StartupGateWindow : Window, IComponentConnector
 		}
 	}
 
+	private void Animate(double From, double To, EasingMode Mode, Action? Done = null)
+	{
+		//IL_0040: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0046: Expected Obj, but got Unknown
+		//IL_0059: Unknown result type (might be due to invalid IL or missing references)
+		//IL_006a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_006f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0070: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0075: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0076: Unknown result type (might be due to invalid IL or missing references)
+		//IL_007e: Expected Obj, but got Unknown
+		//IL_0080: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0081: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0086: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0090: Expected Obj, but got Unknown
+		//IL_00d5: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00d6: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00db: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00e5: Expected Obj, but got Unknown
+		object content = ((ContentControl)this).Content;
+		FrameworkElement val = (FrameworkElement)((content is FrameworkElement) ? content : null);
+		if (val == null)
+		{
+			Done?.Invoke();
+			return;
+		}
+		ScaleTransform val2 = new ScaleTransform(1.0, 1.0);
+		((UIElement)val).RenderTransformOrigin = new Point(0.5, 0.5);
+		((UIElement)val).RenderTransform = (Transform)(object)val2;
+		Duration normal = MotionDurations.Normal;
+		CubicEase easingFunction = new CubicEase
+		{
+			EasingMode = Mode
+		};
+		DoubleAnimation val3 = new DoubleAnimation(From, To, normal)
+		{
+			EasingFunction = (IEasingFunction)(object)easingFunction
+		};
+		if (Done != null)
+		{
+			((Timeline)val3).Completed += (object? _, EventArgs _) =>
+			{
+				Done();
+			};
+		}
+		DoubleAnimation val4 = new DoubleAnimation(0.96 + From * 0.04, 0.96 + To * 0.04, normal)
+		{
+			EasingFunction = (IEasingFunction)(object)easingFunction
+		};
+		((Animatable)val2).BeginAnimation(ScaleTransform.ScaleXProperty, (AnimationTimeline)(object)val4);
+		((Animatable)val2).BeginAnimation(ScaleTransform.ScaleYProperty, (AnimationTimeline)(object)val4);
+		((UIElement)val).BeginAnimation(UIElement.OpacityProperty, (AnimationTimeline)(object)val3);
+	}
+
+	private void Leave(GateChoice Value)
+	{
+		if (Leaving)
+		{
+			return;
+		}
+		Leaving = true;
+		Choice = Value;
+		if (!MotionPolicy.Enabled)
+		{
+			((Window)this).DialogResult = Value == GateChoice.Retry;
+			return;
+		}
+		Animate(1.0, 0.0, (EasingMode)0, () =>
+		{
+			((Window)this).DialogResult = Value == GateChoice.Retry;
+		});
+	}
+
 	private void Retry_Click(object Sender, RoutedEventArgs E)
 	{
-		Choice = GateChoice.Retry;
-		DialogResult = true;
+		Leave(GateChoice.Retry);
 	}
 
 	private void Exit_Click(object Sender, RoutedEventArgs E)
 	{
-		Choice = GateChoice.Exit;
-		DialogResult = false;
+		Leave(GateChoice.Exit);
 	}
 
 	private void Copy_Click(object Sender, RoutedEventArgs E)

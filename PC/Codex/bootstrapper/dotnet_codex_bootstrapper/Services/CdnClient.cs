@@ -92,7 +92,7 @@ public sealed class CdnClient(HttpClient Http, CdnEndpoints Endpoints, RetryPoli
 
 	private async Task<HttpResponseMessage> SendAsync(Uri Url, long? RangeFrom, CancellationToken Cancel, HttpMethod? Method = null)
 	{
-		if (!Endpoints.IsAllowed(Url) && !CdnEndpoints.IsAllowedRuntimeUrl(Url.AbsoluteUri) && !CdnEndpoints.IsAllowedNuGetUrl(Url))
+		if (!Endpoints.IsAllowed(Url) && !CdnEndpoints.IsAllowedRuntimeUrl(Url.AbsoluteUri) && !CdnEndpoints.IsAllowedNuGetUrl(Url) && !CdnEndpoints.IsAllowedRobloxUrl(Url))
 		{
 			throw new UpdateException("E-NET", "The address is not on the allowed update hosts.");
 		}
@@ -115,7 +115,7 @@ public sealed class CdnClient(HttpClient Http, CdnEndpoints Endpoints, RetryPoli
 			throw new CdnException("The update server could not be reached.", null, inner);
 		}
 		Uri uri = httpResponseMessage.RequestMessage?.RequestUri ?? Url;
-		if (!Endpoints.IsAllowed(uri) && !CdnEndpoints.IsAllowedRuntimeUrl(uri.AbsoluteUri) && !CdnEndpoints.IsAllowedNuGetUrl(uri))
+		if (!Endpoints.IsAllowed(uri) && !CdnEndpoints.IsAllowedRuntimeUrl(uri.AbsoluteUri) && !CdnEndpoints.IsAllowedNuGetUrl(uri) && !CdnEndpoints.IsAllowedRobloxUrl(uri))
 		{
 			httpResponseMessage.Dispose();
 			throw new UpdateException("E-NET", "The update server redirected to a host that is not allowed.");

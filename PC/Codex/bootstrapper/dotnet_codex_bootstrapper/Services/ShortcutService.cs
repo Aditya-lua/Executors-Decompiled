@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
@@ -114,6 +115,14 @@ public sealed class ShortcutService(ShortcutLocations Locations)
 				AppLog.Warning("Creating the shortcuts timed out");
 				return new _003C_003Ez__ReadOnlySingleElementList<ShortcutResult>(new ShortcutResult("all", ShortcutOutcome.Failed, "Timed out"));
 			}
+			if (Results.Any((ShortcutResult Item) =>
+			{
+				ShortcutOutcome outcome = Item.Outcome;
+				return (uint)(outcome - 2) <= 1u;
+			}))
+			{
+				SHChangeNotify(134217728, 0u, IntPtr.Zero, IntPtr.Zero);
+			}
 			return Results;
 		}
 		catch (Exception ex)
@@ -144,7 +153,7 @@ public sealed class ShortcutService(ShortcutLocations Locations)
 				AppLog.Warning("Shortcuts skipped: the installed bootstrapper {Path} is missing", fullPath);
 				return null;
 			}
-			return new Wanted(fullPath, Path.GetFullPath(Paths.Root), text);
+			return new Wanted(fullPath, Path.GetFullPath(Paths.Root), fullPath);
 		}
 		catch (Exception error)
 		{
@@ -246,6 +255,9 @@ public sealed class ShortcutService(ShortcutLocations Locations)
 			}
 		}
 	}
+
+	[DllImport("shell32.dll")]
+	private static extern void SHChangeNotify(int Event, uint Flags, nint Item1, nint Item2);
 
 	private static bool Same(string Left, string Right)
 	{

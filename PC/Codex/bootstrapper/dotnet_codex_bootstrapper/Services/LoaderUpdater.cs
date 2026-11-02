@@ -51,7 +51,7 @@ public sealed class LoaderUpdater(BootstrapperPaths Paths, CdnEndpoints Endpoint
 		LoaderEntry Entry = Manifest.Loaders?.FirstOrDefault((LoaderEntry Item) => string.Equals(Item.RobloxVersion, Live, StringComparison.OrdinalIgnoreCase));
 		if ((object)Entry == null)
 		{
-			AppLog.Warning("No loader is published for the live Roblox version {Version}", Live);
+			AppLog.Warning("No loader is published for the live Roblox version {Version}; the manifest offers [{Published}]", Live, string.Join(", ", Manifest.Loaders?.Select((LoaderEntry Item) => Item.RobloxVersion) ?? Array.Empty<string>()));
 			return new LoaderResult(LoaderStatus.Outdated, Live, null);
 		}
 		string Destination = Paths.LoaderFile(Entry.RobloxVersion, Entry.Md5);

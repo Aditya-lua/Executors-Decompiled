@@ -1,12 +1,15 @@
 using System;
 using System.CodeDom.Compiler;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Automation;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 using System.Windows.Markup;
 using System.Windows.Media;
@@ -174,6 +177,7 @@ public partial class SettingsPage : UserControl, IComponentConnector
 		}
 		LoadTetherValues();
 		LoadAutoInjectDelay();
+		LoadLauncherValues();
 		Syncing = true;
 		try
 		{
@@ -320,6 +324,110 @@ public partial class SettingsPage : UserControl, IComponentConnector
 		{
 			ToastService.ShowWarning("Setting Not Saved", $"The auto inject delay must be a number from {1} to {300} (seconds).");
 			LoadAutoInjectDelay();
+		}
+	}
+
+	private void LoadLauncherValues()
+	{
+		SetToggle(LauncherEnabledToggle, LauncherConfiguration.GetBool("Enabled", Default: true));
+		SetToggle(LauncherStartCodexToggle, LauncherConfiguration.GetBool("StartCodex", Default: false));
+		Syncing = true;
+		try
+		{
+			((Selector)UpdateChannelBox).SelectedItem = ((IEnumerable)((ItemsControl)UpdateChannelBox).Items).OfType<ComboBoxItem>().First((ComboBoxItem Item) => (string)((FrameworkElement)Item).Tag == UpdateChannelConfiguration.Name);
+			ComboBox[] array = new ComboBox[2] { LauncherChannelBox, LauncherProgressBox };
+			foreach (ComboBox val in array)
+			{
+				string Value = LauncherConfiguration.GetChoice((string)((FrameworkElement)val).Tag);
+				((Selector)val).SelectedItem = ((IEnumerable)((ItemsControl)val).Items).OfType<ComboBoxItem>().FirstOrDefault((ComboBoxItem Item) => (string)((FrameworkElement)Item).Tag == Value);
+			}
+		}
+		finally
+		{
+			Syncing = false;
+		}
+	}
+
+	private async void UpdateChannel_SelectionChanged(object Sender, SelectionChangedEventArgs E)
+	{
+		if (Syncing)
+		{
+			return;
+		}
+		object selectedItem = ((Selector)UpdateChannelBox).SelectedItem;
+		ComboBoxItem val = (ComboBoxItem)((selectedItem is ComboBoxItem) ? selectedItem : null);
+		if (val == null || !(((FrameworkElement)val).Tag is string text) || text == UpdateChannelConfiguration.Name)
+		{
+			return;
+		}
+		if (!UpdateChannelConfiguration.Set(text))
+		{
+			LoadLauncherValues();
+			ToastService.ShowError("Setting Not Saved", "The update channel couldn't be stored.");
+			return;
+		}
+		AppLog.Information("Update channel set to {Channel}", text);
+		ToastService.ShowSuccess("Update Channel Changed", "Codex switches to " + text + " the next time it starts.");
+		try
+		{
+			await VersionService.RefreshAsync(Force: true);
+		}
+		catch (Exception failure)
+		{
+			AppLog.Error(failure, null, "UpdateChannel_SelectionChanged", "C:\\Users\\User\\source\\repos\\dotnet-codex\\dotnet-codex-ui\\Features\\Settings\\SettingsPage.xaml.cs");
+		}
+		ShowVersions();
+	}
+
+	private void LauncherBool_Changed(object Sender, RoutedEventArgs E)
+	{
+		if (Syncing)
+		{
+			return;
+		}
+		CheckBox val = (CheckBox)((Sender is CheckBox) ? Sender : null);
+		if (val == null || !(((FrameworkElement)val).Tag is string text))
+		{
+			return;
+		}
+		bool valueOrDefault = ((ToggleButton)val).IsChecked == true;
+		if (!LauncherConfiguration.SetBool(text, valueOrDefault))
+		{
+			SetToggle(val, !valueOrDefault);
+			ToastService.ShowError("Setting Not Saved", "The setting couldn't be stored.");
+			return;
+		}
+		AppLog.Information("Roblox launcher setting {Name} set to {Value}", text, valueOrDefault);
+		if (text == "Enabled")
+		{
+			ToastService.ShowSuccess(valueOrDefault ? "Roblox Launcher On" : "Roblox Launcher Off", valueOrDefault ? "Roblox links open through Codex from the next time the bootstrapper runs." : "Roblox links go back to Roblox the next time Codex starts or you press Play.");
+		}
+	}
+
+	private void LauncherChoice_SelectionChanged(object Sender, SelectionChangedEventArgs E)
+	{
+		if (Syncing)
+		{
+			return;
+		}
+		ComboBox val = (ComboBox)((Sender is ComboBox) ? Sender : null);
+		if (val == null || !(((FrameworkElement)val).Tag is string text))
+		{
+			return;
+		}
+		object selectedItem = ((Selector)val).SelectedItem;
+		ComboBoxItem val2 = (ComboBoxItem)((selectedItem is ComboBoxItem) ? selectedItem : null);
+		if (val2 != null && ((FrameworkElement)val2).Tag is string text2)
+		{
+			if (!LauncherConfiguration.SetChoice(text, text2))
+			{
+				LoadLauncherValues();
+				ToastService.ShowError("Setting Not Saved", "The setting couldn't be stored.");
+			}
+			else
+			{
+				AppLog.Information("Roblox launcher setting {Name} set to {Value}", text, text2);
+			}
 		}
 	}
 

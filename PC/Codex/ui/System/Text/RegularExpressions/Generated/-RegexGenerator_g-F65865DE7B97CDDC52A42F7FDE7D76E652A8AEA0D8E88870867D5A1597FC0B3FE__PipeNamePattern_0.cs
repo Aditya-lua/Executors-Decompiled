@@ -5,7 +5,7 @@ namespace System.Text.RegularExpressions.Generated;
 
 [GeneratedCode("System.Text.RegularExpressions.Generator", "10.0.14.42308")]
 [SkipLocalsInit]
-internal sealed class _003CRegexGenerator_g_003EF65865DE7B97CDDC52A42F7FDE7D76E652A8AEA0D8E88870867D5A1597FC0B3FE__Md5Pattern_0 : Regex
+internal sealed class _003CRegexGenerator_g_003EF65865DE7B97CDDC52A42F7FDE7D76E652A8AEA0D8E88870867D5A1597FC0B3FE__PipeNamePattern_0 : Regex
 {
 	private sealed class RunnerFactory : RegexRunnerFactory
 	{
@@ -39,7 +39,7 @@ internal sealed class _003CRegexGenerator_g_003EF65865DE7B97CDDC52A42F7FDE7D76E6
 				{
 					return false;
 				}
-				if ((uint)readOnlySpan.Length < 32u || readOnlySpan.Slice(0, 32).ContainsAnyExcept(_003CRegexGenerator_g_003EF65865DE7B97CDDC52A42F7FDE7D76E652A8AEA0D8E88870867D5A1597FC0B3FE__Utilities.s_asciiHexDigits))
+				if ((uint)readOnlySpan.Length < 32u || readOnlySpan.Slice(0, 32).ContainsAnyExcept(_003CRegexGenerator_g_003EF65865DE7B97CDDC52A42F7FDE7D76E652A8AEA0D8E88870867D5A1597FC0B3FE__Utilities.s_asciiHexDigitsLower))
 				{
 					return false;
 				}
@@ -58,11 +58,11 @@ internal sealed class _003CRegexGenerator_g_003EF65865DE7B97CDDC52A42F7FDE7D76E6
 		}
 	}
 
-	internal static readonly _003CRegexGenerator_g_003EF65865DE7B97CDDC52A42F7FDE7D76E652A8AEA0D8E88870867D5A1597FC0B3FE__Md5Pattern_0 Instance = new _003CRegexGenerator_g_003EF65865DE7B97CDDC52A42F7FDE7D76E652A8AEA0D8E88870867D5A1597FC0B3FE__Md5Pattern_0();
+	internal static readonly _003CRegexGenerator_g_003EF65865DE7B97CDDC52A42F7FDE7D76E652A8AEA0D8E88870867D5A1597FC0B3FE__PipeNamePattern_0 Instance = new _003CRegexGenerator_g_003EF65865DE7B97CDDC52A42F7FDE7D76E652A8AEA0D8E88870867D5A1597FC0B3FE__PipeNamePattern_0();
 
-	private _003CRegexGenerator_g_003EF65865DE7B97CDDC52A42F7FDE7D76E652A8AEA0D8E88870867D5A1597FC0B3FE__Md5Pattern_0()
+	private _003CRegexGenerator_g_003EF65865DE7B97CDDC52A42F7FDE7D76E652A8AEA0D8E88870867D5A1597FC0B3FE__PipeNamePattern_0()
 	{
-		pattern = "^[0-9a-fA-F]{32}$";
+		pattern = "^[0-9a-f]{32}$";
 		roptions = RegexOptions.None;
 		Regex.ValidateMatchTimeout(_003CRegexGenerator_g_003EF65865DE7B97CDDC52A42F7FDE7D76E652A8AEA0D8E88870867D5A1597FC0B3FE__Utilities.s_defaultTimeout);
 		internalMatchTimeout = _003CRegexGenerator_g_003EF65865DE7B97CDDC52A42F7FDE7D76E652A8AEA0D8E88870867D5A1597FC0B3FE__Utilities.s_defaultTimeout;

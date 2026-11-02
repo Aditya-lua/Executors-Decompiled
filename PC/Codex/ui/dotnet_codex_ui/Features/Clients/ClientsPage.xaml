@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<UserControl x:Class="dotnet_codex_ui.Features.Clients.ClientsPage" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:Controls="clr-namespace:dotnet_codex_ui.Controls" TextElement.FontFamily="{StaticResource Inter}" xmlns:clients="clr-namespace:dotnet_codex_ui.Features.Clients">
+<UserControl x:Class="dotnet_codex_ui.Features.Clients.ClientsPage" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:Controls="clr-namespace:dotnet_codex_ui.Controls" TextElement.FontFamily="{StaticResource Inter}" xmlns:clients="clr-namespace:dotnet_codex_ui.Features.Clients;assembly=dotnet-codex-ui">
   <Grid>
     <Grid.RowDefinitions>
       <RowDefinition Height="Auto" />

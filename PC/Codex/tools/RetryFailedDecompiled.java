@@ -11,15 +11,14 @@ import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 
 public class RetryFailedDecompiled extends GhidraScript {
-    private static final String[] ADDRESSES = {
-        "180002ad0", "18000fed0", "1800295e0", "180034da0",
-        "180040d60", "1800d2200", "18018e670"
-    };
-
     @Override
     public void run() throws Exception {
         String[] args = getScriptArgs();
-        if (args.length != 1) throw new IllegalArgumentException("usage: RetryFailedDecompiled <output.c>");
+        if (args.length < 2) {
+            throw new IllegalArgumentException(
+                "usage: RetryFailedDecompiled <output.c> <address> [address ...]"
+            );
+        }
         DecompInterface decompiler = new DecompInterface();
         decompiler.setOptions(new DecompileOptions());
         decompiler.toggleCCode(true);
@@ -30,7 +29,8 @@ public class RetryFailedDecompiled extends GhidraScript {
         try (PrintWriter out = new PrintWriter(new BufferedWriter(new OutputStreamWriter(
                 new FileOutputStream(args[0]), StandardCharsets.UTF_8), 1024 * 1024))) {
             out.println("/* Longer-timeout retries for functions that failed the primary export. */");
-            for (String address : ADDRESSES) {
+            for (int i = 1; i < args.length; i++) {
+                String address = args[i];
                 Function function = currentProgram.getFunctionManager().getFunctionAt(toAddr(address));
                 out.println("\n/* ==================================================================== */");
                 out.println("/* " + address + " / " + (function == null ? "missing" : function.getName(true)) + " */");
@@ -61,7 +61,7 @@ public class RetryFailedDecompiled extends GhidraScript {
                 }
                 out.flush();
             }
-            out.println("\n/* Retry summary: recovered=" + ok + ", attempted=" + ADDRESSES.length + " */");
+            out.println("\n/* Retry summary: recovered=" + ok + ", attempted=" + (args.length - 1) + " */");
         } finally {
             decompiler.dispose();
         }

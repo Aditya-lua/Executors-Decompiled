@@ -1,43 +1,84 @@
-# Codex 1.0.0 Recovered Source
+# Codex 1.0.2 recovered source
 
-This archive is a best-effort static source recovery of the Codex build supplied as:
+This directory is a best-effort static source recovery of the Codex stable
+build supplied as:
 
-`https://cdn.robloxscripts.gg/stable/1.0.0-stable.20261026/dotnet-codex-bootstrapper.exe`
+`https://cdn.robloxscripts.gg/stable/1.0.2-stable.20261028/dotnet-codex-bootstrapper.exe`
 
-It was recovered without executing the Windows binaries. The managed projects were decompiled with ILSpy 11.1, repaired only where generated/decompiler artifacts prevented compilation, and verified with .NET SDK 10.0.403. The native client was extracted from the versioned loader and analyzed with Ghidra 11.0.
+The Windows binaries were not executed. The managed projects were decompiled
+with ILSpy 11.2, reconciled with the previously repaired source tree, and
+verified with .NET SDK 10.0.403. Both the outer loader and its embedded native
+client were analyzed with Ghidra 12.2.
 
-## What is here
+## Contents
 
-- `bootstrapper/` — 88 recovered C# files, 5 XAML files, resources, and a reconstructed buildable project.
-- `ui/` — 201 recovered C# files, 19 XAML files, resources, and a reconstructed buildable project.
-- `web-runtime/` — 93 shipped text/source assets. The main minified browser bundle is preserved beside a formatted `index-3093d9a0.pretty.js` copy (183,524 lines).
-- `native/` — Ghidra C-like pseudocode and a complete function inventory for the extracted native client.
-- `evidence/` — hashes, bundle manifest, CDN manifest snapshot, and the exact binaries needed to reproduce the managed/native recovery.
-- `tools/` — the non-executing .NET bundle extractor used for this recovery.
+- `bootstrapper/` — 115 recovered C# files, 5 XAML files, resources, and a
+  reconstructed buildable project.
+- `ui/` — 205 recovered C# files, 19 XAML files, resources, and a reconstructed
+  buildable project.
+- `web-runtime/` — 93 shipped text/source assets. The main minified browser
+  bundle is also preserved as a formatted 183,524-line copy.
+- `native/` — function inventories and Ghidra C-like pseudocode for the outer
+  loader and the extracted native client.
+- `evidence/` — hashes, bundle metadata, the 2026-11-02 CDN snapshots, import
+  evidence, and the exact principal binaries used for recovery.
+- `tools/` — the non-executing .NET bundle extractor and Ghidra export scripts.
 
 ## Build verification
 
-From the respective project directory on a machine with .NET SDK 10:
+From the repository root on a machine with .NET SDK 10:
 
 ```sh
-dotnet restore
-dotnet build -c Release
+dotnet build PC/Codex/bootstrapper/dotnet-codex-bootstrapper.csproj -c Release
+dotnet build PC/Codex/ui/dotnet-codex-ui.csproj -c Release
 ```
 
-Both reconstructed projects built successfully with zero errors. The bootstrapper produced 4 warnings; the UI produced 110 warnings. Most UI warnings are preserved compiler warnings around original fire-and-forget async calls and decompiled native-interop structs.
+Clean Release builds completed with zero errors. The bootstrapper emitted 10
+warnings and the UI emitted 116 warnings; WPF's temporary and final compilation
+passes duplicate each underlying warning.
+
+## Changes visible in 1.0.2
+
+The recovered update adds a full Roblox launcher/protocol subsystem, launcher
+handoff validation, settings for Roblox launch behavior, and selectable update
+channels. The live app manifest still lists 133 application files; its layout
+is unchanged from the previous snapshot, while the app and current loader have
+advanced to `1.0.2-stable.20261028` and `0.745.0.7451137`.
 
 ## Authentication finding
 
-This exact stable UI build is keyless/auth-disabled as shipped. `AuthModePolicy.BackendEnabled` and `AuthModePolicy.DevModesAllowed` are static readonly booleans with no initializer or static constructor, so both retain the CLR default `false`. `AuthModePolicy.Resolve` consequently selects `AuthMode.Disabled`. The source still contains the real/mock/disabled authentication framework and login UI, but the backend path is disabled in this build.
+This stable UI remains keyless/auth-disabled as shipped.
+`AuthModePolicy.BackendEnabled` and `AuthModePolicy.DevModesAllowed` are static
+readonly booleans with no initializer or static-constructor assignment, so both
+retain the CLR default `false`. `AuthModePolicy.Resolve` consequently selects
+`AuthMode.Disabled`. The real/mock/disabled authentication framework and login
+UI remain present, but the backend path is disabled in this build.
 
-## Important limitations
+## Loader and anti-cheat assessment
+
+The outer loader statically imports cross-process memory, section-mapping, and
+thread-control APIs, including `OpenProcess`, `VirtualAllocEx`,
+`ReadProcessMemory`, `WriteProcessMemory`, `SuspendThread`, `ResumeThread`,
+`NtCreateSection`, and `NtMapViewOfSection`. This establishes injection
+machinery. It does not by itself prove a specific Hyperion/Byfron evasion
+technique, and no literal Hyperion, Byfron, anti-cheat, or bypass marker was
+found. Unlike the previously inspected Velocity loader, this loader is not
+VMProtect-packed at rest, so substantially more static logic is recoverable;
+the available evidence does not show that it uses Velocity's hidden mechanism.
+
+## Limitations
 
 This is recovered source, not the developer's original repository:
 
-- comments, original local-variable names, formatting, solution history, and preprocessor context are not recoverable from compiled binaries;
-- project files were reconstructed and package references were substituted for ILSpy's absolute assembly hint paths;
-- compiler-generated WPF delegates and source-generator attributes were removed where the current SDK correctly regenerates them;
-- native C++ cannot be reconstructed exactly. Ghidra output is C-like pseudocode with inferred names/types, not compilable original C++;
-- static editor assets are served from an unversioned CDN path. Their principal file sizes matched the initial 2026-10-26 recovery, but the included manifest snapshot was fetched on 2026-10-27 after the live channel advanced to 1.0.1. All four versioned UI binaries remain pinned to 1.0.0 and match the recorded hashes.
+- comments, original local-variable names, formatting, solution history, and
+  preprocessor context are not recoverable from compiled binaries;
+- project files were reconstructed and equivalent package references replace
+  ILSpy's machine-specific assembly paths;
+- compiler-generated WPF delegates and source-generator attributes were removed
+  where the current SDK regenerates them;
+- native pseudocode contains inferred names and types and is not lossless or
+  expected to compile as original C++;
+- the CDN snapshots describe the live stable channel on 2026-11-02.
 
-Use this material only where you are authorized to inspect or modify the software.
+Use this material only where you are authorized to inspect or modify the
+software.

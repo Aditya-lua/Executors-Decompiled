@@ -1250,6 +1250,7 @@ public partial class MainWindow : Window, IComponentConnector
 	private async void Window_Loaded(object Sender, RoutedEventArgs E)
 	{
 		AppLog.Information("Main window loaded");
+		BeginEnter();
 		UpdateModeBadge();
 		UpdateLoaderBadge();
 		if (AuthService.Mode != AuthMode.Disabled)
@@ -2125,6 +2126,54 @@ public partial class MainWindow : Window, IComponentConnector
 			}
 		}
 		return true;
+	}
+
+	private void BeginEnter()
+	{
+		//IL_0008: Unknown result type (might be due to invalid IL or missing references)
+		//IL_000d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0015: Expected Obj, but got Unknown
+		//IL_0015: Unknown result type (might be due to invalid IL or missing references)
+		//IL_001a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_002e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_003b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_003c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0046: Unknown result type (might be due to invalid IL or missing references)
+		//IL_004d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0055: Expected Obj, but got Unknown
+		//IL_0082: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0087: Unknown result type (might be due to invalid IL or missing references)
+		//IL_009b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00a8: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00a9: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00b3: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00ba: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00c6: Expected Obj, but got Unknown
+		if (MotionPolicy.Enabled)
+		{
+			CubicEase easingFunction = new CubicEase
+			{
+				EasingMode = (EasingMode)1
+			};
+			DoubleAnimation val = new DoubleAnimation
+			{
+				From = 0.97,
+				To = 1.0,
+				Duration = MotionDurations.Exit,
+				EasingFunction = (IEasingFunction)(object)easingFunction,
+				FillBehavior = (FillBehavior)1
+			};
+			((Animatable)RootScale).BeginAnimation(ScaleTransform.ScaleXProperty, (AnimationTimeline)(object)val);
+			((Animatable)RootScale).BeginAnimation(ScaleTransform.ScaleYProperty, (AnimationTimeline)(object)val);
+			((UIElement)Root).BeginAnimation(UIElement.OpacityProperty, (AnimationTimeline)new DoubleAnimation
+			{
+				From = 0.0,
+				To = 1.0,
+				Duration = MotionDurations.Exit,
+				EasingFunction = (IEasingFunction)(object)easingFunction,
+				FillBehavior = (FillBehavior)1
+			});
+		}
 	}
 
 	private void BeginExit()

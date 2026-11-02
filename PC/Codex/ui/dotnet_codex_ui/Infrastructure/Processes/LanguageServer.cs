@@ -131,7 +131,6 @@ internal static class LanguageServer
 		catch (Exception ex)
 		{
 			Log(ex.Message);
-			MessageBox.Show(ex.Message);
 			return false;
 		}
 	}
